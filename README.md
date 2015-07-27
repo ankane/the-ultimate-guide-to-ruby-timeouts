@@ -13,6 +13,7 @@ Data Stores
 - [mysql2](#mysql2)
 - [dalli](#dalli)
 - [redis](#redis)
+- [mongo](#mongo)
 - [elasticsearch](#elasticsearch)
 - [searchkick](#searchkick)
 
@@ -106,6 +107,16 @@ Raises:
 
 - `Redis::CannotConnectError` on connect timeout
 - `Redis::TimeoutError` on read timeout
+
+### mongo
+
+```ruby
+Mongo::Client.new([host], socket_timeout: 1, server_selection_timeout: 1)
+```
+
+Raises `Mongo::Error::NoServerAvailable` on connect timeout.
+
+TODO: read timeout
 
 ### elasticsearch
 

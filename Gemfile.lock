@@ -16,6 +16,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.8)
     arel (6.0.2)
+    bson (3.2.0)
     builder (3.2.2)
     curb (0.8.8)
     dalli (2.7.4)
@@ -29,11 +30,11 @@ GEM
     elasticsearch-transport (1.0.12)
       faraday
       multi_json
-    ethon (0.7.3)
+    ethon (0.7.4)
       ffi (>= 1.3.0)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.8)
+    ffi (1.9.10)
     hashie (3.4.2)
     http (0.9.0)
       addressable (~> 2.3)
@@ -48,6 +49,8 @@ GEM
     json (1.8.3)
     mime-types (2.6.1)
     minitest (5.7.0)
+    mongo (2.0.6)
+      bson (~> 3.0)
     multi_json (1.11.2)
     multipart-post (2.0.0)
     mysql2 (0.3.18)
@@ -64,8 +67,8 @@ GEM
       elasticsearch (>= 1)
       hashie
     thread_safe (0.3.5)
-    typhoeus (0.7.1)
-      ethon (>= 0.7.1)
+    typhoeus (0.7.2)
+      ethon (>= 0.7.4)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     unf (0.1.4)
@@ -82,6 +85,7 @@ DEPENDENCIES
   elasticsearch
   http
   minitest
+  mongo
   mysql2
   pg
   rake
