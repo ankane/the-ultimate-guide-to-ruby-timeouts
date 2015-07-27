@@ -207,6 +207,8 @@ Slowpoke.timeout = 5
 
 Default: 15s
 
+Raises same exceptions as [rack-timeout](#rack-timeout).
+
 ### rack-timeout
 
 ```ruby
@@ -214,6 +216,8 @@ Rack::Timeout.timeout = 5
 ```
 
 Default: 15s
+
+Raises `Rack::Timeout::RequestTimeoutError` or `Rack::Timeout::RequestExpiryError`.
 
 ## Don’t see a library you use?
 
