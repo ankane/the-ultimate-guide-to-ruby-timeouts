@@ -72,7 +72,7 @@ Raises `Dalli::RingError`.
 ### redis
 
 ```ruby
-Redis.new(host: host, connect_timeout: 1)
+Redis.new(host: host, connect_timeout: 1, timeout: 1)
 ```
 
 Raises:
