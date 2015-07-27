@@ -34,7 +34,11 @@ class Minitest::Test
     4567
   end
 
+  def read_host_and_port
+    "#{read_host}:#{read_port}"
+  end
+
   def read_url
-    "http://#{read_host}:#{read_port}"
+    "http://#{read_host_and_port}"
   end
 end

@@ -10,6 +10,6 @@ class DalliTest < Minitest::Test
   end
 
   def test_read
-    assert_timeout(Dalli::RingError) { Dalli::Client.new("#{read_host}:#{read_port}", socket_timeout: 1).get("hi") }
+    assert_timeout(Dalli::RingError) { Dalli::Client.new(read_host_and_port, socket_timeout: 1).get("hi") }
   end
 end

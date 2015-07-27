@@ -177,6 +177,16 @@ Default: 15s
 
 [Let us know](https://github.com/ankane/ruby-timeouts/issues/new). Even better, [create a pull request](https://github.com/ankane/ruby-timeouts/pulls) for it.
 
+## Running the Tests
+
+```sh
+git clone https://github.com/ankane/ruby-timeouts.git
+cd ruby-timeouts
+bundle install
+node test/server.js # in a separate window
+rake
+```
+
 ## TODO
 
 - read and write timeouts
