@@ -4,7 +4,7 @@ An unresponsive service is worse than a down one. It can tie up your entire syst
 
 Here’s how to add timeouts for popular Ruby gems. **[All have been tested](test)**. The default is no timeout, unless otherwise specified. Enjoy!
 
-## Categories
+## Gems
 
 Data Stores
 
