@@ -124,6 +124,8 @@ Raises
 Searchkick.timeout = 1
 ```
 
+Default: 10s
+
 Raises `Faraday::ConnectionFailed`.
 
 ## HTTP Clients
