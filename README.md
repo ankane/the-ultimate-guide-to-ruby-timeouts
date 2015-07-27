@@ -22,6 +22,7 @@ HTTP Clients
 
 - [net/http](#nethttp)
 - [http](#http)
+- [httparty](#httparty)
 - [rest-client](#rest-client)
 - [faraday](#faraday)
 - [curb](#curb)
@@ -186,6 +187,17 @@ HTTP.timeout(connect: 1, read: 1, write: 1).get(url)
 ```
 
 Raises `HTTP::TimeoutError`.
+
+### httparty
+
+```ruby
+HTTParty.get(url, timeout: 1)
+```
+
+Raises:
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
 
 ### rest-client
 
