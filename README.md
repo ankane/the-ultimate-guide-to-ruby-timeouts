@@ -181,7 +181,7 @@ Raises:
 ### http
 
 ```ruby
-HTTP.timeout(:per_operation, connect: 1, read: 1, write: 1).get(url)
+HTTP.timeout(connect: 1, read: 1, write: 1).get(url)
 ```
 
 Raises `HTTP::TimeoutError`.
@@ -344,7 +344,7 @@ rescue Timeout::Error
 
 Use:
 
-- `Timeout::Error` for both `Net::OpenTimeout` and `Net::ReadTimeout`.
+- `Timeout::Error` for both `Net::OpenTimeout` and `Net::ReadTimeout`
 - `Faraday::ClientError` for both `Faraday::ConnectionFailed` and `Faraday::TimeoutError`
 - `Rack::Timeout::Error` for both `Rack::Timeout::RequestTimeoutError` and `Rack::Timeout::RequestExpiryError`
 
