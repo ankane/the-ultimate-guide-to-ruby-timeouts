@@ -21,6 +21,7 @@ Data Stores
 HTTP Clients
 
 - [net/http](#nethttp)
+- [open-uri](#open-uri)
 - [http](#http)
 - [httparty](#httparty)
 - [rest-client](#rest-client)
@@ -174,6 +175,17 @@ Raises same exceptions as [elasticsearch](#elasticsearch).
 Net::HTTP.start(host, port, open_timeout: 1, read_timeout: 1) do
   # ...
 end
+```
+
+Raises:
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
+
+### open-uri
+
+```ruby
+open(url, open_timeout: 1, read_timeout: 1)
 ```
 
 Raises:
