@@ -49,6 +49,7 @@ External Services
 - [stripe](#stripe)
 - [zendesk_api](#zendesk_api)
 - [hipchat](#hipchat)
+- [firebase](#firebase)
 
 Bonus
 
@@ -380,6 +381,22 @@ Raises:
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
+
+### firebase
+
+No official support yet, but this does the job.
+
+```ruby
+firebase = Firebase::Client.new(url)
+firebase.request.instance_variable_get(:@client).connect_timeout = 1
+firebase.request.instance_variable_get(:@client).receive_timeout = 1
+firebase.request.instance_variable_get(:@client).send_timeout = 1
+```
+
+Raises:
+
+- `HTTPClient::ConnectTimeoutError` on connect timeout
+- `HTTPClient::ReceiveTimeoutError` on read timeout
 
 ## Don’t see a library you use?
 

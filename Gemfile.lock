@@ -38,6 +38,9 @@ GEM
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.10)
+    firebase (0.2.4)
+      httpclient
+      json
     geocoder (1.2.9)
     hashie (3.4.2)
     hipchat (1.5.2)
@@ -107,6 +110,7 @@ DEPENDENCIES
   dalli
   elasticsearch
   faraday
+  firebase
   geocoder
   hipchat
   http
