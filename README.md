@@ -133,8 +133,8 @@ Raises same exceptions as [elasticsearch](#elasticsearch).
 ### net/http
 
 ```ruby
-Net::HTTP.start(host, 80, open_timeout: 1, read_timeout: 1) do
-  #...
+Net::HTTP.start(host, port, open_timeout: 1, read_timeout: 1) do
+  # ...
 end
 ```
 
@@ -239,5 +239,4 @@ rake
 
 ## TODO
 
-- read and write timeouts
 - background jobs
