@@ -176,7 +176,7 @@ Raises `Curl::Err::TimeoutError`.
 response = Typhoeus.get(url, connecttimeout: 1, timeout: 1)
 ```
 
-No error is raised. Check for a timeout with:
+No exception is raised. Check for a timeout with:
 
 ```ruby
 response.timed_out?
@@ -190,6 +190,8 @@ response.timed_out?
 # config/unicorn.rb
 timeout 15
 ```
+
+This kills and respawns the worker process.
 
 It’s recommended to use this in addition to [Rack middleware](#rack-middleware).
 
