@@ -1,6 +1,6 @@
 # Ruby Timeouts
 
-An unresponsive service is worse than a down one. It can tie up your entire system if not handled properly. **Any network request should have a timeout.**
+An unresponsive service is worse than a down one. It can tie up your entire system if not handled properly. **All network requests should have a timeout.**
 
 Here’s how to add timeouts for popular Ruby gems. **[All have been tested](test)**. The default is no timeout, unless otherwise specified. Enjoy!
 
