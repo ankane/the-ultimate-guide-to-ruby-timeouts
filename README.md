@@ -24,6 +24,7 @@ HTTP Clients
 - [open-uri](#open-uri)
 - [http](#http)
 - [httparty](#httparty)
+- [httpclient](#httpclient)
 - [rest-client](#rest-client)
 - [faraday](#faraday)
 - [curb](#curb)
@@ -211,6 +212,21 @@ Raises:
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
+
+### httpclient
+
+```ruby
+client = HTTPClient.new
+client.connect_timeout = 1
+client.receive_timeout = 1
+client.send_timeout = 1
+client.get(url)
+```
+
+Raises:
+
+- `HTTPClient::ConnectTimeoutError` on connect timeout
+- `HTTPClient::ReceiveTimeoutError` on read timeout
 
 ### rest-client
 
