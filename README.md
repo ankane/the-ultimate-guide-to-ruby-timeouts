@@ -44,7 +44,7 @@ Rack Middleware
 #### `postgres` adapter
 
 ```ruby
-ActiveRecord::Base.establish_connection connect_timeout: 1
+ActiveRecord::Base.establish_connection(connect_timeout: 1, ...)
 ```
 
 or in `config/database.yml`
@@ -59,7 +59,7 @@ Raises `PG::ConnectionBad`.
 #### `mysql2` adapter
 
 ```ruby
-ActiveRecord::Base.establish_connection connect_timeout: 1, read_timeout: 1, write_timeout: 1
+ActiveRecord::Base.establish_connection(connect_timeout: 1, read_timeout: 1, write_timeout: 1, ...)
 ```
 
 or in `config/database.yml`
@@ -76,7 +76,7 @@ Raises `Mysql2::Error`.
 ### pg
 
 ```ruby
-PG.connect(connect_timeout: 1)
+PG.connect(connect_timeout: 1, ...)
 ```
 
 Raises `PG::ConnectionBad`.
@@ -84,7 +84,7 @@ Raises `PG::ConnectionBad`.
 ### mysql2
 
 ```ruby
-Mysql2::Client.new(connect_timeout: 1, read_timeout: 1, write_timeout: 1)
+Mysql2::Client.new(connect_timeout: 1, read_timeout: 1, write_timeout: 1, ...)
 ```
 
 Raises `Mysql2::Error`.
@@ -92,7 +92,7 @@ Raises `Mysql2::Error`.
 ### dalli
 
 ```ruby
-Dalli::Client.new(host, socket_timeout: 1)
+Dalli::Client.new(host, socket_timeout: 1, ...)
 ```
 
 Default: 0.5s
@@ -102,7 +102,7 @@ Raises `Dalli::RingError`.
 ### redis
 
 ```ruby
-Redis.new(connect_timeout: 1, timeout: 1)
+Redis.new(connect_timeout: 1, timeout: 1, ...)
 ```
 
 Raises:
@@ -113,7 +113,7 @@ Raises:
 ### mongo
 
 ```ruby
-Mongo::Client.new([host], socket_timeout: 1, server_selection_timeout: 1)
+Mongo::Client.new([host], socket_timeout: 1, server_selection_timeout: 1, ...)
 ```
 
 Raises `Mongo::Error::NoServerAvailable` on connect timeout.
@@ -123,7 +123,7 @@ TODO: read timeout
 ### bunny
 
 ```ruby
-Bunny.new(connection_timeout: 1)
+Bunny.new(connection_timeout: 1, ...)
 ```
 
 Raises `Bunny::TCPConnectionFailedForAllHosts` on connect timeout.
@@ -133,7 +133,7 @@ TODO: read timeout
 ### elasticsearch
 
 ```ruby
-Elasticsearch::Client.new(transport_options: {request: {timeout: 1}})
+Elasticsearch::Client.new(transport_options: {request: {timeout: 1}}, ...)
 ```
 
 Raises
