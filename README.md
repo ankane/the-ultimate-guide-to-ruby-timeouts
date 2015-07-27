@@ -42,6 +42,7 @@ External Services
 - [geocoder](#geocoder)
 - [twilio-ruby](#twilio-ruby)
 - [koala](#koala)
+- [twitter](#twitter)
 - [stripe](#stripe)
 - [zendesk_api](#zendesk_api)
 
@@ -311,6 +312,10 @@ Raises:
 
 - `Faraday::ConnectionFailed` on connect timeout
 - `Faraday::TimeoutError` on read timeout
+
+### twitter
+
+Not configurable at the moment, and no timeout by default.
 
 ### stripe
 
