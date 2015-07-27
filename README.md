@@ -40,6 +40,7 @@ Rack Middleware
 External Services
 
 - [twilio-ruby](#twilio-ruby)
+- [stripe](#stripe)
 
 Bonus
 
@@ -282,6 +283,12 @@ Raises:
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
+
+### stripe
+
+[Not configurable](https://github.com/stripe/stripe-ruby/pull/267) at the moment.
+
+Default: 30s connect timeout, 80s read timeout
 
 ## Don’t see a library you use?
 
