@@ -307,7 +307,10 @@ Raises:
 Koala.http_service.http_options = {request: {open_timeout: 1, timeout: 1}}
 ```
 
-Raises `Faraday::ConnectionFailed`.
+Raises:
+
+- `Faraday::ConnectionFailed` on connect timeout
+- `Faraday::TimeoutError` on read timeout
 
 ### stripe
 

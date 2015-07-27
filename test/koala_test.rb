@@ -7,17 +7,18 @@ class KoalaTest < Minitest::Test
     end
     Koala.http_service.http_options = {request: {open_timeout: 1}}
     assert_timeout(Faraday::ConnectionFailed) do
-      Koala::Facebook::API.new("access_token").get_object("me")
+      Koala::Facebook::API.new.get_object("me")
     end
   end
 
   def test_read
     Koala.configure do |config|
       config.graph_server = read_host_and_port
+      config.use_ssl = false
     end
     Koala.http_service.http_options = {request: {timeout: 1}}
-    assert_timeout(Faraday::ConnectionFailed) do
-      Koala::Facebook::API.new("access_token").get_object("me")
+    assert_timeout(Faraday::TimeoutError) do
+      Koala::Facebook::API.new.get_object("me")
     end
   end
 end
