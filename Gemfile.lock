@@ -52,6 +52,10 @@ GEM
     i18n (0.7.0)
     json (1.8.3)
     jwt (1.5.1)
+    koala (2.0.0)
+      addressable
+      faraday
+      multi_json
     mime-types (2.6.1)
     minitest (5.7.0)
     mongo (2.0.6)
@@ -96,6 +100,7 @@ DEPENDENCIES
   faraday
   geocoder
   http
+  koala
   minitest
   mongo
   mysql2

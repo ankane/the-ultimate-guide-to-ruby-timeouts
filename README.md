@@ -41,6 +41,7 @@ External Services
 
 - [geocoder](#geocoder)
 - [twilio-ruby](#twilio-ruby)
+- [koala](#koala)
 - [stripe](#stripe)
 - [zendesk_api](#zendesk_api)
 
@@ -299,6 +300,14 @@ Raises:
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
+
+### koala
+
+```ruby
+Koala.http_service.http_options = {request: {open_timeout: 1, timeout: 1}}
+```
+
+Raises `Faraday::ConnectionFailed`.
 
 ### stripe
 
