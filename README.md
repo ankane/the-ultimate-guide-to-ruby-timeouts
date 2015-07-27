@@ -31,8 +31,8 @@ Web Servers
 
 Rack Middleware
 
-- [slowpoke](#slowpoke)
 - [rack-timeout](#rack-timeout)
+- [slowpoke](#slowpoke)
 
 ## Data Stores
 
@@ -201,16 +201,6 @@ There’s [no timeout option](https://github.com/puma/puma/issues/160). Use [Rac
 
 ## Rack Middleware
 
-### slowpoke
-
-```ruby
-Slowpoke.timeout = 5
-```
-
-Default: 15s
-
-Raises same exceptions as [rack-timeout](#rack-timeout).
-
 ### rack-timeout
 
 ```ruby
@@ -222,6 +212,16 @@ Default: 15s
 Raises `Rack::Timeout::RequestTimeoutError` or `Rack::Timeout::RequestExpiryError`.
 
 [Read more here](https://github.com/heroku/rack-timeout#the-rabbit-hole).
+
+### slowpoke
+
+```ruby
+Slowpoke.timeout = 5
+```
+
+Default: 15s
+
+Raises same exceptions as [rack-timeout](#rack-timeout).
 
 ## Don’t see a library you use?
 
