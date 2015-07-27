@@ -328,6 +328,26 @@ Default: 10s connect timeout, no read timeout
 
 [Let us know](https://github.com/ankane/ruby-timeouts/issues/new). Even better, [create a pull request](https://github.com/ankane/ruby-timeouts/pulls) for it.
 
+## Rescuing Exceptions
+
+Take advantage of inheritance. Instead of:
+
+```ruby
+rescue Net::OpenTimeout, Net::ReadTimeout
+```
+
+you can do:
+
+```ruby
+rescue Timeout::Error
+```
+
+Use:
+
+- `Timeout::Error` for both `Net::OpenTimeout` and `Net::ReadTimeout`.
+- `Faraday::ClientError` for both `Faraday::ConnectionFailed` and `Faraday::TimeoutError`
+- `Rack::Timeout::Error` for both `Rack::Timeout::RequestTimeoutError` and `Rack::Timeout::RequestExpiryError`
+
 ## Running the Tests
 
 ```sh
