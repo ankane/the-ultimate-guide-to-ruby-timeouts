@@ -126,7 +126,7 @@ Searchkick.timeout = 1
 
 Default: 10s
 
-Raises `Faraday::ConnectionFailed`.
+Raises same exceptions as [elasticsearch](#elasticsearch).
 
 ## HTTP Clients
 
