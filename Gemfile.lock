@@ -40,6 +40,9 @@ GEM
     ffi (1.9.10)
     geocoder (1.2.9)
     hashie (3.4.2)
+    hipchat (1.5.2)
+      httparty
+      mimemagic
     http (0.9.0)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
@@ -60,6 +63,7 @@ GEM
       faraday
       multi_json
     mime-types (2.6.1)
+    mimemagic (0.3.0)
     minitest (5.7.0)
     mongo (2.0.6)
       bson (~> 3.0)
@@ -103,6 +107,7 @@ DEPENDENCIES
   elasticsearch
   faraday
   geocoder
+  hipchat
   http
   httparty
   koala

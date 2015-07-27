@@ -344,7 +344,14 @@ Default: 10s connect timeout, no read timeout
 
 ### hipchat
 
-Not configurable at the moment, and no timeout by default.
+```ruby
+[HipChat::Client, HipChat::Room, HipChat::User].each { |c| c.default_timeout(1) }
+```
+
+Raises:
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
 
 ## Don’t see a library you use?
 
