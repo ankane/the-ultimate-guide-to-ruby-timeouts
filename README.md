@@ -39,6 +39,7 @@ Rack Middleware
 
 External Services
 
+- [geocoder](#geocoder)
 - [twilio-ruby](#twilio-ruby)
 - [stripe](#stripe)
 - [zendesk_api](#zendesk_api)
@@ -271,6 +272,20 @@ Default: 15s
 Raises same exceptions as [rack-timeout](#rack-timeout).
 
 ## External Services
+
+### geocoder
+
+```ruby
+Geocoder.configure(timeout: 1, ...)
+```
+
+No exception is raised by default. To raise exceptions, use:
+
+```ruby
+Geocoder.configure(timeout: 1, always_raise: :all, ...)
+```
+
+Raises `Timeout::Error`.
 
 ### twilio-ruby
 

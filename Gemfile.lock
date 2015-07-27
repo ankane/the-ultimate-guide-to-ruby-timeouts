@@ -38,6 +38,7 @@ GEM
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.10)
+    geocoder (1.2.9)
     hashie (3.4.2)
     http (0.9.0)
       addressable (~> 2.3)
@@ -93,6 +94,7 @@ DEPENDENCIES
   dalli
   elasticsearch
   faraday
+  geocoder
   http
   minitest
   mongo
