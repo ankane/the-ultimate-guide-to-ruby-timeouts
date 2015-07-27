@@ -37,6 +37,10 @@ Rack Middleware
 - [rack-timeout](#rack-timeout)
 - [slowpoke](#slowpoke)
 
+Bonus
+
+- [PostgreSQL statement timeouts](#bonus-postgresql-statement-timeouts)
+
 ## Data Stores
 
 ### activerecord
@@ -274,6 +278,30 @@ node test/server.js # in a separate window
 rake
 ```
 
-## TODO
+## Bonus: PostgreSQL Statement Timeouts
 
-- background jobs
+Prevent single queries from taking up all of your database’s resources. Set a [statement timeout](http://www.postgresql.org/docs/9.4/static/runtime-config-client.html#GUC-STATEMENT-TIMEOUT) in your `config/database.yml`:
+
+```yml
+production:
+  variables:
+    statement_timeout: 250 # ms
+```
+
+or set it on your database role:
+
+```sql
+ALTER ROLE myuser SET statement_timeout = 250;
+```
+
+Test statement timeouts with:
+
+```sql
+SELECT pg_sleep(30);
+```
+
+## And lastly...
+
+> Because time is not going to go backwards, I think I better stop now. - Stephen Hawking
+
+:clock4:
