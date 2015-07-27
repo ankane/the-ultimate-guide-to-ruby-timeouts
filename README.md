@@ -22,6 +22,7 @@ HTTP Clients
 - [net/http](#nethttp)
 - [http](#http)
 - [rest-client](#rest-client)
+- [faraday](#faraday)
 - [curb](#curb)
 - [typhoeus](#typhoeus)
 
@@ -169,6 +170,20 @@ RestClient::Request.execute(method: :get, url: url, open_timeout: 1, timeout: 1)
 ```
 
 Raises `RestClient::RequestTimeout`.
+
+### faraday
+
+```ruby
+Faraday.get(url) do |req|
+  req.options.timeout = 1
+  req.options.open_timeout = 1
+end
+```
+
+Raises:
+
+- `Faraday::ConnectionFailed` on connect timeout
+- `Faraday::TimeoutError` on read timeout
 
 ### curb
 

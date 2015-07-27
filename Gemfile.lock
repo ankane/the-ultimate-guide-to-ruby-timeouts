@@ -83,6 +83,7 @@ DEPENDENCIES
   curb
   dalli
   elasticsearch
+  faraday
   http
   minitest
   mongo
