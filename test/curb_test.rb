@@ -7,10 +7,19 @@ class CurbTest < Minitest::Test
       curl.connect_timeout = 1
       curl.perform
     end
+
+    assert_timeout(Curl::Err::TimeoutError) do
+      curl = Curl::Easy.new(connect_url)
+      curl.timeout = 1
+      curl.perform
+    end
   end
 
-  # def test_connect_default
-  #   Curl::Multi.default_timeout = 1
-  #   assert_timeout() { Curl::Multi.get([connect_url]) }
-  # end
+  def test_read
+    assert_timeout(Curl::Err::TimeoutError) do
+      curl = Curl::Easy.new(read_url)
+      curl.timeout = 1
+      curl.perform
+    end
+  end
 end

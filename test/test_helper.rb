@@ -24,4 +24,12 @@ class Minitest::Test
   def connect_url
     "http://#{connect_host}"
   end
+
+  def read_host
+    "localhost:4567"
+  end
+
+  def read_url
+    "http://#{read_host}"
+  end
 end

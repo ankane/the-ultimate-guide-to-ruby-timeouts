@@ -98,7 +98,7 @@ Raises `Faraday::ConnectionFailed`.
 ### http
 
 ```ruby
-HTTP.timeout(:per_operation, connect: 1).get(url)
+HTTP.timeout(:per_operation, connect: 1, read: 1, write: 1).get(url)
 ```
 
 Raises `HTTP::TimeoutError`.
@@ -106,7 +106,7 @@ Raises `HTTP::TimeoutError`.
 ### rest-client
 
 ```ruby
-RestClient::Request.execute(method: :get, url: url, open_timeout: 1)
+RestClient::Request.execute(method: :get, url: url, open_timeout: 1, timeout: 1)
 ```
 
 Raises `RestClient::RequestTimeout`.
@@ -116,6 +116,7 @@ Raises `RestClient::RequestTimeout`.
 ```ruby
 curl = Curl::Easy.new(url)
 curl.connect_timeout = 1
+curl.timeout = 1
 curl.perform
 ```
 
@@ -124,7 +125,7 @@ Raises `Curl::Err::TimeoutError`.
 ### typhoeus
 
 ```ruby
-response = Typhoeus.get(url, connecttimeout: 1)
+response = Typhoeus.get(url, connecttimeout: 1, timeout: 1)
 ```
 
 No error is raised. Check for a timeout with:
