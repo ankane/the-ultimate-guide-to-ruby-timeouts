@@ -6,6 +6,6 @@ class ElasticsearchTest < Minitest::Test
   end
 
   def test_read
-    assert_timeout(Faraday::TimeoutError) { Elasticsearch::Client.new(adapter: :net_http, host: read_host, log: true, transport_options: {request: {timeout: 1}}).cluster.health }
+    assert_timeout(Faraday::TimeoutError) { Elasticsearch::Client.new(adapter: :net_http, host: read_host, port: read_port, log: true, transport_options: {request: {timeout: 1}}).cluster.health }
   end
 end

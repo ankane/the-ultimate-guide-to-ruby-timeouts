@@ -75,7 +75,10 @@ Raises `Dalli::RingError`.
 Redis.new(host: host, connect_timeout: 1)
 ```
 
-Raises `Redis::CannotConnectError`.
+Raises:
+
+- `Redis::CannotConnectError` on connect timeout
+- `Redis::TimeoutError` on read timeout
 
 ### elasticsearch
 
@@ -83,7 +86,10 @@ Raises `Redis::CannotConnectError`.
 Elasticsearch::Client.new(host: host, transport_options: {request: {timeout: 1}})
 ```
 
-Raises `Faraday::ConnectionFailed`.
+Raises
+
+- `Faraday::ConnectionFailed` on connect timeout
+- `Faraday::TimeoutError` on read timeout
 
 ### searchkick
 

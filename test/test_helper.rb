@@ -27,10 +27,14 @@ class Minitest::Test
   end
 
   def read_host
-    "localhost:4567"
+    "localhost"
+  end
+
+  def read_port
+    4567
   end
 
   def read_url
-    "http://#{read_host}"
+    "http://#{read_host}:#{read_port}"
   end
 end
