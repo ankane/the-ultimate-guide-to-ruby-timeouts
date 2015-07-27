@@ -6,6 +6,6 @@ class PgTest < Minitest::Test
   end
 
   def test_read
-
+    assert_timeout(PG::ConnectionBad) { PG.connect(host: read_host, port: read_port, connect_timeout: 1) }
   end
 end
