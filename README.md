@@ -377,6 +377,16 @@ Use:
 - `Faraday::ClientError` for both `Faraday::ConnectionFailed` and `Faraday::TimeoutError`
 - `Rack::Timeout::Error` for both `Rack::Timeout::RequestTimeoutError` and `Rack::Timeout::RequestExpiryError`
 
+## Existing Services
+
+Adding timeouts to existing services can be a daunting task, but there’s a low risk way to do it.
+
+1. Select a timeout - say 5 seconds
+2. Log instances exceeding the proposed timeout
+3. Fix them
+4. Add the timeout
+5. Repeat this process with a lower timeout, until your target timeout is achieved
+
 ## Running the Tests
 
 ```sh
