@@ -15,9 +15,12 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.3.8)
+    amq-protocol (1.9.2)
     arel (6.0.2)
     bson (3.2.0)
     builder (3.2.2)
+    bunny (2.0.0)
+      amq-protocol (>= 1.9.2)
     curb (0.8.8)
     dalli (2.7.4)
     domain_name (0.5.24)
@@ -80,6 +83,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  bunny
   curb
   dalli
   elasticsearch

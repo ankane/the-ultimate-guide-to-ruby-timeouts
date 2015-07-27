@@ -14,6 +14,7 @@ Data Stores
 - [dalli](#dalli)
 - [redis](#redis)
 - [mongo](#mongo)
+- [bunny](#bunny)
 - [elasticsearch](#elasticsearch)
 - [searchkick](#searchkick)
 
@@ -116,6 +117,16 @@ Mongo::Client.new([host], socket_timeout: 1, server_selection_timeout: 1)
 ```
 
 Raises `Mongo::Error::NoServerAvailable` on connect timeout.
+
+TODO: read timeout
+
+### bunny
+
+```ruby
+Bunny.new(host: host, connection_timeout: 1).start
+```
+
+Raises `Bunny::TCPConnectionFailedForAllHosts` on connect timeout.
 
 TODO: read timeout
 
