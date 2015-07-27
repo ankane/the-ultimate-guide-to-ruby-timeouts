@@ -1,4 +1,4 @@
-# Ruby Timeouts
+# The Ultimate Guide to Timeouts in Ruby
 
 An unresponsive service is worse than a down one. It can tie up your entire system if not handled properly. **All network requests should have a timeout.**
 
