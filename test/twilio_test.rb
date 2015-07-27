@@ -9,7 +9,7 @@ class TwilioTest < Minitest::Test
 
   def test_read
     assert_timeout(Net::ReadTimeout) do
-      Twilio::REST::Client.new("sid", "token", host: read_host, port: read_port, use_ssl: false, timeout: 1).calls.list
+      Twilio::REST::Client.new("sid", "token", host: read_host, port: read_port, use_ssl: false, timeout: 1, retry_limit: 0).calls.list
     end
   end
 end
