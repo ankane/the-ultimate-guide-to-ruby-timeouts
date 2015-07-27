@@ -41,6 +41,7 @@ External Services
 
 - [twilio-ruby](#twilio-ruby)
 - [stripe](#stripe)
+- [zendesk_api](#zendesk_api)
 
 Bonus
 
@@ -289,6 +290,12 @@ Raises:
 [Not configurable](https://github.com/stripe/stripe-ruby/pull/267) at the moment.
 
 Default: 30s connect timeout, 80s read timeout
+
+### zendesk_api
+
+Not configurable at the moment.
+
+Default: 10s connect timeout, no read timeout
 
 ## Don’t see a library you use?
 
