@@ -3,7 +3,9 @@ require "net/http"
 
 class NetHttpTest < Minitest::Test
   def test_connect
-    assert_timeout(Net::OpenTimeout) { Net::HTTP.start(connect_host, 80, open_timeout: 1) { } }
+    assert_timeout(Net::OpenTimeout) do
+      Net::HTTP.start(connect_host, 80, open_timeout: 1) { }
+    end
   end
 
   def test_read

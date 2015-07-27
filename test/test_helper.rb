@@ -9,13 +9,11 @@ class Minitest::Test
   def assert_timeout(exception = UnknownTimeoutError, options = {})
     timeout = options[:timeout] || 1
     started_at = Time.now
-    begin
-      assert_raises(exception) { yield }
-    ensure
-      time = Time.now - started_at
-      p time
-      # assert time > timeout && time < timeout + 2, "Took #{time} seconds to timeout"
-    end
+    assert_raises(exception) { yield }
+    time = Time.now - started_at
+    # p time
+    assert_operator time, :>=, timeout
+    assert_operator time, :<=, timeout + 2
   end
 
   def connect_host
