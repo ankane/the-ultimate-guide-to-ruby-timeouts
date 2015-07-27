@@ -50,6 +50,7 @@ GEM
     minitest (5.7.0)
     multi_json (1.11.2)
     multipart-post (2.0.0)
+    mysql2 (0.3.18)
     netrc (0.10.3)
     pg (0.18.2)
     rake (10.4.2)
@@ -81,6 +82,7 @@ DEPENDENCIES
   elasticsearch
   http
   minitest
+  mysql2
   pg
   rake
   redis

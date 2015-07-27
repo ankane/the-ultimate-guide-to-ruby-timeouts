@@ -10,6 +10,7 @@ Data Stores
 
 - [activerecord](#activerecord)
 - [pg](#pg)
+- [mysql2](#mysql2)
 - [dalli](#dalli)
 - [redis](#redis)
 - [elasticsearch](#elasticsearch)
@@ -37,7 +38,7 @@ Rack Middleware
 
 ### activerecord
 
-For the `postgres` adapter
+#### `postgres` adapter
 
 ```ruby
 ActiveRecord::Base.establish_connection host: host, connect_timeout: 1
@@ -52,6 +53,23 @@ production:
 
 Raises `PG::ConnectionBad`.
 
+#### `mysql2` adapter
+
+```ruby
+ActiveRecord::Base.establish_connection host: host, connect_timeout: 1, read_timeout: 1, write_timeout: 1
+```
+
+or in `config/database.yml`
+
+```yaml
+production:
+  connect_timeout: 1
+  read_timeout: 1
+  write_timeout: 1
+```
+
+Raises `Mysql2::Error`.
+
 ### pg
 
 ```ruby
@@ -59,6 +77,14 @@ PG.connect(host: host, connect_timeout: 1)
 ```
 
 Raises `PG::ConnectionBad`.
+
+### mysql2
+
+```ruby
+Mysql2::Client.new(host: host, connect_timeout: 1, read_timeout: 1, write_timeout: 1)
+```
+
+Raises `Mysql2::Error`.
 
 ### dalli
 
