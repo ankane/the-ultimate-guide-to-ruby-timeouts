@@ -420,6 +420,7 @@ Use:
 
 - `Timeout::Error` for both `Net::OpenTimeout` and `Net::ReadTimeout`
 - `Faraday::ClientError` for both `Faraday::ConnectionFailed` and `Faraday::TimeoutError`
+- `Redis::BaseConnectionError` for both `Redis::CannotConnectError` and `Redis::TimeoutError`
 - `Rack::Timeout::Error` for both `Rack::Timeout::RequestTimeoutError` and `Rack::Timeout::RequestExpiryError`
 
 ## Existing Services
