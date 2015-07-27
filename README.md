@@ -17,6 +17,7 @@ Data Stores
 
 HTTP Clients
 
+- [net/http](#net-http)
 - [http](#http)
 - [rest-client](#rest-client)
 - [curb](#curb)
@@ -100,6 +101,19 @@ Searchkick.timeout = 1
 Raises `Faraday::ConnectionFailed`.
 
 ## HTTP Clients
+
+### net/http
+
+```ruby
+Net::HTTP.start(host, 80, open_timeout: 1, read_timeout: 1) do
+  #...
+end
+```
+
+Raises:
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
 
 ### http
 
