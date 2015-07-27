@@ -1,6 +1,6 @@
 require "sinatra"
 
-get "/" do
+get "*" do
   sleep(2)
   "boom"
 end

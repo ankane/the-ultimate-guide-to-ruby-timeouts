@@ -6,14 +6,15 @@ require "minitest/pride"
 class UnknownTimeoutError < StandardError; end
 
 class Minitest::Test
-  def assert_timeout(exception = UnknownTimeoutError)
+  def assert_timeout(exception = UnknownTimeoutError, options = {})
+    timeout = options[:timeout] || 1
     started_at = Time.now
     begin
       assert_raises(exception) { yield }
     ensure
       time = Time.now - started_at
       p time
-      assert time < 3, "Took #{time} seconds to timeout"
+      assert time > timeout && time < timeout + 2, "Took #{time} seconds to timeout"
     end
   end
 
