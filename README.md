@@ -17,7 +17,7 @@ Data Stores
 
 HTTP Clients
 
-- [net/http](#net-http)
+- [net/http](#nethttp)
 - [http](#http)
 - [rest-client](#rest-client)
 - [curb](#curb)
