@@ -123,7 +123,7 @@ TODO: read timeout
 ### bunny
 
 ```ruby
-Bunny.new(connection_timeout: 1).start
+Bunny.new(connection_timeout: 1)
 ```
 
 Raises `Bunny::TCPConnectionFailedForAllHosts` on connect timeout.
