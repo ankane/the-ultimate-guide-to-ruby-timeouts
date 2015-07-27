@@ -37,6 +37,10 @@ Rack Middleware
 - [rack-timeout](#rack-timeout)
 - [slowpoke](#slowpoke)
 
+External Services
+
+- [twilio-ruby](#twilio-ruby)
+
 Bonus
 
 - [PostgreSQL statement timeouts](#bonus-postgresql-statement-timeouts)
@@ -263,6 +267,21 @@ Slowpoke.timeout = 5
 Default: 15s
 
 Raises same exceptions as [rack-timeout](#rack-timeout).
+
+## External Services
+
+### twilio-ruby
+
+```ruby
+Twilio::REST::Client.new(account_sid, auth_token, timeout: 1)
+```
+
+Default: 30s
+
+Raises:
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
 
 ## Don’t see a library you use?
 
