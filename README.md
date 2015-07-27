@@ -168,7 +168,7 @@ Default: 15s
 
 ## Don’t see a library you use?
 
-[Let us know](https://github.com/ankane/ruby-timeouts/issues/new). Even better, [create a pull request](https://github.com/ankane/ruby-timeouts/pull_requests/new) for it.
+[Let us know](https://github.com/ankane/ruby-timeouts/issues/new). Even better, [create a pull request](https://github.com/ankane/ruby-timeouts/pulls) for it.
 
 ## TODO
 
