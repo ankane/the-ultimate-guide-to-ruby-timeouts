@@ -221,6 +221,8 @@ Default: 15s
 
 Raises `Rack::Timeout::RequestTimeoutError` or `Rack::Timeout::RequestExpiryError`.
 
+[Read more here](https://github.com/heroku/rack-timeout#the-rabbit-hole).
+
 ## Don’t see a library you use?
 
 [Let us know](https://github.com/ankane/ruby-timeouts/issues/new). Even better, [create a pull request](https://github.com/ankane/ruby-timeouts/pulls) for it.
