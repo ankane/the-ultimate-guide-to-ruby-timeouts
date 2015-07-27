@@ -46,6 +46,7 @@ External Services
 - [twitter](#twitter)
 - [stripe](#stripe)
 - [zendesk_api](#zendesk_api)
+- [hipchat](#hipchat)
 
 Bonus
 
@@ -340,6 +341,10 @@ Default: 30s connect timeout, 80s read timeout
 Not configurable at the moment.
 
 Default: 10s connect timeout, no read timeout
+
+### hipchat
+
+Not configurable at the moment, and no timeout by default.
 
 ## Don’t see a library you use?
 
