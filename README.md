@@ -72,7 +72,7 @@ production:
   connect_timeout: 1
 ```
 
-Raises `PG::ConnectionBad`.
+Raises `PG::ConnectionBad`
 
 #### `mysql2` adapter
 
@@ -89,7 +89,7 @@ production:
   write_timeout: 1
 ```
 
-Raises `Mysql2::Error`.
+Raises `Mysql2::Error`
 
 ### pg
 
@@ -97,7 +97,7 @@ Raises `Mysql2::Error`.
 PG.connect(connect_timeout: 1, ...)
 ```
 
-Raises `PG::ConnectionBad`.
+Raises `PG::ConnectionBad`
 
 ### mysql2
 
@@ -105,7 +105,7 @@ Raises `PG::ConnectionBad`.
 Mysql2::Client.new(connect_timeout: 1, read_timeout: 1, write_timeout: 1, ...)
 ```
 
-Raises `Mysql2::Error`.
+Raises `Mysql2::Error`
 
 ### dalli
 
@@ -115,7 +115,7 @@ Dalli::Client.new(host, socket_timeout: 1, ...)
 
 Default: 0.5s
 
-Raises `Dalli::RingError`.
+Raises `Dalli::RingError`
 
 ### redis
 
@@ -123,7 +123,7 @@ Raises `Dalli::RingError`.
 Redis.new(connect_timeout: 1, timeout: 1, ...)
 ```
 
-Raises:
+Raises
 
 - `Redis::CannotConnectError` on connect timeout
 - `Redis::TimeoutError` on read timeout
@@ -134,9 +134,9 @@ Raises:
 Mongo::Client.new([host], socket_timeout: 1, server_selection_timeout: 1, ...)
 ```
 
-Raises `Mongo::Error::NoServerAvailable` on connect timeout.
+Raises `Mongo::Error::NoServerAvailable` on connect timeout
 
-TODO: read timeout
+TODO read timeout
 
 ### bunny
 
@@ -144,9 +144,9 @@ TODO: read timeout
 Bunny.new(connection_timeout: 1, ...)
 ```
 
-Raises `Bunny::TCPConnectionFailedForAllHosts` on connect timeout.
+Raises `Bunny::TCPConnectionFailedForAllHosts` on connect timeout
 
-TODO: read timeout
+TODO read timeout
 
 ### elasticsearch
 
@@ -167,7 +167,7 @@ Searchkick.timeout = 1
 
 Default: 10s
 
-Raises same exceptions as [elasticsearch](#elasticsearch).
+Raises same exceptions as [elasticsearch](#elasticsearch)
 
 ## HTTP Clients
 
@@ -179,7 +179,7 @@ Net::HTTP.start(host, port, open_timeout: 1, read_timeout: 1) do
 end
 ```
 
-Raises:
+Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
@@ -190,7 +190,7 @@ Raises:
 open(url, open_timeout: 1, read_timeout: 1)
 ```
 
-Raises:
+Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
@@ -201,7 +201,7 @@ Raises:
 HTTP.timeout(connect: 1, read: 1, write: 1).get(url)
 ```
 
-Raises `HTTP::TimeoutError`.
+Raises `HTTP::TimeoutError`
 
 ### httparty
 
@@ -209,7 +209,7 @@ Raises `HTTP::TimeoutError`.
 HTTParty.get(url, timeout: 1)
 ```
 
-Raises:
+Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
@@ -224,7 +224,7 @@ client.send_timeout = 1
 client.get(url)
 ```
 
-Raises:
+Raises
 
 - `HTTPClient::ConnectTimeoutError` on connect timeout
 - `HTTPClient::ReceiveTimeoutError` on read timeout
@@ -235,7 +235,7 @@ Raises:
 RestClient::Request.execute(method: :get, url: url, open_timeout: 1, timeout: 1)
 ```
 
-Raises `RestClient::RequestTimeout`.
+Raises `RestClient::RequestTimeout`
 
 ### faraday
 
@@ -246,7 +246,7 @@ Faraday.get(url) do |req|
 end
 ```
 
-Raises:
+Raises
 
 - `Faraday::ConnectionFailed` on connect timeout
 - `Faraday::TimeoutError` on read timeout
@@ -260,7 +260,7 @@ curl.timeout = 1
 curl.perform
 ```
 
-Raises `Curl::Err::TimeoutError`.
+Raises `Curl::Err::TimeoutError`
 
 ### typhoeus
 
@@ -268,7 +268,7 @@ Raises `Curl::Err::TimeoutError`.
 response = Typhoeus.get(url, connecttimeout: 1, timeout: 1)
 ```
 
-No exception is raised. Check for a timeout with:
+No exception is raised. Check for a timeout with
 
 ```ruby
 response.timed_out?
@@ -301,9 +301,9 @@ Rack::Timeout.timeout = 5
 
 Default: 15s
 
-Raises `Rack::Timeout::RequestTimeoutError` or `Rack::Timeout::RequestExpiryError`.
+Raises `Rack::Timeout::RequestTimeoutError` or `Rack::Timeout::RequestExpiryError`
 
-[Read more here](https://github.com/heroku/rack-timeout#the-rabbit-hole).
+[Read more here](https://github.com/heroku/rack-timeout#the-rabbit-hole)
 
 ### slowpoke
 
@@ -313,7 +313,7 @@ Slowpoke.timeout = 5
 
 Default: 15s
 
-Raises same exceptions as [rack-timeout](#rack-timeout).
+Raises same exceptions as [rack-timeout](#rack-timeout)
 
 ## External Services
 
@@ -323,13 +323,13 @@ Raises same exceptions as [rack-timeout](#rack-timeout).
 Geocoder.configure(timeout: 1, ...)
 ```
 
-No exception is raised by default. To raise exceptions, use:
+No exception is raised by default. To raise exceptions, use
 
 ```ruby
 Geocoder.configure(timeout: 1, always_raise: :all, ...)
 ```
 
-Raises `Timeout::Error`.
+Raises `Timeout::Error`
 
 ### twilio-ruby
 
@@ -339,7 +339,7 @@ Twilio::REST::Client.new(account_sid, auth_token, timeout: 1)
 
 Default: 30s
 
-Raises:
+Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
@@ -350,14 +350,14 @@ Raises:
 Koala.http_service.http_options = {request: {open_timeout: 1, timeout: 1}}
 ```
 
-Raises:
+Raises
 
 - `Faraday::ConnectionFailed` on connect timeout
 - `Faraday::TimeoutError` on read timeout
 
 ### twitter
 
-Not configurable at the moment, and no timeout by default.
+Not configurable at the moment, and no timeout by default
 
 ### stripe
 
@@ -370,11 +370,11 @@ Stripe.read_timeout = 1
 
 Default: 30s connect timeout, 80s read timeout
 
-Raises `Stripe::APIConnectionError`.
+Raises `Stripe::APIConnectionError`
 
 ### zendesk_api
 
-Not configurable at the moment.
+Not configurable at the moment
 
 Default: 10s connect timeout, no read timeout
 
@@ -384,14 +384,14 @@ Default: 10s connect timeout, no read timeout
 [HipChat::Client, HipChat::Room, HipChat::User].each { |c| c.default_timeout(1) }
 ```
 
-Raises:
+Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
 
 ### firebase
 
-No official support yet, but this does the job.
+No official support yet, but this does the job
 
 ```ruby
 firebase = Firebase::Client.new(url)
@@ -400,7 +400,7 @@ firebase.request.instance_variable_get(:@client).receive_timeout = 1
 firebase.request.instance_variable_get(:@client).send_timeout = 1
 ```
 
-Raises:
+Raises
 
 - `HTTPClient::ConnectTimeoutError` on connect timeout
 - `HTTPClient::ReceiveTimeoutError` on read timeout
@@ -411,19 +411,19 @@ Raises:
 
 ## Rescuing Exceptions
 
-Take advantage of inheritance. Instead of:
+Take advantage of inheritance. Instead of
 
 ```ruby
 rescue Net::OpenTimeout, Net::ReadTimeout
 ```
 
-you can do:
+you can do
 
 ```ruby
 rescue Timeout::Error
 ```
 
-Use:
+Use
 
 - `Timeout::Error` for both `Net::OpenTimeout` and `Net::ReadTimeout`
 - `Faraday::ClientError` for both `Faraday::ConnectionFailed` and `Faraday::TimeoutError`
@@ -453,7 +453,7 @@ rake
 
 ## Bonus: PostgreSQL Statement Timeouts
 
-Prevent single queries from taking up all of your database’s resources. Set a [statement timeout](http://www.postgresql.org/docs/9.4/static/runtime-config-client.html#GUC-STATEMENT-TIMEOUT) in your `config/database.yml`:
+Prevent single queries from taking up all of your database’s resources. Set a [statement timeout](http://www.postgresql.org/docs/9.4/static/runtime-config-client.html#GUC-STATEMENT-TIMEOUT) in your `config/database.yml`
 
 ```yml
 production:
@@ -461,13 +461,13 @@ production:
     statement_timeout: 250 # ms
 ```
 
-or set it on your database role:
+or set it on your database role
 
 ```sql
 ALTER ROLE myuser SET statement_timeout = 250;
 ```
 
-Test statement timeouts with:
+Test statement timeouts with
 
 ```sql
 SELECT pg_sleep(30);
