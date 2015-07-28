@@ -361,9 +361,16 @@ Not configurable at the moment, and no timeout by default.
 
 ### stripe
 
-[Not configurable](https://github.com/stripe/stripe-ruby/pull/267) at the moment.
+[Master branch only](https://github.com/stripe/stripe-ruby/pull/267)
+
+```ruby
+Stripe.open_timeout = 1
+Stripe.read_timeout = 1
+```
 
 Default: 30s connect timeout, 80s read timeout
+
+Raises `Stripe::APIConnectionError`.
 
 ### zendesk_api
 

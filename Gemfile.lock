@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/stripe/stripe-ruby.git
+  revision: 4c0006f1306db7390295aaa841913c7bafffe48d
+  specs:
+    stripe (1.23.0)
+      json (~> 1.8.1)
+      rest-client (~> 1.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -125,5 +133,6 @@ DEPENDENCIES
   redis
   rest-client
   searchkick
+  stripe!
   twilio-ruby
   typhoeus
