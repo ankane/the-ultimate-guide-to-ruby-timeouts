@@ -244,6 +244,10 @@ Faraday.get(url) do |req|
   req.options.timeout = 1
   req.options.open_timeout = 1
 end
+
+Faraday.new(url, request: { timeout: 1, open_timeout: 1 }) do |faraday|
+  # ...
+end
 ```
 
 Raises
