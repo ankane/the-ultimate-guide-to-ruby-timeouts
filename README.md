@@ -14,7 +14,7 @@ Data Stores
 - [mysql2](#mysql2)
 - [dalli](#dalli)
 - [redis](#redis)
-- [connection_pool](#connection-pool)
+- [connection_pool](#connection_pool)
 - [mongo](#mongo)
 - [bunny](#bunny)
 - [elasticsearch](#elasticsearch)
