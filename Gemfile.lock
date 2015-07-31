@@ -68,6 +68,8 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     httpclient (2.6.0.1)
+    httpi (2.4.1)
+      rack
     i18n (0.7.0)
     json (1.8.3)
     jwt (1.5.1)
@@ -97,6 +99,7 @@ GEM
     optionable (0.2.0)
     origin (2.1.1)
     pg (0.18.2)
+    rack (1.6.4)
     rake (10.4.2)
     redis (3.2.1)
     rest-client (1.8.0)
@@ -138,6 +141,7 @@ DEPENDENCIES
   http
   httparty
   httpclient
+  httpi
   koala
   minitest
   mongo

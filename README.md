@@ -36,6 +36,7 @@ HTTP Clients
 - [http](#http)
 - [httparty](#httparty)
 - [httpclient](#httpclient)
+- [httpi](#httpi)
 - [rest-client](#rest-client)
 - [faraday](#faraday)
 - [curb](#curb)
@@ -291,6 +292,14 @@ Raises
 
 - `HTTPClient::ConnectTimeoutError` on connect timeout
 - `HTTPClient::ReceiveTimeoutError` on read timeout
+
+### httpi
+
+```ruby
+HTTPI::Request.new(url: url, open_timeout: 1)
+```
+
+Raises same errors as underlying client
 
 ### rest-client
 
