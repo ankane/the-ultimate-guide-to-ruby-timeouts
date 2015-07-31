@@ -58,6 +58,7 @@ Rack Middleware
 External Services
 
 - [firebase](#firebase)
+- [gibbon](#gibbon)
 - [geocoder](#geocoder)
 - [hipchat](#hipchat)
 - [koala](#koala)
@@ -447,6 +448,14 @@ Raises
 
 - `HTTPClient::ConnectTimeoutError` on connect timeout
 - `HTTPClient::ReceiveTimeoutError` on read timeout
+
+### gibbon
+
+```ruby
+Gibbon::Request.new(timeout: 1, ...)
+```
+
+Raises `Gibbon::MailChimpError`
 
 ### geocoder
 
