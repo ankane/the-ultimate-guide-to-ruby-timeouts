@@ -63,7 +63,7 @@ Bonus
 #### `postgres` adapter
 
 ```ruby
-ActiveRecord::Base.establish_connection(connect_timeout: 1, ...)
+ActiveRecord::Base.establish_connection(connect_timeout: 1, checkout_timeout: 1, ...)
 ```
 
 or in `config/database.yml`
@@ -71,14 +71,18 @@ or in `config/database.yml`
 ```yaml
 production:
   connect_timeout: 1
+  checkout_timeout: 1
 ```
 
-Raises `PG::ConnectionBad`
+Raises
+
+- `PG::ConnectionBad` on connect and read timeouts
+- `ActiveRecord::ConnectionTimeoutError` on checkout timeout
 
 #### `mysql2` adapter
 
 ```ruby
-ActiveRecord::Base.establish_connection(connect_timeout: 1, read_timeout: 1, write_timeout: 1, ...)
+ActiveRecord::Base.establish_connection(connect_timeout: 1, read_timeout: 1, write_timeout: 1, checkout_timeout: 1, ...)
 ```
 
 or in `config/database.yml`
@@ -88,9 +92,13 @@ production:
   connect_timeout: 1
   read_timeout: 1
   write_timeout: 1
+  checkout_timeout: 1
 ```
 
-Raises `Mysql2::Error`
+Raises
+
+- `Mysql2::Error` on connect and read timeouts
+- `ActiveRecord::ConnectionTimeoutError` on checkout timeout
 
 ### sequel
 
@@ -499,10 +507,6 @@ Test statement timeouts with
 ```sql
 SELECT pg_sleep(30);
 ```
-
-## TODO
-
-- checkout timeouts for pools
 
 ## And lastly...
 

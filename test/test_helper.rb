@@ -16,6 +16,17 @@ class Minitest::Test
     assert_operator time, :<=, timeout + 2
   end
 
+  def assert_threaded_timeout(exception = UnknownTimeoutError, options = {})
+    Thread.abort_on_exception = true
+    threads = []
+    2.times do |i|
+      threads << Thread.new { yield }
+    end
+    assert_timeout(exception, options) do
+      threads.each(&:join)
+    end
+  end
+
   def connect_host
     "10.255.255.1"
   end
