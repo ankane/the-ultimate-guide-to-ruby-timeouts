@@ -6,6 +6,12 @@ GIT
       json (~> 1.8.1)
       rest-client (~> 1.4)
 
+PATH
+  remote: ~/forks/mail
+  specs:
+    mail (2.6.3.edge)
+      mime-types (>= 1.16, < 3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -173,6 +179,7 @@ DEPENDENCIES
   httpclient
   httpi
   koala
+  mail!
   mechanize
   minitest
   mongo
