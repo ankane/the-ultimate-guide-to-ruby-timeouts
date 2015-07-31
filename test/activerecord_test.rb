@@ -34,4 +34,11 @@ class ActiveRecordTest < Minitest::Test
       ActiveRecord::Base.connection.execute("SELECT sleep(2)")
     end
   end
+
+  def test_statement_postgresql
+    ActiveRecord::Base.establish_connection adapter: "postgresql", database: "ultimate_test", variables: {statement_timeout: 250}
+    assert_timeout(ActiveRecord::StatementInvalid, timeout: 0.250) do
+      ActiveRecord::Base.connection.execute("SELECT pg_sleep(1)")
+    end
+  end
 end
