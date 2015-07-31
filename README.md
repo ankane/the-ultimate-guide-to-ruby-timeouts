@@ -14,6 +14,7 @@ Data Stores
 - [mysql2](#mysql2)
 - [dalli](#dalli)
 - [redis](#redis)
+- [connection_pool](#connection-pool)
 - [mongo](#mongo)
 - [bunny](#bunny)
 - [elasticsearch](#elasticsearch)
@@ -154,6 +155,14 @@ Raises
 
 - `Redis::CannotConnectError` on connect timeout
 - `Redis::TimeoutError` on read timeout
+
+### connection_pool
+
+```ruby
+ConnectionPool.new(timeout: 1) { ... }
+```
+
+Raises `Timeout::Error`
 
 ### mongo
 

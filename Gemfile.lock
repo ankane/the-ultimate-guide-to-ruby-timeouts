@@ -29,6 +29,7 @@ GEM
     builder (3.2.2)
     bunny (2.0.0)
       amq-protocol (>= 1.9.2)
+    connection_pool (2.2.0)
     curb (0.8.8)
     dalli (2.7.4)
     domain_name (0.5.24)
@@ -115,6 +116,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   bunny
+  connection_pool
   curb
   dalli
   elasticsearch
