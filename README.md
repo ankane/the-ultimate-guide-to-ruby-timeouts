@@ -40,6 +40,7 @@ HTTP Clients
 - [httpi](#httpi)
 - [net/http](#nethttp)
 - [open-uri](#open-uri)
+- [patron](#patron)
 - [rest-client](#rest-client)
 - [typhoeus](#typhoeus)
 
@@ -345,6 +346,16 @@ Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
+
+### patron
+
+```ruby
+sess = Patron::Session.new
+sess.connect_timeout = 1
+sess.timeout = 1
+```
+
+Raises `Patron::TimeoutError`
 
 ### rest-client
 

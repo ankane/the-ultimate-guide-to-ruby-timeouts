@@ -108,6 +108,7 @@ GEM
     netrc (0.10.3)
     optionable (0.2.0)
     origin (2.1.1)
+    patron (0.4.20)
     pg (0.18.2)
     rack (1.6.4)
     rake (10.4.2)
@@ -158,6 +159,7 @@ DEPENDENCIES
   mongo
   mongoid
   mysql2
+  patron
   pg
   rake
   redis
