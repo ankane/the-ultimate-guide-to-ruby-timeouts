@@ -7,8 +7,8 @@ Here’s how to add timeouts for popular Ruby gems. **[All have been tested](tes
 ## Common Types
 
 - **connect (or open)** - time to open the connection
-- **read (or receive)** - time to receive data after connection is open
-- **write (or send)** - time to send data after connection is open
+- **read (or receive)** - time to receive data after connected
+- **write (or send)** - time to send data after connected
 - **checkout** - time to checkout a connection from the pool
 - **statement** - time to execute a database statement
 
