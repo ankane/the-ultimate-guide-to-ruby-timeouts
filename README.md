@@ -24,6 +24,7 @@ Data Stores
 - [redis](#redis)
 - [connection_pool](#connection_pool)
 - [mongo](#mongo)
+- [mongoid](#mongoid)
 - [bunny](#bunny)
 - [elasticsearch](#elasticsearch)
 - [searchkick](#searchkick)
@@ -183,6 +184,20 @@ Mongo::Client.new([host], socket_timeout: 1, server_selection_timeout: 1, ...)
 ```
 
 Raises `Mongo::Error::NoServerAvailable` on connect timeout
+
+TODO read timeout
+
+### mongoid
+
+```yml
+production:
+  clients:
+    default:
+      options:
+        timeout: 1
+```
+
+Raises `Moped::Errors::ConnectionFailure` on connect timeout
 
 TODO read timeout
 

@@ -80,11 +80,22 @@ GEM
     minitest (5.7.0)
     mongo (2.0.6)
       bson (~> 3.0)
+    mongoid (4.0.2)
+      activemodel (~> 4.0)
+      moped (~> 2.0.0)
+      origin (~> 2.1)
+      tzinfo (>= 0.3.37)
+    moped (2.0.6)
+      bson (~> 3.0)
+      connection_pool (~> 2.0)
+      optionable (~> 0.2.0)
     multi_json (1.11.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     mysql2 (0.3.19)
     netrc (0.10.3)
+    optionable (0.2.0)
+    origin (2.1.1)
     pg (0.18.2)
     rake (10.4.2)
     redis (3.2.1)
@@ -130,6 +141,7 @@ DEPENDENCIES
   koala
   minitest
   mongo
+  mongoid
   mysql2
   pg
   rake
