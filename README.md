@@ -66,6 +66,7 @@ External Services
 - [mail](#mail)
 - [mechanize](#mechanize)
 - [net/smtp](#netsmtp)
+- [omniauth-oauth2](#omniauth-oauth2)
 - [stripe](#stripe)
 - [twilio-ruby](#twilio-ruby)
 - [twitter](#twitter)
@@ -531,6 +532,10 @@ Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
+
+### omniauth-oauth2
+
+[Not configurable at the moment](https://github.com/intridea/omniauth-oauth2/issues/27), and no timeout by default
 
 ### stripe
 
