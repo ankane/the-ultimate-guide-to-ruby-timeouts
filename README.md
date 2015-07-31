@@ -241,11 +241,15 @@ Raises `RestClient::RequestTimeout`
 
 ```ruby
 Faraday.get(url) do |req|
-  req.options.timeout = 1
   req.options.open_timeout = 1
+  req.options.timeout = 1
 end
+```
 
-Faraday.new(url, request: { timeout: 1, open_timeout: 1 }) do |faraday|
+or
+
+```
+Faraday.new(url, request: {open_timeout: 1, timeout: 1}) do |faraday|
   # ...
 end
 ```
