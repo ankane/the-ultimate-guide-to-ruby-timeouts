@@ -396,7 +396,23 @@ response.timed_out?
 
 ### puma
 
-There’s [no timeout option](https://github.com/puma/puma/issues/160). Use [Rack middleware](#rack-middleware) instead.
+```ruby
+# config/puma.rb
+worker_timeout 15
+```
+
+Default: 30s
+
+This kills and respawns the worker process. Note that this is for the worker and not threads. This isn't a [request timeout](https://github.com/puma/puma/issues/160) either. Use [Rack middleware](#rack-middleware) for request timeouts.
+
+```ruby
+# config/puma.rb
+worker_shutdown_timeout 8
+```
+
+Default: 60s
+
+This causes Puma to send a SIGKILL signal to a worker if it hasn't shutdown within the specified time period after having received a SIGTERM signal.
 
 ### unicorn
 
