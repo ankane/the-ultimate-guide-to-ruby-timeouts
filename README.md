@@ -94,21 +94,21 @@ Raises `Mysql2::Error`
 
 ### sequel
 
-```ruby
-Sequel.connect(pool_timeout: 1, ...)
-```
-
 #### `postgres` adapter
 
 ```ruby
 Sequel.connect(adapter: "postgres", connect_timeout: 1, ...)
 ```
 
+Raises `Sequel::DatabaseConnectionError`
+
 #### `mysql2` adapter
 
 ```ruby
 Sequel.connect(adapter: "mysql2", timeout: 1, read_timeout: 1, connect_timeout: 1, ...)
 ```
+
+Raises `Sequel::DatabaseConnectionError`
 
 ### pg
 
@@ -499,6 +499,10 @@ Test statement timeouts with
 ```sql
 SELECT pg_sleep(30);
 ```
+
+## TODO
+
+- checkout timeouts for pools
 
 ## And lastly...
 
