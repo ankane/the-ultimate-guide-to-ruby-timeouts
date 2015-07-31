@@ -38,6 +38,7 @@ HTTP Clients
 - [httpclient](#httpclient)
 - [httpi](#httpi)
 - [rest-client](#rest-client)
+- [em-http-client](#em-http-client)
 - [faraday](#faraday)
 - [curb](#curb)
 - [typhoeus](#typhoeus)
@@ -308,6 +309,17 @@ RestClient::Request.execute(method: :get, url: url, open_timeout: 1, timeout: 1)
 ```
 
 Raises `RestClient::RequestTimeout`
+
+### em-http-client
+
+```ruby
+EventMachine.run do
+  http = EventMachine::HttpRequest.new(url, connect_timeout: 1, inactivity_timeout: 1).get
+  http.errback  { http.error }
+end
+```
+
+No exception is raised, but `http.error` is set to `Errno::ETIMEDOUT` in `http.errback`.
 
 ### faraday
 
