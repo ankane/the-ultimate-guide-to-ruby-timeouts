@@ -33,6 +33,7 @@ HTTP Clients
 
 - [curb](#curb)
 - [em-http-client](#em-http-client)
+- [excon](#excon)
 - [faraday](#faraday)
 - [http](#http)
 - [httparty](#httparty)
@@ -258,6 +259,14 @@ end
 ```
 
 No exception is raised, but `http.error` is set to `Errno::ETIMEDOUT` in `http.errback`.
+
+### excon
+
+```ruby
+Excon.get(url, connect_timeout: 1, read_timeout: 1, write_timeout: 1)
+```
+
+Raises `Excon::Errors::Timeout`
 
 ### faraday
 

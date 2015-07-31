@@ -54,6 +54,7 @@ GEM
     ethon (0.7.4)
       ffi (>= 1.3.0)
     eventmachine (1.0.7)
+    excon (0.45.4)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.10)
@@ -146,6 +147,7 @@ DEPENDENCIES
   dalli
   elasticsearch
   em-http-request
+  excon
   faraday
   firebase
   geocoder
