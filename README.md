@@ -114,7 +114,7 @@ Bonus
 - #### postgres adapter
 
   ```ruby
-  Sequel.connect(adapter: "postgres", connect_timeout: 1, pool_timeout: 1, ...)
+  Sequel.connect(connect_timeout: 1, pool_timeout: 1, ...)
   ```
 
   - `Sequel::DatabaseConnectionError` on connect and read timeouts
@@ -123,7 +123,7 @@ Bonus
 - #### mysql2 adapter
 
   ```ruby
-  Sequel.connect(adapter: "mysql2", timeout: 1, read_timeout: 1, connect_timeout: 1, pool_timeout: 1, ...)
+  Sequel.connect(timeout: 1, read_timeout: 1, connect_timeout: 1, pool_timeout: 1, ...)
   ```
 
   Raises
