@@ -61,6 +61,7 @@ External Services
 - [geocoder](#geocoder)
 - [hipchat](#hipchat)
 - [koala](#koala)
+- [mechanize](#mechanize)
 - [stripe](#stripe)
 - [twilio-ruby](#twilio-ruby)
 - [twitter](#twitter)
@@ -480,6 +481,19 @@ Raises
 
 - `Faraday::ConnectionFailed` on connect timeout
 - `Faraday::TimeoutError` on read timeout
+
+### mechanize
+
+```ruby
+agent = Mechanize.new
+agent.open_timeout = 1
+agent.read_timeout = 1
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::HTTP::Persistent::Error` on read timeout
 
 ### stripe
 
