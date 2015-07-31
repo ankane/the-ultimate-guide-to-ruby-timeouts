@@ -433,6 +433,14 @@ Raises same exceptions as [rack-timeout](#rack-timeout)
 
 ## External Services
 
+### bitly
+
+```ruby
+Bitly.new(username, api_key, timeout)
+```
+
+Raises `BitlyTimeout`
+
 ### firebase
 
 No official support yet, but this does the job
