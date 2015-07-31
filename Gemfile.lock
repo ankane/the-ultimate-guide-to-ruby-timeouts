@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/stripe/stripe-ruby.git
-  revision: 4c0006f1306db7390295aaa841913c7bafffe48d
+  revision: 8ce205c7e2ca8a52d598ca4523d1dda828e48f1b
   specs:
     stripe (1.23.0)
       json (~> 1.8.1)
@@ -25,7 +25,7 @@ GEM
     addressable (2.3.8)
     amq-protocol (1.9.2)
     arel (6.0.2)
-    bson (3.2.0)
+    bson (3.2.1)
     builder (3.2.2)
     bunny (2.0.0)
       amq-protocol (>= 1.9.2)
@@ -82,7 +82,7 @@ GEM
     multi_json (1.11.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    mysql2 (0.3.18)
+    mysql2 (0.3.19)
     netrc (0.10.3)
     pg (0.18.2)
     rake (10.4.2)
@@ -95,6 +95,7 @@ GEM
       activemodel
       elasticsearch (>= 1)
       hashie
+    sequel (4.24.0)
     thread_safe (0.3.5)
     twilio-ruby (4.2.1)
       builder (>= 2.1.2)
@@ -133,6 +134,7 @@ DEPENDENCIES
   redis
   rest-client
   searchkick
+  sequel
   stripe!
   twilio-ruby
   typhoeus
