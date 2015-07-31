@@ -62,6 +62,7 @@ External Services
 - [hipchat](#hipchat)
 - [koala](#koala)
 - [mechanize](#mechanize)
+- [net/smtp](#netsmtp)
 - [stripe](#stripe)
 - [twilio-ruby](#twilio-ruby)
 - [twitter](#twitter)
@@ -494,6 +495,19 @@ Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::HTTP::Persistent::Error` on read timeout
+
+### net/smtp
+
+```ruby
+smtp = Net::SMTP.new(host, 25)
+smtp.open_timeout = 1
+smtp.read_timeout = 1
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
 
 ### stripe
 
