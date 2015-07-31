@@ -57,6 +57,7 @@ Rack Middleware
 
 External Services
 
+- [bitly](#bitly)
 - [firebase](#firebase)
 - [gibbon](#gibbon)
 - [geocoder](#geocoder)
