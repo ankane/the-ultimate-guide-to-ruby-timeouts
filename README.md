@@ -9,6 +9,7 @@ Here’s how to add timeouts for popular Ruby gems. **[All have been tested](tes
 Data Stores
 
 - [activerecord](#activerecord)
+- [sequel](#sequel)
 - [pg](#pg)
 - [mysql2](#mysql2)
 - [dalli](#dalli)
@@ -90,6 +91,24 @@ production:
 ```
 
 Raises `Mysql2::Error`
+
+### sequel
+
+```ruby
+Sequel.connect(pool_timeout: 1, ...)
+```
+
+#### `postgres` adapter
+
+```ruby
+Sequel.connect(adapter: "postgres", connect_timeout: 1, ...)
+```
+
+#### `mysql2` adapter
+
+```ruby
+Sequel.connect(adapter: "mysql2", timeout: 1, read_timeout: 1, connect_timeout: 1, ...)
+```
 
 ### pg
 
