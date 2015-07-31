@@ -4,6 +4,14 @@ An unresponsive service is worse than a down one. It can tie up your entire syst
 
 Here’s how to add timeouts for popular Ruby gems. **[All have been tested](test)**. You should [avoid Ruby’s `Timeout` module](http://www.mikeperham.com/2015/05/08/timeout-rubys-most-dangerous-api/). The default is no timeout, unless otherwise specified. Enjoy!
 
+## Common Types
+
+- **connect (or open)** - time to open the connection
+- **read (or receive)** - time to receive data after connection is open
+- **write (or send)** - time to send data after connection is open
+- **checkout** - time to checkout a connection from a pool
+- **statement** - time to execute a database statement
+
 ## Gems
 
 Data Stores
