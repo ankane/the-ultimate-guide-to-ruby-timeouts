@@ -16,12 +16,11 @@ class Minitest::Test
   end
 
   def assert_threaded_timeout(exception = UnknownTimeoutError, timeout: 1)
-    Thread.abort_on_exception = true
     threads = []
     2.times do |i|
       threads << Thread.new { yield }
     end
-    assert_timeout(exception, options) do
+    assert_timeout(exception, timeout: timeout) do
       threads.each(&:join)
     end
   end
