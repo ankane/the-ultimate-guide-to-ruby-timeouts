@@ -69,67 +69,67 @@ Bonus
 
 ### activerecord
 
-#### `postgres` adapter
+- #### postgres adapter
 
-```ruby
-ActiveRecord::Base.establish_connection(connect_timeout: 1, checkout_timeout: 1, ...)
-```
+  ```ruby
+  ActiveRecord::Base.establish_connection(connect_timeout: 1, checkout_timeout: 1, ...)
+  ```
 
-or in `config/database.yml`
+  or in `config/database.yml`
 
-```yaml
-production:
-  connect_timeout: 1
-  checkout_timeout: 1
-```
+  ```yaml
+  production:
+    connect_timeout: 1
+    checkout_timeout: 1
+  ```
 
-Raises
+  Raises
 
-- `PG::ConnectionBad` on connect and read timeouts
-- `ActiveRecord::ConnectionTimeoutError` on checkout timeout
+  - `PG::ConnectionBad` on connect and read timeouts
+  - `ActiveRecord::ConnectionTimeoutError` on checkout timeout
 
-#### `mysql2` adapter
+- #### mysql2 adapter
 
-```ruby
-ActiveRecord::Base.establish_connection(connect_timeout: 1, read_timeout: 1, write_timeout: 1, checkout_timeout: 1, ...)
-```
+  ```ruby
+  ActiveRecord::Base.establish_connection(connect_timeout: 1, read_timeout: 1, write_timeout: 1, checkout_timeout: 1, ...)
+  ```
 
-or in `config/database.yml`
+  or in `config/database.yml`
 
-```yaml
-production:
-  connect_timeout: 1
-  read_timeout: 1
-  write_timeout: 1
-  checkout_timeout: 1
-```
+  ```yaml
+  production:
+    connect_timeout: 1
+    read_timeout: 1
+    write_timeout: 1
+    checkout_timeout: 1
+  ```
 
-Raises
+  Raises
 
-- `Mysql2::Error` on connect and read timeouts
-- `ActiveRecord::ConnectionTimeoutError` on checkout timeout
+  - `Mysql2::Error` on connect and read timeouts
+  - `ActiveRecord::ConnectionTimeoutError` on checkout timeout
 
 ### sequel
 
-#### `postgres` adapter
+- #### postgres adapter
 
-```ruby
-Sequel.connect(adapter: "postgres", connect_timeout: 1, pool_timeout: 1, ...)
-```
+  ```ruby
+  Sequel.connect(adapter: "postgres", connect_timeout: 1, pool_timeout: 1, ...)
+  ```
 
-- `Sequel::DatabaseConnectionError` on connect and read timeouts
-- `Sequel::PoolTimeout` on checkout timeout
+  - `Sequel::DatabaseConnectionError` on connect and read timeouts
+  - `Sequel::PoolTimeout` on checkout timeout
 
-#### `mysql2` adapter
+- #### mysql2 adapter
 
-```ruby
-Sequel.connect(adapter: "mysql2", timeout: 1, read_timeout: 1, connect_timeout: 1, pool_timeout: 1, ...)
-```
+  ```ruby
+  Sequel.connect(adapter: "mysql2", timeout: 1, read_timeout: 1, connect_timeout: 1, pool_timeout: 1, ...)
+  ```
 
-Raises
+  Raises
 
-- `Sequel::DatabaseConnectionError` on connect and read timeouts
-- `Sequel::PoolTimeout` on checkout timeout
+  - `Sequel::DatabaseConnectionError` on connect and read timeouts
+  - `Sequel::PoolTimeout` on checkout timeout
 
 ### pg
 
