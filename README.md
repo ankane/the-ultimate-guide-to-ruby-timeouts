@@ -17,36 +17,36 @@ Here’s how to add timeouts for popular Ruby gems. **[All have been tested](tes
 Data Stores
 
 - [activerecord](#activerecord)
-- [sequel](#sequel)
-- [pg](#pg)
-- [mysql2](#mysql2)
-- [dalli](#dalli)
-- [redis](#redis)
+- [bunny](#bunny)
 - [connection_pool](#connection_pool)
+- [dalli](#dalli)
+- [elasticsearch](#elasticsearch)
 - [mongo](#mongo)
 - [mongoid](#mongoid)
-- [bunny](#bunny)
-- [elasticsearch](#elasticsearch)
+- [mysql2](#mysql2)
+- [pg](#pg)
+- [redis](#redis)
 - [searchkick](#searchkick)
+- [sequel](#sequel)
 
 HTTP Clients
 
-- [net/http](#nethttp)
-- [open-uri](#open-uri)
+- [curb](#curb)
+- [em-http-client](#em-http-client)
+- [faraday](#faraday)
 - [http](#http)
 - [httparty](#httparty)
 - [httpclient](#httpclient)
 - [httpi](#httpi)
+- [net/http](#nethttp)
+- [open-uri](#open-uri)
 - [rest-client](#rest-client)
-- [em-http-client](#em-http-client)
-- [faraday](#faraday)
-- [curb](#curb)
 - [typhoeus](#typhoeus)
 
 Web Servers
 
-- [unicorn](#unicorn)
 - [puma](#puma)
+- [unicorn](#unicorn)
 
 Rack Middleware
 
@@ -55,14 +55,14 @@ Rack Middleware
 
 External Services
 
-- [geocoder](#geocoder)
-- [twilio-ruby](#twilio-ruby)
-- [koala](#koala)
-- [twitter](#twitter)
-- [stripe](#stripe)
-- [zendesk_api](#zendesk_api)
-- [hipchat](#hipchat)
 - [firebase](#firebase)
+- [geocoder](#geocoder)
+- [hipchat](#hipchat)
+- [koala](#koala)
+- [stripe](#stripe)
+- [twilio-ruby](#twilio-ruby)
+- [twitter](#twitter)
+- [zendesk_api](#zendesk_api)
 
 Bonus
 
@@ -112,43 +112,23 @@ Bonus
   - `Mysql2::Error` on connect and read timeouts
   - `ActiveRecord::ConnectionTimeoutError` on checkout timeout
 
-### sequel
-
-- #### postgres adapter
-
-  ```ruby
-  Sequel.connect(connect_timeout: 1, pool_timeout: 1, ...)
-  ```
-
-  - `Sequel::DatabaseConnectionError` on connect and read timeouts
-  - `Sequel::PoolTimeout` on checkout timeout
-
-- #### mysql2 adapter
-
-  ```ruby
-  Sequel.connect(timeout: 1, read_timeout: 1, connect_timeout: 1, pool_timeout: 1, ...)
-  ```
-
-  Raises
-
-  - `Sequel::DatabaseConnectionError` on connect and read timeouts
-  - `Sequel::PoolTimeout` on checkout timeout
-
-### pg
+### bunny
 
 ```ruby
-PG.connect(connect_timeout: 1, ...)
+Bunny.new(connection_timeout: 1, ...)
 ```
 
-Raises `PG::ConnectionBad`
+Raises `Bunny::TCPConnectionFailedForAllHosts` on connect timeout
 
-### mysql2
+TODO read timeout
+
+### connection_pool
 
 ```ruby
-Mysql2::Client.new(connect_timeout: 1, read_timeout: 1, write_timeout: 1, ...)
+ConnectionPool.new(timeout: 1) { ... }
 ```
 
-Raises `Mysql2::Error`
+Raises `Timeout::Error`
 
 ### dalli
 
@@ -160,24 +140,16 @@ Default: 0.5s
 
 Raises `Dalli::RingError`
 
-### redis
+### elasticsearch
 
 ```ruby
-Redis.new(connect_timeout: 1, timeout: 1, ...)
+Elasticsearch::Client.new(transport_options: {request: {timeout: 1}}, ...)
 ```
 
 Raises
 
-- `Redis::CannotConnectError` on connect timeout
-- `Redis::TimeoutError` on read timeout
-
-### connection_pool
-
-```ruby
-ConnectionPool.new(timeout: 1) { ... }
-```
-
-Raises `Timeout::Error`
+- `Faraday::ConnectionFailed` on connect timeout
+- `Faraday::TimeoutError` on read timeout
 
 ### mongo
 
@@ -203,26 +175,32 @@ Raises `Moped::Errors::ConnectionFailure` on connect timeout
 
 TODO read timeout
 
-### bunny
+### mysql2
 
 ```ruby
-Bunny.new(connection_timeout: 1, ...)
+Mysql2::Client.new(connect_timeout: 1, read_timeout: 1, write_timeout: 1, ...)
 ```
 
-Raises `Bunny::TCPConnectionFailedForAllHosts` on connect timeout
+Raises `Mysql2::Error`
 
-TODO read timeout
-
-### elasticsearch
+### pg
 
 ```ruby
-Elasticsearch::Client.new(transport_options: {request: {timeout: 1}}, ...)
+PG.connect(connect_timeout: 1, ...)
+```
+
+Raises `PG::ConnectionBad`
+
+### redis
+
+```ruby
+Redis.new(connect_timeout: 1, timeout: 1, ...)
 ```
 
 Raises
 
-- `Faraday::ConnectionFailed` on connect timeout
-- `Faraday::TimeoutError` on read timeout
+- `Redis::CannotConnectError` on connect timeout
+- `Redis::TimeoutError` on read timeout
 
 ### searchkick
 
@@ -234,31 +212,73 @@ Default: 10s
 
 Raises same exceptions as [elasticsearch](#elasticsearch)
 
+### sequel
+
+- #### postgres adapter
+
+  ```ruby
+  Sequel.connect(connect_timeout: 1, pool_timeout: 1, ...)
+  ```
+
+  - `Sequel::DatabaseConnectionError` on connect and read timeouts
+  - `Sequel::PoolTimeout` on checkout timeout
+
+- #### mysql2 adapter
+
+  ```ruby
+  Sequel.connect(timeout: 1, read_timeout: 1, connect_timeout: 1, pool_timeout: 1, ...)
+  ```
+
+  Raises
+
+  - `Sequel::DatabaseConnectionError` on connect and read timeouts
+  - `Sequel::PoolTimeout` on checkout timeout
+
 ## HTTP Clients
 
-### net/http
+### curb
 
 ```ruby
-Net::HTTP.start(host, port, open_timeout: 1, read_timeout: 1) do
+curl = Curl::Easy.new(url)
+curl.connect_timeout = 1
+curl.timeout = 1
+curl.perform
+```
+
+Raises `Curl::Err::TimeoutError`
+
+### em-http-client
+
+```ruby
+EventMachine.run do
+  http = EventMachine::HttpRequest.new(url, connect_timeout: 1, inactivity_timeout: 1).get
+  http.errback  { http.error }
+end
+```
+
+No exception is raised, but `http.error` is set to `Errno::ETIMEDOUT` in `http.errback`.
+
+### faraday
+
+```ruby
+Faraday.get(url) do |req|
+  req.options.open_timeout = 1
+  req.options.timeout = 1
+end
+```
+
+or
+
+```
+Faraday.new(url, request: {open_timeout: 1, timeout: 1}) do |faraday|
   # ...
 end
 ```
 
 Raises
 
-- `Net::OpenTimeout` on connect timeout
-- `Net::ReadTimeout` on read timeout
-
-### open-uri
-
-```ruby
-open(url, open_timeout: 1, read_timeout: 1)
-```
-
-Raises
-
-- `Net::OpenTimeout` on connect timeout
-- `Net::ReadTimeout` on read timeout
+- `Faraday::ConnectionFailed` on connect timeout
+- `Faraday::TimeoutError` on read timeout
 
 ### http
 
@@ -302,6 +322,30 @@ HTTPI::Request.new(url: url, open_timeout: 1)
 
 Raises same errors as underlying client
 
+### net/http
+
+```ruby
+Net::HTTP.start(host, port, open_timeout: 1, read_timeout: 1) do
+  # ...
+end
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
+
+### open-uri
+
+```ruby
+open(url, open_timeout: 1, read_timeout: 1)
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
+
 ### rest-client
 
 ```ruby
@@ -309,50 +353,6 @@ RestClient::Request.execute(method: :get, url: url, open_timeout: 1, timeout: 1)
 ```
 
 Raises `RestClient::RequestTimeout`
-
-### em-http-client
-
-```ruby
-EventMachine.run do
-  http = EventMachine::HttpRequest.new(url, connect_timeout: 1, inactivity_timeout: 1).get
-  http.errback  { http.error }
-end
-```
-
-No exception is raised, but `http.error` is set to `Errno::ETIMEDOUT` in `http.errback`.
-
-### faraday
-
-```ruby
-Faraday.get(url) do |req|
-  req.options.open_timeout = 1
-  req.options.timeout = 1
-end
-```
-
-or
-
-```
-Faraday.new(url, request: {open_timeout: 1, timeout: 1}) do |faraday|
-  # ...
-end
-```
-
-Raises
-
-- `Faraday::ConnectionFailed` on connect timeout
-- `Faraday::TimeoutError` on read timeout
-
-### curb
-
-```ruby
-curl = Curl::Easy.new(url)
-curl.connect_timeout = 1
-curl.timeout = 1
-curl.perform
-```
-
-Raises `Curl::Err::TimeoutError`
 
 ### typhoeus
 
@@ -368,6 +368,10 @@ response.timed_out?
 
 ## Web Servers
 
+### puma
+
+There’s [no timeout option](https://github.com/puma/puma/issues/160). Use [Rack middleware](#rack-middleware) instead.
+
 ### unicorn
 
 ```ruby
@@ -378,10 +382,6 @@ timeout 15
 This kills and respawns the worker process.
 
 It’s recommended to use this in addition to [Rack middleware](#rack-middleware).
-
-### puma
-
-There’s [no timeout option](https://github.com/puma/puma/issues/160). Use [Rack middleware](#rack-middleware) instead.
 
 ## Rack Middleware
 
@@ -409,6 +409,22 @@ Raises same exceptions as [rack-timeout](#rack-timeout)
 
 ## External Services
 
+### firebase
+
+No official support yet, but this does the job
+
+```ruby
+firebase = Firebase::Client.new(url)
+firebase.request.instance_variable_get(:@client).connect_timeout = 1
+firebase.request.instance_variable_get(:@client).receive_timeout = 1
+firebase.request.instance_variable_get(:@client).send_timeout = 1
+```
+
+Raises
+
+- `HTTPClient::ConnectTimeoutError` on connect timeout
+- `HTTPClient::ReceiveTimeoutError` on read timeout
+
 ### geocoder
 
 ```ruby
@@ -423,13 +439,11 @@ Geocoder.configure(timeout: 1, always_raise: :all, ...)
 
 Raises `Timeout::Error`
 
-### twilio-ruby
+### hipchat
 
 ```ruby
-Twilio::REST::Client.new(account_sid, auth_token, timeout: 1)
+[HipChat::Client, HipChat::Room, HipChat::User].each { |c| c.default_timeout(1) }
 ```
-
-Default: 30s
 
 Raises
 
@@ -447,10 +461,6 @@ Raises
 - `Faraday::ConnectionFailed` on connect timeout
 - `Faraday::TimeoutError` on read timeout
 
-### twitter
-
-Not configurable at the moment, and no timeout by default
-
 ### stripe
 
 [Master branch only](https://github.com/stripe/stripe-ruby/pull/267)
@@ -464,38 +474,28 @@ Default: 30s connect timeout, 80s read timeout
 
 Raises `Stripe::APIConnectionError`
 
-### zendesk_api
-
-Not configurable at the moment
-
-Default: 10s connect timeout, no read timeout
-
-### hipchat
+### twilio-ruby
 
 ```ruby
-[HipChat::Client, HipChat::Room, HipChat::User].each { |c| c.default_timeout(1) }
+Twilio::REST::Client.new(account_sid, auth_token, timeout: 1)
 ```
+
+Default: 30s
 
 Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
 
-### firebase
+### twitter
 
-No official support yet, but this does the job
+Not configurable at the moment, and no timeout by default
 
-```ruby
-firebase = Firebase::Client.new(url)
-firebase.request.instance_variable_get(:@client).connect_timeout = 1
-firebase.request.instance_variable_get(:@client).receive_timeout = 1
-firebase.request.instance_variable_get(:@client).send_timeout = 1
-```
+### zendesk_api
 
-Raises
+Not configurable at the moment
 
-- `HTTPClient::ConnectTimeoutError` on connect timeout
-- `HTTPClient::ReceiveTimeoutError` on read timeout
+Default: 10s connect timeout, no read timeout
 
 ## Don’t see a library you use?
 
