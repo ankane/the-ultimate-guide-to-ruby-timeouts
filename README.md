@@ -61,6 +61,7 @@ External Services
 - [geocoder](#geocoder)
 - [hipchat](#hipchat)
 - [koala](#koala)
+- [mail](#mail)
 - [mechanize](#mechanize)
 - [net/smtp](#netsmtp)
 - [stripe](#stripe)
@@ -482,6 +483,10 @@ Raises
 
 - `Faraday::ConnectionFailed` on connect timeout
 - `Faraday::TimeoutError` on read timeout
+
+### mail
+
+Not configurable at the moment, and no timeout by default
 
 ### mechanize
 
