@@ -415,6 +415,7 @@ It’s recommended to use this in addition to [Rack middleware](#rack-middleware
 
 ```ruby
 Rack::Timeout.timeout = 5
+Rack::Timeout.wait_timeout = 5
 ```
 
 Default: 15s
