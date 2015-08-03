@@ -434,7 +434,7 @@ Rack::Timeout.timeout = 5
 Rack::Timeout.wait_timeout = 5
 ```
 
-Default: 15s
+Default: 15s service timeout, 30s wait timeout
 
 Raises `Rack::Timeout::RequestTimeoutError` or `Rack::Timeout::RequestExpiryError`
 
