@@ -522,7 +522,7 @@ Raises
 
 ### mail
 
-Not configurable at the moment, and no timeout by default
+Not configurable at the moment, and no timeout by default, but there is a [pull request](https://github.com/mikel/mail/pull/892)
 
 ### mechanize
 
