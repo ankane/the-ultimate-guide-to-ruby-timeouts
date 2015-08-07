@@ -629,8 +629,8 @@ Adding timeouts to existing services can be a daunting task, but there’s a low
 ## Running the Tests
 
 ```sh
-git clone https://github.com/ankane/ruby-timeouts.git
-cd ruby-timeouts
+git clone https://github.com/ankane/the-ultimate-guide-to-timeouts-in-ruby.git
+cd the-ultimate-guide-to-timeouts-in-ruby
 bundle install
 node test/server.js # in a separate window
 rake
