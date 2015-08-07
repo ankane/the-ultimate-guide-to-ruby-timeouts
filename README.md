@@ -556,8 +556,6 @@ Raises
 
 ### stripe
 
-[Master branch only](https://github.com/stripe/stripe-ruby/pull/267)
-
 ```ruby
 Stripe.open_timeout = 1
 Stripe.read_timeout = 1
