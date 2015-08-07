@@ -57,6 +57,7 @@ Rack Middleware
 
 External Services
 
+- [actionmailer](#actionmailer)
 - [bitly](#bitly)
 - [firebase](#firebase)
 - [gibbon](#gibbon)
@@ -451,6 +452,10 @@ Default: 15s
 Raises same exceptions as [rack-timeout](#rack-timeout)
 
 ## External Services
+
+### actionmailer
+
+Not configurable at the moment, and no timeout by default
 
 ### bitly
 
