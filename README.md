@@ -100,6 +100,8 @@ Bonus
   - `PG::ConnectionBad` on connect and read timeouts
   - `ActiveRecord::ConnectionTimeoutError` on checkout timeout
 
+  See also [PostgreSQL statement timeouts](#bonus-postgresql-statement-timeouts)
+
 - #### mysql2 adapter
 
   ```ruby
