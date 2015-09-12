@@ -68,6 +68,7 @@ External Services
 - [mechanize](#mechanize)
 - [net/smtp](#netsmtp)
 - [omniauth-oauth2](#omniauth-oauth2)
+- [slack-notifier](#slack-notifier)
 - [stripe](#stripe)
 - [twilio-ruby](#twilio-ruby)
 - [twitter](#twitter)
@@ -560,6 +561,17 @@ Raises
 ### omniauth-oauth2
 
 [Not configurable at the moment](https://github.com/intridea/omniauth-oauth2/issues/27), and no timeout by default
+
+### slack-notifier
+
+```ruby
+Slack::Notifier.new(webhook_url, http_options: {open_timeout: 1, read_timeout: 1})
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
 
 ### stripe
 
