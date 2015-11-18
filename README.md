@@ -425,6 +425,8 @@ This causes Puma to send a SIGKILL signal to a worker if it hasn’t shutdown wi
 timeout 15
 ```
 
+Default: 60s
+
 This kills and respawns the worker process.
 
 It’s recommended to use this in addition to [Rack middleware](#rack-middleware).
