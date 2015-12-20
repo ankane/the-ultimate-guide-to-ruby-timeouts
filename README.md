@@ -166,7 +166,7 @@ Raises
 ### mongo
 
 ```ruby
-Mongo::Client.new([host], socket_timeout: 1, server_selection_timeout: 1, ...)
+Mongo::Client.new([host], connect_timeout: 1, socket_timeout: 1, server_selection_timeout: 1, ...)
 ```
 
 Raises `Mongo::Error::NoServerAvailable` on connect timeout
