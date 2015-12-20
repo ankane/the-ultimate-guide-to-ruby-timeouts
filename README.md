@@ -472,13 +472,11 @@ Raises `BitlyTimeout`
 
 ### firebase
 
-No official support yet, but this does the job
-
 ```ruby
 firebase = Firebase::Client.new(url)
-firebase.request.instance_variable_get(:@client).connect_timeout = 1
-firebase.request.instance_variable_get(:@client).receive_timeout = 1
-firebase.request.instance_variable_get(:@client).send_timeout = 1
+firebase.request.connect_timeout = 1
+firebase.request.receive_timeout = 1
+firebase.request.send_timeout = 1
 ```
 
 Raises

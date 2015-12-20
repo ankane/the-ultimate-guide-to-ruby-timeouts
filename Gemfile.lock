@@ -77,7 +77,7 @@ GEM
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.10)
-    firebase (0.2.4)
+    firebase (0.2.6)
       httpclient
       json
     geocoder (1.2.9)
@@ -102,7 +102,7 @@ GEM
     httparty (0.13.5)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
-    httpclient (2.6.0.1)
+    httpclient (2.7.0.1)
     httpi (2.4.1)
       rack
     i18n (0.7.0)
