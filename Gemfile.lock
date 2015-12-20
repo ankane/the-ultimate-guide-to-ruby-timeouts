@@ -204,7 +204,7 @@ DEPENDENCIES
   bitly
   bunny
   connection_pool
-  curb
+  curb (~> 0.8.8)
   dalli
   elasticsearch
   em-http-request
