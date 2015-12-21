@@ -450,10 +450,9 @@ Wait timeout limits the time the request had spent in the queue before even reac
 Raises `Rack::Timeout::RequestTimeoutException` if service_timeout exceeded.  RequestTimeoutException extends Exception directly, *not* StandardError (or even Rack::Timeout::Error), so you must list it _explicitly_ in your rescue clause in order to catch it!   Although there is also a `Rack::Timeout::RequestTimeoutError` (< RuntimeError), it is no longer exposed to your controllers.  [Note: The class hierarchy changed in
 [0.2.0](https://github.com/heroku/rack-timeout/commit/9a4ff41d33cdaf837eefb1b74054e38e2722f523)
 and again in
-[0.3.0](https://github.com/heroku/rack-timeout/commit/0390c6f7e81499424714b024851bcc2ea2028676)
-.]
+[0.3.0](https://github.com/heroku/rack-timeout/commit/0390c6f7e81499424714b024851bcc2ea2028676).]
 
-Raises `Rack::Timeout::RequestExpiryError` if wait_timeout exceeded, however this occurs before before your controller is invoked.
+Raises `Rack::Timeout::RequestExpiryError` if wait_timeout exceeded, however this occurs before your controller is invoked.
 
 [Read more here](https://github.com/heroku/rack-timeout#the-rabbit-hole)
 
