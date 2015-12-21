@@ -438,13 +438,22 @@ It’s recommended to use this in addition to [Rack middleware](#rack-middleware
 ### rack-timeout
 
 ```ruby
-Rack::Timeout.timeout = 5
+Rack::Timeout.service_timeout = 5  # or legacy alias .timeout=
 Rack::Timeout.wait_timeout = 5
 ```
 
 Default: 15s service timeout, 30s wait timeout
 
-Raises `Rack::Timeout::RequestTimeoutError` or `Rack::Timeout::RequestExpiryError`
+Service timeout limits the processing time, starting from when the request reaches the Rack::Timeout middleware.
+Wait timeout limits the time the request had spent in the queue before even reaching the Rack::Timeout middleware.
+
+Raises `Rack::Timeout::RequestTimeoutException` if service_timeout exceeded.  RequestTimeoutException extends Exception directly, *not* StandardError (or even Rack::Timeout::Error), so you must list it _explicitly_ in your rescue clause in order to catch it!   Although there is also a `Rack::Timeout::RequestTimeoutError` (< RuntimeError), it is no longer exposed to your controllers.  [Note: The class hierarchy changed in
+[0.2.0](https://github.com/heroku/rack-timeout/commit/9a4ff41d33cdaf837eefb1b74054e38e2722f523)
+and again in
+[0.3.0](https://github.com/heroku/rack-timeout/commit/0390c6f7e81499424714b024851bcc2ea2028676)
+.]
+
+Raises `Rack::Timeout::RequestExpiryError` if wait_timeout exceeded, however this occurs before before your controller is invoked.
 
 [Read more here](https://github.com/heroku/rack-timeout#the-rabbit-hole)
 
@@ -633,7 +642,7 @@ Use
 - `Faraday::ClientError` for both `Faraday::ConnectionFailed` and `Faraday::TimeoutError`
 - `HTTPClient::TimeoutError` for both `HTTPClient::ConnectTimeoutError` and `HTTPClient::ReceiveTimeoutError`
 - `Redis::BaseConnectionError` for both `Redis::CannotConnectError` and `Redis::TimeoutError`
-- `Rack::Timeout::Error` for both `Rack::Timeout::RequestTimeoutError` and `Rack::Timeout::RequestExpiryError`
+
 
 ## Existing Services
 
