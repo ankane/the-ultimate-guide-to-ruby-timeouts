@@ -211,6 +211,8 @@ Raises `PG::ConnectionBad`
 Redis.new(connect_timeout: 1, timeout: 1, ...)
 ```
 
+Default: 5s
+
 Raises
 
 - `Redis::CannotConnectError` on connect timeout
