@@ -359,6 +359,8 @@ Raises
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
 
+**Note:** Read timeouts are [retried automatically](https://github.com/ruby/ruby/blob/v2_2_4/lib/net/http.rb#L1436)
+
 ### open-uri
 
 ```ruby
