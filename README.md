@@ -127,12 +127,13 @@ Bonus
 ### bunny
 
 ```ruby
-Bunny.new(connection_timeout: 1, ...)
+Bunny.new(connection_timeout: 1, read_timeout: 1, ...)
 ```
 
-Raises `Bunny::TCPConnectionFailedForAllHosts` on connect timeout
+Raises
 
-TODO read timeout
+- `Bunny::TCPConnectionFailedForAllHosts` on connect timeout
+- `Bunny::NetworkFailure` on read timeout
 
 ### connection_pool
 
