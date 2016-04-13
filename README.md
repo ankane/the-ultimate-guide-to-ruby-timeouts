@@ -697,6 +697,12 @@ production:
     max_execution_time: 250 # ms
 ```
 
+Test with
+
+```sql
+SELECT 1 FROM information_schema.tables WHERE sleep(1)
+```
+
 ## And lastly...
 
 > Because time is not going to go backwards, I think I better stop now. - Stephen Hawking
