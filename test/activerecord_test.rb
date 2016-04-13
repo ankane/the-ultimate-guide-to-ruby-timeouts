@@ -41,4 +41,12 @@ class ActiveRecordTest < Minitest::Test
       ActiveRecord::Base.connection.execute("SELECT pg_sleep(1)")
     end
   end
+
+  def test_statement_mysql2
+    ActiveRecord::Base.establish_connection adapter: "mysql2", database: "ultimate_test", variables: {max_execution_time: 1}
+    assert_timeout(ActiveRecord::StatementInvalid, timeout: 0.001) do
+      # SELECT sleep(N) doesn't work :(
+      ActiveRecord::Base.connection.execute("SELECT * FROM information_schema.tables")
+    end
+  end
 end

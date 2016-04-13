@@ -76,7 +76,8 @@ External Services
 
 Bonus
 
-- [PostgreSQL statement timeouts](#bonus-postgresql-statement-timeouts)
+- [PostgreSQL statement timeouts](#postgresql-statement-timeouts)
+- [MySQL statement timeouts](#mysql-statement-timeouts)
 
 ## Data Stores
 
@@ -101,7 +102,7 @@ Bonus
   - `PG::ConnectionBad` on connect and read timeouts
   - `ActiveRecord::ConnectionTimeoutError` on checkout timeout
 
-  See also [PostgreSQL statement timeouts](#bonus-postgresql-statement-timeouts)
+  See also [PostgreSQL statement timeouts](#postgresql-statement-timeouts)
 
 - #### mysql2 adapter
 
@@ -123,6 +124,8 @@ Bonus
 
   - `Mysql2::Error` on connect and read timeouts
   - `ActiveRecord::ConnectionTimeoutError` on checkout timeout
+
+  See also [MySQL statement timeouts](#mysql-statement-timeouts)
 
 ### bunny
 
@@ -660,7 +663,9 @@ node test/server.js # in a separate window
 rake
 ```
 
-## Bonus: PostgreSQL Statement Timeouts
+## Bonus
+
+### PostgreSQL Statement Timeouts
 
 Prevent single queries from taking up all of your database’s resources. Set a [statement timeout](http://www.postgresql.org/docs/9.4/static/runtime-config-client.html#GUC-STATEMENT-TIMEOUT) in your `config/database.yml`
 
@@ -680,6 +685,16 @@ Test statement timeouts with
 
 ```sql
 SELECT pg_sleep(30);
+```
+
+### MySQL Statement Timeouts
+
+For MySQL 5.7.8 and higher, set a [statement timeout](http://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_execution_time) in your `config/database.yml`
+
+```yml
+production:
+  variables:
+    max_execution_time: 250 # ms
 ```
 
 ## And lastly...
