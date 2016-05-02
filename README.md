@@ -684,7 +684,7 @@ ALTER ROLE myuser SET statement_timeout = 250;
 Test statement timeouts with
 
 ```sql
-SELECT pg_sleep(30);
+SELECT pg_sleep(5);
 ```
 
 ### MySQL Statement Timeouts
@@ -700,7 +700,7 @@ production:
 Test with
 
 ```sql
-SELECT 1 FROM information_schema.tables WHERE sleep(1)
+SELECT 1 FROM information_schema.tables WHERE sleep(5);
 ```
 
 ## And lastly...
