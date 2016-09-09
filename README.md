@@ -376,6 +376,8 @@ Raises
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
 
+Note that open-uri didn't support (and so didn't pass to underlying net/http) the `:open_timeout` argument [until Ruby 2.2](https://bugs.ruby-lang.org/issues/10361).
+
 ### patron
 
 ```ruby
