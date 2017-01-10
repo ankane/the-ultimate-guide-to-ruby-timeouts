@@ -226,6 +226,7 @@ Raises
 
 ```ruby
 Searchkick.timeout = 1
+Searchkick.search_timeout = 1
 ```
 
 Default: 10s
