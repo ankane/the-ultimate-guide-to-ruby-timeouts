@@ -66,6 +66,7 @@ External Services
 - [koala](#koala)
 - [mail](#mail)
 - [mechanize](#mechanize)
+- [net-dns](#net-dns)
 - [net/smtp](#netsmtp)
 - [omniauth-oauth2](#omniauth-oauth2)
 - [slack-notifier](#slack-notifier)
@@ -553,6 +554,14 @@ Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::HTTP::Persistent::Error` on read timeout
+
+### net-dns
+
+```ruby
+Net::DNS::Resolver.new(udp_timeout: 1)
+```
+
+Raises `Net::DNS::Resolver::NoResponseError`
 
 ### net/smtp
 
