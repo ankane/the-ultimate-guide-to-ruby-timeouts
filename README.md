@@ -173,9 +173,7 @@ Raises
 Mongo::Client.new([host], connect_timeout: 1, socket_timeout: 1, server_selection_timeout: 1, ...)
 ```
 
-Raises `Mongo::Error::NoServerAvailable` on connect timeout
-
-TODO read timeout
+Raises `Mongo::Error::NoServerAvailable`
 
 ### mongoid
 
@@ -189,9 +187,7 @@ production:
         server_selection_timeout: 1
 ```
 
-Raises `Mongo::Error::NoServerAvailable` on connect timeout
-
-TODO read timeout
+Raises `Mongo::Error::NoServerAvailable`
 
 ### mysql2
 
