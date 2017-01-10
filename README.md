@@ -628,7 +628,9 @@ Raises
 
 ### twitter
 
-Not configurable at the moment, and no timeout by default
+Not configurable at the moment
+
+Default: 10s connect timeout, 30s read timeout
 
 ### zendesk_api
 
