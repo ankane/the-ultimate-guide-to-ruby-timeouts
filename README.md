@@ -68,6 +68,7 @@ External Services
 - [mechanize](#mechanize)
 - [net-dns](#net-dns)
 - [net/smtp](#netsmtp)
+- [net-ssh](#net-ssh)
 - [omniauth-oauth2](#omniauth-oauth2)
 - [slack-notifier](#slack-notifier)
 - [stripe](#stripe)
@@ -575,6 +576,14 @@ Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
+
+### net-ssh
+
+```ruby
+Net::SSH.start(host, user, timeout: 1)
+```
+
+Raises `Net::SSH::ConnectionTimeout`
 
 ### omniauth-oauth2
 

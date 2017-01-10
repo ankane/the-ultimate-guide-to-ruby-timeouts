@@ -143,6 +143,7 @@ GEM
     net-dns (0.8.0)
     net-http-digest_auth (1.4)
     net-http-persistent (2.9.4)
+    net-ssh (4.0.1)
     netrc (0.11.0)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
@@ -223,6 +224,7 @@ DEPENDENCIES
   mongoid
   mysql2
   net-dns
+  net-ssh
   patron
   pg
   rake
