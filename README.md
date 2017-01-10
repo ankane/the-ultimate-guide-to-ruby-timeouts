@@ -562,6 +562,8 @@ Raises
 Net::DNS::Resolver.new(udp_timeout: 1)
 ```
 
+Default: 5s
+
 Raises `Net::DNS::Resolver::NoResponseError`
 
 ### net/smtp
