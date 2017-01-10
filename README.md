@@ -500,7 +500,7 @@ Raises
 ### gibbon
 
 ```ruby
-Gibbon::Request.new(timeout: 1, ...)
+Gibbon::Request.new(open_timeout: 1, timeout: 1, ...)
 ```
 
 Raises `Gibbon::MailChimpError`
