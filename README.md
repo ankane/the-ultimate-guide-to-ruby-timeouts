@@ -26,6 +26,7 @@ Data Stores
 - [mysql2](#mysql2)
 - [pg](#pg)
 - [redis](#redis)
+- [rsolr](#rsolr)
 - [searchkick](#searchkick)
 - [sequel](#sequel)
 
@@ -219,6 +220,17 @@ Raises
 
 - `Redis::CannotConnectError` on connect timeout
 - `Redis::TimeoutError` on read timeout
+
+### rsolr
+
+```ruby
+RSolr.connect(open_timeout: 1, read_timeout: 1)
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
 
 ### searchkick
 

@@ -192,6 +192,8 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    rsolr (1.1.2)
+      builder (>= 2.1.2)
     searchkick (2.0.2)
       activemodel (>= 4.1)
       elasticsearch (>= 1)
@@ -252,6 +254,7 @@ DEPENDENCIES
   rake
   redis
   rest-client
+  rsolr
   searchkick
   sequel
   slack-notifier
