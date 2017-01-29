@@ -80,8 +80,8 @@ Other
 
 Statement Timeouts
 
-- [PostgreSQL](#postgresql-2)
-- [MySQL](#mysql-2)
+- [PostgreSQL](#postgresql)
+- [MySQL](#mysql)
 
 ## Data Stores
 
@@ -106,7 +106,7 @@ Statement Timeouts
   - `PG::ConnectionBad` on connect and read timeouts
   - `ActiveRecord::ConnectionTimeoutError` on checkout timeout
 
-  See also [PostgreSQL statement timeouts](#postgresql-statement-timeouts)
+  See also [PostgreSQL statement timeouts](#postgresql)
 
 - #### mysql2 adapter
 
@@ -129,7 +129,7 @@ Statement Timeouts
   - `Mysql2::Error` on connect and read timeouts
   - `ActiveRecord::ConnectionTimeoutError` on checkout timeout
 
-  See also [MySQL statement timeouts](#mysql-statement-timeouts)
+  See also [MySQL statement timeouts](#mysql)
 
 ### bunny
 
