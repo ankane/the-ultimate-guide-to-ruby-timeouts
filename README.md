@@ -153,7 +153,7 @@ SELECT /*+ MAX_EXECUTION_TIME(250) */ ...
 
 ### MariaDB
 
-**Note:** Requires [MariaDB 10.1.1](https://mariadb.com/kb/en/mariadb/aborting-statements/) or higher
+**Note:** Requires MariaDB 10.1.1 or higher
 
 If you use Rails, add to your `config/database.yml`
 
@@ -181,6 +181,8 @@ As of MariaDB 10.1.2, you can set single statement timeouts with
 SET STATEMENT max_statement_time=1 FOR
   SELECT ...
 ```
+
+[Official docs](https://mariadb.com/kb/en/mariadb/aborting-statements/)
 
 ## Data Stores
 
