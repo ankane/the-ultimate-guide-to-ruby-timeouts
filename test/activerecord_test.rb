@@ -43,6 +43,8 @@ class ActiveRecordTest < Minitest::Test
   end
 
   def test_statement_mysql2
+    skip if travis?
+
     ActiveRecord::Base.establish_connection adapter: "mysql2", database: "ultimate_test", variables: {max_execution_time: 250}
     assert_timeout(ActiveRecord::StatementInvalid, timeout: 0.250) do
       ActiveRecord::Base.connection.execute("SELECT 1 FROM information_schema.tables WHERE sleep(1)")

@@ -1,0 +1,17 @@
+sudo: false
+language: ruby
+rvm: 2.3.1
+services:
+  - postgresql
+  - mysql
+script: bundle exec rake test
+before_script:
+  - psql -c 'create database ultimate_test;' -U postgres
+  - mysql -e 'CREATE DATABASE ultimate_test;'
+  - node test/server.js &>/dev/null &
+env:
+  - TRAVIS=t
+notifications:
+  email:
+    on_success: never
+    on_failure: change
