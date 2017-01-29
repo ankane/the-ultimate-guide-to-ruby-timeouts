@@ -14,14 +14,23 @@ class ActionMailerTest < Minitest::Test
   end
 
   def test_connect
-    skip
     ActionMailer::Base.smtp_settings = {
-      address: connect_host
+      address: connect_host,
+      open_timeout: 1
     }
-    Mailer.hi.deliver_now
+    assert_timeout(Net::OpenTimeout) do
+      Mailer.hi.deliver_now
+    end
   end
 
   def test_read
-    skip
+    ActionMailer::Base.smtp_settings = {
+      address: read_host,
+      port: read_port,
+      read_timeout: 1
+    }
+    assert_timeout(Net::ReadTimeout) do
+      Mailer.hi.deliver_now
+    end
   end
 end
