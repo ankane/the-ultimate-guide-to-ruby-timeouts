@@ -175,6 +175,13 @@ Test with
 SELECT 1 FROM information_schema.tables WHERE sleep(5);
 ```
 
+As of MariaDB 10.1.2, you can set single statement timeouts with
+
+```sql
+SET STATEMENT max_statement_time=1 FOR
+  SELECT ...
+```
+
 ## Data Stores
 
 ### activerecord
