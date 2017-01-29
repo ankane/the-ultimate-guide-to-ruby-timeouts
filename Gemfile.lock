@@ -194,6 +194,7 @@ GEM
       netrc (~> 0.8)
     rsolr (1.1.2)
       builder (>= 2.1.2)
+    ruby-kafka (0.3.16)
     searchkick (2.0.2)
       activemodel (>= 4.1)
       elasticsearch (>= 1)
@@ -255,6 +256,7 @@ DEPENDENCIES
   redis
   rest-client
   rsolr
+  ruby-kafka
   searchkick
   sequel
   slack-notifier

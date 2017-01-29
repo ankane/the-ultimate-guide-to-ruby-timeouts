@@ -27,6 +27,7 @@ Data Stores
 - [pg](#pg)
 - [redis](#redis)
 - [rsolr](#rsolr)
+- [ruby-kafka](#ruby-kafka)
 - [searchkick](#searchkick)
 - [sequel](#sequel)
 
@@ -231,6 +232,14 @@ Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
+
+### ruby-kafka
+
+```ruby
+Kafka.new(connect_timeout: 1, socket_timeout: 1)
+```
+
+Raises `Kafka::ConnectionError`
 
 ### searchkick
 
