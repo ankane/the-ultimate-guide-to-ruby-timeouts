@@ -88,9 +88,9 @@ Other
 
 ## Statement Timeouts
 
-### PostgreSQL
-
 Prevent single queries from taking up all of your database’s resources.
+
+### PostgreSQL
 
 If you use Rails, add to your `config/database.yml`
 
