@@ -492,7 +492,19 @@ Raises same exceptions as [rack-timeout](#rack-timeout)
 
 ### actionmailer
 
-Not configurable at the moment, and no timeout by default
+```ruby
+ActionMailer::Base.smtp_settings = {
+  open_timeout: 1,
+  read_timeout: 1
+}
+```
+
+**Note:** Only available with the `master` branch of the [mail](https://github.com/mikel/mail) gem
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
 
 ### bitly
 
@@ -562,7 +574,18 @@ Raises
 
 ### mail
 
-Not configurable at the moment, and no timeout by default, but there is a [pull request](https://github.com/mikel/mail/pull/892)
+```ruby
+Mail.defaults do
+  delivery_method :smtp, open_timeout: 1, read_timeout: 1
+end
+```
+
+**Note:** Only available on the `master` branch of the gem
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
 
 ### mechanize
 
