@@ -105,7 +105,7 @@ or set it on your database role
 ALTER ROLE myuser SET statement_timeout = 250;
 ```
 
-Test statement timeouts with
+Test with
 
 ```sql
 SELECT pg_sleep(5);
@@ -121,6 +121,12 @@ If you use Rails, add to your `config/database.yml`
 production:
   variables:
     max_execution_time: 250 # ms
+```
+
+or set it directly on each connection
+
+```sql
+SET SESSION max_execution_time = 250;
 ```
 
 Test with
