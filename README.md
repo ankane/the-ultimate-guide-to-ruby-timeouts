@@ -12,6 +12,13 @@ Here’s how to add timeouts for popular Ruby gems. **[All have been tested](tes
 - **checkout** - time to checkout a connection from the pool
 - **statement** - time to execute a database statement
 
+## Statement Timeouts
+
+For many apps, the *single most important thing* to do (if you use a relational database).
+
+- [PostgreSQL](#postgresql)
+- [MySQL](#mysql)
+
 ## Gems
 
 Data Stores
@@ -80,8 +87,43 @@ Other
 
 ## Statement Timeouts
 
-- [PostgreSQL](#postgresql)
-- [MySQL](#mysql)
+### PostgreSQL
+
+Prevent single queries from taking up all of your database’s resources. Set a [statement timeout](http://www.postgresql.org/docs/9.4/static/runtime-config-client.html#GUC-STATEMENT-TIMEOUT) in your `config/database.yml`
+
+```yml
+production:
+  variables:
+    statement_timeout: 250 # ms
+```
+
+or set it on your database role
+
+```sql
+ALTER ROLE myuser SET statement_timeout = 250;
+```
+
+Test statement timeouts with
+
+```sql
+SELECT pg_sleep(5);
+```
+
+### MySQL
+
+For MySQL 5.7.8 and higher, set a [statement timeout](http://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_execution_time) in your `config/database.yml`
+
+```yml
+production:
+  variables:
+    max_execution_time: 250 # ms
+```
+
+Test with
+
+```sql
+SELECT 1 FROM information_schema.tables WHERE sleep(5);
+```
 
 ## Data Stores
 
@@ -726,46 +768,6 @@ cd the-ultimate-guide-to-ruby-timeouts
 bundle install
 node test/server.js # in a separate window
 rake
-```
-
-## Statement Timeouts
-
-### PostgreSQL
-
-Prevent single queries from taking up all of your database’s resources. Set a [statement timeout](http://www.postgresql.org/docs/9.4/static/runtime-config-client.html#GUC-STATEMENT-TIMEOUT) in your `config/database.yml`
-
-```yml
-production:
-  variables:
-    statement_timeout: 250 # ms
-```
-
-or set it on your database role
-
-```sql
-ALTER ROLE myuser SET statement_timeout = 250;
-```
-
-Test statement timeouts with
-
-```sql
-SELECT pg_sleep(5);
-```
-
-### MySQL
-
-For MySQL 5.7.8 and higher, set a [statement timeout](http://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_execution_time) in your `config/database.yml`
-
-```yml
-production:
-  variables:
-    max_execution_time: 250 # ms
-```
-
-Test with
-
-```sql
-SELECT 1 FROM information_schema.tables WHERE sleep(5);
 ```
 
 ## And lastly...
