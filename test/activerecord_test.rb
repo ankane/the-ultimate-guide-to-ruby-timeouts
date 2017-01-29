@@ -42,12 +42,31 @@ class ActiveRecordTest < Minitest::Test
     end
   end
 
+  def test_statement_postgresql_local
+    ActiveRecord::Base.establish_connection adapter: "postgresql", database: "ultimate_test"
+    assert_timeout(ActiveRecord::StatementInvalid, timeout: 0.250) do
+      ActiveRecord::Base.transaction do
+        ActiveRecord::Base.connection.execute("SET LOCAL statement_timeout = 250")
+        ActiveRecord::Base.connection.execute("SELECT pg_sleep(1)")
+      end
+    end
+  end
+
   def test_statement_mysql2
     skip if travis?
 
     ActiveRecord::Base.establish_connection adapter: "mysql2", database: "ultimate_test", variables: {max_execution_time: 250}
     assert_timeout(ActiveRecord::StatementInvalid, timeout: 0.250) do
       ActiveRecord::Base.connection.execute("SELECT 1 FROM information_schema.tables WHERE sleep(1)")
+    end
+  end
+
+  def test_statement_mysql2_inline
+    skip if travis?
+
+    ActiveRecord::Base.establish_connection adapter: "mysql2", database: "ultimate_test"
+    assert_timeout(ActiveRecord::StatementInvalid, timeout: 0.250) do
+      ActiveRecord::Base.connection.execute("SELECT /*+ MAX_EXECUTION_TIME(250) */ 1 FROM information_schema.tables WHERE sleep(1)")
     end
   end
 end

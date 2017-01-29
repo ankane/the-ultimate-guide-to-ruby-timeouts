@@ -112,6 +112,15 @@ Test with
 SELECT pg_sleep(5);
 ```
 
+To set for a single transaction, use
+
+```sql
+BEGIN;
+SET LOCAL statement_timeout = 250;
+...
+COMMIT;
+```
+
 ### MySQL
 
 **Note:** Requires MySQL 5.7.8 or higher
@@ -134,6 +143,12 @@ Test with
 
 ```sql
 SELECT 1 FROM information_schema.tables WHERE sleep(5);
+```
+
+To set for a single statement, use an [optimizer hint](https://dev.mysql.com/doc/refman/5.7/en/optimizer-hints.html#optimizer-hints-execution-time)
+
+```sql
+SELECT /*+ MAX_EXECUTION_TIME(250) */ ...
 ```
 
 ### MariaDB
