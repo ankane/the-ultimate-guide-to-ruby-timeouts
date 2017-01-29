@@ -14,7 +14,7 @@ Here’s how to add timeouts for popular Ruby gems. **[All have been tested](tes
 
 ## Statement Timeouts
 
-For many apps, the *single most important thing* to do (if you use a relational database).
+For many apps, the *single most important thing* to do (if you use a relational database)
 
 - [PostgreSQL](#postgresql)
 - [MySQL](#mysql)
