@@ -18,6 +18,7 @@ For many apps, the *single most important thing* to do (if you use a relational 
 
 - [PostgreSQL](#postgresql)
 - [MySQL](#mysql)
+- [MariaDB](#mariadb)
 
 ## Gems
 
@@ -127,6 +128,30 @@ or set it directly on each connection
 
 ```sql
 SET SESSION max_execution_time = 250;
+```
+
+Test with
+
+```sql
+SELECT 1 FROM information_schema.tables WHERE sleep(5);
+```
+
+### MariaDB
+
+**Note:** Requires [MariaDB 10.1.1](https://mariadb.com/kb/en/mariadb/aborting-statements/) or higher
+
+If you use Rails, add to your `config/database.yml`
+
+```yml
+production:
+  variables:
+    max_statement_time: 1 # sec
+```
+
+or set it directly on each connection
+
+```sql
+SET SESSION max_statement_time = 1;
 ```
 
 Test with
