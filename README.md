@@ -89,7 +89,9 @@ Other
 
 ### PostgreSQL
 
-Prevent single queries from taking up all of your database’s resources. Set a [statement timeout](http://www.postgresql.org/docs/9.4/static/runtime-config-client.html#GUC-STATEMENT-TIMEOUT) in your `config/database.yml`
+Prevent single queries from taking up all of your database’s resources.
+
+If you use Rails, add to your `config/database.yml`
 
 ```yml
 production:
@@ -111,7 +113,9 @@ SELECT pg_sleep(5);
 
 ### MySQL
 
-For MySQL 5.7.8 and higher, set a [statement timeout](http://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_execution_time) in your `config/database.yml`
+**Note:** Requires MySQL 5.7.8 or higher
+
+If you use Rails, add to your `config/database.yml`
 
 ```yml
 production:
