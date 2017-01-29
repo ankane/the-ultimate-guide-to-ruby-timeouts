@@ -20,7 +20,8 @@ class CurbTest < Minitest::Test
   end
 
   def test_read
-    assert_timeout(Curl::Err::TimeoutError) do
+    # times out early on Travis
+    assert_timeout(Curl::Err::TimeoutError, timeout: 0.99) do
       curl = Curl::Easy.new(read_url)
       curl.timeout = 1
       curl.perform
