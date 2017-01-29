@@ -3,7 +3,7 @@ require "action_mailer"
 
 class Mailer < ActionMailer::Base
   def hi
-    mail(to: "to@example.com", from: "from@example.com", subject: "hi", body: "")
+    mail to: "to@example.com", from: "from@example.com", subject: "hi", body: ""
   end
 end
 
