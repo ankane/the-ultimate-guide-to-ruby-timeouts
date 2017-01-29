@@ -1,6 +1,6 @@
 # The Ultimate Guide to Ruby Timeouts
 
-An unresponsive service is worse than a down one. It can tie up your entire system if not handled properly. **All network requests should have a timeout.**
+An unresponsive service can be worse than a down one. It can tie up your entire system if not handled properly. **All network requests should have a timeout.**
 
 Here’s how to add timeouts for popular Ruby gems. **[All have been tested](test)**. You should [avoid Ruby’s `Timeout` module](http://www.mikeperham.com/2015/05/08/timeout-rubys-most-dangerous-api/). The default is no timeout, unless otherwise specified. Enjoy!
 
@@ -57,7 +57,7 @@ Rack Middleware
 - [rack-timeout](#rack-timeout)
 - [slowpoke](#slowpoke)
 
-External Services
+Other
 
 - [actionmailer](#actionmailer)
 - [bitly](#bitly)
@@ -78,10 +78,10 @@ External Services
 - [twitter](#twitter)
 - [zendesk_api](#zendesk_api)
 
-Bonus
+Statement Timeouts
 
-- [PostgreSQL statement timeouts](#postgresql-statement-timeouts)
-- [MySQL statement timeouts](#mysql-statement-timeouts)
+- [PostgreSQL](#postgresql-2)
+- [MySQL](#mysql-2)
 
 ## Data Stores
 
@@ -728,9 +728,9 @@ node test/server.js # in a separate window
 rake
 ```
 
-## Bonus
+## Statement Timeouts
 
-### PostgreSQL Statement Timeouts
+### PostgreSQL
 
 Prevent single queries from taking up all of your database’s resources. Set a [statement timeout](http://www.postgresql.org/docs/9.4/static/runtime-config-client.html#GUC-STATEMENT-TIMEOUT) in your `config/database.yml`
 
@@ -752,7 +752,7 @@ Test statement timeouts with
 SELECT pg_sleep(5);
 ```
 
-### MySQL Statement Timeouts
+### MySQL
 
 For MySQL 5.7.8 and higher, set a [statement timeout](http://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_execution_time) in your `config/database.yml`
 
