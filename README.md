@@ -68,6 +68,7 @@ Rack Middleware
 Other
 
 - [actionmailer](#actionmailer)
+- [aws-sdk](#aws-sdk)
 - [bitly](#bitly)
 - [firebase](#firebase)
 - [gibbon](#gibbon)
@@ -606,6 +607,17 @@ Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
+
+### aws-sdk
+
+```ruby
+Aws.config = {
+  http_open_timeout: 1,
+  http_read_timeout: 1
+}
+```
+
+Raises `Seahorse::Client::NetworkingError`
 
 ### bitly
 
