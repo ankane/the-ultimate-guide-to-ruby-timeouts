@@ -14,7 +14,6 @@ class KoalaTest < Minitest::Test
   def test_read
     Koala.configure do |config|
       config.graph_server = read_host_and_port
-      config.use_ssl = false
     end
     Koala.http_service.http_options = {request: {timeout: 1}}
     assert_timeout(Faraday::TimeoutError) do

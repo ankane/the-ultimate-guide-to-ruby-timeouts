@@ -15,7 +15,7 @@ class AwsSdkTest < Minitest::Test
   end
 
   def test_read
-    Aws.config.update(endpoint: connect_url, http_read_timeout: 1)
+    Aws.config.update(endpoint: read_url, http_read_timeout: 1)
     assert_timeout(Seahorse::Client::NetworkingError) do
       Aws::S3::Client.new.list_buckets
     end
