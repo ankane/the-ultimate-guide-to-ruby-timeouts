@@ -513,10 +513,20 @@ Raises `Patron::TimeoutError`
 ### rest-client
 
 ```ruby
-RestClient::Request.execute(method: :get, url: url, open_timeout: 1, timeout: 1)
+RestClient::Request.execute(method: :get, url: url, open_timeout: 1, read_timeout: 1)
+
+# shorthand to set open_timeout = read_timeout = 1
+RestClient::Request.execute(method: :get, url: url, timeout: 1)
 ```
 
-Raises `RestClient::RequestTimeout`
+Same options also work with `RestClient::Resource`.
+
+Raises:
+
+- `RestClient::Exceptions::OpenTimeout` on connect timeout
+- `RestClient::Exceptions::ReadTimeout` on read timeout
+
+Defaults: inherited from net/http — 60s both since Ruby 2.3.
 
 ### typhoeus
 
@@ -820,6 +830,8 @@ Use
 - `HTTPClient::TimeoutError` for both `HTTPClient::ConnectTimeoutError` and `HTTPClient::ReceiveTimeoutError`
 - `Redis::BaseConnectionError` for both `Redis::CannotConnectError` and `Redis::TimeoutError`
 - `Rack::Timeout::Error` for both `Rack::Timeout::RequestTimeoutError` and `Rack::Timeout::RequestExpiryError`
+- `RestClient::Exceptions::Timeout` for both `RestClient::Exceptions::OpenTimeout` and `RestClient::Exceptions::ReadTimeout`
+
 
 ## Existing Services
 
