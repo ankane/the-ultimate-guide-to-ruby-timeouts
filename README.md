@@ -485,6 +485,10 @@ Raises
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
 
+Defaults: 60s read timeout.  Connect timeout was infinite till Ruby 2.2, [became 60s in Ruby 2.3](https://github.com/ruby/ruby/commit/52e1c3b0ab41041f7f51a7afc3fce3aab97bc010).
+
+Write timeout is infinite, presently [can't be set](https://bugs.ruby-lang.org/issues/13396).
+
 **Note:** Read timeouts are [retried automatically](https://github.com/ruby/ruby/blob/v2_2_4/lib/net/http.rb#L1436)
 
 ### open-uri
