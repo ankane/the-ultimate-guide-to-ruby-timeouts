@@ -75,6 +75,7 @@ Other
 - [geocoder](#geocoder)
 - [hipchat](#hipchat)
 - [koala](#koala)
+- [kubeclient](#kubeclient)
 - [mail](#mail)
 - [mechanize](#mechanize)
 - [net-dns](#net-dns)
@@ -698,6 +699,16 @@ Raises
 
 - `Faraday::ConnectionFailed` on connect timeout
 - `Faraday::TimeoutError` on read timeout
+
+### kubeclient
+
+```ruby
+Kubeclient::Client.new(url, api_version, timeouts: {open: 1, read: 1})
+```
+
+Raises `KubeException` (no specific timeout exception).
+
+Defaults match rest-client & net/http — 60s both since Ruby 2.3.
 
 ### mail
 
