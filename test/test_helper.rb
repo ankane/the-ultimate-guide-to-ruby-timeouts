@@ -10,7 +10,7 @@ class Minitest::Test
     started_at = Time.now
     ex = assert_raises(exception) { yield }
     # test exact class
-    assert_equal ex.class, exception
+    assert_equal exception, ex.class
     time = Time.now - started_at
     # p time
     assert_operator time, :>=, timeout
