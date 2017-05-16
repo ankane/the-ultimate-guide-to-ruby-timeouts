@@ -675,7 +675,7 @@ No exception is raised by default. To raise exceptions, use
 Geocoder.configure(timeout: 1, always_raise: :all, ...)
 ```
 
-Raises `Timeout::Error`
+Raises `Geocoder::LookupTimeout`
 
 ### hipchat
 
