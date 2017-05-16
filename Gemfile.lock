@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/mikel/mail.git
-  revision: 6e0c854b3cfa7c2320e763bc4d40a608efda7cd9
+  revision: bf418912133d0aee5fdd9a5140fe5fb44cf4091f
   specs:
     mail (2.7.0.rc1)
       mini_mime (>= 0.1.1)
@@ -61,13 +61,13 @@ GEM
       public_suffix (~> 2.0, >= 2.0.2)
     amq-protocol (2.2.0)
     arel (8.0.0)
-    aws-sdk (2.9.17)
-      aws-sdk-resources (= 2.9.17)
-    aws-sdk-core (2.9.17)
+    aws-sdk (2.9.18)
+      aws-sdk-resources (= 2.9.18)
+    aws-sdk-core (2.9.18)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.9.17)
-      aws-sdk-core (= 2.9.17)
+    aws-sdk-resources (2.9.18)
+      aws-sdk-core (= 2.9.18)
     aws-sigv4 (1.0.0)
     bitly (1.1.0)
       httparty (>= 0.7.6)
@@ -193,7 +193,7 @@ GEM
     patron (0.8.0)
     pg (0.20.0)
     public_suffix (2.0.5)
-    rack (2.0.2)
+    rack (2.0.3)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails-dom-testing (2.0.3)
