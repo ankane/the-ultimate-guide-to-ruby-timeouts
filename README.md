@@ -486,7 +486,7 @@ Raises
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
 
-Defaults: 60s read timeout.  Connect timeout was infinite till Ruby 2.2, [became 60s in Ruby 2.3](https://github.com/ruby/ruby/commit/52e1c3b0ab41041f7f51a7afc3fce3aab97bc010).
+Default: 60s connect timeout ([Ruby 2.3+](https://github.com/ruby/ruby/commit/52e1c3b0ab41041f7f51a7afc3fce3aab97bc010)), 60s read timeout
 
 Write timeout is infinite, presently [can't be set](https://bugs.ruby-lang.org/issues/13396).
 
@@ -531,7 +531,7 @@ Raises:
 - `RestClient::Exceptions::OpenTimeout` on connect timeout
 - `RestClient::Exceptions::ReadTimeout` on read timeout
 
-Defaults: inherited from net/http — 60s both since Ruby 2.3.
+Default: 60s connect timeout (Ruby 2.3+), 60s read timeout
 
 ### typhoeus
 
@@ -703,12 +703,12 @@ Raises
 ### kubeclient
 
 ```ruby
-Kubeclient::Client.new(url, api_version, timeouts: {open: 1, read: 1})
+Kubeclient::Client.new(url, timeouts: {open: 1, read: 1})
 ```
 
-Raises `KubeException` (no specific timeout exception).
+Raises `KubeException`
 
-Defaults match rest-client & net/http — 60s both since Ruby 2.3.
+Default: 60s connect timeout (Ruby 2.3+), 60s read timeout
 
 ### mail
 
