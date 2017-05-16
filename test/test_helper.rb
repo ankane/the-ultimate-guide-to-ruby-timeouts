@@ -8,7 +8,9 @@ class UnknownTimeoutError < StandardError; end
 class Minitest::Test
   def assert_timeout(exception = UnknownTimeoutError, timeout: 1)
     started_at = Time.now
-    assert_raises(exception) { yield }
+    ex = assert_raises(exception) { yield }
+    # test exact class
+    assert_equal ex.class, exception
     time = Time.now - started_at
     # p time
     assert_operator time, :>=, timeout

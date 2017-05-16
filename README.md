@@ -332,8 +332,8 @@ RSolr.connect(open_timeout: 1, read_timeout: 1)
 
 Raises
 
-- `Net::OpenTimeout` on connect timeout
-- `Net::ReadTimeout` on read timeout
+- `RSolr::Error::ConnectionRefused` on connect timeout
+- `RSolr::Error::Http` on read timeout
 
 ### ruby-kafka
 
