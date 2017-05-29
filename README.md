@@ -202,14 +202,18 @@ SET STATEMENT max_statement_time=1 FOR
 
   ```yaml
   production:
-    connect_timeout: 1
-    checkout_timeout: 1
+    connect_timeout: 1  # seconds
+    checkout_timeout: 1 # seconds
+    variables:
+      statement_timeout: 1000 # ms
+
   ```
 
   Raises
 
   - `PG::ConnectionBad` on connect and read timeouts
   - `ActiveRecord::ConnectionTimeoutError` on checkout timeout
+  - `ActiveRecord::StatementInvalid` (with cause `PG::QueryCanceled`) on query running for too long
 
   See also [PostgreSQL statement timeouts](#postgresql)
 
