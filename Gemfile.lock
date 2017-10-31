@@ -8,13 +8,6 @@ GIT
       rest-client (~> 2.0)
 
 GIT
-  remote: https://github.com/mikel/mail.git
-  revision: 1ada5a65990780f2e3565aa7043c4adba95403d8
-  specs:
-    mail (2.7.0.rc3)
-      mini_mime (>= 0.1.1)
-
-GIT
   remote: https://github.com/sferik/twitter.git
   revision: bc911e9106012aa0ef4d8b0b92ef05b880ed6da9
   specs:
@@ -583,6 +576,8 @@ GEM
     loofah (2.1.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
+    mail (2.7.0.rc3)
+      mini_mime (>= 0.1.1)
     mechanize (2.7.5)
       domain_name (~> 0.5, >= 0.5.1)
       http-cookie (~> 1.0)
@@ -697,7 +692,7 @@ DEPENDENCIES
   httpi
   koala
   kubeclient!
-  mail!
+  mail (>= 2.7.0.rc3)
   mechanize
   minitest
   mongo
