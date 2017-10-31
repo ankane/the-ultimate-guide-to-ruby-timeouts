@@ -597,7 +597,7 @@ Raises `Rack::Timeout::RequestTimeoutError` or `Rack::Timeout::RequestExpiryErro
 
 [Read more here](https://github.com/heroku/rack-timeout#the-rabbit-hole)
 
-**Caveat:** `rack-timeout` is fundamentally unsafe as described [previously](#the-ultimate-guide-to-ruby-timeouts).
+**Note:** The approach used by Rack::Timeout can leave your application in an inconsistent state, [as described here](https://github.com/heroku/rack-timeout#timing-out-inherently-unsafe)
 
 ### slowpoke
 
