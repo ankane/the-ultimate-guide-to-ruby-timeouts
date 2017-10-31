@@ -802,15 +802,16 @@ Raises `Stripe::APIConnectionError`
 ### twilio-ruby
 
 ```ruby
-Twilio::REST::Client.new(account_sid, auth_token, timeout: 1)
+http_client = Twilio::HTTP::Client.new(timeout: 1)
+Twilio::REST::Client.new(account_sid, auth_token, nil, nil, http_client)
 ```
 
 Default: 30s
 
 Raises
 
-- `Net::OpenTimeout` on connect timeout
-- `Net::ReadTimeout` on read timeout
+- `Faraday::ConnectionFailed` on connect timeout
+- `Faraday::TimeoutError` on read timeout
 
 ### twitter
 

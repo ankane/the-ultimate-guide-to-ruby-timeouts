@@ -2,14 +2,16 @@ require_relative "test_helper"
 
 class TwilioTest < Minitest::Test
   def test_connect
-    assert_timeout(Net::OpenTimeout) do
-      Twilio::REST::Client.new("sid", "token", host: connect_host, timeout: 1).calls.list
+    http_client = Twilio::HTTP::Client.new(connect_host, 80, "http://user", "secret", timeout: 1)
+    assert_timeout(Faraday::ConnectionFailed) do
+      Twilio::REST::Client.new("sid", "token", nil, nil, http_client).api.account.calls.list
     end
   end
 
   def test_read
-    assert_timeout(Net::ReadTimeout) do
-      Twilio::REST::Client.new("sid", "token", host: read_host, port: read_port, use_ssl: false, timeout: 1, retry_limit: 0).calls.list
+    http_client = Twilio::HTTP::Client.new(read_host, read_port, "http://user", "secret", timeout: 1)
+    assert_timeout(Faraday::TimeoutError) do
+      Twilio::REST::Client.new("sid", "token", nil, nil, http_client).api.account.calls.list
     end
   end
 end

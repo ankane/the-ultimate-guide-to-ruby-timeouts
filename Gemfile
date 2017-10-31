@@ -16,7 +16,7 @@ gem "searchkick"
 gem "mongo"
 gem "faraday"
 gem "bunny"
-gem "twilio-ruby", "~> 4" # TODO update to latest version
+gem "twilio-ruby", git: "https://github.com/ankane/twilio-ruby.git"
 gem "geocoder"
 gem "koala"
 gem "httparty"

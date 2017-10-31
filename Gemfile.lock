@@ -8,6 +8,15 @@ GIT
       rest-client (~> 2.0)
 
 GIT
+  remote: https://github.com/ankane/twilio-ruby.git
+  revision: f2c600c06e9910d9387e27d7c4db52d2bc168c18
+  specs:
+    twilio-ruby (5.4.3)
+      faraday (~> 0.9)
+      jwt (~> 1.5)
+      libxml-ruby (>= 2.0, < 4.0)
+
+GIT
   remote: https://github.com/sferik/twitter.git
   revision: bc911e9106012aa0ef4d8b0b92ef05b880ed6da9
   specs:
@@ -573,6 +582,7 @@ GEM
       addressable
       faraday
       json (>= 1.8)
+    libxml-ruby (3.0.0)
     loofah (2.1.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -653,10 +663,6 @@ GEM
     stripe (3.7.0)
       faraday (~> 0.10)
     thread_safe (0.3.6)
-    twilio-ruby (4.13.0)
-      builder (>= 2.1.2)
-      jwt (~> 1.0)
-      multi_json (>= 1.3.0)
     typhoeus (1.3.0)
       ethon (>= 0.9.0)
     tzinfo (1.2.4)
@@ -711,7 +717,7 @@ DEPENDENCIES
   sequel
   slack-notifier
   stripe (>= 1.24.0)
-  twilio-ruby (~> 4)
+  twilio-ruby!
   twitter!
   typhoeus
 
