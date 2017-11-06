@@ -620,8 +620,6 @@ ActionMailer::Base.smtp_settings = {
 }
 ```
 
-**Note:** Only available with the `master` branch of the [mail](https://github.com/mikel/mail) gem
-
 Raises
 
 - `Net::OpenTimeout` on connect timeout
@@ -721,8 +719,6 @@ Mail.defaults do
   delivery_method :smtp, open_timeout: 1, read_timeout: 1
 end
 ```
-
-**Note:** Only available on the `master` branch of the gem
 
 Raises
 
