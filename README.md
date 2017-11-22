@@ -70,6 +70,7 @@ Rack Middleware
 Other
 
 - [actionmailer](#actionmailer)
+- [activemerchant](#activemerchant)
 - [aws-sdk](#aws-sdk)
 - [bitly](#bitly)
 - [firebase](#firebase)
@@ -624,6 +625,15 @@ Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
+
+### activemerchant
+
+```ruby
+ActiveMerchant::Billing::Gateway.open_timeout = 1 # Default is 60
+ActiveMerchant::Billing::Gateway.read_timeout = 1 # Default is 60
+```
+
+Raises `ActiveMerchant::ConnectionError`
 
 ### aws-sdk
 

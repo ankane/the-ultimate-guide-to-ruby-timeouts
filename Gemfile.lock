@@ -48,6 +48,11 @@ GEM
     activejob (5.1.4)
       activesupport (= 5.1.4)
       globalid (>= 0.3.6)
+    activemerchant (1.75.0)
+      activesupport (>= 3.2.14, < 6.x)
+      builder (>= 2.1.2, < 4.0.0)
+      i18n (>= 0.6.9)
+      nokogiri (~> 1.4)
     activemodel (5.1.4)
       activesupport (= 5.1.4)
     activerecord (5.1.4)
@@ -672,6 +677,7 @@ PLATFORMS
 
 DEPENDENCIES
   actionmailer
+  activemerchant
   activerecord
   aws-sdk (>= 2)
   bitly
