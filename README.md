@@ -629,9 +629,11 @@ Raises
 ### activemerchant
 
 ```ruby
-ActiveMerchant::Billing::Gateway.open_timeout = 1 # Default is 60
-ActiveMerchant::Billing::Gateway.read_timeout = 1 # Default is 60
+ActiveMerchant::Billing::Gateway.open_timeout = 1
+ActiveMerchant::Billing::Gateway.read_timeout = 1
 ```
+
+Default: 60s
 
 Raises `ActiveMerchant::ConnectionError`
 
