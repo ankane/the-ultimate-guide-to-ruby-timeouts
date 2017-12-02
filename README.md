@@ -76,6 +76,7 @@ Other
 - [firebase](#firebase)
 - [gibbon](#gibbon)
 - [geocoder](#geocoder)
+- [google-cloud](#google-cloud)
 - [hipchat](#hipchat)
 - [koala](#koala)
 - [kubeclient](#kubeclient)
@@ -700,6 +701,14 @@ Geocoder.configure(timeout: 1, always_raise: :all, ...)
 ```
 
 Raises `Geocoder::LookupTimeout`
+
+### google-cloud
+
+```ruby
+Google::Cloud::Storage.new(timeout: 1)
+```
+
+Raises `Google::Cloud::Error`
 
 ### hipchat
 
