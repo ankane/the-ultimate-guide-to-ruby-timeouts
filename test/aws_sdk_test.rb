@@ -20,4 +20,16 @@ class AwsSdkTest < Minitest::Test
       Aws::S3::Client.new.list_buckets
     end
   end
+
+  def test_connect_client
+    assert_timeout(Seahorse::Client::NetworkingError) do
+      Aws::S3::Client.new(endpoint: connect_url, http_open_timeout: 1).list_buckets
+    end
+  end
+
+  def test_read_client
+    assert_timeout(Seahorse::Client::NetworkingError) do
+      Aws::S3::Client.new(endpoint: read_url, http_read_timeout: 1).list_buckets
+    end
+  end
 end

@@ -646,6 +646,15 @@ Aws.config = {
 }
 ```
 
+Or with a client
+
+```ruby
+Aws::S3::Client.new(
+  http_open_timeout: 1,
+  http_read_timeout: 1
+)
+```
+
 Raises `Seahorse::Client::NetworkingError`
 
 ### bitly
