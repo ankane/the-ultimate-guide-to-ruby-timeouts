@@ -93,7 +93,7 @@ GEM
     concurrent-ruby (1.0.5)
     connection_pool (2.2.1)
     cookiejar (0.3.3)
-    crass (1.0.2)
+    crass (1.0.3)
     curb (0.8.8)
     dalli (2.7.6)
     declarative (0.0.10)
@@ -284,7 +284,7 @@ GEM
     logging (2.2.2)
       little-plugger (~> 1.1)
       multi_json (~> 1.10)
-    loofah (2.1.1)
+    loofah (2.2.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.0)
@@ -323,7 +323,7 @@ GEM
     net-http-persistent (2.9.4)
     net-ssh (4.2.0)
     netrc (0.11.0)
-    nokogiri (1.8.1)
+    nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     ntlm-http (0.1.1)
     oauth2 (1.4.0)
@@ -445,4 +445,4 @@ DEPENDENCIES
   typhoeus
 
 BUNDLED WITH
-   1.16.0
+   1.16.1
