@@ -2,7 +2,7 @@
 
 An unresponsive service can be worse than a down one. It can tie up your entire system if not handled properly. **All network requests should have a timeout.**
 
-Here’s how to add timeouts for popular Ruby gems. **[All have been tested](test)**. You should [avoid Ruby’s `Timeout` module](http://www.mikeperham.com/2015/05/08/timeout-rubys-most-dangerous-api/). The default is no timeout, unless otherwise specified. Enjoy!
+Here’s how to add timeouts for popular Ruby gems. **[All have been tested](test)**. You should [avoid Ruby’s `Timeout` module](https://www.mikeperham.com/2015/05/08/timeout-rubys-most-dangerous-api/). The default is no timeout, unless otherwise specified. Enjoy!
 
 [![Build Status](https://travis-ci.org/ankane/the-ultimate-guide-to-ruby-timeouts.svg?branch=master)](https://travis-ci.org/ankane/the-ultimate-guide-to-ruby-timeouts)
 
