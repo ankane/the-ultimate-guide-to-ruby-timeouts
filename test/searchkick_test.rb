@@ -4,6 +4,7 @@ require "typhoeus/adapters/faraday"
 class SearchkickTest < Minitest::Test
   def setup
     Searchkick.timeout = 1
+    Searchkick.client_options = {retry_on_failure: false}
     Searchkick.client = nil
   end
 
