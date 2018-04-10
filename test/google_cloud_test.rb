@@ -3,7 +3,7 @@ require "google/cloud/storage"
 
 class GoogleCloudTest < Minitest::Test
   def setup
-    skip if ENV["TRAVIS"]
+    skip if travis?
   end
 
   def test_connect
