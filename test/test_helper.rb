@@ -3,6 +3,8 @@ Bundler.require :default
 require "minitest/autorun"
 require "minitest/pride"
 
+Thread.report_on_exception = false
+
 class UnknownTimeoutError < StandardError; end
 
 class Minitest::Test

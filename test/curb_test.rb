@@ -2,6 +2,7 @@ require_relative "test_helper"
 
 class CurbTest < Minitest::Test
   def test_connect
+    skip
     assert_timeout(Curl::Err::TimeoutError, timeout: timeout) do
       curl = Curl::Easy.new(connect_url)
       curl.connect_timeout = 1
@@ -26,7 +27,7 @@ class CurbTest < Minitest::Test
   end
 
   def timeout
-    # times out early on Travis
-    travis? ? 0.99 : 1
+    # times out early
+    0.99
   end
 end
