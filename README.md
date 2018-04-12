@@ -83,6 +83,7 @@ Other
 - [mail](#mail)
 - [mechanize](#mechanize)
 - [net-dns](#net-dns)
+- [net/ftp](#netftp)
 - [net/smtp](#netsmtp)
 - [net-ssh](#net-ssh)
 - [omniauth-oauth2](#omniauth-oauth2)
@@ -777,6 +778,17 @@ Net::DNS::Resolver.new(udp_timeout: 1)
 Default: 5s
 
 Raises `Net::DNS::Resolver::NoResponseError`
+
+### net/ftp
+
+```ruby
+ftp = Net::FTP.new(host, open_timeout: 1, read_timeout: 1)
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
 
 ### net/smtp
 
