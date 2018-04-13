@@ -782,7 +782,7 @@ Raises `Net::DNS::Resolver::NoResponseError`
 ### net/ftp
 
 ```ruby
-ftp = Net::FTP.new(host, open_timeout: 1, read_timeout: 1)
+Net::FTP.new(host, open_timeout: 1, read_timeout: 1)
 ```
 
 Raises
