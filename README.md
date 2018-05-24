@@ -486,6 +486,14 @@ Net::HTTP.start(host, port, open_timeout: 1, read_timeout: 1) do
 end
 ```
 
+or
+
+```ruby
+http = Net::HTTP.new(host, port)
+http.open_timeout = 1
+http.read_timeout = 1
+```
+
 Raises
 
 - `Net::OpenTimeout` on connect timeout
