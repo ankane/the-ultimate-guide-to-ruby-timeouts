@@ -1,19 +1,3 @@
-GIT
-  remote: https://github.com/sferik/twitter.git
-  revision: 844818cad07ce490ccb9d8542ebb6b4fc7a61cb4
-  specs:
-    twitter (6.2.0)
-      addressable (~> 2.3)
-      buftok (~> 0.2.0)
-      equalizer (~> 0.0.11)
-      http (~> 3.0)
-      http-form_data (~> 2.0)
-      http_parser.rb (~> 0.6.0)
-      memoizable (~> 0.4.0)
-      multipart-post (~> 2.0)
-      naught (~> 1.0)
-      simple_oauth (~> 0.3.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -402,6 +386,17 @@ GEM
       faraday (~> 0.9)
       jwt (>= 1.5, <= 2.5)
       nokogiri (>= 1.6, < 2.0)
+    twitter (6.2.0)
+      addressable (~> 2.3)
+      buftok (~> 0.2.0)
+      equalizer (~> 0.0.11)
+      http (~> 3.0)
+      http-form_data (~> 2.0)
+      http_parser.rb (~> 0.6.0)
+      memoizable (~> 0.4.0)
+      multipart-post (~> 2.0)
+      naught (~> 1.0)
+      simple_oauth (~> 0.3.0)
     typhoeus (1.3.0)
       ethon (>= 0.9.0)
     tzinfo (1.2.5)
@@ -460,7 +455,7 @@ DEPENDENCIES
   slack-notifier
   stripe (>= 1.24.0)
   twilio-ruby
-  twitter!
+  twitter
   typhoeus
 
 BUNDLED WITH
