@@ -866,9 +866,13 @@ Raises
 
 ### twitter
 
-Not configurable at the moment
+```ruby
+Twitter::REST::Client.new(timeouts: {connect: 1, read: 1, write: 1})
+```
 
-Default: 10s connect timeout, 30s read timeout
+Raises
+
+- `HTTP::TimeoutError`
 
 ### zendesk_api
 
