@@ -608,7 +608,7 @@ Raises `Rack::Timeout::RequestTimeoutError` or `Rack::Timeout::RequestExpiryErro
 
 [Read more here](https://github.com/heroku/rack-timeout#the-rabbit-hole)
 
-**Note:** The approach used by Rack::Timeout can leave your application in an inconsistent state, [as described here](https://github.com/heroku/rack-timeout#timing-out-inherently-unsafe)
+**Note:** The approach used by Rack::Timeout can leave your application in an inconsistent state, [as described here](https://github.com/heroku/rack-timeout/blob/master/doc/risks.md)
 
 ### slowpoke
 
