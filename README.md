@@ -72,6 +72,7 @@ Other
 - [actionmailer](#actionmailer)
 - [activemerchant](#activemerchant)
 - [aws-sdk](#aws-sdk)
+- [azure](#azure)
 - [bitly](#bitly)
 - [firebase](#firebase)
 - [gibbon](#gibbon)
@@ -666,6 +667,10 @@ Aws::S3::Client.new(
 ```
 
 Raises `Seahorse::Client::NetworkingError`
+
+### azure
+
+Not configurable at the moment, and no timeout by default
 
 ### bitly
 
