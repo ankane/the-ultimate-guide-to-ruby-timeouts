@@ -870,9 +870,7 @@ Raises
 Twitter::REST::Client.new(timeouts: {connect: 1, read: 1, write: 1})
 ```
 
-Raises
-
-- `HTTP::TimeoutError`
+Raises `HTTP::TimeoutError`
 
 ### zendesk_api
 
