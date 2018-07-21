@@ -867,16 +867,24 @@ Raises
 ### twitter
 
 ```ruby
-Twitter::REST::Client.new(timeouts: {connect: 1, read: 1, write: 1})
+Twitter::REST::Client.new do |config|
+  config.timeouts = {connect: 1, read: 1, write: 1}
+end
 ```
 
 Raises `HTTP::TimeoutError`
 
 ### zendesk_api
 
-Not configurable at the moment
+```ruby
+ZendeskAPI::Client.new do |config|
+  config.client_options = {request: {open_timeout: 1, timeout: 1}}
+end
+```
 
 Default: 10s connect timeout, no read timeout
+
+Raises `ZendeskAPI::Error::NetworkError`
 
 ## Don’t see a library you use?
 

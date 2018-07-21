@@ -278,6 +278,7 @@ GEM
       socksify
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
+    inflection (1.0.0)
     jmespath (1.4.0)
     json (2.1.0)
     jwt (2.1.0)
@@ -406,6 +407,12 @@ GEM
       unf_ext
     unf_ext (0.0.7.5)
     webrobots (0.1.2)
+    zendesk_api (1.16.0)
+      faraday (~> 0.9)
+      hashie (>= 3.5.2, < 4.0.0)
+      inflection
+      mime-types
+      multipart-post (~> 2.0)
     zonefile (1.06)
 
 PLATFORMS
@@ -457,6 +464,7 @@ DEPENDENCIES
   twilio-ruby
   twitter
   typhoeus
+  zendesk_api
 
 BUNDLED WITH
    1.16.3
