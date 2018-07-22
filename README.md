@@ -69,22 +69,31 @@ Rack Middleware
 - [rack-timeout](#rack-timeout)
 - [slowpoke](#slowpoke)
 
-Other
+3rd Party Services
 
-- [actionmailer](#actionmailer)
-- [activemerchant](#activemerchant)
 - [aws-sdk](#aws-sdk)
 - [azure](#azure)
 - [bitly](#bitly)
-- [docker-api](#docker-api)
 - [dogapi](#dogapi)
-- [fastimage](#fastimage)
 - [firebase](#firebase)
-- [geocoder](#geocoder)
 - [gibbon](#gibbon)
 - [google-cloud](#google-cloud)
 - [hipchat](#hipchat)
 - [koala](#koala)
+- [restforce](#restforce)
+- [slack-notifier](#slack-notifier)
+- [stripe](#stripe)
+- [twilio-ruby](#twilio-ruby)
+- [twitter](#twitter)
+- [zendesk_api](#zendesk_api)
+
+Other
+
+- [actionmailer](#actionmailer)
+- [activemerchant](#activemerchant)
+- [docker-api](#docker-api)
+- [fastimage](#fastimage)
+- [geocoder](#geocoder)
 - [kubeclient](#kubeclient)
 - [mail](#mail)
 - [mechanize](#mechanize)
@@ -97,12 +106,6 @@ Other
 - [net-ssh](#net-ssh)
 - [net-telnet](#net-telnet)
 - [omniauth-oauth2](#omniauth-oauth2)
-- [restforce](#restforce)
-- [slack-notifier](#slack-notifier)
-- [stripe](#stripe)
-- [twilio-ruby](#twilio-ruby)
-- [twitter](#twitter)
-- [zendesk_api](#zendesk_api)
 
 ## Statement Timeouts
 
@@ -655,32 +658,7 @@ Default: 15s
 
 Raises same exceptions as [rack-timeout](#rack-timeout)
 
-## Other
-
-### actionmailer
-
-```ruby
-ActionMailer::Base.smtp_settings = {
-  open_timeout: 1,
-  read_timeout: 1
-}
-```
-
-Raises
-
-- `Net::OpenTimeout` on connect timeout
-- `Net::ReadTimeout` on read timeout
-
-### activemerchant
-
-```ruby
-ActiveMerchant::Billing::Gateway.open_timeout = 1
-ActiveMerchant::Billing::Gateway.read_timeout = 1
-```
-
-Default: 60s
-
-Raises `ActiveMerchant::ConnectionError`
+## 3rd Party Services
 
 ### aws-sdk
 
@@ -714,18 +692,6 @@ Bitly.new(username, api_key, timeout)
 
 Raises `BitlyTimeout`
 
-### docker-api
-
-```ruby
-Docker.options = {
-  read_timeout: 1
-}
-```
-
-Connect timeout not configurable
-
-Raises `Docker::Error::TimeoutError`
-
 ### dogapi
 
 ```ruby
@@ -736,16 +702,6 @@ Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
-
-### fastimage
-
-```ruby
-FastImage.size(url, timeout: 1)
-```
-
-Returns `nil` on timeouts
-
-If you pass `raise_on_failure: true`, raises `FastImage::ImageFetchFailure`
 
 ### firebase
 
@@ -760,20 +716,6 @@ Raises
 
 - `HTTPClient::ConnectTimeoutError` on connect timeout
 - `HTTPClient::ReceiveTimeoutError` on read timeout
-
-### geocoder
-
-```ruby
-Geocoder.configure(timeout: 1, ...)
-```
-
-No exception is raised by default. To raise exceptions, use
-
-```ruby
-Geocoder.configure(timeout: 1, always_raise: :all, ...)
-```
-
-Raises `Geocoder::LookupTimeout`
 
 ### gibbon
 
@@ -812,6 +754,138 @@ Raises
 
 - `Faraday::ConnectionFailed` on connect timeout
 - `Faraday::TimeoutError` on read timeout
+
+### restforce
+
+```ruby
+Restforce.new(timeout: 1)
+```
+
+Raises
+
+- `Faraday::ConnectionFailed` on connect timeout
+- `Faraday::TimeoutError` on read timeout
+
+### slack-notifier
+
+```ruby
+Slack::Notifier.new(webhook_url, http_options: {open_timeout: 1, read_timeout: 1})
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
+
+### stripe
+
+```ruby
+Stripe.open_timeout = 1
+Stripe.read_timeout = 1
+```
+
+Default: 30s connect timeout, 80s read timeout
+
+Raises `Stripe::APIConnectionError`
+
+### twilio-ruby
+
+```ruby
+http_client = Twilio::HTTP::Client.new(timeout: 1)
+Twilio::REST::Client.new(account_sid, auth_token, nil, nil, http_client)
+```
+
+Default: 30s
+
+Raises
+
+- `Faraday::ConnectionFailed` on connect timeout
+- `Faraday::TimeoutError` on read timeout
+
+### twitter
+
+```ruby
+Twitter::REST::Client.new do |config|
+  config.timeouts = {connect: 1, read: 1, write: 1}
+end
+```
+
+Raises `HTTP::TimeoutError`
+
+### zendesk_api
+
+```ruby
+ZendeskAPI::Client.new do |config|
+  config.client_options = {request: {open_timeout: 1, timeout: 1}}
+end
+```
+
+Default: 10s connect timeout, no read timeout
+
+Raises `ZendeskAPI::Error::NetworkError`
+
+## Other
+
+### actionmailer
+
+```ruby
+ActionMailer::Base.smtp_settings = {
+  open_timeout: 1,
+  read_timeout: 1
+}
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
+
+### activemerchant
+
+```ruby
+ActiveMerchant::Billing::Gateway.open_timeout = 1
+ActiveMerchant::Billing::Gateway.read_timeout = 1
+```
+
+Default: 60s
+
+Raises `ActiveMerchant::ConnectionError`
+
+### docker-api
+
+```ruby
+Docker.options = {
+  read_timeout: 1
+}
+```
+
+Connect timeout not configurable
+
+Raises `Docker::Error::TimeoutError`
+
+### fastimage
+
+```ruby
+FastImage.size(url, timeout: 1)
+```
+
+Returns `nil` on timeouts
+
+If you pass `raise_on_failure: true`, raises `FastImage::ImageFetchFailure`
+
+### geocoder
+
+```ruby
+Geocoder.configure(timeout: 1, ...)
+```
+
+No exception is raised by default. To raise exceptions, use
+
+```ruby
+Geocoder.configure(timeout: 1, always_raise: :all, ...)
+```
+
+Raises `Geocoder::LookupTimeout`
 
 ### kubeclient
 
@@ -933,75 +1007,6 @@ Raises
 ### omniauth-oauth2
 
 [Not configurable at the moment](https://github.com/intridea/omniauth-oauth2/issues/27), and no timeout by default
-
-### restforce
-
-```ruby
-Restforce.new(timeout: 1)
-```
-
-Raises
-
-- `Faraday::ConnectionFailed` on connect timeout
-- `Faraday::TimeoutError` on read timeout
-
-### slack-notifier
-
-```ruby
-Slack::Notifier.new(webhook_url, http_options: {open_timeout: 1, read_timeout: 1})
-```
-
-Raises
-
-- `Net::OpenTimeout` on connect timeout
-- `Net::ReadTimeout` on read timeout
-
-### stripe
-
-```ruby
-Stripe.open_timeout = 1
-Stripe.read_timeout = 1
-```
-
-Default: 30s connect timeout, 80s read timeout
-
-Raises `Stripe::APIConnectionError`
-
-### twilio-ruby
-
-```ruby
-http_client = Twilio::HTTP::Client.new(timeout: 1)
-Twilio::REST::Client.new(account_sid, auth_token, nil, nil, http_client)
-```
-
-Default: 30s
-
-Raises
-
-- `Faraday::ConnectionFailed` on connect timeout
-- `Faraday::TimeoutError` on read timeout
-
-### twitter
-
-```ruby
-Twitter::REST::Client.new do |config|
-  config.timeouts = {connect: 1, read: 1, write: 1}
-end
-```
-
-Raises `HTTP::TimeoutError`
-
-### zendesk_api
-
-```ruby
-ZendeskAPI::Client.new do |config|
-  config.client_options = {request: {open_timeout: 1, timeout: 1}}
-end
-```
-
-Default: 10s connect timeout, no read timeout
-
-Raises `ZendeskAPI::Error::NetworkError`
 
 ## Don’t see a library you use?
 
