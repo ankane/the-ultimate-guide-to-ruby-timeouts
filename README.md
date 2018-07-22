@@ -76,6 +76,7 @@ Other
 - [aws-sdk](#aws-sdk)
 - [azure](#azure)
 - [bitly](#bitly)
+- [docker-api](#docker-api)
 - [firebase](#firebase)
 - [gibbon](#gibbon)
 - [geocoder](#geocoder)
@@ -709,6 +710,18 @@ Bitly.new(username, api_key, timeout)
 ```
 
 Raises `BitlyTimeout`
+
+### docker-api
+
+```ruby
+Docker.options = {
+  read_timeout: 1
+}
+```
+
+Connect timeout not configurable
+
+Raises `Docker::Error::TimeoutError`
 
 ### firebase
 

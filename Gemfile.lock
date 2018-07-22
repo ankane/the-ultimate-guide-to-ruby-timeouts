@@ -76,6 +76,9 @@ GEM
     declarative (0.0.10)
     declarative-option (0.1.0)
     digest-crc (0.4.1)
+    docker-api (1.34.2)
+      excon (>= 0.47.0)
+      multi_json
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
     elasticsearch (6.1.0)
@@ -313,6 +316,7 @@ DEPENDENCIES
   connection_pool
   curb
   dalli
+  docker-api
   elasticsearch
   em-http-request
   excon
