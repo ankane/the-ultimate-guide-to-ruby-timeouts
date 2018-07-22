@@ -56,6 +56,7 @@ HTTP Clients
 - [patron](#patron)
 - [rest-client](#rest-client)
 - [typhoeus](#typhoeus)
+- [unirest](#unirest)
 
 Web Servers
 
@@ -558,6 +559,18 @@ No exception is raised. Check for a timeout with
 ```ruby
 response.timed_out?
 ```
+
+### unirest
+
+```ruby
+Unirest.timeout(1)
+```
+
+Connect timeout is not configurable
+
+Default: 10s read timeout, no connect timeout
+
+Raises `RuntimeError`
 
 ## Web Servers
 
