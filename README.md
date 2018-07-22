@@ -31,6 +31,7 @@ Data Stores
 - [connection_pool](#connection_pool)
 - [dalli](#dalli)
 - [elasticsearch](#elasticsearch)
+- [hiredis](#hiredis)
 - [mongo](#mongo)
 - [mongoid](#mongoid)
 - [mysql2](#mysql2)
@@ -283,6 +284,18 @@ Raises
 
 - `Faraday::ConnectionFailed` on connect timeout
 - `Faraday::TimeoutError` on read timeout
+
+### hiredis
+
+```ruby
+conn = Hiredis::Connection.new
+conn.timeout = 1_000_000 # microseconds
+```
+
+Raises:
+
+- `Errno::ETIMEDOUT` on connect timeout
+- `Errno::EAGAIN` on read timeout
 
 ### mongo
 
