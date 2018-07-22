@@ -273,9 +273,12 @@ Raises
 Cassandra.cluster(connect_timeout: 1, timeout: 1)
 ```
 
-Default: 5s connect timeout, no read timeout
+Default: 10s connect timeout, 12s read timeout
 
-Raises `Cassandra::Errors::NoHostsAvailable`
+Raises
+
+- `Cassandra::Errors::NoHostsAvailable` on connect timeout
+- `Cassandra::Errors::TimeoutError` on read timeout
 
 ### connection_pool
 

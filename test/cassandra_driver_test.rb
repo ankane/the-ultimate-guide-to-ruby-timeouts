@@ -9,6 +9,8 @@ class CassandraDriverTest < Minitest::Test
   end
 
   def test_read
+    # unable to test Cassandra::Errors::TimeoutError
+
     assert_timeout(Cassandra::Errors::NoHostsAvailable) do
       Cassandra.cluster(hosts: [read_host], port: read_port, timeout: 1)
     end
