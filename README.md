@@ -96,6 +96,7 @@ Other
 - [net-ssh](#net-ssh)
 - [net-telnet](#net-telnet)
 - [omniauth-oauth2](#omniauth-oauth2)
+- [restforce](#restforce)
 - [slack-notifier](#slack-notifier)
 - [stripe](#stripe)
 - [twilio-ruby](#twilio-ruby)
@@ -920,6 +921,17 @@ Raises
 ### omniauth-oauth2
 
 [Not configurable at the moment](https://github.com/intridea/omniauth-oauth2/issues/27), and no timeout by default
+
+### restforce
+
+```ruby
+Restforce.new(timeout: 1)
+```
+
+Raises
+
+- `Faraday::ConnectionFailed` on connect timeout
+- `Faraday::TimeoutError` on read timeout
 
 ### slack-notifier
 
