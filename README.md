@@ -86,7 +86,7 @@ Other
 - [mechanize](#mechanize)
 - [net-dns](#net-dns)
 - [net/ftp](#netftp)
-- [net-scp](#netscp)
+- [net-scp](#net-scp)
 - [net/smtp](#netsmtp)
 - [net-ssh](#net-ssh)
 - [omniauth-oauth2](#omniauth-oauth2)
