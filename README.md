@@ -92,6 +92,7 @@ Other
 - [net-sftp](#net-sftp)
 - [net/smtp](#netsmtp)
 - [net-ssh](#net-ssh)
+- [net-telnet](#net-telnet)
 - [omniauth-oauth2](#omniauth-oauth2)
 - [slack-notifier](#slack-notifier)
 - [stripe](#stripe)
@@ -292,7 +293,7 @@ conn = Hiredis::Connection.new
 conn.timeout = 1_000_000 # microseconds
 ```
 
-Raises:
+Raises
 
 - `Errno::ETIMEDOUT` on connect timeout
 - `Errno::EAGAIN` on read timeout
@@ -557,7 +558,7 @@ RestClient::Request.execute(method: :get, url: url, timeout: 1)
 
 Same options also work with `RestClient::Resource`.
 
-Raises:
+Raises
 
 - `RestClient::Exceptions::OpenTimeout` on connect timeout
 - `RestClient::Exceptions::ReadTimeout` on read timeout
@@ -880,6 +881,17 @@ Net::SSH.start(host, user, timeout: 1)
 ```
 
 Raises `Net::SSH::ConnectionTimeout`
+
+### net-telnet
+
+```ruby
+Net::Telnet::new("Host" => host, "Timeout" => 1)
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
 
 ### omniauth-oauth2
 
