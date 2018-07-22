@@ -79,6 +79,8 @@ GEM
     docker-api (1.34.2)
       excon (>= 0.47.0)
       multi_json
+    dogapi (1.30)
+      multi_json
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
     elasticsearch (6.1.0)
@@ -325,6 +327,7 @@ DEPENDENCIES
   curb
   dalli
   docker-api
+  dogapi
   elasticsearch
   em-http-request
   excon

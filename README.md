@@ -77,10 +77,11 @@ Other
 - [azure](#azure)
 - [bitly](#bitly)
 - [docker-api](#docker-api)
-- [firebase](#firebase)
+- [dogapi](#dogapi)
 - [fastimage](#fastimage)
-- [gibbon](#gibbon)
+- [firebase](#firebase)
 - [geocoder](#geocoder)
+- [gibbon](#gibbon)
 - [google-cloud](#google-cloud)
 - [hipchat](#hipchat)
 - [koala](#koala)
@@ -725,6 +726,17 @@ Connect timeout not configurable
 
 Raises `Docker::Error::TimeoutError`
 
+### dogapi
+
+```ruby
+Dogapi::Client.new(api_key, nil, nil, nil, false, 1)
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
+
 ### fastimage
 
 ```ruby
@@ -749,14 +761,6 @@ Raises
 - `HTTPClient::ConnectTimeoutError` on connect timeout
 - `HTTPClient::ReceiveTimeoutError` on read timeout
 
-### gibbon
-
-```ruby
-Gibbon::Request.new(open_timeout: 1, timeout: 1, ...)
-```
-
-Raises `Gibbon::MailChimpError`
-
 ### geocoder
 
 ```ruby
@@ -770,6 +774,14 @@ Geocoder.configure(timeout: 1, always_raise: :all, ...)
 ```
 
 Raises `Geocoder::LookupTimeout`
+
+### gibbon
+
+```ruby
+Gibbon::Request.new(open_timeout: 1, timeout: 1, ...)
+```
+
+Raises `Gibbon::MailChimpError`
 
 ### google-cloud
 
