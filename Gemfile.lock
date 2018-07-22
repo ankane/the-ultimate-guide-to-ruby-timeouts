@@ -328,6 +328,8 @@ GEM
     net-http-digest_auth (1.4.1)
     net-http-persistent (3.0.0)
       connection_pool (~> 2.2)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
     net-ssh (5.0.2)
     netrc (0.11.0)
     nokogiri (1.8.3)
@@ -449,6 +451,7 @@ DEPENDENCIES
   mongoid
   mysql2
   net-dns
+  net-scp
   net-ssh
   patron
   pg

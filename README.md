@@ -86,6 +86,7 @@ Other
 - [mechanize](#mechanize)
 - [net-dns](#net-dns)
 - [net/ftp](#netftp)
+- [net-scp](#netscp)
 - [net/smtp](#netsmtp)
 - [net-ssh](#net-ssh)
 - [omniauth-oauth2](#omniauth-oauth2)
@@ -815,6 +816,14 @@ Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
+
+### net-scp
+
+```ruby
+Net::SCP.start(host, user, timeout: 1)
+```
+
+Raises `Net::SSH::ConnectionTimeout`
 
 ### net/smtp
 
