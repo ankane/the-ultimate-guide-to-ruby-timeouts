@@ -279,6 +279,7 @@ GEM
     simple_oauth (0.3.1)
     slack-notifier (2.3.2)
     socksify (1.7.1)
+    statsd-ruby (1.4.0)
     stripe (3.17.2)
       faraday (~> 0.10)
     thread_safe (0.3.6)
@@ -367,6 +368,7 @@ DEPENDENCIES
   searchkick
   sequel
   slack-notifier
+  statsd-ruby
   stripe (>= 1.24.0)
   twilio-ruby
   twitter
