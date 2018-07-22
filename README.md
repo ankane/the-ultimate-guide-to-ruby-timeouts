@@ -28,6 +28,7 @@ Data Stores
 
 - [activerecord](#activerecord)
 - [bunny](#bunny)
+- [cassandra-driver](#cassandra-driver)
 - [connection_pool](#connection_pool)
 - [dalli](#dalli)
 - [elasticsearch](#elasticsearch)
@@ -265,6 +266,16 @@ Raises
 
 - `Bunny::TCPConnectionFailedForAllHosts` on connect timeout
 - `Bunny::NetworkFailure` on read timeout
+
+### cassandra-driver
+
+```ruby
+Cassandra.cluster(connect_timeout: 1, timeout: 1)
+```
+
+Default: 5s connect timeout, no read timeout
+
+Raises `Cassandra::Errors::NoHostsAvailable`
 
 ### connection_pool
 

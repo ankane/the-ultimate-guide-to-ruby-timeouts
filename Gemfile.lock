@@ -76,6 +76,8 @@ GEM
     builder (3.2.3)
     bunny (2.11.0)
       amq-protocol (~> 2.3.0)
+    cassandra-driver (3.2.2)
+      ione (~> 1.2)
     concurrent-ruby (1.0.5)
     connection_pool (2.2.2)
     cookiejar (0.3.3)
@@ -185,6 +187,7 @@ GEM
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
     inflection (1.0.0)
+    ione (1.2.4)
     jmespath (1.4.0)
     json (2.1.0)
     jwt (1.5.6)
@@ -347,6 +350,7 @@ DEPENDENCIES
   aws-sdk-s3
   bitly
   bunny
+  cassandra-driver
   connection_pool
   curb
   dalli
