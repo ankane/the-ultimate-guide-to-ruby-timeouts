@@ -208,6 +208,7 @@ GEM
     net-http-digest_auth (1.4.1)
     net-http-persistent (3.0.0)
       connection_pool (~> 2.2)
+    net-ldap (0.16.1)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -331,6 +332,7 @@ DEPENDENCIES
   mongoid
   mysql2
   net-dns
+  net-ldap
   net-scp
   net-sftp
   net-ssh

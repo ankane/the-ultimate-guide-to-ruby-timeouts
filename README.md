@@ -86,6 +86,7 @@ Other
 - [mechanize](#mechanize)
 - [net-dns](#net-dns)
 - [net/ftp](#netftp)
+- [net-ldap](#net-ldap)
 - [net-scp](#net-scp)
 - [net-sftp](#net-sftp)
 - [net/smtp](#netsmtp)
@@ -817,6 +818,18 @@ Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
+
+### net/ldap
+
+```ruby
+Net::LDAP.new(host: host, connect_timeout: 1)
+```
+
+Read timeout not configurable
+
+Default: 5s connect timeout, no read timeout
+
+Raises `Net::LDAP::Error`
 
 ### net-scp
 
