@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/abonas/kubeclient.git
+  revision: f6a9bf12cd0ea3811165e84d2775251f968366ec
+  specs:
+    kubeclient (3.1.2)
+      http (~> 3.0)
+      recursive-open-struct (~> 1.0, >= 1.0.4)
+      rest-client (~> 2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -249,7 +258,7 @@ GEM
     pg (1.0.0)
     public_suffix (3.0.2)
     rack (2.0.5)
-    rack-test (1.0.0)
+    rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
@@ -257,6 +266,7 @@ GEM
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
     rake (12.3.1)
+    recursive-open-struct (1.1.0)
     redis (4.0.1)
     representable (3.0.4)
       declarative (< 0.1.0)
@@ -359,6 +369,7 @@ DEPENDENCIES
   httpclient
   httpi
   koala
+  kubeclient!
   mail (>= 2.7.0)
   mechanize
   minitest
