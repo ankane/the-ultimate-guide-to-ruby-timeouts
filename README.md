@@ -825,7 +825,7 @@ Raises
 Net::LDAP.new(host: host, connect_timeout: 1)
 ```
 
-Read timeout not configurable
+Read timeout [not configurable at the moment](https://github.com/ruby-ldap/ruby-net-ldap/pull/167)
 
 Default: 5s connect timeout, no read timeout
 
