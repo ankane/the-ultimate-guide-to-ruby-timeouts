@@ -1,7 +1,7 @@
 require_relative "test_helper"
 require "net/scp"
 
-class NetSSHTest < Minitest::Test
+class NetScpTest < Minitest::Test
   def test_connect
     assert_timeout(Net::SSH::ConnectionTimeout) do
       Net::SCP.start(connect_host, nil, timeout: 1) do |scp|

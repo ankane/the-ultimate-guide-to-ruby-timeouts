@@ -87,6 +87,7 @@ Other
 - [net-dns](#net-dns)
 - [net/ftp](#netftp)
 - [net-scp](#net-scp)
+- [net-sftp](#net-sftp)
 - [net/smtp](#netsmtp)
 - [net-ssh](#net-ssh)
 - [omniauth-oauth2](#omniauth-oauth2)
@@ -821,6 +822,14 @@ Raises
 
 ```ruby
 Net::SCP.start(host, user, timeout: 1)
+```
+
+Raises `Net::SSH::ConnectionTimeout`
+
+### net-sftp
+
+```ruby
+Net::SFTP.start(host, user, timeout: 1)
 ```
 
 Raises `Net::SSH::ConnectionTimeout`

@@ -330,6 +330,8 @@ GEM
       connection_pool (~> 2.2)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
+    net-sftp (2.1.2)
+      net-ssh (>= 2.6.5)
     net-ssh (5.0.2)
     netrc (0.11.0)
     nokogiri (1.8.3)
@@ -452,6 +454,7 @@ DEPENDENCIES
   mysql2
   net-dns
   net-scp
+  net-sftp
   net-ssh
   patron
   pg
