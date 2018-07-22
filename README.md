@@ -77,6 +77,7 @@ Rack Middleware
 - [dogapi](#dogapi)
 - [firebase](#firebase)
 - [gibbon](#gibbon)
+- [github_api](#github_api)
 - [google-cloud](#google-cloud)
 - [hipchat](#hipchat)
 - [koala](#koala)
@@ -725,6 +726,17 @@ Gibbon::Request.new(open_timeout: 1, timeout: 1, ...)
 ```
 
 Raises `Gibbon::MailChimpError`
+
+### github_api
+
+```ruby
+Github.new(connection_options: {request: {open_timeout: 1, timeout: 1}})
+```
+
+Raises
+
+- `Faraday::ConnectionFailed` on connect timeout
+- `Faraday::TimeoutError` on read timeout
 
 ### google-cloud
 
