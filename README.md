@@ -80,6 +80,7 @@ Rack Middleware
 - [google-cloud](#google-cloud)
 - [hipchat](#hipchat)
 - [koala](#koala)
+- [octokit](#octokit)
 - [restforce](#restforce)
 - [slack-notifier](#slack-notifier)
 - [stripe](#stripe)
@@ -748,6 +749,17 @@ Raises
 
 ```ruby
 Koala.http_service.http_options = {request: {open_timeout: 1, timeout: 1}}
+```
+
+Raises
+
+- `Faraday::ConnectionFailed` on connect timeout
+- `Faraday::TimeoutError` on read timeout
+
+### octokit
+
+```ruby
+Octokit::Client.new(connection_options: {request: {open_timeout: 1, timeout: 1}})
 ```
 
 Raises
