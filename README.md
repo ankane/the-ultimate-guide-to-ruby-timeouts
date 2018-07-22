@@ -78,6 +78,7 @@ Other
 - [bitly](#bitly)
 - [docker-api](#docker-api)
 - [firebase](#firebase)
+- [fastimage](#fastimage)
 - [gibbon](#gibbon)
 - [geocoder](#geocoder)
 - [google-cloud](#google-cloud)
@@ -652,7 +653,7 @@ Default: 15s
 
 Raises same exceptions as [rack-timeout](#rack-timeout)
 
-## External Services
+## Other
 
 ### actionmailer
 
@@ -722,6 +723,16 @@ Docker.options = {
 Connect timeout not configurable
 
 Raises `Docker::Error::TimeoutError`
+
+### fastimage
+
+```ruby
+FastImage.size(url, timeout: 1)
+```
+
+Returns `nil` on timeouts
+
+If you pass `raise_on_failure: true`, raises `FastImage::ImageFetchFailure`
 
 ### firebase
 
