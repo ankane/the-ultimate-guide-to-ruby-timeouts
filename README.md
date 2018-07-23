@@ -113,6 +113,7 @@ Other
 - [net-telnet](#net-telnet)
 - [omniauth-oauth2](#omniauth-oauth2)
 - [reversed](#reversed)
+- [socket](#socket)
 
 ## Statement Timeouts
 
@@ -1087,6 +1088,16 @@ Reversed.lookup("8.8.8.8", timeout: 1)
 ```
 
 Returns `nil` on timeouts
+
+### socket
+
+```ruby
+Socket.tcp(host, 80, connect_timeout: 1) do |sock|
+  # ...
+end
+```
+
+Raises `Errno::ETIMEDOUT`
 
 ## Don’t see a library you use?
 
