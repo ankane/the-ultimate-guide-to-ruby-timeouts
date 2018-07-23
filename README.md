@@ -81,6 +81,7 @@ Rack Middleware
 - [azure](#azure)
 - [bitly](#bitly)
 - [dogapi](#dogapi)
+- [droplet_kit](#droplet_kit)
 - [fastly](#fastly)
 - [firebase](#firebase)
 - [gibbon](#gibbon)
@@ -792,6 +793,10 @@ Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
+
+### droplet_kit
+
+[Not configurable at the moment](https://github.com/digitalocean/droplet_kit/pull/144), and no timeout by default
 
 ### fastly
 
