@@ -35,6 +35,7 @@ Data Stores
 - [drill-sergeant](#drill-sergeant)
 - [elasticsearch](#elasticsearch)
 - [hiredis](#hiredis)
+- [influxdb](#influxdb)
 - [mongo](#mongo)
 - [mongoid](#mongoid)
 - [mysql2](#mysql2)
@@ -365,6 +366,14 @@ Raises
 
 - `Errno::ETIMEDOUT` on connect timeout
 - `Errno::EAGAIN` on read timeout
+
+### influxdb
+
+```ruby
+InfluxDB::Client.new(open_timeout: 1, read_timeout: 1)
+```
+
+Raises `InfluxDB::ConnectionError`
 
 ### mongo
 
