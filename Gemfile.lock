@@ -7,6 +7,12 @@ GIT
       recursive-open-struct (~> 1.0, >= 1.0.4)
       rest-client (~> 2.0)
 
+GIT
+  remote: https://github.com/ankane/drill-sergeant.git
+  revision: 83055baf29f444f29d865f471ba3c62d5982e230
+  specs:
+    drill-sergeant (0.1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -360,6 +366,7 @@ DEPENDENCIES
   dalli
   docker-api
   dogapi
+  drill-sergeant!
   elasticsearch
   em-http-request
   excon

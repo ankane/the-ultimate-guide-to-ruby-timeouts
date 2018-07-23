@@ -31,6 +31,7 @@ Data Stores
 - [cassandra-driver](#cassandra-driver)
 - [connection_pool](#connection_pool)
 - [dalli](#dalli)
+- [drill-sergeant](#drill-sergeant)
 - [elasticsearch](#elasticsearch)
 - [hiredis](#hiredis)
 - [mongo](#mongo)
@@ -300,6 +301,19 @@ Default: 0.5s
 
 Raises `Dalli::RingError`
 
+### drill-sergeant
+
+```ruby
+Drill.new(url: url, open_timeout: 1, read_timeout: 1)
+```
+
+Default: 3s connect timeout, 600s read timeout
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
+
 ### elasticsearch
 
 ```ruby
@@ -400,7 +414,7 @@ Raises
 
 Not configurable at the moment
 
-Default: 10s open timeout, no read timeout
+Default: 10s connect timeout, no read timeout
 
 ### ruby-kafka
 
