@@ -81,6 +81,10 @@ GEM
     concurrent-ruby (1.0.5)
     connection_pool (2.2.2)
     cookiejar (0.3.3)
+    couchrest (2.0.1)
+      httpclient (~> 2.8)
+      mime-types (>= 1.15)
+      multi_json (~> 1.7)
     crass (1.0.4)
     curb (0.9.6)
     dalli (2.7.8)
@@ -359,6 +363,7 @@ DEPENDENCIES
   bunny
   cassandra-driver
   connection_pool
+  couchrest
   curb
   dalli
   docker-api

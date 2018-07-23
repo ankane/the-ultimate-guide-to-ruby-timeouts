@@ -30,6 +30,7 @@ Data Stores
 - [bunny](#bunny)
 - [cassandra-driver](#cassandra-driver)
 - [connection_pool](#connection_pool)
+- [couchrest](#couchrest)
 - [dalli](#dalli)
 - [drill-sergeant](#drill-sergeant)
 - [elasticsearch](#elasticsearch)
@@ -292,6 +293,17 @@ ConnectionPool.new(timeout: 1) { ... }
 ```
 
 Raises `Timeout::Error`
+
+### couchrest
+
+```ruby
+CouchRest.new(url, open_timeout: 1, read_timeout: 1, timeout: 1)
+```
+
+Raises
+
+- `HTTPClient::ConnectTimeoutError` on connect timeout
+- `HTTPClient::ReceiveTimeoutError` on read timeout
 
 ### dalli
 
