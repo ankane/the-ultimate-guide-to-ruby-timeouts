@@ -88,6 +88,7 @@ Rack Middleware
 - [koala](#koala)
 - [octokit](#octokit)
 - [restforce](#restforce)
+- [shopify_api](#shopify_api)
 - [slack-notifier](#slack-notifier)
 - [stripe](#stripe)
 - [twilio-ruby](#twilio-ruby)
@@ -851,6 +852,14 @@ Raises
 
 - `Faraday::ConnectionFailed` on connect timeout
 - `Faraday::TimeoutError` on read timeout
+
+### shopify_api
+
+```ruby
+ShopifyAPI::Base.timeout = 1
+```
+
+Raises `ActiveResource::TimeoutError`
 
 ### slack-notifier
 
