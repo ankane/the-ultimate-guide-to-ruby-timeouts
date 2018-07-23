@@ -38,6 +38,7 @@ Data Stores
 - [mongo](#mongo)
 - [mongoid](#mongoid)
 - [mysql2](#mysql2)
+- [neo4j](#neo4j)
 - [pg](#pg)
 - [presto-client](#presto-client)
 - [redis](#redis)
@@ -388,6 +389,20 @@ Mysql2::Client.new(connect_timeout: 1, read_timeout: 1, write_timeout: 1, ...)
 ```
 
 Raises `Mysql2::Error`
+
+### neo4j
+
+```ruby
+config.neo4j.session.options = {
+  faraday_configurator: lambda do |faraday|
+    faraday.adapter :typhoeus
+    faraday.options[:open_timeout] = 5
+    faraday.options[:timeout] = 65
+  end
+}
+```
+
+Raises `Faraday::TimeoutError`
 
 ### pg
 
