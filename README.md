@@ -1056,6 +1056,8 @@ Default: 5s
 
 Raises `Net::DNS::Resolver::NoResponseError`
 
+Use the `Timeout` module
+
 ### net/ftp
 
 ```ruby
@@ -1138,6 +1140,8 @@ Reversed.lookup("8.8.8.8", timeout: 1)
 ```
 
 Returns `nil` on timeouts
+
+Depends on net-dns, which uses the `Timeout` module
 
 ### socket
 
