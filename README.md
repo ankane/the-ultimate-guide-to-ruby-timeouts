@@ -1155,11 +1155,15 @@ Raises `Errno::ETIMEDOUT`
 
 Default: 30s
 
+Raises `Zookeeper::Exceptions::ContinuationTimeoutError`
+
 ### zookeeper
 
 [Not configurable at the moment](https://github.com/zk-ruby/zookeeper/issues/38)
 
 Default: 30s
+
+Raises `Zookeeper::Exceptions::ContinuationTimeoutError`
 
 ## Don’t see a library you use?
 
