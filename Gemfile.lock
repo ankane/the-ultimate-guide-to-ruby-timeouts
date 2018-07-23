@@ -339,6 +339,9 @@ GEM
       activeresource (>= 3.0.0)
       graphql-client
       rack
+    sift (3.0.0)
+      httparty (>= 0.11.0)
+      multi_json (>= 1.0)
     signet (0.8.1)
       addressable (~> 2.3)
       faraday (~> 0.9)
@@ -445,6 +448,7 @@ DEPENDENCIES
   searchkick
   sequel
   shopify_api
+  sift
   slack-notifier
   statsd-ruby
   stripe (>= 1.24.0)

@@ -90,6 +90,7 @@ Rack Middleware
 - [restforce](#restforce)
 - [shopify_api](#shopify_api)
 - [slack-notifier](#slack-notifier)
+- [sift](#sift)
 - [stripe](#stripe)
 - [twilio-ruby](#twilio-ruby)
 - [twitter](#twitter)
@@ -866,6 +867,19 @@ Raises `ActiveResource::TimeoutError`
 ```ruby
 Slack::Notifier.new(webhook_url, http_options: {open_timeout: 1, read_timeout: 1})
 ```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
+
+### sift
+
+```ruby
+Sift::Client.new(timeout: 1)
+```
+
+Default: 2s
 
 Raises
 
