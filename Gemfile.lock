@@ -317,6 +317,7 @@ GEM
       faraday (~> 0.12)
       msgpack (>= 0.7.0)
     public_suffix (3.0.2)
+    pwned (1.2.1)
     rack (2.0.5)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -469,6 +470,7 @@ DEPENDENCIES
   patron
   pg
   presto-client
+  pwned
   rake
   redis
   rest-client

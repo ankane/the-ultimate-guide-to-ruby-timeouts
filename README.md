@@ -89,6 +89,7 @@ Rack Middleware
 - [hipchat](#hipchat)
 - [koala](#koala)
 - [octokit](#octokit)
+- [pwned](#pwned)
 - [restforce](#restforce)
 - [shopify_api](#shopify_api)
 - [slack-notifier](#slack-notifier)
@@ -867,6 +868,14 @@ Raises
 
 - `Faraday::ConnectionFailed` on connect timeout
 - `Faraday::TimeoutError` on read timeout
+
+### pwned
+
+```ruby
+Pwned::Password.new("password", open_timeout: 1, read_timeout: 1)
+```
+
+Raises `Pwned::TimeoutError`
 
 ### restforce
 
