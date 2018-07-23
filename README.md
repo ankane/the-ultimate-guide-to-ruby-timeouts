@@ -116,6 +116,7 @@ Other
 - [net-dns](#net-dns)
 - [net/ftp](#netftp)
 - [net-ldap](#net-ldap)
+- [net-ntp](#net-ntp)
 - [net-scp](#net-scp)
 - [net-sftp](#net-sftp)
 - [net/smtp](#netsmtp)
@@ -783,7 +784,8 @@ Raises `BitlyTimeout`
 ### dogapi
 
 ```ruby
-Dogapi::Client.new(api_key, nil, nil, nil, false, 1)
+timeout = 1
+Dogapi::Client.new(api_key, nil, nil, nil, false, timeout)
 ```
 
 Raises
@@ -1134,6 +1136,15 @@ Read timeout [not configurable at the moment](https://github.com/ruby-ldap/ruby-
 Default: 5s connect timeout, no read timeout
 
 Raises `Net::LDAP::Error`
+
+### net-ntp
+
+```ruby
+timeout = 1
+Net::NTP.get(host, port, timeout)
+```
+
+Raises `Timeout::Error`
 
 ### net-scp
 

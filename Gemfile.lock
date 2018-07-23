@@ -291,6 +291,7 @@ GEM
     net-http-persistent (3.0.0)
       connection_pool (~> 2.2)
     net-ldap (0.16.1)
+    net-ntp (2.1.3)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -462,6 +463,7 @@ DEPENDENCIES
   neo4j
   net-dns
   net-ldap
+  net-ntp
   net-scp
   net-sftp
   net-ssh
