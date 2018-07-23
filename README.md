@@ -39,6 +39,7 @@ Data Stores
 - [pg](#pg)
 - [redis](#redis)
 - [rsolr](#rsolr)
+- [ruby-druid](#ruby-druid)
 - [ruby-kafka](#ruby-kafka)
 - [searchkick](#searchkick)
 - [sequel](#sequel)
@@ -382,6 +383,12 @@ Raises
 
 - `RSolr::Error::ConnectionRefused` on connect timeout
 - `RSolr::Error::Http` on read timeout
+
+### ruby-druid
+
+Not configurable at the moment
+
+Default: 10s open timeout, no read timeout
 
 ### ruby-kafka
 
