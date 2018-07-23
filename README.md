@@ -80,6 +80,7 @@ Rack Middleware
 - [azure](#azure)
 - [bitly](#bitly)
 - [dogapi](#dogapi)
+- [fastly](#fastly)
 - [firebase](#firebase)
 - [gibbon](#gibbon)
 - [github_api](#github_api)
@@ -772,6 +773,10 @@ Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
+
+### fastly
+
+Not configurable at the moment, and no timeout by default
 
 ### firebase
 
