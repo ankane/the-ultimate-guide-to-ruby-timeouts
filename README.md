@@ -108,6 +108,7 @@ Other
 - [kubeclient](#kubeclient)
 - [mail](#mail)
 - [mechanize](#mechanize)
+- [nats-pure](#nats-pure)
 - [net-dns](#net-dns)
 - [net/ftp](#netftp)
 - [net-ldap](#net-ldap)
@@ -1050,6 +1051,15 @@ Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::HTTP::Persistent::Error` on read timeout
+
+### nats-pure
+
+```ruby
+nats = NATS::IO::Client.new
+nats.connect(connect_timeout: 1)
+```
+
+Raises `NATS::IO::SocketTimeoutError`
 
 ### net-dns
 

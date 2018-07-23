@@ -265,6 +265,7 @@ GEM
     multi_xml (0.6.0)
     multipart-post (2.0.0)
     mysql2 (0.5.2)
+    nats-pure (0.5.0)
     naught (1.1.0)
     net-dns (0.8.0)
     net-http-digest_auth (1.4.1)
@@ -435,6 +436,7 @@ DEPENDENCIES
   mongo
   mongoid
   mysql2
+  nats-pure
   net-dns
   net-ldap
   net-scp
