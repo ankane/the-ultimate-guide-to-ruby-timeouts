@@ -112,6 +112,7 @@ Other
 - [net-ssh](#net-ssh)
 - [net-telnet](#net-telnet)
 - [omniauth-oauth2](#omniauth-oauth2)
+- [reversed](#reversed)
 
 ## Statement Timeouts
 
@@ -1078,6 +1079,14 @@ Raises
 ### omniauth-oauth2
 
 [Not configurable at the moment](https://github.com/intridea/omniauth-oauth2/issues/27), and no timeout by default
+
+### reversed
+
+```ruby
+Reversed.lookup("8.8.8.8", timeout: 1)
+```
+
+Returns `nil` on timeouts
 
 ## Don’t see a library you use?
 

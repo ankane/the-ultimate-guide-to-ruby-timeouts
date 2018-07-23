@@ -290,6 +290,8 @@ GEM
       hashie (>= 1.2.0, < 4.0)
       json (>= 1.7.5)
     retriable (3.1.2)
+    reversed (0.2.1)
+      net-dns
     rsolr (2.2.1)
       builder (>= 2.1.2)
       faraday (>= 0.9.0)
@@ -400,6 +402,7 @@ DEPENDENCIES
   redis
   rest-client
   restforce
+  reversed
   rsolr
   ruby-kafka
   searchkick
