@@ -384,6 +384,9 @@ GEM
       inflection
       mime-types
       multipart-post (~> 2.0)
+    zk (1.9.6)
+      zookeeper (~> 1.4.0)
+    zookeeper (1.4.11)
 
 PLATFORMS
   ruby
@@ -456,6 +459,8 @@ DEPENDENCIES
   twitter
   typhoeus
   zendesk_api
+  zk
+  zookeeper
 
 BUNDLED WITH
    1.16.3

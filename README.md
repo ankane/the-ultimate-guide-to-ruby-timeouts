@@ -118,6 +118,8 @@ Other
 - [omniauth-oauth2](#omniauth-oauth2)
 - [reversed](#reversed)
 - [socket](#socket)
+- [zk](#zk)
+- [zookeeper](#zookeeper)
 
 ## Statement Timeouts
 
@@ -1146,6 +1148,18 @@ end
 ```
 
 Raises `Errno::ETIMEDOUT`
+
+### zk
+
+[Not configurable at the moment](https://github.com/zk-ruby/zk/issues/87)
+
+Default: 30s
+
+### zookeeper
+
+[Not configurable at the moment](https://github.com/zk-ruby/zookeeper/issues/38)
+
+Default: 30s
 
 ## Don’t see a library you use?
 
