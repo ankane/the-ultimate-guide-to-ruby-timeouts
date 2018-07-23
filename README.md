@@ -130,6 +130,7 @@ Other
 - [omniauth-oauth2](#omniauth-oauth2)
 - [reversed](#reversed)
 - [socket](#socket)
+- [spyke](#spyke)
 - [zk](#zk)
 - [zookeeper](#zookeeper)
 
@@ -1259,6 +1260,18 @@ end
 ```
 
 Raises `Errno::ETIMEDOUT`
+
+### spyke
+
+```ruby
+Spyke::Base.connection = Faraday.new(url: url) do |c|
+  c.adapter Faraday.default_adapter
+  c.options[:open_timeout] = 1
+  c.options[:timeout] = 1
+end
+```
+
+Raises `Spyke::ConnectionError`
 
 ### zk
 

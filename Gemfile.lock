@@ -375,6 +375,12 @@ GEM
     slack-notifier (2.3.2)
     smartystreets_ruby_sdk (5.3.3)
     socksify (1.7.1)
+    spyke (5.3.1)
+      activemodel (>= 4.0.0, < 6.0)
+      activesupport (>= 4.0.0, < 6.0)
+      addressable (>= 2.5.2)
+      faraday (>= 0.9.0, < 2.0)
+      faraday_middleware (>= 0.9.1, < 2.0)
     statsd-ruby (1.4.0)
     stripe (3.17.2)
       faraday (~> 0.10)
@@ -490,6 +496,7 @@ DEPENDENCIES
   sift
   slack-notifier
   smartystreets_ruby_sdk
+  spyke
   statsd-ruby
   stripe (>= 1.24.0)
   twilio-ruby
