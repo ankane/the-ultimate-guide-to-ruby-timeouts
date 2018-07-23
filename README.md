@@ -80,6 +80,7 @@ Rack Middleware
 - [aws-sdk](#aws-sdk)
 - [azure](#azure)
 - [bitly](#bitly)
+- [checkr-official](#checkr-official)
 - [dogapi](#dogapi)
 - [droplet_kit](#droplet_kit)
 - [fastly](#fastly)
@@ -781,6 +782,12 @@ Bitly.new(username, api_key, timeout)
 ```
 
 Raises `BitlyTimeout`
+
+### checkr-official
+
+Default: 30s connect timeout, 60s read timeout
+
+Not configurable at the moment
 
 ### dogapi
 
