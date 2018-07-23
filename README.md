@@ -307,7 +307,7 @@ Raises `Dalli::RingError`
 Drill.new(url: url, open_timeout: 1, read_timeout: 1)
 ```
 
-Default: 3s connect timeout, 600s read timeout
+Default: 3s connect timeout, no read timeout
 
 Raises
 
