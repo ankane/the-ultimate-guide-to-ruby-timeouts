@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem "actionmailer"
 gem "activemerchant"
 gem "activerecord", require: "active_record"
+gem "active_shipping", git: "https://github.com/Shopify/active_shipping.git"
 gem "aws-sdk-s3"
 gem "bitly"
 gem "bunny"

@@ -1,4 +1,14 @@
 GIT
+  remote: https://github.com/Shopify/active_shipping.git
+  revision: 590bc805e10a137251c122a1525940c34b164a44
+  specs:
+    active_shipping (2.2.0)
+      active_utils (~> 3.3.1)
+      activesupport (>= 4.2, < 6.1)
+      measured (>= 2.0)
+      nokogiri (>= 1.6)
+
+GIT
   remote: https://github.com/abonas/kubeclient.git
   revision: f6a9bf12cd0ea3811165e84d2775251f968366ec
   specs:
@@ -29,6 +39,9 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    active_utils (3.3.12)
+      activesupport (>= 3.2, < 6.0)
+      i18n
     activejob (5.2.0)
       activesupport (= 5.2.0)
       globalid (>= 0.3.6)
@@ -209,6 +222,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
+    measured (2.4.0)
+      activesupport (>= 4.2)
     mechanize (2.7.6)
       domain_name (~> 0.5, >= 0.5.1)
       http-cookie (~> 1.0)
@@ -356,6 +371,7 @@ PLATFORMS
 
 DEPENDENCIES
   actionmailer
+  active_shipping!
   activemerchant
   activerecord
   aws-sdk-s3

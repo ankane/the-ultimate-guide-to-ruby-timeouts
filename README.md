@@ -98,6 +98,7 @@ Other
 
 - [actionmailer](#actionmailer)
 - [activemerchant](#activemerchant)
+- [active_shipping](#active_shipping)
 - [docker-api](#docker-api)
 - [fastimage](#fastimage)
 - [geocoder](#geocoder)
@@ -935,6 +936,18 @@ ActiveMerchant::Billing::Gateway.read_timeout = 1
 Default: 60s
 
 Raises `ActiveMerchant::ConnectionError`
+
+### active_shipping
+
+```ruby
+client = ActiveShipping::USPS.new(login: "developer-key")
+client.open_timeout = 1
+client.read_timeout = 1
+```
+
+Default: 2s connect timeout, 10s read timeout
+
+Raises `ActiveUtils::ConnectionError`
 
 ### docker-api
 
