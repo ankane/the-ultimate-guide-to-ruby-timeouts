@@ -96,6 +96,7 @@ Rack Middleware
 - [shopify_api](#shopify_api)
 - [slack-notifier](#slack-notifier)
 - [sift](#sift)
+- [smartystreets_ruby_sdk](#smartystreets_ruby_sdk)
 - [stripe](#stripe)
 - [twilio-ruby](#twilio-ruby)
 - [twitter](#twitter)
@@ -933,6 +934,16 @@ Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
+
+### smartystreets_ruby_sdk
+
+```ruby
+SmartyStreets::ClientBuilder.new(credentials).with_max_timeout(1)
+```
+
+Connect timeout is not configurable at the moment
+
+Raises `Net::ReadTimeout` on read timeout
 
 ### stripe
 
