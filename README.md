@@ -967,7 +967,7 @@ Raises `ZendeskAPI::Error::NetworkError`
 ### acme-client
 
 ```ruby
-Acme::Client.new(connection_options: {request: {timeout: 1}})
+Acme::Client.new(connection_options: {request: {open_timeout: 1, timeout: 1}})
 ```
 
 Raises
