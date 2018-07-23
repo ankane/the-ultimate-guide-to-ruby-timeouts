@@ -109,6 +109,7 @@ Other
 - [acme-client](#acme-client)
 - [actionmailer](#actionmailer)
 - [activemerchant](#activemerchant)
+- [activeresource](#activeresource)
 - [active_shipping](#active_shipping)
 - [docker-api](#docker-api)
 - [fastimage](#fastimage)
@@ -1042,6 +1043,17 @@ ActiveMerchant::Billing::Gateway.read_timeout = 1
 Default: 60s
 
 Raises `ActiveMerchant::ConnectionError`
+
+### activeresource
+
+```ruby
+class Person < ActiveResource::Base
+  self.open_timeout = 1
+  self.read_timeout = 1
+end
+```
+
+Raises `ActiveResource::TimeoutError`
 
 ### active_shipping
 

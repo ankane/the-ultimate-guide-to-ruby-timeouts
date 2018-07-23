@@ -426,6 +426,7 @@ DEPENDENCIES
   active_shipping!
   activemerchant
   activerecord
+  activeresource
   aws-sdk-s3
   bitly
   bunny
