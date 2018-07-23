@@ -94,6 +94,7 @@ Rack Middleware
 - [stripe](#stripe)
 - [twilio-ruby](#twilio-ruby)
 - [twitter](#twitter)
+- [yt](#yt)
 - [zendesk_api](#zendesk_api)
 
 Other
@@ -922,6 +923,10 @@ end
 ```
 
 Raises `HTTP::TimeoutError`
+
+### yt
+
+Not configurable at the moment, and no timeout by default
 
 ### zendesk_api
 
