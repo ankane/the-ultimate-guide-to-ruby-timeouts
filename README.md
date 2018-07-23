@@ -37,6 +37,7 @@ Data Stores
 - [mongoid](#mongoid)
 - [mysql2](#mysql2)
 - [pg](#pg)
+- [presto-client](#presto-client)
 - [redis](#redis)
 - [rsolr](#rsolr)
 - [ruby-druid](#ruby-druid)
@@ -359,6 +360,17 @@ PG.connect(connect_timeout: 1, ...)
 ```
 
 Raises `PG::ConnectionBad`
+
+### presto-client
+
+```ruby
+Presto::Client.new(http_open_timeout: 1, http_timeout: 1)
+```
+
+Raises
+
+- `Faraday::ConnectionFailed` on connect timeout
+- `Faraday::TimeoutError` on read timeout
 
 ### redis
 
