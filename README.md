@@ -101,6 +101,7 @@ Rack Middleware
 
 Other
 
+- [acme-client](#acme-client)
 - [actionmailer](#actionmailer)
 - [activemerchant](#activemerchant)
 - [active_shipping](#active_shipping)
@@ -962,6 +963,17 @@ Default: 10s connect timeout, no read timeout
 Raises `ZendeskAPI::Error::NetworkError`
 
 ## Other
+
+### acme-client
+
+```ruby
+Acme::Client.new(connection_options: {request: {timeout: 1}})
+```
+
+Raises
+
+- `Faraday::ConnectionFailed` on connect timeout
+- `Faraday::TimeoutError` on read timeout
 
 ### actionmailer
 

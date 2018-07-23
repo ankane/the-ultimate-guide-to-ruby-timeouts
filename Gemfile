@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem "acme-client"
 gem "actionmailer"
 gem "activemerchant"
 gem "activerecord", require: "active_record"
