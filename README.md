@@ -132,6 +132,7 @@ Other
 - [reversed](#reversed)
 - [socket](#socket)
 - [spyke](#spyke)
+- [stomp](#stomp)
 - [zk](#zk)
 - [zookeeper](#zookeeper)
 
@@ -1281,6 +1282,17 @@ end
 ```
 
 Raises `Spyke::ConnectionError`
+
+### stomp
+
+```ruby
+Stomp::Client.new(start_timeout: 1, connect_timeout: 1, connread_timeout: 1, parse_timeout: 1)
+```
+
+Raises
+
+- `Stomp::Error::StartTimeoutException` on connect timeout
+- `Stomp::Error::ReceiveTimeout` on read timeout
 
 ### zk
 

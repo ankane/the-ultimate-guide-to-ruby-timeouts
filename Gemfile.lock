@@ -378,6 +378,7 @@ GEM
       faraday (>= 0.9.0, < 2.0)
       faraday_middleware (>= 0.9.1, < 2.0)
     statsd-ruby (1.4.0)
+    stomp (1.4.4)
     stripe (3.21.0)
       faraday (~> 0.10)
     thread_safe (0.3.6)
@@ -495,6 +496,7 @@ DEPENDENCIES
   smartystreets_ruby_sdk
   spyke
   statsd-ruby
+  stomp
   stripe (>= 1.24.0)
   twilio-ruby
   twitter
