@@ -114,6 +114,7 @@ Other
 - [docker-api](#docker-api)
 - [fastimage](#fastimage)
 - [geocoder](#geocoder)
+- [grpc](#grpc)
 - [kubeclient](#kubeclient)
 - [mail](#mail)
 - [mechanize](#mechanize)
@@ -1103,6 +1104,14 @@ Geocoder.configure(timeout: 1, always_raise: :all, ...)
 ```
 
 Raises `Geocoder::LookupTimeout`
+
+### grpc
+
+```ruby
+RouteGuide::Stub.new(addr, :this_channel_is_insecure, timeout: 1)
+```
+
+Raises `GRPC::DeadlineExceeded`
 
 ### kubeclient
 

@@ -178,6 +178,9 @@ GEM
       google-api-client (~> 0.23)
       google-cloud-core (~> 1.2)
       googleauth (~> 0.6.2)
+    google-protobuf (3.6.1)
+    googleapis-common-protos-types (1.0.1)
+      google-protobuf (~> 3.0)
     googleauth (0.6.3)
       faraday (~> 0.12)
       jwt (>= 1.4, < 3.0)
@@ -189,6 +192,9 @@ GEM
     graphql-client (0.13.0)
       activesupport (>= 3.0, < 6.0)
       graphql (~> 1.6)
+    grpc (1.13.0)
+      google-protobuf (~> 3.1)
+      googleapis-common-protos-types (~> 1.0.0)
     hashie (3.5.7)
     hipchat (1.6.0)
       httparty
@@ -444,6 +450,7 @@ DEPENDENCIES
   gibbon
   github_api
   google-cloud-storage
+  grpc
   hipchat
   hiredis
   http
