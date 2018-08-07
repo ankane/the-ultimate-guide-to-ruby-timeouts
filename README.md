@@ -114,6 +114,7 @@ Other
 - [docker-api](#docker-api)
 - [fastimage](#fastimage)
 - [geocoder](#geocoder)
+- [graphql-client](#graphql-client)
 - [grpc](#grpc)
 - [kubeclient](#kubeclient)
 - [mail](#mail)
@@ -1105,6 +1106,24 @@ Geocoder.configure(timeout: 1, always_raise: :all, ...)
 ```
 
 Raises `Geocoder::LookupTimeout`
+
+### graphql-client
+
+```ruby
+GraphQL::Client::HTTP.new(url) do
+  def connection
+    conn = super
+    conn.open_timeout = 1
+    conn.read_timeout = 1
+    conn
+  end
+end
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
 
 ### grpc
 

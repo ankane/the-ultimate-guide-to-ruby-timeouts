@@ -451,6 +451,7 @@ DEPENDENCIES
   gibbon
   github_api
   google-cloud-storage
+  graphql-client
   grpc
   hipchat
   hiredis
