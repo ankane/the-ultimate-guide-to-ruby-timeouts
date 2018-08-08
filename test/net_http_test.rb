@@ -11,7 +11,7 @@ class NetHttpTest < Minitest::Test
   def test_read
     assert_timeout(Net::ReadTimeout) do
       Net::HTTP.start(read_host, read_port, read_timeout: 1) do |http|
-        response = http.head("/")
+        http.head("/")
       end
     end
   end
