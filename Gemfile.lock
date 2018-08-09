@@ -8,6 +8,13 @@ GIT
       measured (>= 2.0)
       nokogiri (>= 1.6)
 
+GIT
+  remote: https://github.com/ankane/carrot2.git
+  revision: 24794eb3b4574c59d92799d07b0c603e445ce44e
+  specs:
+    carrot2 (0.2.0)
+      builder
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -433,6 +440,7 @@ DEPENDENCIES
   aws-sdk-s3
   bitly
   bunny
+  carrot2!
   cassandra-driver
   connection_pool
   couchrest
