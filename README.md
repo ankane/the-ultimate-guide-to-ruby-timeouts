@@ -101,6 +101,7 @@ Rack Middleware
 - [sift](#sift)
 - [smartystreets_ruby_sdk](#smartystreets_ruby_sdk)
 - [stripe](#stripe)
+- [tamber](#tamber)
 - [twilio-ruby](#twilio-ruby)
 - [twitter](#twitter)
 - [yt](#yt)
@@ -986,6 +987,15 @@ Stripe.read_timeout = 1
 Default: 30s connect timeout, 80s read timeout
 
 Raises `Stripe::APIConnectionError`
+
+### tamber
+
+```ruby
+Tamber.open_timeout = 1
+Tamber.read_timeout = 1
+```
+
+Raises `Tamber::NetworkError`
 
 ### twilio-ruby
 
