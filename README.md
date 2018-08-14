@@ -96,6 +96,7 @@ Rack Middleware
 - [restforce](#restforce)
 - [shopify_api](#shopify_api)
 - [slack-notifier](#slack-notifier)
+- [slack-ruby-client](#slack-ruby-client)
 - [sift](#sift)
 - [smartystreets_ruby_sdk](#smartystreets_ruby_sdk)
 - [stripe](#stripe)
@@ -935,6 +936,17 @@ Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
+
+### slack-ruby-client
+
+```ruby
+Slack::Web::Client.new(open_timeout: 1, timeout: 1)
+```
+
+Raises
+
+- `Faraday::ConnectionFailed` on connect timeout
+- `Faraday::TimeoutError` on read timeout
 
 ### sift
 
