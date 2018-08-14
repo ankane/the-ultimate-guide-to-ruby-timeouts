@@ -82,6 +82,7 @@ Rack Middleware
 - [azure](#azure)
 - [bitly](#bitly)
 - [checkr-official](#checkr-official)
+- [coinbase](#coinbase)
 - [dogapi](#dogapi)
 - [droplet_kit](#droplet_kit)
 - [fastly](#fastly)
@@ -802,6 +803,10 @@ Raises `BitlyTimeout`
 ### checkr-official
 
 Default: 30s connect timeout, 60s read timeout
+
+Not configurable at the moment
+
+### coinbase
 
 Not configurable at the moment
 

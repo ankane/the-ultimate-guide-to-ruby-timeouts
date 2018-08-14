@@ -99,6 +99,7 @@ GEM
       amq-protocol (~> 2.3.0)
     cassandra-driver (3.2.2)
       ione (~> 1.2)
+    coinbase (4.2.0)
     concurrent-ruby (1.0.5)
     connection_pool (2.2.2)
     cookiejar (0.3.3)
@@ -453,6 +454,7 @@ DEPENDENCIES
   bunny
   carrot2!
   cassandra-driver
+  coinbase
   connection_pool
   couchrest
   curb
