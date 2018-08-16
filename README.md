@@ -135,6 +135,7 @@ Other
 - [omniauth-oauth2](#omniauth-oauth2)
 - [reversed](#reversed)
 - [socket](#socket)
+- [spidr](#spidr)
 - [spyke](#spyke)
 - [stomp](#stomp)
 - [zk](#zk)
@@ -1316,6 +1317,20 @@ end
 ```
 
 Raises `Errno::ETIMEDOUT`
+
+### spydr
+
+```ruby
+Spidr.open_timeout = 1
+Spidr.read_timeout = 1
+```
+
+No exception is raised. Check for failures with
+
+```ruby
+agent = Spidr.site(url)
+agent.failures
+```
 
 ### spyke
 
