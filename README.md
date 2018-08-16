@@ -134,6 +134,7 @@ Other
 - [net-telnet](#net-telnet)
 - [omniauth-oauth2](#omniauth-oauth2)
 - [reversed](#reversed)
+- [savon](#savon)
 - [socket](#socket)
 - [spidr](#spidr)
 - [spyke](#spyke)
@@ -1307,6 +1308,17 @@ Reversed.lookup("8.8.8.8", timeout: 1)
 ```
 
 Returns `nil` on timeouts
+
+### savon
+
+```ruby
+Savon.client(wsdl: url, open_timeout: 1, read_timeout: 1)
+```
+
+Raises
+
+- `HTTPClient::ConnectTimeoutError` on connect timeout
+- `HTTPClient::ReceiveTimeoutError` on read timeout
 
 ### socket
 
