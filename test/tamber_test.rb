@@ -1,6 +1,6 @@
 require_relative "test_helper"
 
-Tamber.project_key = "your_project_key"
+# Tamber.project_key = "your_project_key"
 
 class TamberTest < Minitest::Test
   def test_connect
