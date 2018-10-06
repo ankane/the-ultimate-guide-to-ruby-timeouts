@@ -87,6 +87,7 @@ Rack Middleware
 - [droplet_kit](#droplet_kit)
 - [fastly](#fastly)
 - [firebase](#firebase)
+- [flickraw](#flickraw)
 - [gibbon](#gibbon)
 - [github_api](#github_api)
 - [google-cloud](#google-cloud)
@@ -846,6 +847,10 @@ Raises
 
 - `HTTPClient::ConnectTimeoutError` on connect timeout
 - `HTTPClient::ReceiveTimeoutError` on read timeout
+
+### flickraw
+
+Not configurable at the moment
 
 ### gibbon
 
