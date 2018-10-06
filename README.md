@@ -101,6 +101,7 @@ Rack Middleware
 - [slack-ruby-client](#slack-ruby-client)
 - [sift](#sift)
 - [smartystreets_ruby_sdk](#smartystreets_ruby_sdk)
+- [soda-ruby](#soda-ruby)
 - [stripe](#stripe)
 - [tamber](#tamber)
 - [twilio-ruby](#twilio-ruby)
@@ -978,6 +979,16 @@ Raises
 
 ```ruby
 SmartyStreets::ClientBuilder.new(credentials).with_max_timeout(1)
+```
+
+Connect timeout is not configurable at the moment
+
+Raises `Net::ReadTimeout` on read timeout
+
+### soda-ruby
+
+```ruby
+SODA::Client.new(timeout: 1)
 ```
 
 Connect timeout is not configurable at the moment
