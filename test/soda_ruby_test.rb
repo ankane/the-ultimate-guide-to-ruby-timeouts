@@ -11,11 +11,10 @@ class SodaRubyTest < Minitest::Test
   end
 
   def test_read
-    skip # requires https endpoint
-
-    client = SODA::Client.new(domain: read_host_and_port, timeout: 1)
-    assert_timeout(Net::ReadTimeout) do
-      client.get("test")
+    client = SODA::Client.new(timeout: 1)
+    assert_timeout(Net::ReadTimeout, timeout: 2) do
+      # requires https endpoint
+      client.get("https://httpbin.org/delay/3")
     end
   end
 end
