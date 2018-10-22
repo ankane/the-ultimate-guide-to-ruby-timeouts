@@ -141,6 +141,7 @@ Other
 - [spidr](#spidr)
 - [spyke](#spyke)
 - [stomp](#stomp)
+- [vault](#vault)
 - [zk](#zk)
 - [zookeeper](#zookeeper)
 
@@ -1382,6 +1383,21 @@ Raises
 
 - `Stomp::Error::StartTimeoutException` on connect timeout
 - `Stomp::Error::ReceiveTimeout` on read timeout
+
+### vault
+
+```ruby
+Vault.configure do |config|
+  config.timeout = 1
+
+  # or more granular
+  config.ssl_timeout  = 1
+  config.open_timeout = 1
+  config.read_timeout = 1
+end
+```
+
+Raises `Vault::HTTPConnectionError`
 
 ### zk
 

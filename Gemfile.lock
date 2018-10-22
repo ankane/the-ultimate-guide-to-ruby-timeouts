@@ -445,6 +445,8 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.5)
+    vault (0.12.0)
+      aws-sigv4
     wasabi (3.5.0)
       httpi (~> 2.0)
       nokogiri (>= 1.4.2)
@@ -554,6 +556,7 @@ DEPENDENCIES
   twilio-ruby
   twitter
   typhoeus
+  vault
   yt
   zendesk_api
   zk
