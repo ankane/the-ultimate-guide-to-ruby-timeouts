@@ -246,7 +246,7 @@ GEM
       http (~> 3.0)
       recursive-open-struct (~> 1.0, >= 1.0.4)
       rest-client (~> 2.0)
-    loofah (2.2.2)
+    loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.0)
@@ -563,4 +563,4 @@ DEPENDENCIES
   zookeeper
 
 BUNDLED WITH
-   1.16.4
+   1.17.1
