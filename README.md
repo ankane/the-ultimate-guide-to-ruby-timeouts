@@ -257,7 +257,7 @@ SET STATEMENT max_statement_time=1 FOR
 
   ```yaml
   production:
-    connect_timeout: 1
+    connect_timeout: 2
     checkout_timeout: 1
   ```
 
