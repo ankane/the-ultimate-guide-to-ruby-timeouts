@@ -332,7 +332,7 @@ GEM
       msgpack (>= 0.7.0)
     public_suffix (3.0.3)
     pwned (1.2.1)
-    rack (2.0.5)
+    rack (2.0.6)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails-dom-testing (2.0.3)
