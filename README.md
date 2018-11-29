@@ -180,7 +180,7 @@ SET LOCAL statement_timeout = 250;
 COMMIT;
 ```
 
-For migrations, you likely want to set a longer statement timeout. You can do this with:
+For migrations, you likely want to set a longer statement timeout. You can do this with
 
 ```yml
 production:
@@ -188,7 +188,7 @@ production:
     statement_timeout: <%= ENV['STATEMENT_TIMEOUT'] || 250 %>
 ```
 
-And use:
+And use
 
 ```sh
 STATEMENT_TIMEOUT=90s rails db:migrate
@@ -224,7 +224,7 @@ To set for a single statement, use an [optimizer hint](https://dev.mysql.com/doc
 SELECT /*+ MAX_EXECUTION_TIME(250) */ ...
 ```
 
-For migrations, you likely want to set a longer statement timeout. You can do this with:
+For migrations, you likely want to set a longer statement timeout. You can do this with
 
 ```yml
 production:
@@ -232,7 +232,7 @@ production:
     max_execution_time: <%= ENV['MAX_EXECUTION_TIME'] || 250 %>
 ```
 
-And use:
+And use
 
 ```sh
 MAX_EXECUTION_TIME=90000 rails db:migrate
@@ -269,7 +269,7 @@ SET STATEMENT max_statement_time=1 FOR
   SELECT ...
 ```
 
-For migrations, you likely want to set a longer statement timeout. You can do this with:
+For migrations, you likely want to set a longer statement timeout. You can do this with
 
 ```yml
 production:
@@ -277,7 +277,7 @@ production:
     max_statement_time: <%= ENV['MAX_STATEMENT_TIME'] || 1 %>
 ```
 
-And use:
+And use
 
 ```sh
 MAX_STATEMENT_TIME=90 rails db:migrate
