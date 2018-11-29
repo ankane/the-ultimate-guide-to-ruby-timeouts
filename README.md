@@ -180,7 +180,7 @@ SET LOCAL statement_timeout = 250;
 COMMIT;
 ```
 
-You may want to be able to customize `statement_timeout` per process. For example, to increase the timeout in database migrations, allow overriding the default with an environment variable.
+For migrations, you likely want to set a longer statement timeout. You can do this with:
 
 ```yml
 production:
@@ -188,7 +188,9 @@ production:
     statement_timeout: <%= ENV['STATEMENT_TIMEOUT'] || 250 %>
 ```
 
-```bash
+And use:
+
+```sh
 STATEMENT_TIMEOUT=90s rails db:migrate
 ```
 
@@ -222,6 +224,20 @@ To set for a single statement, use an [optimizer hint](https://dev.mysql.com/doc
 SELECT /*+ MAX_EXECUTION_TIME(250) */ ...
 ```
 
+For migrations, you likely want to set a longer statement timeout. You can do this with:
+
+```yml
+production:
+  variables:
+    max_execution_time: <%= ENV['MAX_EXECUTION_TIME'] || 250 %>
+```
+
+And use:
+
+```sh
+MAX_EXECUTION_TIME=90000 rails db:migrate
+```
+
 ### MariaDB
 
 **Note:** Requires MariaDB 10.1.1 or higher
@@ -251,6 +267,20 @@ As of MariaDB 10.1.2, you can set single statement timeouts with
 ```sql
 SET STATEMENT max_statement_time=1 FOR
   SELECT ...
+```
+
+For migrations, you likely want to set a longer statement timeout. You can do this with:
+
+```yml
+production:
+  variables:
+    max_statement_time: <%= ENV['MAX_STATEMENT_TIME'] || 1 %>
+```
+
+And use:
+
+```sh
+MAX_STATEMENT_TIME=90 rails db:migrate
 ```
 
 [Official docs](https://mariadb.com/kb/en/mariadb/aborting-statements/)
