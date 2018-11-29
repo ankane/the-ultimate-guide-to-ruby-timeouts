@@ -180,16 +180,16 @@ SET LOCAL statement_timeout = 250;
 COMMIT;
 ```
 
-You may want to be able to customize `statement_timeout` per process. For example, to increase the timeout in database migrations, allow overriding the default with an envrionment variable.
+You may want to be able to customize `statement_timeout` per process. For example, to increase the timeout in database migrations, allow overriding the default with an environment variable.
 
 ```yml
 production:
   variables:
-    statement_timeout: <%= ENV['PG_STATEMENT_TIMEOUT'] || 250 %>
+    statement_timeout: <%= ENV['STATEMENT_TIMEOUT'] || 250 %>
 ```
 
 ```bash
-PG_STATEMENT_TIMEOUT=90s rails db:migrate
+STATEMENT_TIMEOUT=90s rails db:migrate
 ```
 
 ### MySQL
