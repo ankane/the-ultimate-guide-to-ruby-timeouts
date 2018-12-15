@@ -1,16 +1,15 @@
-sudo: false
+dist: xenial
 language: ruby
-rvm: 2.5.1
+rvm: 2.5.3
+gemfile:
+  - Gemfile
 services:
   - postgresql
   - mysql
 script: bundle exec rake test
-before_install:
-  - gem update --system
-  - gem install bundler
 before_script:
-  - psql -c 'create database ultimate_test;' -U postgres
   - mysql -e 'CREATE DATABASE ultimate_test;'
+  - psql -c 'CREATE DATABASE ultimate_test;' -U postgres
   - node test/server.js &>/dev/null &
 env:
   - TRAVIS=t
