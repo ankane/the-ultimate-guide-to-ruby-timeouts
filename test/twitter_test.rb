@@ -1,6 +1,10 @@
 require_relative "test_helper"
 
 class TwitterTest < Minitest::Test
+  def setup
+    skip
+  end
+
   def test_connect
     assert_raises(HTTP::TimeoutError) do
       Twitter::REST::Request.send(:remove_const, "BASE_URL")
