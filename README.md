@@ -90,6 +90,7 @@ Rack Middleware
 - [flickraw](#flickraw)
 - [gibbon](#gibbon)
 - [github_api](#github_api)
+- [google-api-client](#google-api-client)
 - [google-cloud](#google-cloud)
 - [hipchat](#hipchat)
 - [koala](#koala)
@@ -914,6 +915,16 @@ Raises
 
 - `Faraday::ConnectionFailed` on connect timeout
 - `Faraday::TimeoutError` on read timeout
+
+### google-api-client
+
+```ruby
+client = Google::Apis::DriveV2::DriveService.new
+client.client_options.open_timeout_sec = 1
+client.client_options.read_timeout_sec = 1
+```
+
+Raise `Google::Apis::TransmissionError`
 
 ### google-cloud
 

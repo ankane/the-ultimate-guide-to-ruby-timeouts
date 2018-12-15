@@ -500,6 +500,7 @@ DEPENDENCIES
   geocoder
   gibbon
   github_api
+  google-api-client
   google-cloud-storage
   graphql-client
   grpc
@@ -563,4 +564,4 @@ DEPENDENCIES
   zookeeper
 
 BUNDLED WITH
-   1.17.1
+   1.17.2
