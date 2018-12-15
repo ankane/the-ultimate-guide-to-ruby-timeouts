@@ -6,6 +6,7 @@ gemfile:
 services:
   - postgresql
   - mysql
+  - elasticsearch
 script: bundle exec rake test
 before_script:
   - mysql -e 'CREATE DATABASE ultimate_test;'
