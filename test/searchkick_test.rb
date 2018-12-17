@@ -10,8 +10,7 @@ class SearchkickTest < Minitest::Test
 
   def test_connect
     ENV["ELASTICSEARCH_URL"] = connect_url
-    # Faraday::ConnectionFailed in latest version of Faraday
-    assert_timeout(Faraday::TimeoutError) do
+    assert_timeout(Faraday::ConnectionFailed) do
       Searchkick.client.cluster.health
     end
   end
