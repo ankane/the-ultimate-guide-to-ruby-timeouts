@@ -92,6 +92,7 @@ Rack Middleware
 - [github_api](#github_api)
 - [google-api-client](#google-api-client)
 - [google-cloud](#google-cloud)
+- [intercom](#intercom)
 - [hipchat](#hipchat)
 - [koala](#koala)
 - [octokit](#octokit)
@@ -933,6 +934,18 @@ Google::Cloud::Storage.new(timeout: 1)
 ```
 
 Raises `Google::Cloud::Error`
+
+### intercom
+
+```ruby
+client = Intercom::Client.new(token: INTERCOM_ACCESS_TOKEN)
+client.options(Intercom::Client.set_timeouts(open_timeout: 1, read_timeout: 1))
+```
+
+Raises
+
+- `Intercom::ServiceConnectionError` on connect timeout (inherits from `IntercomError`)
+- `Intercom::ServiceUnavailableError` on read timeout (inherits from `IntercomError`)
 
 ### hipchat
 
