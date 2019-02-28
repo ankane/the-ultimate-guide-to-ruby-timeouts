@@ -938,7 +938,7 @@ Raises `Google::Cloud::Error`
 ### intercom
 
 ```ruby
-client = Intercom::Client.new(token: INTERCOM_ACCESS_TOKEN)
+client = Intercom::Client.new(token: token)
 client.options(Intercom::Client.set_timeouts(open_timeout: 1, read_timeout: 1))
 ```
 
