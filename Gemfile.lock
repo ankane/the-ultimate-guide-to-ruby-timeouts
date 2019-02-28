@@ -233,6 +233,7 @@ GEM
       concurrent-ruby (~> 1.0)
     inflection (1.0.0)
     influxdb (0.6.4)
+    intercom (3.7.3)
     ione (1.2.4)
     jmespath (1.4.0)
     json (2.1.0)
@@ -491,6 +492,7 @@ DEPENDENCIES
   httpclient
   httpi
   influxdb
+  intercom
   koala
   mail (>= 2.7.0)
   mechanize
