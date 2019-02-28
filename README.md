@@ -944,8 +944,8 @@ client.options(Intercom::Client.set_timeouts(open_timeout: 1, read_timeout: 1))
 
 Raises
 
-- `Intercom::ServiceConnectionError` on connect timeout (inherits from `IntercomError`)
-- `Intercom::ServiceUnavailableError` on read timeout (inherits from `IntercomError`)
+- `Intercom::ServiceConnectionError` on connect timeout (inherits from `Intercom::IntercomError`)
+- `Intercom::ServiceUnavailableError` on read timeout (inherits from `Intercom::IntercomError`)
 
 ### hipchat
 
@@ -1507,7 +1507,6 @@ Use
 - `Redis::BaseConnectionError` for both `Redis::CannotConnectError` and `Redis::TimeoutError`
 - `Rack::Timeout::Error` for both `Rack::Timeout::RequestTimeoutError` and `Rack::Timeout::RequestExpiryError`
 - `RestClient::Exceptions::Timeout` for both `RestClient::Exceptions::OpenTimeout` and `RestClient::Exceptions::ReadTimeout`
-
 
 ## Existing Services
 
