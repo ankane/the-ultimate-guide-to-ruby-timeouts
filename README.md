@@ -665,7 +665,7 @@ Raises same errors as underlying client
 ### net/http
 
 ```ruby
-Net::HTTP.start(host, port, open_timeout: 1, read_timeout: 1) do
+Net::HTTP.start(host, port, open_timeout: 1, read_timeout: 1, write_timeout: 1) do
   # ...
 end
 ```
@@ -676,16 +676,18 @@ or
 http = Net::HTTP.new(host, port)
 http.open_timeout = 1
 http.read_timeout = 1
+http.write_timeout = 1
 ```
 
 Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
+- `Net::WriteTimeout` on write timeout
 
-Default: 60s connect timeout ([Ruby 2.3+](https://github.com/ruby/ruby/commit/52e1c3b0ab41041f7f51a7afc3fce3aab97bc010)), 60s read timeout
+Default: 60s connect timeout ([Ruby 2.3+](https://github.com/ruby/ruby/commit/52e1c3b0ab41041f7f51a7afc3fce3aab97bc010)), 60s read timeout, and 60s write timeout.
 
-Write timeout is infinite, presently [can't be set](https://bugs.ruby-lang.org/issues/13396).
+Write timeout can be set in [Ruby 2.6+](https://github.com/ruby/ruby/commit/bd7c46a7aa8b4f44ef683e22f469033b96d3dd5f).
 
 **Note:** Read timeouts are [retried automatically](https://github.com/ruby/ruby/blob/v2_2_4/lib/net/http.rb#L1436)
 
