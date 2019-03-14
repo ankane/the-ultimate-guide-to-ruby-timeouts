@@ -689,7 +689,7 @@ Default: 60s connect timeout ([Ruby 2.3+](https://github.com/ruby/ruby/commit/52
 
 Write timeout can be set in [Ruby 2.6+](https://github.com/ruby/ruby/commit/bd7c46a7aa8b4f44ef683e22f469033b96d3dd5f).
 
-**Note:** Read timeouts are [retried automatically](https://github.com/ruby/ruby/blob/v2_2_4/lib/net/http.rb#L1436)
+**Note:** Read timeouts are retried once automatically for idempotent methods like `GET`. In Ruby 2.5+, you can set the number of retries with `http.max_retries = 1`.
 
 ### open-uri
 
