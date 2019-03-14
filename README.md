@@ -792,15 +792,18 @@ It’s recommended to use this in addition to [Rack middleware](#rack-middleware
 ### rack-timeout
 
 ```ruby
-Rack::Timeout.timeout = 5
-Rack::Timeout.wait_timeout = 5
+use Rack::Timeout,
+  service_timeout:   15     # ENV["RACK_TIMEOUT_SERVICE_TIMEOUT"]
+  wait_timeout:      30     # ENV["RACK_TIMEOUT_WAIT_TIMEOUT"]
+  wait_overtime:     60     # ENV["RACK_TIMEOUT_WAIT_OVERTIME"]
+  service_past_wait: false  # ENV["RACK_TIMEOUT_SERVICE_PAST_WAIT"]
 ```
 
 Default: 15s service timeout, 30s wait timeout
 
 Raises `Rack::Timeout::RequestTimeoutError` or `Rack::Timeout::RequestExpiryError`
 
-[Read more here](https://github.com/heroku/rack-timeout#the-rabbit-hole)
+[Read more here](https://github.com/heroku/rack-timeout#configuring)
 
 **Note:** The approach used by Rack::Timeout can leave your application in an inconsistent state, [as described here](https://github.com/heroku/rack-timeout/blob/master/doc/risks.md)
 
