@@ -685,11 +685,9 @@ Raises
 - `Net::ReadTimeout` on read timeout
 - `Net::WriteTimeout` on write timeout
 
-Default: 60s connect timeout ([Ruby 2.3+](https://github.com/ruby/ruby/commit/52e1c3b0ab41041f7f51a7afc3fce3aab97bc010)), 60s read timeout, and 60s write timeout.
+Default: 60s connect timeout, 60s read timeout, and 60s write timeout
 
-Write timeout can be set in [Ruby 2.6+](https://github.com/ruby/ruby/commit/bd7c46a7aa8b4f44ef683e22f469033b96d3dd5f).
-
-**Note:** Read timeouts are retried once automatically for idempotent methods like `GET`. In Ruby 2.5+, you can set the number of retries with `http.max_retries = 1`.
+Write timeout can be set in [Ruby 2.6+](https://github.com/ruby/ruby/commit/bd7c46a7aa8b4f44ef683e22f469033b96d3dd5f). Read timeouts are retried once automatically for idempotent methods like `GET`. In Ruby 2.5+, you can set the number of retries with `http.max_retries = 1`.
 
 ### open-uri
 
@@ -701,8 +699,6 @@ Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
-
-Note that open-uri didn't support (and so didn't pass to underlying net/http) the `:open_timeout` argument [until Ruby 2.2](https://bugs.ruby-lang.org/issues/10361).
 
 ### patron
 
@@ -730,7 +726,7 @@ Raises
 - `RestClient::Exceptions::OpenTimeout` on connect timeout
 - `RestClient::Exceptions::ReadTimeout` on read timeout
 
-Default: 60s connect timeout (Ruby 2.3+), 60s read timeout
+Default: 60s connect timeout, 60s read timeout
 
 ### typhoeus
 
@@ -1255,7 +1251,7 @@ Kubeclient::Client.new(url, timeouts: {open: 1, read: 1})
 
 Raises `KubeException`
 
-Default: 60s connect timeout (Ruby 2.3+), 60s read timeout
+Default: 60s connect timeout, 60s read timeout
 
 ### mail
 
