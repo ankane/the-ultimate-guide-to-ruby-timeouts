@@ -793,10 +793,10 @@ It’s recommended to use this in addition to [Rack middleware](#rack-middleware
 
 ```ruby
 use Rack::Timeout,
-  service_timeout:   15     # ENV["RACK_TIMEOUT_SERVICE_TIMEOUT"]
-  wait_timeout:      30     # ENV["RACK_TIMEOUT_WAIT_TIMEOUT"]
-  wait_overtime:     60     # ENV["RACK_TIMEOUT_WAIT_OVERTIME"]
-  service_past_wait: false  # ENV["RACK_TIMEOUT_SERVICE_PAST_WAIT"]
+  service_timeout:   15,     # ENV["RACK_TIMEOUT_SERVICE_TIMEOUT"]
+  wait_timeout:      30,     # ENV["RACK_TIMEOUT_WAIT_TIMEOUT"]
+  wait_overtime:     60,     # ENV["RACK_TIMEOUT_WAIT_OVERTIME"]
+  service_past_wait: false   # ENV["RACK_TIMEOUT_SERVICE_PAST_WAIT"]
 ```
 
 Default: 15s service timeout, 30s wait timeout
