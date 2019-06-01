@@ -158,26 +158,26 @@ If you use Rails, add to your `config/database.yml`
 ```yml
 production:
   variables:
-    statement_timeout: 250 # ms
+    statement_timeout: 5s
 ```
 
 or set it on your database role
 
 ```sql
-ALTER ROLE myuser SET statement_timeout = 250;
+ALTER ROLE myuser SET statement_timeout = '5s';
 ```
 
 Test with
 
 ```sql
-SELECT pg_sleep(5);
+SELECT pg_sleep(6);
 ```
 
 To set for a single transaction, use
 
 ```sql
 BEGIN;
-SET LOCAL statement_timeout = 250;
+SET LOCAL statement_timeout = '5s';
 ...
 COMMIT;
 ```
@@ -187,7 +187,7 @@ For migrations, you likely want to set a longer statement timeout. You can do th
 ```yml
 production:
   variables:
-    statement_timeout: <%= ENV['STATEMENT_TIMEOUT'] || 250 %>
+    statement_timeout: <%= ENV["STATEMENT_TIMEOUT"] || "5s" %>
 ```
 
 And use
@@ -205,25 +205,25 @@ If you use Rails, add to your `config/database.yml`
 ```yml
 production:
   variables:
-    max_execution_time: 250 # ms
+    max_execution_time: 5000 # ms
 ```
 
 or set it directly on each connection
 
 ```sql
-SET SESSION max_execution_time = 250;
+SET SESSION max_execution_time = 5000;
 ```
 
 Test with
 
 ```sql
-SELECT 1 FROM information_schema.tables WHERE sleep(5);
+SELECT 1 FROM information_schema.tables WHERE sleep(6);
 ```
 
 To set for a single statement, use an [optimizer hint](https://dev.mysql.com/doc/refman/5.7/en/optimizer-hints.html#optimizer-hints-execution-time)
 
 ```sql
-SELECT /*+ MAX_EXECUTION_TIME(250) */ ...
+SELECT /*+ MAX_EXECUTION_TIME(5000) */ ...
 ```
 
 For migrations, you likely want to set a longer statement timeout. You can do this with
@@ -231,7 +231,7 @@ For migrations, you likely want to set a longer statement timeout. You can do th
 ```yml
 production:
   variables:
-    max_execution_time: <%= ENV['MAX_EXECUTION_TIME'] || 250 %>
+    max_execution_time: <%= ENV["MAX_EXECUTION_TIME"] || 5000 %>
 ```
 
 And use
@@ -249,25 +249,25 @@ If you use Rails, add to your `config/database.yml`
 ```yml
 production:
   variables:
-    max_statement_time: 1 # sec
+    max_statement_time: 5 # sec
 ```
 
 or set it directly on each connection
 
 ```sql
-SET SESSION max_statement_time = 1;
+SET SESSION max_statement_time = 5;
 ```
 
 Test with
 
 ```sql
-SELECT 1 FROM information_schema.tables WHERE sleep(5);
+SELECT 1 FROM information_schema.tables WHERE sleep(6);
 ```
 
 As of MariaDB 10.1.2, you can set single statement timeouts with
 
 ```sql
-SET STATEMENT max_statement_time=1 FOR
+SET STATEMENT max_statement_time=5 FOR
   SELECT ...
 ```
 
@@ -276,7 +276,7 @@ For migrations, you likely want to set a longer statement timeout. You can do th
 ```yml
 production:
   variables:
-    max_statement_time: <%= ENV['MAX_STATEMENT_TIME'] || 1 %>
+    max_statement_time: <%= ENV['MAX_STATEMENT_TIME'] || 5 %>
 ```
 
 And use
