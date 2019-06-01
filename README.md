@@ -158,7 +158,7 @@ If you use Rails, add to your `config/database.yml`
 ```yml
 production:
   variables:
-    statement_timeout: 5s
+    statement_timeout: 5s # or ms, min, etc
 ```
 
 or set it on your database role
