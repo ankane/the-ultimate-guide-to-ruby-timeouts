@@ -643,6 +643,20 @@ Raises `HTTP::TimeoutError`
 HTTParty.get(url, timeout: 1)
 ```
 
+or
+
+```ruby
+class Resource
+  include HTTParty
+
+  default_timeout 1
+  # or
+  open_timeout 1
+  read_timeout 1
+  write_timeout 1
+end
+```
+
 Raises
 
 - `Net::OpenTimeout` on connect timeout
