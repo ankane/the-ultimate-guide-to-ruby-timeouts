@@ -83,6 +83,7 @@ Rack Middleware
 - [bitly](#bitly)
 - [boxr](#boxr)
 - [checkr-official](#checkr-official)
+- [clearbit](#clearbit)
 - [coinbase](#coinbase)
 - [dogapi](#dogapi)
 - [dropbox-sdk](#dropbox-sdk)
@@ -865,6 +866,14 @@ Not configurable at the moment, and no timeout by default
 Default: 30s connect timeout, 60s read timeout
 
 Not configurable at the moment
+
+### clearbit
+
+```ruby
+Clearbit::Resource.options = {timeout: 1}
+```
+
+Raises `Nestful::TimeoutError`
 
 ### coinbase
 
