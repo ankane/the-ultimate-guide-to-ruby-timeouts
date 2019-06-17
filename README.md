@@ -132,6 +132,7 @@ Other
 - [mail](#mail)
 - [mechanize](#mechanize)
 - [nats-pure](#nats-pure)
+- [nestful](#nestful)
 - [net-dns](#net-dns)
 - [net/ftp](#netftp)
 - [net-ldap](#net-ldap)
@@ -1336,6 +1337,22 @@ nats.connect(connect_timeout: 1)
 ```
 
 Raises `NATS::IO::SocketTimeoutError`
+
+### nestful
+
+```ruby
+Nestful::Request.new(url, timeout: 1)
+```
+
+or
+
+```ruby
+class Resource < Nestful::Resource
+  options timeout: 1
+end
+```
+
+Raises `Nestful::TimeoutError`
 
 ### net-dns
 

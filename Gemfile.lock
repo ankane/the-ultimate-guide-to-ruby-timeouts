@@ -550,6 +550,7 @@ DEPENDENCIES
   mysql2
   nats-pure
   neo4j
+  nestful
   net-dns
   net-ldap
   net-ntp
