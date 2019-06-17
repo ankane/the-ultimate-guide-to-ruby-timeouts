@@ -81,6 +81,7 @@ Rack Middleware
 
 - [airrecord](#airrecord)
 - [airtable](#airtable)
+- [algoliasearch](#algoliasearch)
 - [aws-sdk](#aws-sdk)
 - [azure](#azure)
 - [bitly](#bitly)
@@ -868,6 +869,20 @@ Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
+
+### algoliasearch
+
+```ruby
+Algolia.init(
+  connect_timeout: 1,
+  send_timeout: 1,
+  receive_timeout: 1,
+  batch_timeout: 1,
+  search_timeout: 1
+)
+```
+
+Raises `Algolia::AlgoliaProtocolError`
 
 ### aws-sdk
 
