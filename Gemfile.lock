@@ -465,6 +465,7 @@ GEM
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
+    whois (4.1.0)
     yt (0.32.3)
       activesupport
       yt-support (>= 0.1)
@@ -569,6 +570,7 @@ DEPENDENCIES
   twilio-ruby
   typhoeus
   vault
+  whois
   yt
   zendesk_api
   zk

@@ -144,6 +144,7 @@ Other
 - [spyke](#spyke)
 - [stomp](#stomp)
 - [vault](#vault)
+- [whois](#whois)
 - [zk](#zk)
 - [zookeeper](#zookeeper)
 
@@ -1472,6 +1473,16 @@ end
 ```
 
 Raises `Vault::HTTPConnectionError`
+
+### whois
+
+```ruby
+Whois::Client.new(timeout: 1)
+```
+
+Default: 10s
+
+Raises `Timeout::Error`
 
 ### zk
 
