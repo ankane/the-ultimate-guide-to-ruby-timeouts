@@ -95,8 +95,8 @@ Rack Middleware
 - [github_api](#github_api)
 - [google-api-client](#google-api-client)
 - [google-cloud](#google-cloud)
-- [intercom](#intercom)
 - [hipchat](#hipchat)
+- [intercom](#intercom)
 - [koala](#koala)
 - [linkedin](#linkedin)
 - [octokit](#octokit)
@@ -970,6 +970,17 @@ Google::Cloud::Storage.new(timeout: 1)
 
 Raises `Google::Cloud::Error`
 
+### hipchat
+
+```ruby
+[HipChat::Client, HipChat::Room, HipChat::User].each { |c| c.default_timeout(1) }
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
+
 ### intercom
 
 ```ruby
@@ -981,17 +992,6 @@ Raises
 
 - `Intercom::ServiceConnectionError` on connect timeout (inherits from `Intercom::IntercomError`)
 - `Intercom::ServiceUnavailableError` on read timeout (inherits from `Intercom::IntercomError`)
-
-### hipchat
-
-```ruby
-[HipChat::Client, HipChat::Room, HipChat::User].each { |c| c.default_timeout(1) }
-```
-
-Raises
-
-- `Net::OpenTimeout` on connect timeout
-- `Net::ReadTimeout` on read timeout
 
 ### koala
 
