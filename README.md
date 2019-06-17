@@ -875,7 +875,14 @@ Raises
 
 ### droplet_kit
 
-[Not configurable at the moment](https://github.com/digitalocean/droplet_kit/pull/144), and no timeout by default
+```ruby
+DropletKit::Client.new(open_timeout: 1, timeout: 1)
+```
+
+Raises
+
+- `Faraday::ConnectionFailed` on connect timeout
+- `Faraday::TimeoutError` on read timeout
 
 ### fastly
 
