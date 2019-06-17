@@ -110,6 +110,7 @@ Rack Middleware
 - [sift](#sift)
 - [smartystreets_ruby_sdk](#smartystreets_ruby_sdk)
 - [soda-ruby](#soda-ruby)
+- [soundcloud](#soundcloud)
 - [stripe](#stripe)
 - [tamber](#tamber)
 - [twilio-ruby](#twilio-ruby)
@@ -1114,6 +1115,10 @@ SODA::Client.new(timeout: 1)
 Connect timeout is not configurable at the moment
 
 Raises `Net::ReadTimeout` on read timeout
+
+### soundcloud
+
+Not configurable at the moment, and no timeout by default
 
 ### stripe
 
