@@ -78,6 +78,7 @@ Rack Middleware
 
 3rd Party Services
 
+- [airtable](#airtable)
 - [aws-sdk](#aws-sdk)
 - [azure](#azure)
 - [bitly](#bitly)
@@ -841,6 +842,17 @@ Default: 15s
 Raises same exceptions as [rack-timeout](#rack-timeout)
 
 ## 3rd Party Services
+
+### airtable
+
+```ruby
+Airtable::Resource.default_timeout 1
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
 
 ### aws-sdk
 
