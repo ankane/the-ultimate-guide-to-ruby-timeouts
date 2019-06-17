@@ -43,6 +43,7 @@ Data Stores
 - [pg](#pg)
 - [presto-client](#presto-client)
 - [redis](#redis)
+- [riddle](#riddle)
 - [rsolr](#rsolr)
 - [ruby-druid](#ruby-druid)
 - [ruby-kafka](#ruby-kafka)
@@ -518,6 +519,15 @@ Raises
 
 - `Redis::CannotConnectError` on connect timeout
 - `Redis::TimeoutError` on read timeout
+
+### riddle
+
+```ruby
+client = Riddle::Client.new
+client.timeout = 1
+```
+
+Raises `Riddle::ResponseError`
 
 ### rsolr
 
