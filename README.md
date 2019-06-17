@@ -84,6 +84,7 @@ Rack Middleware
 - [checkr-official](#checkr-official)
 - [coinbase](#coinbase)
 - [dogapi](#dogapi)
+- [dropbox-sdk](#dropbox-sdk)
 - [droplet_kit](#droplet_kit)
 - [fastly](#fastly)
 - [firebase](#firebase)
@@ -875,6 +876,12 @@ Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
+
+### dropbox-sdk
+
+Not configurable at the moment
+
+Default: No connect timeout, 600s read timeout
 
 ### droplet_kit
 
