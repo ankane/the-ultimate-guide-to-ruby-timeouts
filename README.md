@@ -95,6 +95,7 @@ Rack Middleware
 - [intercom](#intercom)
 - [hipchat](#hipchat)
 - [koala](#koala)
+- [linkedin](#linkedin)
 - [octokit](#octokit)
 - [pinterest-api](#pinterest-api)
 - [pwned](#pwned)
@@ -978,6 +979,10 @@ Raises
 
 - `Faraday::ConnectionFailed` on connect timeout
 - `Faraday::TimeoutError` on read timeout
+
+### linkedin
+
+Not configurable at the moment, and no timeout by default.
 
 ### octokit
 
