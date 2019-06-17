@@ -81,6 +81,7 @@ Rack Middleware
 - [aws-sdk](#aws-sdk)
 - [azure](#azure)
 - [bitly](#bitly)
+- [boxr](#boxr)
 - [checkr-official](#checkr-official)
 - [coinbase](#coinbase)
 - [dogapi](#dogapi)
@@ -854,6 +855,10 @@ Bitly.new(username, api_key, timeout)
 ```
 
 Raises `BitlyTimeout`
+
+### boxr
+
+Not configurable at the moment, and no timeout by default
 
 ### checkr-official
 
