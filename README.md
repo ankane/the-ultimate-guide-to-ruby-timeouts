@@ -78,6 +78,7 @@ Rack Middleware
 
 3rd Party Services
 
+- [airrecord](#airrecord)
 - [airtable](#airtable)
 - [aws-sdk](#aws-sdk)
 - [azure](#azure)
@@ -842,6 +843,10 @@ Default: 15s
 Raises same exceptions as [rack-timeout](#rack-timeout)
 
 ## 3rd Party Services
+
+### airrecord
+
+Not configurable at the moment, and no timeout by default
 
 ### airtable
 
