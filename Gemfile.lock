@@ -339,10 +339,22 @@ GEM
       rack (>= 1.2, < 3)
     octokit (4.14.0)
       sawyer (~> 0.8.0, >= 0.5.3)
+    omniauth (1.9.0)
+      hashie (>= 3.4.6, < 3.7.0)
+      rack (>= 1.6.2, < 3)
+    omniauth-oauth2 (1.6.0)
+      oauth2 (~> 1.1)
+      omniauth (~> 1.9)
     orm_adapter (0.5.0)
     os (1.0.1)
     patron (0.13.3)
     pg (1.1.4)
+    pinterest-api (0.4.0)
+      faraday (~> 0.9)
+      faraday_middleware (~> 0.9)
+      hashie (~> 3.0)
+      omniauth (~> 1.0)
+      omniauth-oauth2 (~> 1.0)
     presto-client (0.5.14)
       faraday (~> 0.12)
       msgpack (>= 0.7.0)
@@ -544,6 +556,7 @@ DEPENDENCIES
   octokit
   patron
   pg
+  pinterest-api
   presto-client
   pwned
   rake

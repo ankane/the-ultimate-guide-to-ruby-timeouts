@@ -96,6 +96,7 @@ Rack Middleware
 - [hipchat](#hipchat)
 - [koala](#koala)
 - [octokit](#octokit)
+- [pinterest-api](#pinterest-api)
 - [pwned](#pwned)
 - [restforce](#restforce)
 - [shopify_api](#shopify_api)
@@ -982,6 +983,17 @@ Raises
 
 ```ruby
 Octokit::Client.new(connection_options: {request: {open_timeout: 1, timeout: 1}})
+```
+
+Raises
+
+- `Faraday::ConnectionFailed` on connect timeout
+- `Faraday::TimeoutError` on read timeout
+
+### pinterest-api
+
+```ruby
+Pinterest::Client.new(access_token, request: {open_timeout: 1, timeout: 1})
 ```
 
 Raises
