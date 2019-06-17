@@ -103,6 +103,7 @@ Rack Middleware
 - [pinterest-api](#pinterest-api)
 - [pwned](#pwned)
 - [restforce](#restforce)
+- [rspotify](#rspotify)
 - [shopify_api](#shopify_api)
 - [slack-notifier](#slack-notifier)
 - [slack-ruby-client](#slack-ruby-client)
@@ -1046,6 +1047,10 @@ Raises
 
 - `Faraday::ConnectionFailed` on connect timeout
 - `Faraday::TimeoutError` on read timeout
+
+### rspotify
+
+Not configurable at the moment, and no timeout by default
 
 ### shopify_api
 
