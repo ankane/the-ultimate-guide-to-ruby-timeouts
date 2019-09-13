@@ -1,12 +1,8 @@
 require_relative "test_helper"
 
-# Tamber.project_key = "your_project_key"
+Tamber.project_key = "your_project_key"
 
 class TamberTest < Minitest::Test
-  def setup
-    skip # requires older rest-client
-  end
-
   def test_connect
     Tamber.instance_variable_set(:@api_url, connect_url)
     Tamber.open_timeout = 1

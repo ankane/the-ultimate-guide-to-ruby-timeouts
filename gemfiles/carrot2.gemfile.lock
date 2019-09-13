@@ -1,0 +1,29 @@
+GIT
+  remote: https://github.com/ankane/carrot2.git
+  revision: e51e316c29f85a7135d5e1fd207eb7e7b7df5f04
+  specs:
+    carrot2 (0.2.0)
+      builder
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    appraisal (2.2.0)
+      bundler
+      rake
+      thor (>= 0.14.0)
+    builder (3.2.3)
+    minitest (5.11.3)
+    rake (12.3.3)
+    thor (0.20.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  appraisal
+  carrot2!
+  minitest
+
+BUNDLED WITH
+   1.17.2

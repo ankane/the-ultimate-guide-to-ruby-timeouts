@@ -3,17 +3,19 @@ language: ruby
 rvm: 2.6.3
 gemfile:
   - Gemfile
+cache:
+  directories:
+  - vendor/bundle
 services:
   - postgresql
   - mysql
   - elasticsearch
-script: bundle exec rake test
+script: bundle exec appraisal rake test
 before_script:
-  - mysql -e 'CREATE DATABASE ultimate_test;'
-  - psql -c 'CREATE DATABASE ultimate_test;' -U postgres
+  - mysqladmin create ultimate_test
+  - createdb ultimate_test
   - node test/server.js &>/dev/null &
-env:
-  - TRAVIS=t
+  - bundle exec appraisal install
 notifications:
   email:
     on_success: never

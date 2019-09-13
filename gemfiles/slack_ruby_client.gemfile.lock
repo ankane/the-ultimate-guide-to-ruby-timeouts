@@ -1,0 +1,51 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (6.0.0)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+      zeitwerk (~> 2.1, >= 2.1.8)
+    appraisal (2.2.0)
+      bundler
+      rake
+      thor (>= 0.14.0)
+    concurrent-ruby (1.1.5)
+    faraday (0.15.4)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.13.1)
+      faraday (>= 0.7.4, < 1.0)
+    gli (2.19.0)
+    hashie (3.6.0)
+    i18n (1.6.0)
+      concurrent-ruby (~> 1.0)
+    minitest (5.11.3)
+    multipart-post (2.1.1)
+    rake (12.3.3)
+    slack-ruby-client (0.14.4)
+      activesupport
+      faraday (>= 0.9)
+      faraday_middleware
+      gli
+      hashie
+      websocket-driver
+    thor (0.20.3)
+    thread_safe (0.3.6)
+    tzinfo (1.2.5)
+      thread_safe (~> 0.1)
+    websocket-driver (0.7.1)
+      websocket-extensions (>= 0.1.0)
+    websocket-extensions (0.1.4)
+    zeitwerk (2.1.10)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  appraisal
+  minitest
+  slack-ruby-client
+
+BUNDLED WITH
+   1.17.2

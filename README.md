@@ -1670,13 +1670,13 @@ node test/server.js
 To run all tests, use:
 
 ```sh
-bundle exec rake
+bundle exec appraisal rake test
 ```
 
 To run individual tests, use:
 
 ```sh
-ruby test/faraday_test.rb
+bundle exec appraisal faraday rake test
 ```
 
 ## And lastly...

@@ -1,0 +1,24 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    appraisal (2.2.0)
+      bundler
+      rake
+      thor (>= 0.14.0)
+    mail (2.7.1)
+      mini_mime (>= 0.1.1)
+    mini_mime (1.0.2)
+    minitest (5.11.3)
+    rake (12.3.3)
+    thor (0.20.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  appraisal
+  mail (>= 2.7.0)
+  minitest
+
+BUNDLED WITH
+   1.17.2

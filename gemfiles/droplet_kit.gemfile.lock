@@ -1,0 +1,63 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (5.2.3)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
+    appraisal (2.2.0)
+      bundler
+      rake
+      thor (>= 0.14.0)
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
+    concurrent-ruby (1.1.5)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
+    droplet_kit (3.0.3)
+      activesupport (> 3.0, < 6)
+      faraday (~> 0.15)
+      kartograph (~> 0.2.3)
+      resource_kit (~> 0.1.5)
+      virtus (~> 1.0.3)
+    equalizer (0.0.11)
+    faraday (0.15.4)
+      multipart-post (>= 1.2, < 3)
+    i18n (1.6.0)
+      concurrent-ruby (~> 1.0)
+    ice_nine (0.11.2)
+    kartograph (0.2.7)
+    minitest (5.11.3)
+    multipart-post (2.1.1)
+    public_suffix (4.0.1)
+    rake (12.3.3)
+    resource_kit (0.1.7)
+      addressable (>= 2.3.6, < 3.0.0)
+    thor (0.20.3)
+    thread_safe (0.3.6)
+    tzinfo (1.2.5)
+      thread_safe (~> 0.1)
+    virtus (1.0.5)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0, >= 0.0.3)
+      equalizer (~> 0.0, >= 0.0.9)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  appraisal
+  droplet_kit
+  faraday
+  minitest
+
+BUNDLED WITH
+   1.17.2

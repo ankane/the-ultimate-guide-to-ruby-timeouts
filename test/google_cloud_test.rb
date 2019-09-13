@@ -2,11 +2,9 @@ require_relative "test_helper"
 require "google/cloud/storage"
 
 class GoogleCloudTest < Minitest::Test
-  def setup
-    skip if travis?
-  end
-
   def test_connect
+    skip # need to set up credentials
+
     storage = Google::Cloud::Storage.new(project: "test", timeout: 1, retries: 0)
     storage.service.service.root_url = connect_url + "/"
 
@@ -16,6 +14,8 @@ class GoogleCloudTest < Minitest::Test
   end
 
   def test_read
+    skip # need to set up credentials
+
     storage = Google::Cloud::Storage.new(project: "test", timeout: 1, retries: 0)
     storage.service.service.root_url = read_url + "/"
 

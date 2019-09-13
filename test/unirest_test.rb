@@ -11,8 +11,6 @@ class UnirestTest < Minitest::Test
   end
 
   def test_read
-    skip # conflicts with other gems
-
     Unirest.timeout(1)
     assert_timeout(RuntimeError) do
       Unirest.get(read_url)

@@ -1,5 +1,4 @@
 require_relative "test_helper"
-require "typhoeus/adapters/faraday"
 
 class SearchkickTest < Minitest::Test
   def setup
@@ -9,6 +8,8 @@ class SearchkickTest < Minitest::Test
   end
 
   def test_connect
+    skip if travis?
+
     ENV["ELASTICSEARCH_URL"] = connect_url
     assert_timeout(Faraday::ConnectionFailed) do
       Searchkick.client.cluster.health

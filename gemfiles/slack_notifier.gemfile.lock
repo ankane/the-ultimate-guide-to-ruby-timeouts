@@ -1,0 +1,22 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    appraisal (2.2.0)
+      bundler
+      rake
+      thor (>= 0.14.0)
+    minitest (5.11.3)
+    rake (12.3.3)
+    slack-notifier (2.3.2)
+    thor (0.20.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  appraisal
+  minitest
+  slack-notifier
+
+BUNDLED WITH
+   1.17.2

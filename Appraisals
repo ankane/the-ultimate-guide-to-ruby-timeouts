@@ -1,0 +1,412 @@
+appraise "acme_client" do
+  gem "acme-client"
+end
+
+appraise "actionmailer" do
+  gem "actionmailer"
+end
+
+appraise "activemerchant" do
+  gem "activemerchant"
+end
+
+appraise "activerecord" do
+  gem "activerecord", require: "active_record"
+  gem "pg"
+  gem "mysql2"
+end
+
+appraise "activeresource" do
+  gem "activeresource"
+end
+
+appraise "active_shipping" do
+  gem "active_shipping", git: "https://github.com/Shopify/active_shipping.git"
+end
+
+appraise "airtable" do
+  gem "airtable"
+end
+
+appraise "algoliasearch" do
+  gem "algoliasearch"
+end
+
+appraise "aws_sdk" do
+  gem "aws-sdk-s3"
+end
+
+appraise "azure" do
+  gem "azure_mgmt_compute"
+end
+
+appraise "bitly" do
+  gem "bitly"
+end
+
+appraise "bunny" do
+  gem "bunny"
+end
+
+appraise "carrot2" do
+  gem "carrot2", git: "https://github.com/ankane/carrot2.git"
+end
+
+appraise "cassandra_driver" do
+  gem "cassandra-driver"
+end
+
+appraise "clearbit" do
+  gem "clearbit"
+end
+
+appraise "coinbase" do
+  gem "coinbase"
+end
+
+appraise "connection_pool" do
+  gem "connection_pool"
+  gem "redis"
+end
+
+appraise "couchrest" do
+  gem "couchrest"
+end
+
+appraise "curb" do
+  gem "curb"
+end
+
+appraise "dalli" do
+  gem "dalli"
+end
+
+appraise "docker_api" do
+  gem "docker-api"
+end
+
+appraise "dogapi" do
+  gem "dogapi"
+end
+
+appraise "drill_sergeant" do
+  gem "drill-sergeant"
+end
+
+appraise "droplet_kit" do
+  gem "droplet_kit"
+  gem "faraday"
+end
+
+appraise "elasticsearch" do
+  gem "elasticsearch"
+end
+
+appraise "em_http_request" do
+  gem "em-http-request"
+end
+
+appraise "excon" do
+  gem "excon"
+end
+
+appraise "faraday" do
+  gem "faraday"
+end
+
+appraise "fastimage" do
+  gem "fastimage"
+end
+
+appraise "firebase" do
+  gem "firebase"
+end
+
+appraise "geocoder" do
+  gem "geocoder"
+end
+
+appraise "gibbon" do
+  gem "gibbon"
+end
+
+appraise "github_api" do
+  gem "github_api"
+end
+
+appraise "google_api_client" do
+  gem "google-api-client"
+end
+
+appraise "google_cloud" do
+  gem "google-cloud-storage"
+end
+
+appraise "graphql-client" do
+  gem "graphql-client"
+end
+
+appraise "grpc" do
+  gem "grpc"
+end
+
+appraise "hipchat" do
+  gem "hipchat"
+end
+
+appraise "hiredis" do
+  gem "hiredis"
+end
+
+appraise "http" do
+  gem "http"
+end
+
+appraise "httparty" do
+  gem "httparty"
+end
+
+appraise "httpclient" do
+  gem "httpclient"
+end
+
+appraise "httpi" do
+  gem "httpi"
+  gem "httpclient"
+end
+
+appraise "influxdb" do
+  gem "influxdb"
+end
+
+appraise "intercom" do
+  gem "intercom"
+end
+
+appraise "koala" do
+  gem "koala"
+end
+
+appraise "kubeclient" do
+  #gem "kubeclient"
+end
+
+appraise "mail" do
+  gem "mail", ">= 2.7.0"
+end
+
+appraise "mechanize" do
+  gem "mechanize"
+end
+
+appraise "mongo" do
+  gem "mongo"
+end
+
+appraise "mongoid" do
+  gem "mongoid"
+end
+
+appraise "mysql2" do
+  gem "mysql2"
+end
+
+appraise "nats_pure" do
+  gem "nats-pure"
+end
+
+appraise "neo4j" do
+  gem "neo4j", git: "https://github.com/neo4jrb/neo4j.git"
+end
+
+appraise "nestful" do
+  gem "nestful"
+end
+
+appraise "net_dns" do
+  gem "net-dns"
+end
+
+appraise "net_ldap" do
+  gem "net-ldap"
+end
+
+appraise "net_ntp" do
+  gem "net-ntp"
+end
+
+appraise "net_scp" do
+  gem "net-scp"
+end
+
+appraise "net_sftp" do
+  gem "net-sftp"
+end
+
+appraise "net_ssh" do
+  gem "net-ssh"
+end
+
+appraise "net_telnet" do
+  gem "net-telnet"
+end
+
+appraise "octokit" do
+  gem "octokit"
+end
+
+appraise "patron" do
+  gem "patron"
+end
+
+appraise "pg" do
+  gem "pg"
+end
+
+appraise "pinterest_api" do
+  gem "pinterest-api"
+end
+
+appraise "presto_client" do
+  gem "presto-client"
+end
+
+appraise "pwned" do
+  gem "pwned"
+end
+
+appraise "redis" do
+  gem "redis"
+end
+
+appraise "rest_client" do
+  gem "rest-client"
+end
+
+appraise "restforce" do
+  gem "restforce"
+end
+
+appraise "reversed" do
+  gem "reversed"
+end
+
+appraise "riddle" do
+  gem "riddle"
+end
+
+appraise "rsolr" do
+  gem "rsolr"
+end
+
+appraise "ruby_kafka" do
+  gem "ruby-kafka"
+end
+
+appraise "savon" do
+  gem "savon"
+  gem "httpclient"
+end
+
+appraise "searchkick" do
+  gem "searchkick"
+  gem "typhoeus"
+end
+
+appraise "sequel" do
+  gem "sequel"
+  gem "pg"
+  gem "mysql2"
+end
+
+appraise "shopify_api" do
+  gem "shopify_api"
+end
+
+appraise "slack_notifier" do
+  gem "slack-notifier"
+end
+
+appraise "slack_ruby_client" do
+  gem "slack-ruby-client"
+end
+
+appraise "sift" do
+  gem "sift"
+end
+
+appraise "smartystreets_ruby_sdk" do
+  gem "smartystreets_ruby_sdk"
+end
+
+appraise "soda_ruby" do
+  gem "soda-ruby", require: "soda"
+end
+
+appraise "soundcloud" do
+  gem "soundcloud"
+end
+
+appraise "spidr" do
+  gem "spidr"
+end
+
+appraise "spyke" do
+  gem "spyke"
+end
+
+appraise "statsd_ruby" do
+  gem "statsd-ruby"
+end
+
+appraise "stomp" do
+  gem "stomp"
+end
+
+appraise "stripe" do
+  gem "stripe", ">= 1.24.0"
+end
+
+appraise "tamber" do
+  gem "tamber"
+end
+
+appraise "twilio" do
+  gem "twilio-ruby"
+end
+
+appraise "twitter" do
+  gem "twitter"
+end
+
+appraise "typhoeus" do
+  gem "typhoeus"
+end
+
+appraise "unirest" do
+  gem "unirest"
+end
+
+appraise "vault" do
+  gem "vault"
+end
+
+appraise "whois" do
+  gem "whois"
+end
+
+appraise "yt" do
+  gem "yt"
+end
+
+appraise "zendesk_api" do
+  gem "zendesk_api"
+end
+
+appraise "zk" do
+  gem "zk"
+end
+
+appraise "zookeeper" do
+  gem "zookeeper"
+end

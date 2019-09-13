@@ -1,0 +1,24 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    appraisal (2.2.0)
+      bundler
+      rake
+      thor (>= 0.14.0)
+    digest-crc (0.4.1)
+    minitest (5.11.3)
+    rake (12.3.3)
+    ruby-kafka (0.7.10)
+      digest-crc
+    thor (0.20.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  appraisal
+  minitest
+  ruby-kafka
+
+BUNDLED WITH
+   1.17.2

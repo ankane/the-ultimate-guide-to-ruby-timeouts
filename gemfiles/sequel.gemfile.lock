@@ -1,0 +1,26 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    appraisal (2.2.0)
+      bundler
+      rake
+      thor (>= 0.14.0)
+    minitest (5.11.3)
+    mysql2 (0.5.2)
+    pg (1.1.4)
+    rake (12.3.3)
+    sequel (5.24.0)
+    thor (0.20.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  appraisal
+  minitest
+  mysql2
+  pg
+  sequel
+
+BUNDLED WITH
+   1.17.2

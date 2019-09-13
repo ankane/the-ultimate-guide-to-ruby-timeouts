@@ -1,0 +1,24 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    appraisal (2.2.0)
+      bundler
+      rake
+      thor (>= 0.14.0)
+    minitest (5.11.3)
+    net-dns (0.9.0)
+    rake (12.3.3)
+    reversed (0.2.1)
+      net-dns
+    thor (0.20.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  appraisal
+  minitest
+  reversed
+
+BUNDLED WITH
+   1.17.2

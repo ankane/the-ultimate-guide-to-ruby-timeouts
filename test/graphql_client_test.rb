@@ -1,4 +1,6 @@
 require_relative "test_helper"
+require "graphql/client"
+require "graphql/client/http"
 
 class GraphqlClientTest < Minitest::Test
   def test_connect

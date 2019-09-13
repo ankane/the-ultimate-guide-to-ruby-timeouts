@@ -1,4 +1,5 @@
 require_relative "test_helper"
+require "json"
 
 ActiveMerchant::Billing::Gateway.open_timeout = 1 # Default is 60
 ActiveMerchant::Billing::Gateway.read_timeout = 1 # Default is 60
