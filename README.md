@@ -109,9 +109,9 @@ Rack Middleware
 - [restforce](#restforce)
 - [rspotify](#rspotify)
 - [shopify_api](#shopify_api)
+- [sift](#sift)
 - [slack-notifier](#slack-notifier)
 - [slack-ruby-client](#slack-ruby-client)
-- [sift](#sift)
 - [smartystreets_ruby_sdk](#smartystreets_ruby_sdk)
 - [soda-ruby](#soda-ruby)
 - [soundcloud](#soundcloud)
@@ -1117,6 +1117,19 @@ ShopifyAPI::Base.timeout = 1
 
 Raises `ActiveResource::TimeoutError`
 
+### sift
+
+```ruby
+Sift::Client.new(timeout: 1)
+```
+
+Default: 2s
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
+
 ### slack-notifier
 
 ```ruby
@@ -1138,19 +1151,6 @@ Raises
 
 - `Faraday::ConnectionFailed` on connect timeout
 - `Faraday::TimeoutError` on read timeout
-
-### sift
-
-```ruby
-Sift::Client.new(timeout: 1)
-```
-
-Default: 2s
-
-Raises
-
-- `Net::OpenTimeout` on connect timeout
-- `Net::ReadTimeout` on read timeout
 
 ### smartystreets_ruby_sdk
 
