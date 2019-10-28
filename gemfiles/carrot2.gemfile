@@ -4,4 +4,4 @@ source "https://rubygems.org"
 
 gem "appraisal"
 gem "minitest"
-gem "carrot2", git: "https://github.com/ankane/carrot2.git"
+gem "carrot2"

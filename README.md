@@ -129,6 +129,7 @@ Other
 - [activemerchant](#activemerchant)
 - [activeresource](#activeresource)
 - [active_shipping](#active_shipping)
+- [carrot2](#carrot2)
 - [docker-api](#docker-api)
 - [fastimage](#fastimage)
 - [geocoder](#geocoder)
@@ -1296,6 +1297,17 @@ client.read_timeout = 1
 Default: 2s connect timeout, 10s read timeout
 
 Raises `ActiveUtils::ConnectionError`
+
+### carrot2
+
+```ruby
+Carrot2.new(open_timeout: 1, read_timeout: 1)
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
 
 ### docker-api
 

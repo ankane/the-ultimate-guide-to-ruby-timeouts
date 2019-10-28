@@ -49,7 +49,7 @@ appraise "bunny" do
 end
 
 appraise "carrot2" do
-  gem "carrot2", git: "https://github.com/ankane/carrot2.git"
+  gem "carrot2"
 end
 
 appraise "cassandra_driver" do
