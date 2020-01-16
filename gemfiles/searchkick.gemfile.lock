@@ -1,50 +1,50 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (6.0.0)
-      activesupport (= 6.0.0)
-    activesupport (6.0.0)
+    activemodel (6.0.2.1)
+      activesupport (= 6.0.2.1)
+    activesupport (6.0.2.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-      zeitwerk (~> 2.1, >= 2.1.8)
+      zeitwerk (~> 2.2)
     appraisal (2.2.0)
       bundler
       rake
       thor (>= 0.14.0)
     concurrent-ruby (1.1.5)
-    elasticsearch (7.3.0)
-      elasticsearch-api (= 7.3.0)
-      elasticsearch-transport (= 7.3.0)
-    elasticsearch-api (7.3.0)
+    elasticsearch (7.4.0)
+      elasticsearch-api (= 7.4.0)
+      elasticsearch-transport (= 7.4.0)
+    elasticsearch-api (7.4.0)
       multi_json
-    elasticsearch-transport (7.3.0)
+    elasticsearch-transport (7.4.0)
       faraday
       multi_json
     ethon (0.12.0)
       ffi (>= 1.3.0)
-    faraday (0.15.4)
+    faraday (1.0.0)
       multipart-post (>= 1.2, < 3)
-    ffi (1.11.1)
-    hashie (3.6.0)
-    i18n (1.6.0)
+    ffi (1.11.3)
+    hashie (4.0.0)
+    i18n (1.8.2)
       concurrent-ruby (~> 1.0)
-    minitest (5.11.3)
-    multi_json (1.13.1)
+    minitest (5.14.0)
+    multi_json (1.14.1)
     multipart-post (2.1.1)
-    rake (12.3.3)
-    searchkick (4.1.0)
+    rake (13.0.1)
+    searchkick (4.2.0)
       activemodel (>= 5)
       elasticsearch (>= 6)
       hashie
-    thor (0.20.3)
+    thor (1.0.1)
     thread_safe (0.3.6)
     typhoeus (1.3.1)
       ethon (>= 0.9.0)
-    tzinfo (1.2.5)
+    tzinfo (1.2.6)
       thread_safe (~> 0.1)
-    zeitwerk (2.1.10)
+    zeitwerk (2.2.2)
 
 PLATFORMS
   ruby
@@ -56,4 +56,4 @@ DEPENDENCIES
   typhoeus
 
 BUNDLED WITH
-   1.17.2
+   1.17.3

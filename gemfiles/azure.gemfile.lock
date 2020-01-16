@@ -5,20 +5,20 @@ GEM
       bundler
       rake
       thor (>= 0.14.0)
-    azure_mgmt_compute (0.18.7)
+    azure_mgmt_compute (0.19.0)
       ms_rest_azure (~> 0.11.1)
     concurrent-ruby (1.1.5)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    faraday (0.15.4)
+    faraday (0.17.3)
       multipart-post (>= 1.2, < 3)
     faraday-cookie_jar (0.0.6)
       faraday (>= 0.7.4)
       http-cookie (~> 1.0.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    minitest (5.11.3)
-    ms_rest (0.7.4)
+    minitest (5.14.0)
+    ms_rest (0.7.5)
       concurrent-ruby (~> 1.0)
       faraday (~> 0.9)
       timeliness (~> 0.3.10)
@@ -29,8 +29,8 @@ GEM
       ms_rest (~> 0.7.4)
       unf_ext (= 0.0.7.2)
     multipart-post (2.1.1)
-    rake (12.3.3)
-    thor (0.20.3)
+    rake (13.0.1)
+    thor (1.0.1)
     timeliness (0.3.10)
     unf (0.1.4)
       unf_ext
@@ -45,4 +45,4 @@ DEPENDENCIES
   minitest
 
 BUNDLED WITH
-   1.17.2
+   1.17.3

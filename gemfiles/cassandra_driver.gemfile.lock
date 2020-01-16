@@ -8,9 +8,9 @@ GEM
     cassandra-driver (3.2.3)
       ione (~> 1.2)
     ione (1.2.4)
-    minitest (5.11.3)
-    rake (12.3.3)
-    thor (0.20.3)
+    minitest (5.14.0)
+    rake (13.0.1)
+    thor (1.0.1)
 
 PLATFORMS
   ruby
@@ -21,4 +21,4 @@ DEPENDENCIES
   minitest
 
 BUNDLED WITH
-   1.17.2
+   1.17.3
