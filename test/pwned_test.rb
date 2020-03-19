@@ -11,6 +11,8 @@ class PwnedTest < Minitest::Test
   end
 
   def test_read
+    skip "Requires SSL"
+
     Pwned::Password.send(:remove_const, "API_URL")
     Pwned::Password.const_set("API_URL", "#{read_url}/")
 
