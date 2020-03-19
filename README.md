@@ -911,11 +911,7 @@ Not configurable at the moment, and no timeout by default
 
 ### bitly
 
-```ruby
-Bitly.new(username, api_key, timeout)
-```
-
-Raises `BitlyTimeout`
+Not configurable at the moment, and no timeout by default
 
 ### boxr
 
