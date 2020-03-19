@@ -1202,10 +1202,7 @@ Twilio::REST::Client.new(account_sid, auth_token, nil, nil, http_client)
 
 Default: 30s
 
-Raises
-
-- `Faraday::ConnectionFailed` on connect timeout
-- `Faraday::TimeoutError` on read timeout
+Raises `Twilio::REST::TwilioError`
 
 ### twitter
 
