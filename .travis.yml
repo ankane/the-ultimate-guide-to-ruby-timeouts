@@ -18,6 +18,8 @@ before_script:
   - createdb ultimate_test
   - node test/server.js &>/dev/null &
   - bundle exec appraisal install
+before_install:
+  - gem install bundler
 notifications:
   email:
     on_success: never
