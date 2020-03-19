@@ -7,7 +7,7 @@ GEM
       thor (>= 0.14.0)
     mini_portile2 (2.4.0)
     minitest (5.14.0)
-    nokogiri (1.10.7)
+    nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     rake (13.0.1)
     spidr (0.6.1)

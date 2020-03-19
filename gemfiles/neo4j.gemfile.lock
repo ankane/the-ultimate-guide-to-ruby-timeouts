@@ -1,14 +1,3 @@
-GIT
-  remote: https://github.com/neo4jrb/neo4j.git
-  revision: 7aa3dc6873c10ffcbc47a0ed98f88487463992c6
-  specs:
-    neo4j (9.6.1)
-      activemodel (>= 4.0)
-      activesupport (>= 4.0)
-      i18n (!= 1.3.0)
-      neo4j-core (>= 9.0.0)
-      orm_adapter (~> 0.5.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -24,17 +13,17 @@ GEM
       bundler
       rake
       thor (>= 0.14.0)
-    concurrent-ruby (1.1.5)
+    concurrent-ruby (1.1.6)
     ethon (0.12.0)
       ffi (>= 1.3.0)
     faraday (0.17.3)
       multipart-post (>= 1.2, < 3)
-    faraday_middleware (0.13.1)
+    faraday_middleware (0.14.0)
       faraday (>= 0.7.4, < 1.0)
     faraday_middleware-multi_json (0.0.6)
       faraday_middleware
       multi_json
-    ffi (1.11.3)
+    ffi (1.12.2)
     httpclient (2.8.3)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
@@ -42,6 +31,12 @@ GEM
     minitest (5.14.0)
     multi_json (1.14.1)
     multipart-post (2.1.1)
+    neo4j (9.6.1)
+      activemodel (>= 4.0)
+      activesupport (>= 4.0)
+      i18n (!= 1.3.0)
+      neo4j-core (>= 9.0.0)
+      orm_adapter (~> 0.5.0)
     neo4j-core (9.0.0)
       activesupport (>= 4.0)
       faraday (>= 0.9.0)
@@ -61,7 +56,7 @@ GEM
       ethon (>= 0.9.0)
     tzinfo (1.2.6)
       thread_safe (~> 0.1)
-    zeitwerk (2.2.2)
+    zeitwerk (2.3.0)
 
 PLATFORMS
   ruby
@@ -69,7 +64,7 @@ PLATFORMS
 DEPENDENCIES
   appraisal
   minitest
-  neo4j!
+  neo4j
 
 BUNDLED WITH
    1.17.3

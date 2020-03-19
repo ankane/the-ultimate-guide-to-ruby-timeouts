@@ -22,17 +22,17 @@ GEM
       rake
       thor (>= 0.14.0)
     builder (3.2.4)
-    concurrent-ruby (1.1.5)
-    graphql (1.9.17)
+    concurrent-ruby (1.1.6)
+    graphql (1.10.5)
     graphql-client (0.16.0)
       activesupport (>= 3.0)
       graphql (~> 1.8)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     minitest (5.14.0)
-    rack (2.1.1)
+    rack (2.2.2)
     rake (13.0.1)
-    shopify_api (8.1.0)
+    shopify_api (9.0.2)
       activeresource (>= 4.1.0, < 6.0.0)
       graphql-client
       rack
@@ -40,7 +40,7 @@ GEM
     thread_safe (0.3.6)
     tzinfo (1.2.6)
       thread_safe (~> 0.1)
-    zeitwerk (2.2.2)
+    zeitwerk (2.3.0)
 
 PLATFORMS
   ruby

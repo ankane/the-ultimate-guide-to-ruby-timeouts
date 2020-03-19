@@ -7,9 +7,9 @@ GEM
       thor (>= 0.14.0)
     minitest (5.14.0)
     mysql2 (0.5.3)
-    pg (1.2.2)
+    pg (1.2.3)
     rake (13.0.1)
-    sequel (5.28.0)
+    sequel (5.30.0)
     thor (1.0.1)
 
 PLATFORMS

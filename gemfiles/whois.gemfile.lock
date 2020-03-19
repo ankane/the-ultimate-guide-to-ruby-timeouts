@@ -8,7 +8,7 @@ GEM
     minitest (5.14.0)
     rake (13.0.1)
     thor (1.0.1)
-    whois (5.0.0)
+    whois (5.0.1)
 
 PLATFORMS
   ruby

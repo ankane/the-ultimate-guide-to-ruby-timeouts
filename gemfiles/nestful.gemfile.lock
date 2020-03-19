@@ -6,7 +6,7 @@ GEM
       rake
       thor (>= 0.14.0)
     minitest (5.14.0)
-    nestful (1.1.3)
+    nestful (1.1.4)
     rake (13.0.1)
     thor (1.0.1)
 

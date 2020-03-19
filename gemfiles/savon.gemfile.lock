@@ -17,10 +17,10 @@ GEM
       socksify
     mini_portile2 (2.4.0)
     minitest (5.14.0)
-    nokogiri (1.10.7)
+    nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     nori (2.6.0)
-    rack (2.1.1)
+    rack (2.2.2)
     rake (13.0.1)
     savon (2.12.0)
       akami (~> 1.2)

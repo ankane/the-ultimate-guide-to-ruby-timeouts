@@ -5,10 +5,10 @@ GEM
       bundler
       rake
       thor (>= 0.14.0)
-    digest-crc (0.4.1)
+    digest-crc (0.5.1)
     minitest (5.14.0)
     rake (13.0.1)
-    ruby-kafka (0.7.10)
+    ruby-kafka (1.0.0)
       digest-crc
     thor (1.0.1)
 

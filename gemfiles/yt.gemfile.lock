@@ -11,7 +11,7 @@ GEM
       bundler
       rake
       thor (>= 0.14.0)
-    concurrent-ruby (1.1.5)
+    concurrent-ruby (1.1.6)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     minitest (5.14.0)
@@ -20,9 +20,9 @@ GEM
     thread_safe (0.3.6)
     tzinfo (1.2.6)
       thread_safe (~> 0.1)
-    yt (0.32.5)
+    yt (0.32.6)
       activesupport
-    zeitwerk (2.2.2)
+    zeitwerk (2.3.0)
 
 PLATFORMS
   ruby
