@@ -1,6 +1,6 @@
-dist: xenial
+dist: bionic
 language: ruby
-rvm: 2.6.3
+rvm: 2.7
 gemfile:
   - Gemfile
 cache:
@@ -10,6 +10,8 @@ services:
   - postgresql
   - mysql
   - elasticsearch
+addons:
+  postgresql: 10
 script: bundle exec appraisal rake test
 before_script:
   - mysqladmin create ultimate_test
