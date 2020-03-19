@@ -216,7 +216,7 @@ appraise "nats_pure" do
 end
 
 appraise "neo4j" do
-  gem "neo4j", git: "https://github.com/neo4jrb/neo4j.git"
+  gem "neo4j"
 end
 
 appraise "nestful" do

@@ -10,7 +10,7 @@ GEM
       rack
       socksify
     minitest (5.14.0)
-    rack (2.1.1)
+    rack (2.2.2)
     rake (13.0.1)
     socksify (1.7.1)
     thor (1.0.1)

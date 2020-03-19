@@ -4,4 +4,4 @@ source "https://rubygems.org"
 
 gem "appraisal"
 gem "minitest"
-gem "neo4j", git: "https://github.com/neo4jrb/neo4j.git"
+gem "neo4j"

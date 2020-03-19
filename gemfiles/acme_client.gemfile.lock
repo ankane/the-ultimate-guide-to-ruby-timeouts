@@ -1,13 +1,13 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    acme-client (2.0.5)
-      faraday (~> 0.9, >= 0.9.1)
+    acme-client (2.0.6)
+      faraday (>= 0.17, < 2.0.0)
     appraisal (2.2.0)
       bundler
       rake
       thor (>= 0.14.0)
-    faraday (0.17.3)
+    faraday (1.0.0)
       multipart-post (>= 1.2, < 3)
     minitest (5.14.0)
     multipart-post (2.1.1)

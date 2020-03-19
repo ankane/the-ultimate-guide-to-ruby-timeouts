@@ -15,7 +15,7 @@ GEM
       descendants_tracker (~> 0.0.1)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
-    droplet_kit (3.4.0)
+    droplet_kit (3.5.1)
       faraday (~> 0.15)
       kartograph (~> 0.2.3)
       resource_kit (~> 0.1.5)

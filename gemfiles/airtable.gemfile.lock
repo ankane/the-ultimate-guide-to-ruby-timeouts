@@ -7,7 +7,7 @@ GEM
       bundler
       rake
       thor (>= 0.14.0)
-    httparty (0.17.3)
+    httparty (0.18.0)
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
     mime-types (3.3.1)

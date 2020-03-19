@@ -6,7 +6,7 @@ GEM
       bundler
       rake
       thor (>= 0.14.0)
-    bunny (2.14.3)
+    bunny (2.14.4)
       amq-protocol (~> 2.3, >= 2.3.0)
     minitest (5.14.0)
     rake (13.0.1)
