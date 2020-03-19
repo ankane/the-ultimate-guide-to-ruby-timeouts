@@ -12,7 +12,7 @@ services:
   - elasticsearch
 addons:
   postgresql: 10
-script: bundle exec appraisal rake test || true
+script: bundle exec appraisal "rake test || true"
 before_script:
   - mysqladmin create ultimate_test
   - createdb ultimate_test
