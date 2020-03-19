@@ -488,7 +488,7 @@ config.neo4j.session.options = {
 }
 ```
 
-Raises `Faraday::TimeoutError`
+Raises `Faraday::Error::TimeoutError`
 
 ### pg
 
