@@ -18,7 +18,7 @@ class SearchkickTest < Minitest::Test
 
   def test_read
     ENV["ELASTICSEARCH_URL"] = read_url
-    assert_timeout(Faraday::TimeoutError) do
+    assert_timeout(Faraday::Error::TimeoutError) do
       Searchkick.client.cluster.health
     end
   end
