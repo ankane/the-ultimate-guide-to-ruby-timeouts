@@ -833,7 +833,7 @@ use Rack::Timeout,
   service_timeout:   15,     # ENV["RACK_TIMEOUT_SERVICE_TIMEOUT"]
   wait_timeout:      30,     # ENV["RACK_TIMEOUT_WAIT_TIMEOUT"]
   wait_overtime:     60,     # ENV["RACK_TIMEOUT_WAIT_OVERTIME"]
-  service_past_wait: false   # ENV["RACK_TIMEOUT_SERVICE_PAST_WAIT"]
+  service_past_wait: false,  # ENV["RACK_TIMEOUT_SERVICE_PAST_WAIT"]
   term_on_timeout:   false   # ENV["RACK_TIMEOUT_TERM_ON_TIMEOUT"]
 ```
 
