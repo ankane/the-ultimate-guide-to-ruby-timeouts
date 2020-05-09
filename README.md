@@ -833,7 +833,8 @@ use Rack::Timeout,
   service_timeout:   15,     # ENV["RACK_TIMEOUT_SERVICE_TIMEOUT"]
   wait_timeout:      30,     # ENV["RACK_TIMEOUT_WAIT_TIMEOUT"]
   wait_overtime:     60,     # ENV["RACK_TIMEOUT_WAIT_OVERTIME"]
-  service_past_wait: false   # ENV["RACK_TIMEOUT_SERVICE_PAST_WAIT"]
+  service_past_wait: false,  # ENV["RACK_TIMEOUT_SERVICE_PAST_WAIT"]
+  term_on_timeout:   false   # ENV["RACK_TIMEOUT_TERM_ON_TIMEOUT"]
 ```
 
 Default: 15s service timeout, 30s wait timeout
@@ -842,7 +843,7 @@ Raises `Rack::Timeout::RequestTimeoutError` or `Rack::Timeout::RequestExpiryErro
 
 [Read more here](https://github.com/heroku/rack-timeout/blob/master/doc/settings.md)
 
-**Note:** The approach used by Rack::Timeout can leave your application in an inconsistent state, [as described here](https://github.com/heroku/rack-timeout/blob/master/doc/risks.md)
+**Note:** The approach used by Rack::Timeout can leave your application in an inconsistent state, [as described here](https://github.com/heroku/rack-timeout/blob/master/doc/risks.md). You can use [term on timeout](https://github.com/sharpstone/rack-timeout/blob/master/doc/settings.md#term-on-timeout) to avoid this.
 
 ### slowpoke
 
