@@ -267,6 +267,10 @@ appraise "pinterest_api" do
   gem "pinterest-api"
 end
 
+appraise "posix_spawn" do
+  gem "posix-spawn"
+end
+
 appraise "presto_client" do
   gem "presto-client"
 end

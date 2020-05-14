@@ -67,6 +67,10 @@ HTTP Clients
 - [typhoeus](#typhoeus)
 - [unirest](#unirest)
 
+Commands
+
+- [posix-spawn](#posix-spawn)
+
 Web Servers
 
 - [puma](#puma)
@@ -788,6 +792,16 @@ Connect timeout is not configurable
 Default: 10s read timeout, no connect timeout
 
 Raises `RuntimeError`
+
+## Commands
+
+### posix-spawn
+
+```ruby
+POSIX::Spawn::Child.new(command, timeout: 1)
+```
+
+Raises `POSIX::Spawn::TimeoutExceeded`
 
 ## Web Servers
 
