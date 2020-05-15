@@ -796,6 +796,14 @@ Raises `RuntimeError`
 
 ## Commands
 
+### frontkick
+
+```ruby
+Frontkick.exec(command, timeout: 1)
+```
+
+Raises `Frontkick::Timeout`
+
 ### mixlib-shellout
 
 ```ruby
@@ -1712,7 +1720,7 @@ To add a new gem:
 
 1. Add it to `Appraisals` and run `bundle exec appraisal generate`
 2. Run `bundle exec appraisal new_gem bundle`
-3. Create a test with `test/new_gem_test.rb`
+3. Create `test/new_gem_test.rb` and run `bundle exec appraisal new_gem rake test`
 4. Add it to the appropriate section of the readme
 
 ## And lastly...
