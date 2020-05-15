@@ -825,7 +825,7 @@ Raises `POSIX::Spawn::TimeoutExceeded`
 ### tty-command
 
 ```ruby
-TTY::Command.new(timeout: 5)
+TTY::Command.new(timeout: 1)
 ```
 
 or
