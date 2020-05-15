@@ -69,6 +69,7 @@ HTTP Clients
 
 Commands
 
+- [frontkick](#frontkick)
 - [mixlib-shellout](#mixlib-shellout)
 - [posix-spawn](#posix-spawn)
 
