@@ -69,6 +69,7 @@ HTTP Clients
 
 Commands
 
+- [mixlib-shellout](#mixlib-shellout)
 - [posix-spawn](#posix-spawn)
 
 Web Servers
@@ -794,6 +795,14 @@ Default: 10s read timeout, no connect timeout
 Raises `RuntimeError`
 
 ## Commands
+
+### mixlib-shellout
+
+```ruby
+Mixlib::ShellOut.new("sleep 10", timeout: 1).run_command
+```
+
+Raises `Mixlib::ShellOut::CommandTimeout`
 
 ### posix-spawn
 
@@ -1698,6 +1707,13 @@ To run individual tests, use:
 ```sh
 bundle exec appraisal faraday rake test
 ```
+
+To add a new gem:
+
+1. Add it to `Appraisals` and run `bundle exec appraisal generate`
+2. Run `bundle exec appraisal new_gem bundle`
+3. Create a test with `test/new_gem_test.rb`
+4. Add it to the appropriate section of the readme
 
 ## And lastly...
 

@@ -199,6 +199,10 @@ appraise "mechanize" do
   gem "mechanize"
 end
 
+appraise "mixlib_shellout" do
+  gem "mixlib-shellout"
+end
+
 appraise "mongo" do
   gem "mongo"
 end
