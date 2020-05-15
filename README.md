@@ -799,7 +799,7 @@ Raises `RuntimeError`
 ### mixlib-shellout
 
 ```ruby
-Mixlib::ShellOut.new("sleep 10", timeout: 1).run_command
+Mixlib::ShellOut.new(command, timeout: 1)
 ```
 
 Raises `Mixlib::ShellOut::CommandTimeout`
