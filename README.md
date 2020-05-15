@@ -72,6 +72,7 @@ Commands
 - [frontkick](#frontkick)
 - [mixlib-shellout](#mixlib-shellout)
 - [posix-spawn](#posix-spawn)
+- [tty-command](#tty-command)
 
 Web Servers
 
@@ -820,6 +821,20 @@ POSIX::Spawn::Child.new(command, timeout: 1)
 ```
 
 Raises `POSIX::Spawn::TimeoutExceeded`
+
+### tty-command
+
+```ruby
+TTY::Command.new(timeout: 5)
+```
+
+or
+
+```ruby
+cmd.run(command, timeout: 1)
+```
+
+Raises `TTY::Command::TimeoutExceeded`
 
 ## Web Servers
 

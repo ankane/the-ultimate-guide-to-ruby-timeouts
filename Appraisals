@@ -383,6 +383,10 @@ appraise "tamber" do
   gem "tamber"
 end
 
+appraise "tty_command" do
+  gem "tty-command"
+end
+
 appraise "twilio" do
   gem "twilio-ruby"
 end
