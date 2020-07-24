@@ -1,8 +1,11 @@
 dist: bionic
 language: ruby
-rvm: 2.7
-gemfile: Gemfile
-cache: bundler
+rvm: 2.6
+gemfile:
+  - Gemfile
+cache:
+  directories:
+  - vendor/bundle
 services:
   - postgresql
   - mysql
