@@ -88,7 +88,9 @@ Rack Middleware
 
 Solvers
 
+- [osqp](#osqp)
 - [ruby-cbc](#ruby-cbc)
+- [scs](#scs)
 
 3rd Party Services
 
@@ -953,6 +955,10 @@ Check for a timeout with
 ```ruby
 problem.time_limit_reached?
 ```
+
+### scs
+
+Not configurable at the moment, and no timeout by default
 
 ## 3rd Party Services
 
