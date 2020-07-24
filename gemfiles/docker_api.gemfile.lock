@@ -1,16 +1,16 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    appraisal (2.2.0)
+    appraisal (2.3.0)
       bundler
       rake
       thor (>= 0.14.0)
     docker-api (1.34.2)
       excon (>= 0.47.0)
       multi_json
-    excon (0.73.0)
-    minitest (5.14.0)
-    multi_json (1.14.1)
+    excon (0.75.0)
+    minitest (5.14.1)
+    multi_json (1.15.0)
     rake (13.0.1)
     thor (1.0.1)
 

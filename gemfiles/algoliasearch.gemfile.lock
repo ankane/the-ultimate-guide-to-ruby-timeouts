@@ -1,16 +1,16 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    algoliasearch (1.27.1)
+    algoliasearch (1.27.3)
       httpclient (~> 2.8, >= 2.8.3)
       json (>= 1.5.1)
-    appraisal (2.2.0)
+    appraisal (2.3.0)
       bundler
       rake
       thor (>= 0.14.0)
     httpclient (2.8.3)
-    json (2.3.0)
-    minitest (5.14.0)
+    json (2.3.1)
+    minitest (5.14.1)
     rake (13.0.1)
     thor (1.0.1)
 

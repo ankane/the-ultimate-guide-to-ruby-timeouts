@@ -1,16 +1,16 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    appraisal (2.2.0)
+    appraisal (2.3.0)
       bundler
       rake
       thor (>= 0.14.0)
-    ffi (1.12.2)
+    ffi (1.13.1)
     hashie (3.6.0)
-    minitest (5.14.0)
+    minitest (5.14.1)
     multipart-post (2.0.0)
     rake (13.0.1)
-    soda-ruby (1.0.0)
+    soda-ruby (1.0.1)
       hashie (~> 3.5)
       multipart-post (~> 2.0.0)
       sys-uname (~> 1.0.2)

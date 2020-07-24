@@ -1,14 +1,14 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    appraisal (2.2.0)
+    appraisal (2.3.0)
       bundler
       rake
       thor (>= 0.14.0)
-    cassandra-driver (3.2.3)
+    cassandra-driver (3.2.4)
       ione (~> 1.2)
     ione (1.2.4)
-    minitest (5.14.0)
+    minitest (5.14.1)
     rake (13.0.1)
     thor (1.0.1)
 

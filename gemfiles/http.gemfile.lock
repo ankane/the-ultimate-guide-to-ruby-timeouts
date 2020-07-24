@@ -3,17 +3,17 @@ GEM
   specs:
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    appraisal (2.2.0)
+    appraisal (2.3.0)
       bundler
       rake
       thor (>= 0.14.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    ffi (1.12.2)
+    ffi (1.13.1)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
-    http (4.3.0)
+    http (4.4.1)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
       http-form_data (~> 2.2)
@@ -23,13 +23,13 @@ GEM
     http-form_data (2.3.0)
     http-parser (1.2.1)
       ffi-compiler (>= 1.0, < 2.0)
-    minitest (5.14.0)
-    public_suffix (4.0.3)
+    minitest (5.14.1)
+    public_suffix (4.0.5)
     rake (13.0.1)
     thor (1.0.1)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.6)
+    unf_ext (0.0.7.7)
 
 PLATFORMS
   ruby

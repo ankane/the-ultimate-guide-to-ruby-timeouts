@@ -1,12 +1,14 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    appraisal (2.2.0)
+    appraisal (2.3.0)
       bundler
       rake
       thor (>= 0.14.0)
-    minitest (5.14.0)
-    mixlib-shellout (3.0.9)
+    chef-utils (16.2.73)
+    minitest (5.14.1)
+    mixlib-shellout (3.1.2)
+      chef-utils
     rake (13.0.1)
     thor (1.0.1)
 

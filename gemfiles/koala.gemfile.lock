@@ -3,20 +3,20 @@ GEM
   specs:
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    appraisal (2.2.0)
+    appraisal (2.3.0)
       bundler
       rake
       thor (>= 0.14.0)
-    faraday (1.0.0)
+    faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
-    json (2.3.0)
+    json (2.3.1)
     koala (3.0.0)
       addressable
       faraday
       json (>= 1.8)
-    minitest (5.14.0)
+    minitest (5.14.1)
     multipart-post (2.1.1)
-    public_suffix (4.0.3)
+    public_suffix (4.0.5)
     rake (13.0.1)
     thor (1.0.1)
 

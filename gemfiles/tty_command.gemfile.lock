@@ -1,12 +1,12 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    appraisal (2.2.0)
+    appraisal (2.3.0)
       bundler
       rake
       thor (>= 0.14.0)
     equatable (0.6.1)
-    minitest (5.14.0)
+    minitest (5.14.1)
     pastel (0.7.4)
       equatable (~> 0.6)
       tty-color (~> 0.5)

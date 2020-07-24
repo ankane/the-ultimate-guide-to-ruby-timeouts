@@ -1,34 +1,34 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (6.0.2.1)
-      activesupport (= 6.0.2.1)
-    activesupport (6.0.2.1)
+    activemodel (6.0.3.2)
+      activesupport (= 6.0.3.2)
+    activesupport (6.0.3.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-      zeitwerk (~> 2.2)
-    appraisal (2.2.0)
+      zeitwerk (~> 2.2, >= 2.2.2)
+    appraisal (2.3.0)
       bundler
       rake
       thor (>= 0.14.0)
-    bson (4.8.2)
+    bson (4.10.0)
     concurrent-ruby (1.1.6)
-    i18n (1.8.2)
+    i18n (1.8.5)
       concurrent-ruby (~> 1.0)
-    minitest (5.14.0)
-    mongo (2.11.4)
-      bson (>= 4.4.2, < 5.0.0)
-    mongoid (7.1.0)
+    minitest (5.14.1)
+    mongo (2.12.2)
+      bson (>= 4.8.2, < 5.0.0)
+    mongoid (7.1.2)
       activemodel (>= 5.1, < 6.1)
       mongo (>= 2.7.0, < 3.0.0)
     rake (13.0.1)
     thor (1.0.1)
     thread_safe (0.3.6)
-    tzinfo (1.2.6)
+    tzinfo (1.2.7)
       thread_safe (~> 0.1)
-    zeitwerk (2.3.0)
+    zeitwerk (2.4.0)
 
 PLATFORMS
   ruby
