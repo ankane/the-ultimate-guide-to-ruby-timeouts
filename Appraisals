@@ -399,6 +399,10 @@ appraise "twitter" do
   gem "twitter"
 end
 
+appraise "typesense" do
+  gem "typesense"
+end
+
 appraise "typhoeus" do
   gem "typhoeus"
 end

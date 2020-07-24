@@ -50,6 +50,7 @@ Data Stores
 - [ruby-kafka](#ruby-kafka)
 - [searchkick](#searchkick)
 - [sequel](#sequel)
+- [typesense](#typesense)
 
 HTTP Clients
 
@@ -609,6 +610,17 @@ Raises same exceptions as [elasticsearch](#elasticsearch)
 
   - `Sequel::DatabaseConnectionError` on connect and read timeouts
   - `Sequel::PoolTimeout` on checkout timeout
+
+### typesense
+
+```ruby
+Typesense::Client.new(connection_timeout_seconds: 1)
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
 
 ## HTTP Clients
 
