@@ -1,6 +1,6 @@
 dist: bionic
 language: ruby
-rvm: 2.6
+rvm: 2.7
 gemfile:
   - Gemfile
 cache:
