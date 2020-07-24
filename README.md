@@ -937,7 +937,7 @@ Raises same exceptions as [rack-timeout](#rack-timeout)
 ### ruby-cbc
 
 ```ruby
-problem.set_time_limit(0)
+problem.set_time_limit(1)
 ```
 
 No exception is raised. Check for a timeout with
