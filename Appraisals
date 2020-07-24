@@ -315,6 +315,10 @@ appraise "rsolr" do
   gem "rsolr"
 end
 
+appraise "ruby_cbc" do
+  gem "ruby-cbc"
+end
+
 appraise "ruby_kafka" do
   gem "ruby-kafka"
 end

@@ -86,6 +86,10 @@ Rack Middleware
 - [rack-timeout](#rack-timeout)
 - [slowpoke](#slowpoke)
 
+Solvers
+
+- [ruby-cbc](#ruby-cbc)
+
 3rd Party Services
 
 - [airrecord](#airrecord)
@@ -927,6 +931,20 @@ Slowpoke.timeout = 5
 Default: 15s
 
 Raises same exceptions as [rack-timeout](#rack-timeout)
+
+## Solvers
+
+### ruby-cbc
+
+```ruby
+problem.set_time_limit(0)
+```
+
+No exception is raised. Check for a timeout with
+
+```ruby
+problem.time_limit_reached?
+```
 
 ## 3rd Party Services
 
