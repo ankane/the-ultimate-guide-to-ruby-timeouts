@@ -958,7 +958,7 @@ problem.time_limit_reached?
 
 ### scs
 
-Not configurable at the moment, and no timeout by default
+Not configurable at the moment, and no timeout by default ([requires support in C API](https://github.com/cvxgrp/scs/issues/136))
 
 ## 3rd Party Services
 
