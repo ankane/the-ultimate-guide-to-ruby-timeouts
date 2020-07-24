@@ -497,7 +497,7 @@ config.neo4j.session.options = {
 }
 ```
 
-Raises `Faraday::Error::TimeoutError`
+Raises `Faraday::TimeoutError`
 
 ### pg
 
@@ -1448,7 +1448,7 @@ agent.read_timeout = 1
 Raises
 
 - `Net::OpenTimeout` on connect timeout
-- `Net::HTTP::Persistent::Error` on read timeout
+- `Net::ReadTimeout` on read timeout
 
 ### nats-pure
 
