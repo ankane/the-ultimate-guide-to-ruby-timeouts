@@ -228,9 +228,7 @@ STATEMENT_TIMEOUT=90s rails db:migrate
 
 ### MySQL
 
-**Note:** Requires MySQL 5.7.8 or higher
-
-**Note:** `max_execution_time` only applies to read-only `select` statements. Furthermore, it does not apply to `select` statements in stored programs. See [here](https://dev.mysql.com/doc/refman/8.0/en/optimizer-hints.html#optimizer-hints-execution-time).
+**Note:** Requires MySQL 5.7.8 or higher, and only applies to read-only `SELECT` statements ([more info](https://dev.mysql.com/doc/refman/8.0/en/optimizer-hints.html#optimizer-hints-execution-time)).
 
 If you use Rails, add to your `config/database.yml`
 
