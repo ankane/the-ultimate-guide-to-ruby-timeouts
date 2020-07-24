@@ -267,10 +267,6 @@ appraise "octokit" do
   gem "octokit"
 end
 
-appraise "or_tools" do
-  gem "or-tools"
-end
-
 appraise "osqp" do
   gem "osqp"
 end
