@@ -13,7 +13,7 @@ class Neo4jTest < Minitest::Test
     http_adaptor = Neo4j::Core::CypherSession::Adaptors::HTTP.new(connect_url, options)
     neo4j_session = Neo4j::Core::CypherSession.new(http_adaptor)
 
-    assert_timeout(Faraday::Error::TimeoutError) do
+    assert_timeout(Faraday::TimeoutError) do
       neo4j_session.query("MATCH (n) RETURN n LIMIT 10")
     end
   end
@@ -28,7 +28,7 @@ class Neo4jTest < Minitest::Test
     http_adaptor = Neo4j::Core::CypherSession::Adaptors::HTTP.new(read_url, options)
     neo4j_session = Neo4j::Core::CypherSession.new(http_adaptor)
 
-    assert_timeout(Faraday::Error::TimeoutError) do
+    assert_timeout(Faraday::TimeoutError) do
       neo4j_session.query("MATCH (n) RETURN n LIMIT 10")
     end
   end
