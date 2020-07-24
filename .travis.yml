@@ -4,14 +4,17 @@ rvm: 2.7
 gemfile:
   - Gemfile
 cache:
-  directories:
-  - vendor/bundle
+  apt: true
+  bundler: true
 services:
   - postgresql
   - mysql
   - elasticsearch
 addons:
   postgresql: 10
+  apt:
+    packages:
+      - coinor-libcbc-dev
 script: bundle exec appraisal "rake test || true"
 before_script:
   - mysqladmin create ultimate_test
