@@ -9,6 +9,7 @@ class OsqpTest < Minitest::Test
     u = [1, 0.7, 0.7]
 
     solver = OSQP::Solver.new
-    solver.solve(p, q, a, l, u, alpha: 1.0, time_limit: 0.000001)
+    result = solver.solve(p, q, a, l, u, alpha: 1.0, time_limit: 0.000001)
+    assert_equal "run time limit reached", result[:status]
   end
 end

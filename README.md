@@ -940,13 +940,15 @@ Raises same exceptions as [rack-timeout](#rack-timeout)
 solver.solve(p, q, a, l, u, time_limit: 1)
 ```
 
+Check for a `status` of `run time limit reached` for a timeout
+
 ### ruby-cbc
 
 ```ruby
 problem.set_time_limit(1)
 ```
 
-No exception is raised. Check for a timeout with
+Check for a timeout with
 
 ```ruby
 problem.time_limit_reached?
