@@ -88,6 +88,7 @@ Rack Middleware
 
 Solvers
 
+- [or-tools](#or-tools)
 - [osqp](#osqp)
 - [ruby-cbc](#ruby-cbc)
 - [scs](#scs)
@@ -935,6 +936,12 @@ Default: 15s
 Raises same exceptions as [rack-timeout](#rack-timeout)
 
 ## Solvers
+
+### or-tools
+
+```ruby
+routing.solve(time_limit: 1)
+```
 
 ### osqp
 
