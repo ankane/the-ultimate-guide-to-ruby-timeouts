@@ -267,6 +267,10 @@ appraise "octokit" do
   gem "octokit"
 end
 
+appraise "osqp" do
+  gem "osqp"
+end
+
 appraise "patron" do
   gem "patron"
 end

@@ -934,6 +934,12 @@ Raises same exceptions as [rack-timeout](#rack-timeout)
 
 ## Solvers
 
+### osqp
+
+```ruby
+solver.solve(p, q, a, l, u, time_limit: 1)
+```
+
 ### ruby-cbc
 
 ```ruby
