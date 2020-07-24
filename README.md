@@ -388,7 +388,7 @@ Raises
 ConnectionPool.new(timeout: 1) { ... }
 ```
 
-Raises `Timeout::Error`
+Raises `ConnectionPool::TimeoutError`
 
 ### couchrest
 
