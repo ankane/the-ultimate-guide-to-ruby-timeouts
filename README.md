@@ -36,6 +36,7 @@ Data Stores
 - [elasticsearch](#elasticsearch)
 - [hiredis](#hiredis)
 - [influxdb](#influxdb)
+- [meilisearch](#meilisearch)
 - [mongo](#mongo)
 - [mongoid](#mongoid)
 - [mysql2](#mysql2)
@@ -454,6 +455,17 @@ InfluxDB::Client.new(open_timeout: 1, read_timeout: 1)
 ```
 
 Raises `InfluxDB::ConnectionError`
+
+### meilisearch
+
+Not configurable at the moment
+
+Default: 1s
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
 
 ### mongo
 

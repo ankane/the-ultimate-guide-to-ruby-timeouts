@@ -203,6 +203,10 @@ appraise "mechanize" do
   gem "mechanize"
 end
 
+appraise "meilisearch" do
+  gem "meilisearch"
+end
+
 appraise "mixlib_shellout" do
   gem "mixlib-shellout"
 end
