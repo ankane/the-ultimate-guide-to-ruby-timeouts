@@ -955,6 +955,12 @@ Check for a `status` of `run time limit reached` for a timeout
 problem.set_time_limit(1)
 ```
 
+or
+
+```ruby
+problem.solve(sec: 1)
+```
+
 Check for a timeout with
 
 ```ruby
