@@ -997,7 +997,7 @@ Raises `Redis::Lock::LockNotAcquired`
 ### redlock
 
 ```ruby
-lock_manager.lock!(key, 1000) do |locked|
+lock_manager.lock!(key, 1000) do
   # ...
 end
 ```
