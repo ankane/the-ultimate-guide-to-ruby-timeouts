@@ -97,6 +97,11 @@ Solvers
 - [ruby-cbc](#ruby-cbc)
 - [scs](#scs)
 
+Distributed Locks
+
+- [mlanett-redis-lock](#mlanett-redis-lock)
+- [redlock](#redlock)
+
 3rd Party Services
 
 - [airrecord](#airrecord)
@@ -141,11 +146,6 @@ Solvers
 - [twitter](#twitter)
 - [yt](#yt)
 - [zendesk_api](#zendesk_api)
-
-Distributed Locks
-
-- [mlanett-redis-lock](#mlanett-redis-lock)
-- [redlock](#redlock)
 
 Other
 
@@ -980,6 +980,32 @@ problem.time_limit_reached?
 
 Not configurable at the moment, and no timeout by default ([requires support in C API](https://github.com/cvxgrp/scs/issues/136))
 
+## Distributed Locks
+
+### mlanett-redis-lock
+
+```ruby
+redis.lock(key, life: 1, acquire: 1) do |lock|
+  # ...
+end
+```
+
+Default: 10s acquisition timeout
+
+Raises `Redis::Lock::LockNotAcquired`
+
+### redlock
+
+```ruby
+lock_manager.lock!(key, 1000) do |locked|
+  # ...
+end
+```
+
+Default: 200ms acquisition timeout with 3 retries
+
+Raises `Redlock::LockError`
+
 ## 3rd Party Services
 
 ### airrecord
@@ -1355,32 +1381,6 @@ end
 Default: 10s connect timeout, no read timeout
 
 Raises `ZendeskAPI::Error::NetworkError`
-
-## Distributed Locks
-
-### mlanett-redis-lock
-
-```ruby
-redis.lock(key, life: 1, acquire: 1) do |lock|
-  # ...
-end
-```
-
-Default: 10s acquisition timeout
-
-Raises `Redis::Lock::LockNotAcquired`
-
-### redlock
-
-```ruby
-lock_manager.lock!(key, 1000) do |locked|
-  # ...
-end
-```
-
-Default: 200ms acquisition timeout with 3 retries
-
-Raises `Redlock::LockError`
 
 ## Other
 
