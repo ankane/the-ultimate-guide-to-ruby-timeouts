@@ -14,7 +14,7 @@ Here’s how to add timeouts for popular Ruby gems. **[All have been tested](tes
 - **checkout** - time to checkout a connection from the pool
 - **statement** - time to execute a database statement
 - **lock** - time to acquire a lock
-- **request** - time to process a request
+- **request (or service)** - time to process a request
 - **command** - time to run a command
 - **solve** - time to solve an optimization problem
 
