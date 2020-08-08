@@ -1041,7 +1041,7 @@ ActiveRecord::Base.with_advisory_lock("123", timeout_seconds: 1) do
 end
 ```
 
-Returns `false` on acquition timeout
+Returns `false` on acquisition timeout
 
 ## 3rd Party Services
 
