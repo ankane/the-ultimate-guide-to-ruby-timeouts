@@ -1010,6 +1010,12 @@ Raises `Redlock::LockError`
 ### suo
 
 ```ruby
+Suo::Client::Memcached.new(key, acquisition_timeout: 1)
+```
+
+or
+
+```ruby
 Suo::Client::Redis.new(key, acquisition_timeout: 1)
 ```
 
