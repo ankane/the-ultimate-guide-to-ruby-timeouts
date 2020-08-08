@@ -76,21 +76,19 @@ class ActiveRecordTest < Minitest::Test
 
   def test_advisory_lock_postgresql
     ActiveRecord::Base.establish_connection adapter: "postgresql", database: "ultimate_test"
-    assert ActiveRecord::Base.connection.get_advisory_lock(123)
-    t = Thread.new do
-      # use different connection
-      refute ActiveRecord::Base.connection.get_advisory_lock(123)
+    results = with_threads do
+      ActiveRecord::Base.connection.get_advisory_lock(123)
     end
-    t.join
+    assert_includes results, true
+    assert_includes results, false
   end
 
   def test_advisory_lock_mysql
     ActiveRecord::Base.establish_connection adapter: "mysql2", database: "ultimate_test"
-    assert ActiveRecord::Base.connection.get_advisory_lock(123)
-    t = Thread.new do
-      # use different connection
-      refute ActiveRecord::Base.connection.get_advisory_lock(123)
+    results = with_threads do
+      ActiveRecord::Base.connection.get_advisory_lock(123)
     end
-    t.join
+    assert_includes results, true
+    assert_includes results, false
   end
 end

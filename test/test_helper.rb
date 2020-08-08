@@ -19,14 +19,20 @@ class Minitest::Test
     assert_operator time, :<=, timeout + 1.25 # TODO reduce
   end
 
-  def assert_threaded_timeout(exception = UnknownTimeoutError, timeout: 1)
-    threads = []
-    2.times do
-      threads << Thread.new { yield }
-    end
+  def assert_threaded_timeout(exception = UnknownTimeoutError, timeout: 1, &block)
     assert_timeout(exception, timeout: timeout) do
-      threads.each(&:join)
+      with_threads(&block)
     end
+  end
+
+  def with_threads
+    threads = []
+    results = []
+    2.times do
+      threads << Thread.new { results << yield }
+    end
+    threads.each(&:join)
+    results
   end
 
   def connect_host

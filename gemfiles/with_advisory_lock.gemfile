@@ -4,4 +4,7 @@ source "https://rubygems.org"
 
 gem "appraisal"
 gem "minitest"
-gem "mlanett-redis-lock", github: "mlanett/redis-lock", require: "redis-lock"
+gem "with_advisory_lock"
+gem "activerecord", require: "active_record"
+gem "mysql2"
+gem "pg"

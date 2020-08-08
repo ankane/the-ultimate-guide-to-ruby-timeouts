@@ -1,5 +1,4 @@
 require_relative "test_helper"
-require "redis-lock"
 
 class MlanettRedisLockTest < Minitest::Test
   def test_acquire

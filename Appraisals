@@ -212,7 +212,7 @@ appraise "mixlib_shellout" do
 end
 
 appraise "mlanett_redis_lock" do
-  gem "mlanett-redis-lock", github: "mlanett/redis-lock"
+  gem "mlanett-redis-lock", github: "mlanett/redis-lock", require: "redis-lock"
 end
 
 appraise "mongo" do
@@ -437,6 +437,13 @@ end
 
 appraise "whois" do
   gem "whois"
+end
+
+appraise "with_advisory_lock" do
+  gem "with_advisory_lock"
+  gem "activerecord", require: "active_record"
+  gem "mysql2"
+  gem "pg"
 end
 
 appraise "yt" do

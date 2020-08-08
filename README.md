@@ -103,6 +103,7 @@ Distributed Locks
 - [mlanett-redis-lock](#mlanett-redis-lock)
 - [redlock](#redlock)
 - [suo](#suo)
+- [with_advisory_lock](#with_advisory_lock)
 
 3rd Party Services
 
@@ -990,7 +991,7 @@ Not configurable at the moment, and no timeout by default ([requires support in 
 ActiveRecord::Base.connection.get_advisory_lock(123)
 ```
 
-Returns `false` if lock not acquired
+Returns `false` if lock cannot be immediately acquired
 
 ### mlanett-redis-lock
 
@@ -1031,6 +1032,16 @@ Suo::Client::Redis.new(key, acquisition_timeout: 1)
 Default: 0.1s acquisition timeout with 10 retries
 
 The `lock` method returns `nil` on timeout
+
+### with_advisory_lock
+
+```ruby
+ActiveRecord::Base.with_advisory_lock("123", timeout_seconds: 1) do
+  # ...
+end
+```
+
+Returns `false` on acquition timeout
 
 ## 3rd Party Services
 
