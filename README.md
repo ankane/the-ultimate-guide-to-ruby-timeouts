@@ -99,6 +99,7 @@ Solvers
 
 Distributed Locks
 
+- [activerecord](#activerecord-1)
 - [mlanett-redis-lock](#mlanett-redis-lock)
 - [redlock](#redlock)
 - [suo](#suo)
@@ -982,6 +983,14 @@ problem.time_limit_reached?
 Not configurable at the moment, and no timeout by default ([requires support in C API](https://github.com/cvxgrp/scs/issues/136))
 
 ## Distributed Locks
+
+### activerecord
+
+```ruby
+ActiveRecord::Base.connection.get_advisory_lock(123)
+```
+
+Returns `false` if lock not acquired
 
 ### mlanett-redis-lock
 

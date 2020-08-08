@@ -73,4 +73,24 @@ class ActiveRecordTest < Minitest::Test
       ActiveRecord::Base.connection.execute("SELECT /*+ MAX_EXECUTION_TIME(250) */ 1 FROM information_schema.tables WHERE sleep(1)")
     end
   end
+
+  def test_advisory_lock_postgresql
+    ActiveRecord::Base.establish_connection adapter: "postgresql", database: "ultimate_test"
+    assert ActiveRecord::Base.connection.get_advisory_lock(123)
+    t = Thread.new do
+      # use different connection
+      refute ActiveRecord::Base.connection.get_advisory_lock(123)
+    end
+    t.join
+  end
+
+  def test_advisory_lock_mysql
+    ActiveRecord::Base.establish_connection adapter: "mysql2", database: "ultimate_test"
+    assert ActiveRecord::Base.connection.get_advisory_lock(123)
+    t = Thread.new do
+      # use different connection
+      refute ActiveRecord::Base.connection.get_advisory_lock(123)
+    end
+    t.join
+  end
 end
