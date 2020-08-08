@@ -142,6 +142,11 @@ Solvers
 - [yt](#yt)
 - [zendesk_api](#zendesk_api)
 
+Distributed Locks
+
+- [mlanett-redis-lock](#mlanett-redis-lock)
+- [redlock](#redlock)
+
 Other
 
 - [acme-client](#acme-client)
@@ -1350,6 +1355,32 @@ end
 Default: 10s connect timeout, no read timeout
 
 Raises `ZendeskAPI::Error::NetworkError`
+
+## Distributed Locks
+
+### mlanett-redis-lock
+
+```ruby
+redis.lock(key, life: 1, acquire: 1) do |lock|
+  # ...
+end
+```
+
+Default: 10s acquisition timeout
+
+Raises `Redis::Lock::LockNotAcquired`
+
+### redlock
+
+```ruby
+lock_manager.lock!(key, 1000) do |locked|
+  # ...
+end
+```
+
+Default: 200ms acquisition timeout with 3 retries
+
+Raises `Redlock::LockError`
 
 ## Other
 

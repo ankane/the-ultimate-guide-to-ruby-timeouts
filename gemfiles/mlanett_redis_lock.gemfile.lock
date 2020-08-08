@@ -1,0 +1,29 @@
+GIT
+  remote: https://github.com/mlanett/redis-lock.git
+  revision: 08f1bb58ee3a2232f9dbab7c06a93461767de643
+  specs:
+    mlanett-redis-lock (0.2.7)
+      redis
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    appraisal (2.3.0)
+      bundler
+      rake
+      thor (>= 0.14.0)
+    minitest (5.14.1)
+    rake (13.0.1)
+    redis (4.2.1)
+    thor (1.0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  appraisal
+  minitest
+  mlanett-redis-lock!
+
+BUNDLED WITH
+   2.1.4

@@ -211,6 +211,10 @@ appraise "mixlib_shellout" do
   gem "mixlib-shellout"
 end
 
+appraise "mlanett_redis_lock" do
+  gem "mlanett-redis-lock", github: "mlanett/redis-lock"
+end
+
 appraise "mongo" do
   gem "mongo"
 end
@@ -297,6 +301,10 @@ end
 
 appraise "redis" do
   gem "redis"
+end
+
+appraise "redlock" do
+  gem "redlock"
 end
 
 appraise "rest_client" do
