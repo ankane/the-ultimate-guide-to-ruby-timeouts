@@ -98,6 +98,14 @@ appraise "droplet_kit" do
   gem "faraday"
 end
 
+appraise "etcd" do
+  gem "etcd"
+end
+
+appraise "etcdv3" do
+  gem "etcdv3"
+end
+
 appraise "elasticsearch" do
   gem "elasticsearch"
 end

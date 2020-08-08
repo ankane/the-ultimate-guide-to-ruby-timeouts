@@ -159,6 +159,8 @@ Other
 - [active_shipping](#active_shipping)
 - [carrot2](#carrot2)
 - [docker-api](#docker-api)
+- [etcd](#etcd)
+- [etcdv3](#etcdv3)
 - [fastimage](#fastimage)
 - [geocoder](#geocoder)
 - [graphql-client](#graphql-client)
@@ -1502,6 +1504,34 @@ Docker.options = {
 Connect timeout not configurable
 
 Raises `Docker::Error::TimeoutError`
+
+### etcd
+
+```ruby
+client = Etcd.client(read_timeout: 1)
+```
+
+Connect timeout not configurable
+
+Default: 60s read timeout
+
+Raises
+
+- `Net::ReadTimeout` on read timeout
+
+### etcdv3
+
+```ruby
+Etcdv3.new(command_timeout: 1)
+```
+
+or
+
+```ruby
+conn.get(key, timeout: 1)
+```
+
+Raises `GRPC::DeadlineExceeded`
 
 ### fastimage
 
