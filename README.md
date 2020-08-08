@@ -101,6 +101,7 @@ Distributed Locks
 
 - [mlanett-redis-lock](#mlanett-redis-lock)
 - [redlock](#redlock)
+- [suo](#suo)
 
 3rd Party Services
 
@@ -1005,6 +1006,16 @@ end
 Default: 200ms acquisition timeout with 3 retries
 
 Raises `Redlock::LockError`
+
+### suo
+
+```ruby
+Suo::Client::Redis.new(key, acquisition_timeout: 1)
+```
+
+Default: 0.1s acquisition timeout with 10 retries
+
+The `lock` method returns `nil` on timeout
 
 ## 3rd Party Services
 

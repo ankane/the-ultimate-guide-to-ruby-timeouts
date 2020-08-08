@@ -1,0 +1,28 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    appraisal (2.3.0)
+      bundler
+      rake
+      thor (>= 0.14.0)
+    dalli (2.7.10)
+    minitest (5.14.1)
+    msgpack (1.3.3)
+    rake (13.0.1)
+    redis (4.2.1)
+    suo (0.3.4)
+      dalli
+      msgpack
+      redis
+    thor (1.0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  appraisal
+  minitest
+  suo
+
+BUNDLED WITH
+   2.1.4

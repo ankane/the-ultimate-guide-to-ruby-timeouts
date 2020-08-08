@@ -399,6 +399,10 @@ appraise "stripe" do
   gem "stripe", ">= 1.24.0"
 end
 
+appraise "suo" do
+  gem "suo"
+end
+
 appraise "tamber" do
   gem "tamber"
 end
