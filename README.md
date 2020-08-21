@@ -181,6 +181,7 @@ Other
 - [net-ssh](#net-ssh)
 - [net-telnet](#net-telnet)
 - [omniauth-oauth2](#omniauth-oauth2)
+- [rbhive](#rbhive)
 - [reversed](#reversed)
 - [savon](#savon)
 - [socket](#socket)
@@ -1738,6 +1739,16 @@ Raises
 ### omniauth-oauth2
 
 [Not configurable at the moment](https://github.com/intridea/omniauth-oauth2/issues/27), and no timeout by default
+
+### rbhive
+
+```ruby
+RBHive.tcli_connect(host, port, timeout: 1) do |connection|
+  # ...
+end
+```
+
+Raises `Thrift::TransportException`
 
 ### reversed
 

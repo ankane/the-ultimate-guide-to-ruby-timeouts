@@ -307,6 +307,10 @@ appraise "pwned" do
   gem "pwned"
 end
 
+appraise "rbhive" do
+  gem "rbhive"
+end
+
 appraise "redis" do
   gem "redis"
 end
