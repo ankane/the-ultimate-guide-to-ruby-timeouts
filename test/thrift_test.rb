@@ -1,6 +1,6 @@
 require_relative "test_helper"
 
-class RbhiveTest < Minitest::Test
+class ThriftTest < Minitest::Test
   def test_connect
     socket = Thrift::Socket.new(connect_host, 9090, 1)
     assert_timeout(Thrift::TransportException) do
