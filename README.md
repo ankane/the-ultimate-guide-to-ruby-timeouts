@@ -188,6 +188,7 @@ Other
 - [spidr](#spidr)
 - [spyke](#spyke)
 - [stomp](#stomp)
+- [thrift](#thrift)
 - [vault](#vault)
 - [whois](#whois)
 - [zk](#zk)
@@ -1815,6 +1816,14 @@ Raises
 
 - `Stomp::Error::StartTimeoutException` on connect timeout
 - `Stomp::Error::ReceiveTimeout` on read timeout
+
+### thrift
+
+```ruby
+Thrift::Socket.new(host, port, 1)
+```
+
+Raises `Thrift::TransportException`
 
 ### vault
 

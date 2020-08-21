@@ -419,6 +419,10 @@ appraise "tamber" do
   gem "tamber"
 end
 
+appraise "thrift" do
+  gem "thrift"
+end
+
 appraise "tty_command" do
   gem "tty-command"
 end
