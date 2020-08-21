@@ -21,7 +21,6 @@ script: bundle exec appraisal "rake test || true"
 before_script:
   - mysqladmin create ultimate_test
   - createdb ultimate_test
-  - node test/server.js &>/dev/null &
   - bundle exec appraisal install
 notifications:
   email:

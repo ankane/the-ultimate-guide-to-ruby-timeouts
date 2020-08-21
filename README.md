@@ -1909,7 +1909,6 @@ Adding timeouts to existing services can be a daunting task, but there’s a low
 git clone https://github.com/ankane/the-ultimate-guide-to-ruby-timeouts.git
 cd the-ultimate-guide-to-ruby-timeouts
 bundle install
-node test/server.js
 ```
 
 To run all tests, use:

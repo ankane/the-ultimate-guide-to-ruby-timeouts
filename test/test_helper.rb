@@ -7,6 +7,9 @@ Thread.report_on_exception = false
 
 class UnknownTimeoutError < StandardError; end
 
+server = TCPServer.new("127.0.0.1", 4567)
+Minitest.after_run { server.close }
+
 class Minitest::Test
   def assert_timeout(exception = UnknownTimeoutError, timeout: 1)
     started_at = Time.now
