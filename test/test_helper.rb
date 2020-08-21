@@ -2,6 +2,7 @@ require "bundler/setup"
 Bundler.require :default
 require "minitest/autorun"
 require "minitest/pride"
+require "socket"
 
 Thread.report_on_exception = false
 
