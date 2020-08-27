@@ -190,6 +190,7 @@ Other
 - [spyke](#spyke)
 - [stomp](#stomp)
 - [thrift](#thrift)
+- [thrift_client](#thrift_client)
 - [vault](#vault)
 - [whois](#whois)
 - [zk](#zk)
@@ -1833,6 +1834,17 @@ Thrift::Socket.new(host, port, 1)
 ```
 
 Raises `Thrift::TransportException`
+
+### thrift_client
+
+```ruby
+ThriftClient.new(client_class, servers, connect_timeout: 1, timeout: 1)
+```
+
+Raises
+
+- `ThriftClient::NoServersAvailable` on connect timeout
+- TODO: read timeout
 
 ### vault
 

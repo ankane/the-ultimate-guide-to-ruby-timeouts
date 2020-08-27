@@ -427,6 +427,10 @@ appraise "thrift" do
   gem "thrift"
 end
 
+appraise "thrift_client" do
+  gem "thrift_client"
+end
+
 appraise "tty_command" do
   gem "tty-command"
 end
