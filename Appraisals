@@ -89,6 +89,10 @@ appraise "dogapi" do
   gem "dogapi"
 end
 
+appraise "down" do
+  gem "down"
+end
+
 appraise "drill_sergeant" do
   gem "drill-sergeant"
 end

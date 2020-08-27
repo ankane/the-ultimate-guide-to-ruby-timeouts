@@ -60,6 +60,7 @@ Data Stores
 HTTP Clients
 
 - [curb](#curb)
+- [down](#down)
 - [em-http-client](#em-http-client)
 - [excon](#excon)
 - [faraday](#faraday)
@@ -656,6 +657,14 @@ curl.perform
 ```
 
 Raises `Curl::Err::TimeoutError`
+
+### down
+
+```ruby
+Down::NetHttp.download(connect_url, open_timeout: 1, read_timeout: 1)
+```
+
+Raises `Down::TimeoutError`
 
 ### em-http-client
 
