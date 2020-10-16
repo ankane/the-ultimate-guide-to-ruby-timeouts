@@ -199,6 +199,10 @@ appraise "intercom" do
   gem "intercom"
 end
 
+appraise "jira-ruby" do
+  gem "jira-ruby"
+end
+
 appraise "koala" do
   gem "koala"
 end

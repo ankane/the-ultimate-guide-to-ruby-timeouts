@@ -131,6 +131,7 @@ Distributed Locks
 - [google-cloud](#google-cloud)
 - [hipchat](#hipchat)
 - [intercom](#intercom)
+- [jira-ruby](#jira-ruby)
 - [koala](#koala)
 - [linkedin](#linkedin)
 - [octokit](#octokit)
@@ -1249,6 +1250,16 @@ Raises
 
 - `Intercom::ServiceConnectionError` on connect timeout (inherits from `Intercom::IntercomError`)
 - `Intercom::ServiceUnavailableError` on read timeout (inherits from `Intercom::IntercomError`)
+
+### jira-ruby
+
+```ruby
+JIRA::Client.new(read_timeout: 1)
+```
+
+Connect timeout is not configurable at the moment
+
+Raises `Net::ReadTimeout` on read timeout
 
 ### koala
 
