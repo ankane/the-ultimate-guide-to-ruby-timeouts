@@ -140,6 +140,7 @@ Distributed Locks
 - [pwned](#pwned)
 - [restforce](#restforce)
 - [rspotify](#rspotify)
+- [ruby-trello](#ruby-trello)
 - [shopify_api](#shopify_api)
 - [sift](#sift)
 - [slack-notifier](#slack-notifier)
@@ -1330,6 +1331,10 @@ Raises
 - `Faraday::TimeoutError` on read timeout
 
 ### rspotify
+
+Not configurable at the moment, and no timeout by default
+
+### ruby-trello
 
 Not configurable at the moment, and no timeout by default
 
