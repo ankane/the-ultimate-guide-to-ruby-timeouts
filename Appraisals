@@ -150,6 +150,10 @@ appraise "github_api" do
   gem "github_api"
 end
 
+appraise "gitlab" do
+  gem "gitlab"
+end
+
 appraise "google_api_client" do
   gem "google-api-client"
 end

@@ -127,6 +127,7 @@ Distributed Locks
 - [flickraw](#flickraw)
 - [gibbon](#gibbon)
 - [github_api](#github_api)
+- [gitlab](#gitlab)
 - [google-api-client](#google-api-client)
 - [google-cloud](#google-cloud)
 - [hipchat](#hipchat)
@@ -1209,6 +1210,17 @@ Raises
 
 - `Faraday::ConnectionFailed` on connect timeout
 - `Faraday::TimeoutError` on read timeout
+
+### gitlab
+
+```ruby
+Gitlab.client(httparty: {timeout: 1})
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
 
 ### google-api-client
 
