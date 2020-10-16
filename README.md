@@ -137,6 +137,7 @@ Distributed Locks
 - [linkedin](#linkedin)
 - [octokit](#octokit)
 - [pinterest-api](#pinterest-api)
+- [pusher](#pusher)
 - [pwned](#pwned)
 - [restforce](#restforce)
 - [rspotify](#rspotify)
@@ -1310,6 +1311,17 @@ Raises
 
 - `Faraday::ConnectionFailed` on connect timeout
 - `Faraday::TimeoutError` on read timeout
+
+### pusher
+
+```ruby
+client.connect_timoeut = 1
+client.send_timeout = 1
+client.receive_timeout = 1
+client.keep_alive_timeout = 1
+```
+
+Raises `Pusher::HTTPError`
 
 ### pwned
 

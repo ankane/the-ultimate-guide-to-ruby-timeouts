@@ -315,6 +315,10 @@ appraise "presto_client" do
   gem "presto-client"
 end
 
+appraise "pusher" do
+  gem "pusher"
+end
+
 appraise "pwned" do
   gem "pwned"
 end
