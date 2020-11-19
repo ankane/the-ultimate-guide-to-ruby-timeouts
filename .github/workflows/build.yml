@@ -23,5 +23,5 @@ jobs:
     - run: |
         mysqladmin create ultimate_test
         createdb ultimate_test
-        bundle exec appraisal install
+    - run: bundle exec appraisal install
     - run: bundle exec appraisal "rake test || true"
