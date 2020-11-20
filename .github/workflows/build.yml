@@ -21,7 +21,7 @@ jobs:
     - run: |
         sudo apt-get install redis-server
         sudo systemctl start redis
-    - run: sudo apt-get install coinor-libcbc-dev libcurl-dev
+    - run: sudo apt-get install coinor-libcbc-dev libcurl4-openssl-dev
     - run: |
         mysqladmin create ultimate_test
         createdb ultimate_test
