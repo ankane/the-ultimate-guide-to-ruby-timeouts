@@ -11,6 +11,7 @@ jobs:
         ruby-version: 2.7
         # caching causes issues - https://github.com/thoughtbot/appraisal/issues/173
         # bundler-cache: true
+    - run: bundle install
     - uses: ankane/setup-postgres@v1
     - uses: ankane/setup-mysql@v1
     - uses: ankane/setup-elasticsearch@v1
