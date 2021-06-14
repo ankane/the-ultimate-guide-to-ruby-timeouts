@@ -122,6 +122,7 @@ Distributed Locks
 - [dogapi](#dogapi)
 - [dropbox-sdk](#dropbox-sdk)
 - [droplet_kit](#droplet_kit)
+- [faktory](#faktory)
 - [fastly](#fastly)
 - [firebase](#firebase)
 - [flickraw](#flickraw)
@@ -1171,6 +1172,16 @@ Raises
 
 - `Faraday::ConnectionFailed` on connect timeout
 - `Faraday::TimeoutError` on read timeout
+
+### faktory
+
+```ruby
+Faktory.faktory = { timeout: 1 }
+```
+
+Raises
+
+- `Faktory::TimeoutError` on connect timeout
 
 ### fastly
 
