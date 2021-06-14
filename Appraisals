@@ -122,6 +122,10 @@ appraise "excon" do
   gem "excon"
 end
 
+appraise "faktory_worker_ruby" do
+  gem "faktory_worker_ruby"
+end
+
 appraise "faraday" do
   gem "faraday"
 end
