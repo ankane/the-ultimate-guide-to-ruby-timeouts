@@ -360,7 +360,8 @@ MAX_STATEMENT_TIME=90 rails db:migrate
 
   Raises
 
-  - `PG::ConnectionBad` on connect and read timeouts
+  - `ActiveRecord::ConnectionNotEstablished` on connect and read timeouts for Active Record 6.1+
+  - `PG::ConnectionBad` on connect and read timeouts for Active Record < 6.1
   - `ActiveRecord::ConnectionTimeoutError` on checkout timeout
 
   See also [PostgreSQL statement timeouts](#postgresql)
@@ -383,7 +384,8 @@ MAX_STATEMENT_TIME=90 rails db:migrate
 
   Raises
 
-  - `Mysql2::Error` on connect and read timeouts
+  - `ActiveRecord::ConnectionNotEstablished` on connect and read timeouts for Active Record 6.1+
+  - `Mysql2::Error` on connect and read timeouts for Active Record < 6.1
   - `ActiveRecord::ConnectionTimeoutError` on checkout timeout
 
   See also [MySQL statement timeouts](#mysql)

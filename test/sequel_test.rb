@@ -33,7 +33,7 @@ class SequelTest < Minitest::Test
   end
 
   def test_checkout_mysql2
-    db = Sequel.connect adapter: "mysql2", max_connections: 1, pool_timeout: 1, database: "ultimate_test", user: "root"
+    db = Sequel.connect adapter: "mysql2", max_connections: 1, pool_timeout: 1, database: "ultimate_test"
     assert_threaded_timeout(Sequel::PoolTimeout) do
       db["SELECT sleep(2)"].to_a
     end

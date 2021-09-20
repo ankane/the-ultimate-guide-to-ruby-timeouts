@@ -10,7 +10,7 @@ class PusherTest < Minitest::Test
   end
 
   def test_read
-    client = Pusher::Client.new(host: read_host, port: read_port, app_id: "test", key: "test", secret: "test")
+    client = Pusher::Client.new(host: read_host, port: read_port, app_id: "test", key: "test", secret: "test", use_tls: false)
     client.receive_timeout = 1
     assert_timeout(Pusher::HTTPError) do
       client.trigger("channel", "event", {})
