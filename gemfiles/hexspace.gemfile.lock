@@ -13,7 +13,7 @@ GEM
     thrift (0.15.0)
 
 PLATFORMS
-  x86_64-linux
+  ruby
 
 DEPENDENCIES
   appraisal
