@@ -27,6 +27,7 @@ GEM
       racc (~> 1.4)
     racc (1.5.2)
     rake (13.0.6)
+    rexml (3.2.5)
     thor (1.1.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
@@ -39,6 +40,7 @@ DEPENDENCIES
   activemerchant
   appraisal
   minitest
+  rexml
 
 BUNDLED WITH
    2.2.27

@@ -645,10 +645,7 @@ Raises same exceptions as [elasticsearch](#elasticsearch)
 Typesense::Client.new(connection_timeout_seconds: 1)
 ```
 
-Raises
-
-- `Net::OpenTimeout` on connect timeout
-- `Net::ReadTimeout` on read timeout
+Raises `Typesense::Error::TimeoutError`
 
 ## HTTP Clients
 
@@ -1388,10 +1385,7 @@ Raises
 Slack::Web::Client.new(open_timeout: 1, timeout: 1)
 ```
 
-Raises
-
-- `Faraday::ConnectionFailed` on connect timeout
-- `Faraday::TimeoutError` on read timeout
+Raises `Slack::Web::Api::Errors::TimeoutError`
 
 ### smartystreets_ruby_sdk
 
@@ -1482,10 +1476,7 @@ Raises `ZendeskAPI::Error::NetworkError`
 Acme::Client.new(connection_options: {request: {open_timeout: 1, timeout: 1}})
 ```
 
-Raises
-
-- `Faraday::ConnectionFailed` on connect timeout
-- `Faraday::TimeoutError` on read timeout
+Raises `Acme::Client::Error::Timeout`
 
 ### actionmailer
 

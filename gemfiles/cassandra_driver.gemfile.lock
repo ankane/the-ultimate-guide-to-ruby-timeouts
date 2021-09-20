@@ -10,6 +10,11 @@ GEM
     ione (1.2.4)
     minitest (5.14.4)
     rake (13.0.6)
+    rbtree (0.4.4)
+    set (1.0.1)
+    sorted_set (1.0.3)
+      rbtree
+      set (~> 1.0)
     thor (1.1.0)
 
 PLATFORMS
@@ -19,6 +24,7 @@ DEPENDENCIES
   appraisal
   cassandra-driver
   minitest
+  sorted_set
 
 BUNDLED WITH
    2.2.27

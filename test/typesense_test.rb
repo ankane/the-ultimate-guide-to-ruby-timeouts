@@ -8,7 +8,7 @@ class TypesenseTest < Minitest::Test
       connection_timeout_seconds: 1,
       num_retries: 0
     )
-    assert_timeout(Net::OpenTimeout) do
+    assert_timeout(Typesense::Error::TimeoutError) do
       client.collections.retrieve
     end
   end
@@ -20,7 +20,7 @@ class TypesenseTest < Minitest::Test
       connection_timeout_seconds: 1,
       num_retries: 0
     )
-    assert_timeout(Net::ReadTimeout) do
+    assert_timeout(Typesense::Error::TimeoutError) do
       client.collections.retrieve
     end
   end

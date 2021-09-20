@@ -8,6 +8,7 @@ end
 
 appraise "activemerchant" do
   gem "activemerchant"
+  gem "rexml"
 end
 
 appraise "activerecord" do
@@ -34,6 +35,7 @@ end
 
 appraise "aws_sdk" do
   gem "aws-sdk-s3"
+  gem "rexml"
 end
 
 appraise "azure" do
@@ -54,6 +56,7 @@ end
 
 appraise "cassandra_driver" do
   gem "cassandra-driver"
+  gem "sorted_set"
 end
 
 appraise "clearbit" do

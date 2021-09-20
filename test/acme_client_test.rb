@@ -9,7 +9,7 @@ class AcmeClientTest < Minitest::Test
       connection_options: {request: {open_timeout: 1}}
     )
 
-    assert_timeout(Faraday::ConnectionFailed) do
+    assert_timeout(Acme::Client::Error::Timeout) do
       client.new_account(contact: "mailto:info@example.com", terms_of_service_agreed: true)
     end
   end
@@ -22,7 +22,7 @@ class AcmeClientTest < Minitest::Test
       connection_options: {request: {timeout: 1}}
     )
 
-    assert_timeout(Faraday::TimeoutError) do
+    assert_timeout(Acme::Client::Error::Timeout) do
       client.new_account(contact: "mailto:info@example.com", terms_of_service_agreed: true)
     end
   end

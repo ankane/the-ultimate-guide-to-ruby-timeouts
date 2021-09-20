@@ -24,6 +24,7 @@ GEM
     jmespath (1.4.0)
     minitest (5.14.4)
     rake (13.0.6)
+    rexml (3.2.5)
     thor (1.1.0)
 
 PLATFORMS
@@ -33,6 +34,7 @@ DEPENDENCIES
   appraisal
   aws-sdk-s3
   minitest
+  rexml
 
 BUNDLED WITH
    2.2.27
