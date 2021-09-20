@@ -489,9 +489,9 @@ Raises `InfluxDB::ConnectionError`
 
 ### meilisearch
 
-Not configurable at the moment
-
-Default: 1s
+```ruby
+MeiliSearch::Client.new(url, api_key, timeout: 1)
+```
 
 Raises
 
