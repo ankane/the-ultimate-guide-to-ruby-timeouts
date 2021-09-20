@@ -173,6 +173,10 @@ appraise "grpc" do
   gem "grpc"
 end
 
+appraise "hexspace" do
+  gem "hexspace"
+end
+
 appraise "hipchat" do
   gem "hipchat"
 end

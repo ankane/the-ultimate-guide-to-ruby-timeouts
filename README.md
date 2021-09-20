@@ -171,6 +171,7 @@ Other
 - [geocoder](#geocoder)
 - [graphql-client](#graphql-client)
 - [grpc](#grpc)
+- [hexspace](#hexspace)
 - [kubeclient](#kubeclient)
 - [mail](#mail)
 - [mechanize](#mechanize)
@@ -1628,6 +1629,14 @@ RouteGuide::Stub.new(addr, :this_channel_is_insecure, timeout: 1)
 ```
 
 Raises `GRPC::DeadlineExceeded`
+
+### hexspace
+
+```ruby
+Hexspace::Client.new(timeout: 1)
+```
+
+Raises `Thrift::TransportException`
 
 ### kubeclient
 

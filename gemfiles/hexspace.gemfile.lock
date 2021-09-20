@@ -1,0 +1,24 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    appraisal (2.4.1)
+      bundler
+      rake
+      thor (>= 0.14.0)
+    hexspace (0.1.1)
+      thrift
+    minitest (5.14.4)
+    rake (13.0.6)
+    thor (1.1.0)
+    thrift (0.15.0)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  appraisal
+  hexspace
+  minitest
+
+BUNDLED WITH
+   2.2.27
