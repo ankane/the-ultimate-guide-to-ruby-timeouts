@@ -62,4 +62,8 @@ class Minitest::Test
   def read_url
     "http://#{read_host_and_port}"
   end
+
+  def ruby3?
+    RUBY_VERSION.to_i >= 3
+  end
 end

@@ -1,6 +1,10 @@
 require_relative "test_helper"
 
 class PinterestApiTest < Minitest::Test
+  def setup
+    skip if ruby3?
+  end
+
   def test_connect
     Pinterest::Client.send(:remove_const, "BASE_ENDPOINT")
     Pinterest::Client.const_set("BASE_ENDPOINT", "#{connect_url}/")

@@ -1,6 +1,10 @@
 require_relative "test_helper"
 
 class ActiveShippingTest < Minitest::Test
+  def setup
+    skip if ruby3?
+  end
+
   def test_connect
     ActiveShipping::USPS::USE_SSL[:test] = false
     ActiveShipping::USPS::TEST_DOMAINS[false] = connect_host

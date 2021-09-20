@@ -2,6 +2,8 @@ require_relative "test_helper"
 
 class HipchatTest < Minitest::Test
   def setup
+    skip if ruby3?
+
     [HipChat::Client, HipChat::Room, HipChat::User].each { |c| c.default_timeout(1) }
   end
 
