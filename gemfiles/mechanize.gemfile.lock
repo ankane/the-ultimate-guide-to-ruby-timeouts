@@ -1,40 +1,48 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    appraisal (2.3.0)
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
+    appraisal (2.4.1)
       bundler
       rake
       thor (>= 0.14.0)
-    connection_pool (2.2.3)
+    connection_pool (2.2.5)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    http-cookie (1.0.3)
+    http-cookie (1.0.4)
       domain_name (~> 0.5)
-    mechanize (2.7.6)
-      domain_name (~> 0.5, >= 0.5.1)
-      http-cookie (~> 1.0)
-      mime-types (>= 1.17.2)
-      net-http-digest_auth (~> 1.1, >= 1.1.1)
-      net-http-persistent (>= 2.5.2)
-      nokogiri (~> 1.6)
-      ntlm-http (~> 0.1, >= 0.1.1)
-      webrobots (>= 0.0.9, < 0.2)
+    mechanize (2.8.2)
+      addressable (~> 2.8)
+      domain_name (~> 0.5, >= 0.5.20190701)
+      http-cookie (~> 1.0, >= 1.0.3)
+      mime-types (~> 3.0)
+      net-http-digest_auth (~> 1.4, >= 1.4.1)
+      net-http-persistent (>= 2.5.2, < 5.0.dev)
+      nokogiri (~> 1.11, >= 1.11.2)
+      rubyntlm (~> 0.6, >= 0.6.3)
+      webrick (~> 1.7)
+      webrobots (~> 0.1.2)
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2020.0512)
-    mini_portile2 (2.4.0)
-    minitest (5.14.1)
+    mime-types-data (3.2021.0901)
+    mini_portile2 (2.6.1)
+    minitest (5.14.4)
     net-http-digest_auth (1.4.1)
-    net-http-persistent (4.0.0)
+    net-http-persistent (4.0.1)
       connection_pool (~> 2.2)
-    nokogiri (1.10.10)
-      mini_portile2 (~> 2.4.0)
-    ntlm-http (0.1.1)
-    rake (13.0.1)
-    thor (1.0.1)
+    nokogiri (1.12.4)
+      mini_portile2 (~> 2.6.1)
+      racc (~> 1.4)
+    public_suffix (4.0.6)
+    racc (1.5.2)
+    rake (13.0.6)
+    rubyntlm (0.6.3)
+    thor (1.1.0)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.7)
+    unf_ext (0.0.8)
+    webrick (1.7.0)
     webrobots (0.1.2)
 
 PLATFORMS
@@ -46,4 +54,4 @@ DEPENDENCIES
   minitest
 
 BUNDLED WITH
-   2.1.4
+   2.2.27

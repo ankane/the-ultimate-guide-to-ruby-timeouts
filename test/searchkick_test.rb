@@ -8,8 +8,6 @@ class SearchkickTest < Minitest::Test
   end
 
   def test_connect
-    skip if travis?
-
     ENV["ELASTICSEARCH_URL"] = connect_url
     assert_timeout(Faraday::TimeoutError) do
       Searchkick.client.cluster.health

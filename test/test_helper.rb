@@ -62,8 +62,4 @@ class Minitest::Test
   def read_url
     "http://#{read_host_and_port}"
   end
-
-  def travis?
-    ENV["TRAVIS"]
-  end
 end

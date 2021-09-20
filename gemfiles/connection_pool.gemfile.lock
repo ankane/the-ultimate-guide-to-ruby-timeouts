@@ -1,15 +1,15 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    appraisal (2.3.0)
+    appraisal (2.4.1)
       bundler
       rake
       thor (>= 0.14.0)
-    connection_pool (2.2.3)
-    minitest (5.14.1)
-    rake (13.0.1)
-    redis (4.2.1)
-    thor (1.0.1)
+    connection_pool (2.2.5)
+    minitest (5.14.4)
+    rake (13.0.6)
+    redis (4.4.0)
+    thor (1.1.0)
 
 PLATFORMS
   ruby
@@ -21,4 +21,4 @@ DEPENDENCIES
   redis
 
 BUNDLED WITH
-   2.1.4
+   2.2.27

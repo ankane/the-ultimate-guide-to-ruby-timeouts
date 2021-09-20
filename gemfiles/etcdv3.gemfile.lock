@@ -1,21 +1,21 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    appraisal (2.3.0)
+    appraisal (2.4.1)
       bundler
       rake
       thor (>= 0.14.0)
-    etcdv3 (0.10.2)
+    etcdv3 (0.11.3)
       grpc (~> 1.17)
-    google-protobuf (3.12.4)
-    googleapis-common-protos-types (1.0.5)
-      google-protobuf (~> 3.11)
-    grpc (1.30.2)
-      google-protobuf (~> 3.12)
+    google-protobuf (3.18.0)
+    googleapis-common-protos-types (1.2.0)
+      google-protobuf (~> 3.14)
+    grpc (1.40.0)
+      google-protobuf (~> 3.15)
       googleapis-common-protos-types (~> 1.0)
-    minitest (5.14.1)
-    rake (13.0.1)
-    thor (1.0.1)
+    minitest (5.14.4)
+    rake (13.0.6)
+    thor (1.1.0)
 
 PLATFORMS
   ruby
@@ -26,4 +26,4 @@ DEPENDENCIES
   minitest
 
 BUNDLED WITH
-   2.1.4
+   2.2.27

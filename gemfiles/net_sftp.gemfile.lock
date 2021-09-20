@@ -1,16 +1,16 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    appraisal (2.3.0)
+    appraisal (2.4.1)
       bundler
       rake
       thor (>= 0.14.0)
-    minitest (5.14.1)
+    minitest (5.14.4)
     net-sftp (3.0.0)
       net-ssh (>= 5.0.0, < 7.0.0)
     net-ssh (6.1.0)
-    rake (13.0.1)
-    thor (1.0.1)
+    rake (13.0.6)
+    thor (1.1.0)
 
 PLATFORMS
   ruby
@@ -21,4 +21,4 @@ DEPENDENCIES
   net-sftp
 
 BUNDLED WITH
-   2.1.4
+   2.2.27

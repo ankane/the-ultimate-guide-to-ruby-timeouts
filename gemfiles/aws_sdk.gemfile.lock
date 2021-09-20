@@ -1,30 +1,30 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    appraisal (2.3.0)
+    appraisal (2.4.1)
       bundler
       rake
       thor (>= 0.14.0)
-    aws-eventstream (1.1.0)
-    aws-partitions (1.345.0)
-    aws-sdk-core (3.104.3)
+    aws-eventstream (1.2.0)
+    aws-partitions (1.503.0)
+    aws-sdk-core (3.121.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.239.0)
       aws-sigv4 (~> 1.1)
       jmespath (~> 1.0)
-    aws-sdk-kms (1.36.0)
-      aws-sdk-core (~> 3, >= 3.99.0)
+    aws-sdk-kms (1.48.0)
+      aws-sdk-core (~> 3, >= 3.120.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.75.0)
-      aws-sdk-core (~> 3, >= 3.104.1)
+    aws-sdk-s3 (1.103.0)
+      aws-sdk-core (~> 3, >= 3.120.0)
       aws-sdk-kms (~> 1)
-      aws-sigv4 (~> 1.1)
-    aws-sigv4 (1.2.1)
+      aws-sigv4 (~> 1.4)
+    aws-sigv4 (1.4.0)
       aws-eventstream (~> 1, >= 1.0.2)
     jmespath (1.4.0)
-    minitest (5.14.1)
-    rake (13.0.1)
-    thor (1.0.1)
+    minitest (5.14.4)
+    rake (13.0.6)
+    thor (1.1.0)
 
 PLATFORMS
   ruby
@@ -35,4 +35,4 @@ DEPENDENCIES
   minitest
 
 BUNDLED WITH
-   2.1.4
+   2.2.27

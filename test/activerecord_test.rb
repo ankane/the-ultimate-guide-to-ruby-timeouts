@@ -2,15 +2,11 @@ require_relative "test_helper"
 
 class ActiveRecordTest < Minitest::Test
   def test_connect_postgresql
-    skip if travis?
-
     ActiveRecord::Base.establish_connection adapter: "postgresql", host: connect_host, connect_timeout: 1
     assert_timeout(PG::ConnectionBad) { ActiveRecord::Base.connection.execute("SELECT 1") }
   end
 
   def test_read_postgresql
-    skip if travis?
-
     ActiveRecord::Base.establish_connection adapter: "postgresql", host: read_host, port: read_port, connect_timeout: 1
     assert_timeout(PG::ConnectionBad) { ActiveRecord::Base.connection.execute("SELECT 1") }
   end
@@ -57,8 +53,6 @@ class ActiveRecordTest < Minitest::Test
   end
 
   def test_statement_mysql2
-    skip if travis?
-
     ActiveRecord::Base.establish_connection adapter: "mysql2", database: "ultimate_test", variables: {max_execution_time: 250}
     assert_timeout(ActiveRecord::StatementTimeout, timeout: 0.250) do
       ActiveRecord::Base.connection.execute("SELECT 1 FROM information_schema.tables WHERE sleep(1)")
@@ -66,8 +60,6 @@ class ActiveRecordTest < Minitest::Test
   end
 
   def test_statement_mysql2_inline
-    skip if travis?
-
     ActiveRecord::Base.establish_connection adapter: "mysql2", database: "ultimate_test"
     assert_timeout(ActiveRecord::StatementTimeout, timeout: 0.250) do
       ActiveRecord::Base.connection.execute("SELECT /*+ MAX_EXECUTION_TIME(250) */ 1 FROM information_schema.tables WHERE sleep(1)")

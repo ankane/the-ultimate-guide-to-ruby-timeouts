@@ -1,9 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.7.0)
+    addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
-    appraisal (2.3.0)
+    appraisal (2.4.1)
       bundler
       rake
       thor (>= 0.14.0)
@@ -11,7 +11,7 @@ GEM
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     equalizer (0.0.11)
-    ffi (1.13.1)
+    ffi (1.15.4)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
@@ -20,21 +20,21 @@ GEM
       http-cookie (~> 1.0)
       http-form_data (~> 2.2)
       http-parser (~> 1.2.0)
-    http-cookie (1.0.3)
+    http-cookie (1.0.4)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
-    http-parser (1.2.1)
+    http-parser (1.2.3)
       ffi-compiler (>= 1.0, < 2.0)
     http_parser.rb (0.6.0)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
-    minitest (5.14.1)
+    minitest (5.14.4)
     multipart-post (2.1.1)
     naught (1.1.0)
-    public_suffix (4.0.5)
-    rake (13.0.1)
+    public_suffix (4.0.6)
+    rake (13.0.6)
     simple_oauth (0.3.1)
-    thor (1.0.1)
+    thor (1.1.0)
     thread_safe (0.3.6)
     twitter (7.0.0)
       addressable (~> 2.3)
@@ -49,7 +49,7 @@ GEM
       simple_oauth (~> 0.3.0)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.7)
+    unf_ext (0.0.8)
 
 PLATFORMS
   ruby
@@ -60,4 +60,4 @@ DEPENDENCIES
   twitter
 
 BUNDLED WITH
-   2.1.4
+   2.2.27

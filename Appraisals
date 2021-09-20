@@ -464,7 +464,8 @@ appraise "typhoeus" do
 end
 
 appraise "unirest" do
-  gem "unirest"
+  # requires Ruby < 3
+  # gem "unirest"
 end
 
 appraise "vault" do

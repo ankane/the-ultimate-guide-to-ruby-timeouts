@@ -1,20 +1,18 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    appraisal (2.3.0)
+    appraisal (2.4.1)
       bundler
       rake
       thor (>= 0.14.0)
-    equatable (0.6.1)
-    minitest (5.14.1)
-    pastel (0.7.4)
-      equatable (~> 0.6)
+    minitest (5.14.4)
+    pastel (0.8.0)
       tty-color (~> 0.5)
-    rake (13.0.1)
-    thor (1.0.1)
-    tty-color (0.5.1)
-    tty-command (0.9.0)
-      pastel (~> 0.7.0)
+    rake (13.0.6)
+    thor (1.1.0)
+    tty-color (0.6.0)
+    tty-command (0.10.1)
+      pastel (~> 0.8)
 
 PLATFORMS
   ruby
@@ -25,4 +23,4 @@ DEPENDENCIES
   tty-command
 
 BUNDLED WITH
-   2.1.4
+   2.2.27

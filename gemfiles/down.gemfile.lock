@@ -1,18 +1,18 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.7.0)
+    addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
-    appraisal (2.3.0)
+    appraisal (2.4.1)
       bundler
       rake
       thor (>= 0.14.0)
-    down (5.1.1)
-      addressable (~> 2.5)
-    minitest (5.14.1)
-    public_suffix (4.0.5)
-    rake (13.0.1)
-    thor (1.0.1)
+    down (5.2.4)
+      addressable (~> 2.8)
+    minitest (5.14.4)
+    public_suffix (4.0.6)
+    rake (13.0.6)
+    thor (1.1.0)
 
 PLATFORMS
   ruby
@@ -23,4 +23,4 @@ DEPENDENCIES
   minitest
 
 BUNDLED WITH
-   2.1.4
+   2.2.27

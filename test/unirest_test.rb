@@ -1,6 +1,10 @@
 require_relative "test_helper"
 
 class UnirestTest < Minitest::Test
+  def setup
+    skip # requires Ruby < 3
+  end
+
   def test_connect
     skip # not configurable
 

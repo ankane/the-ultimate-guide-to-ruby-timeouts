@@ -2,18 +2,21 @@ name: build
 on: [push, pull_request]
 jobs:
   build:
-    if: "!contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.7
+        ruby-version: 3.0
         # caching causes issues - https://github.com/thoughtbot/appraisal/issues/173
         # bundler-cache: true
     - run: bundle install
     - uses: ankane/setup-postgres@v1
+      with:
+        database: ultimate_test
     - uses: ankane/setup-mysql@v1
+      with:
+        database: ultimate_test
     - uses: ankane/setup-elasticsearch@v1
     - run: |
         sudo apt-get install memcached
@@ -22,8 +25,7 @@ jobs:
         sudo apt-get install redis-server
         sudo systemctl start redis
     - run: sudo apt-get install coinor-libcbc-dev libcurl4-openssl-dev
-    - run: |
-        mysqladmin create ultimate_test
-        createdb ultimate_test
+    # for https://github.com/zk-ruby/zookeeper/issues/85
+    - run: CFLAGS=-Wno-error=format-overflow gem install zookeeper --version 1.4.11
     - run: bundle exec appraisal install
     - run: bundle exec appraisal "rake test || true"

@@ -1,22 +1,13 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.3.8)
-    appraisal (2.3.0)
+    appraisal (2.4.1)
       bundler
       rake
       thor (>= 0.14.0)
-    json (1.8.6)
-    mime-types (1.25.1)
-    minitest (5.14.1)
-    rake (13.0.1)
-    rest-client (1.6.14)
-      mime-types (~> 1.16)
-    thor (1.0.1)
-    unirest (1.1.2)
-      addressable (~> 2.3.5)
-      json (~> 1.8.1)
-      rest-client (~> 1.6.7)
+    minitest (5.14.4)
+    rake (13.0.6)
+    thor (1.1.0)
 
 PLATFORMS
   ruby
@@ -24,7 +15,6 @@ PLATFORMS
 DEPENDENCIES
   appraisal
   minitest
-  unirest
 
 BUNDLED WITH
-   2.1.4
+   2.2.27
