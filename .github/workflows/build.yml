@@ -19,12 +19,10 @@ jobs:
         database: ultimate_test
     - uses: ankane/setup-elasticsearch@v1
     - run: |
-        sudo apt-get install memcached
+        sudo apt-get update
+        sudo apt-get install coinor-libcbc-dev libcurl4-openssl-dev memcached redis-server
         sudo systemctl start memcached
-    - run: |
-        sudo apt-get install redis-server
         sudo systemctl start redis
-    - run: sudo apt-get install coinor-libcbc-dev libcurl4-openssl-dev
     # for https://github.com/zk-ruby/zookeeper/issues/85
     - run: CFLAGS=-Wno-error=format-overflow gem install zookeeper --version 1.4.11
     - run: bundle exec appraisal install
