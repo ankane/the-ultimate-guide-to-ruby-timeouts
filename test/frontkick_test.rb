@@ -2,6 +2,7 @@ require_relative "test_helper"
 
 class FrontkickTest < Minitest::Test
   def setup
+    # https://github.com/sonots/frontkick/pull/13
     skip if ruby3?
   end
 

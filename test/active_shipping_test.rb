@@ -2,6 +2,7 @@ require_relative "test_helper"
 
 class ActiveShippingTest < Minitest::Test
   def setup
+    # archived
     skip if ruby3?
   end
 
