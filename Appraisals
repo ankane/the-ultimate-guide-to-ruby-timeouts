@@ -202,6 +202,10 @@ appraise "httpi" do
   gem "httpclient"
 end
 
+appraise "ignite_client" do
+  gem "ignite-client"
+end
+
 appraise "influxdb" do
   gem "influxdb"
 end

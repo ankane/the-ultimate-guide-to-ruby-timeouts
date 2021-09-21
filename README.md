@@ -172,6 +172,7 @@ Other
 - [graphql-client](#graphql-client)
 - [grpc](#grpc)
 - [hexspace](#hexspace)
+- [ignite-client](#ignite-client)
 - [kubeclient](#kubeclient)
 - [mail](#mail)
 - [mechanize](#mechanize)
@@ -1639,6 +1640,16 @@ Hexspace::Client.new(timeout: 1)
 ```
 
 Raises `Thrift::TransportException`
+
+### ignite-client
+
+```ruby
+Ignite::Client.new(connect_timeout: 1)
+```
+
+Read timeout is not configurable at the moment
+
+Raises `Ignite::TimeoutError` on connect timeout
 
 ### kubeclient
 
