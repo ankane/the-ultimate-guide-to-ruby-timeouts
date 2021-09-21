@@ -1315,7 +1315,9 @@ Raises
 ### pusher
 
 ```ruby
-client.connect_timoeut = 1
+client.timeout = 1
+# or
+client.connect_timeout = 1
 client.send_timeout = 1
 client.receive_timeout = 1
 client.keep_alive_timeout = 1
