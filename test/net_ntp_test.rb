@@ -8,7 +8,7 @@ class NetNtpTest < Minitest::Test
   end
 
   def test_read
-    skip
+    skip "Uses UPD"
 
     assert_timeout(Timeout::Error) do
       Net::NTP.get(read_host, read_port, 1)
