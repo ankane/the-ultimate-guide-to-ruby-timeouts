@@ -18,7 +18,6 @@ class ActiveMerchantTest < Minitest::Test
   end
 
   def test_read
-    skip # throws internal error with gem
     @stripe.live_url = read_url + "/"
     assert_timeout(ActiveMerchant::ConnectionError) do
       @stripe.verify_credentials

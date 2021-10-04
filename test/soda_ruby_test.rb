@@ -11,7 +11,7 @@ class SodaRubyTest < Minitest::Test
   end
 
   def test_read
-    skip # requires https endpoint
+    skip # no way to set port
 
     client = SODA::Client.new(timeout: 1)
     assert_timeout(Net::ReadTimeout, timeout: 2) do
