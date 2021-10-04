@@ -1,16 +1,13 @@
 require_relative "test_helper"
 
 class TwitterTest < Minitest::Test
-  def setup
-    skip
-  end
-
   def test_connect
     assert_raises(HTTP::TimeoutError) do
       Twitter::REST::Request.send(:remove_const, "BASE_URL")
       Twitter::REST::Request.const_set("BASE_URL", connect_url)
       client = Twitter::REST::Client.new do |config|
-        config.timeouts = {connect: 1}
+        # must all be set
+        config.timeouts = {connect: 1, read: 30, write: 30}
       end
       client.followers
     end
@@ -21,7 +18,8 @@ class TwitterTest < Minitest::Test
       Twitter::REST::Request.send(:remove_const, "BASE_URL")
       Twitter::REST::Request.const_set("BASE_URL", read_url)
       client = Twitter::REST::Client.new do |config|
-        config.timeouts = {read: 1}
+        # must all be set
+        config.timeouts = {connect: 30, read: 1, write: 30}
       end
       client.followers
     end

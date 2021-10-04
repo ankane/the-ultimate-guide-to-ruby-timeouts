@@ -1458,6 +1458,8 @@ end
 
 Raises `HTTP::TimeoutError`
 
+**Note:** All three timeouts must be set for any to take effect.
+
 ### yt
 
 Not configurable at the moment, and no timeout by default
