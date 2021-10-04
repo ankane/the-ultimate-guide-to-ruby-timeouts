@@ -1549,11 +1549,10 @@ Raises
 
 ```ruby
 Docker.options = {
+  connect_timeout: 1,
   read_timeout: 1
 }
 ```
-
-Connect timeout not configurable
 
 Raises `Docker::Error::TimeoutError`
 

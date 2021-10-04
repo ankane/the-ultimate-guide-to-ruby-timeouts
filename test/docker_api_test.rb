@@ -2,11 +2,12 @@ require_relative "test_helper"
 
 class DockerApiTest < Minitest::Test
   def test_connect
-    skip # no connect timeout
-
     Docker.url = "tcp://#{connect_host}"
+    Docker.options = {
+      connect_timeout: 1
+    }
 
-    assert_timeout(Docker::Error::TimeoutError) do
+    assert_timeout(Docker::Error::TimeoutError, timeout: 4) do
       Docker.version
     end
   end
