@@ -223,7 +223,7 @@ appraise "koala" do
 end
 
 appraise "kubeclient" do
-  #gem "kubeclient"
+  gem "kubeclient"
 end
 
 appraise "mail" do
