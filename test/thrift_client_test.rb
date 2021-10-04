@@ -13,10 +13,9 @@ class ThriftClientTest < Minitest::Test
   end
 
   def test_read
-    skip "TODO"
-
     client = ThriftClient.new(TestClient, read_host_and_port, retries: 0, timeout: 1)
     assert_timeout(Thrift::TransportException) do
+      client.connect!
     end
   end
 end
