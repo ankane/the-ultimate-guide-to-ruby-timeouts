@@ -379,6 +379,10 @@ appraise "savon" do
   gem "httpclient"
 end
 
+appraise "scs" do
+  gem "scs"
+end
+
 appraise "searchkick" do
   gem "searchkick"
   gem "typhoeus"

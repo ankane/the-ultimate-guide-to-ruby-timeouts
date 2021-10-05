@@ -1001,7 +1001,11 @@ problem.time_limit_reached?
 
 ### scs
 
-Not configurable at the moment, and no timeout by default ([requires support in C API](https://github.com/cvxgrp/scs/issues/136))
+```ruby
+solver.solve(data, cone, time_limit_secs: 1)
+```
+
+Check for a `status` of `solved (inaccurate - reached time_limit_secs)` for a timeout
 
 ## Distributed Locks
 
