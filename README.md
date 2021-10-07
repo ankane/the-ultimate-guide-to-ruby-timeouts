@@ -34,6 +34,7 @@ Standard Library
 - [net/ftp](#netftp)
 - [net/http](#nethttp)
 - [net/imap](#netimap)
+- [net/pop](#netpop)
 - [net/smtp](#netsmtp)
 - [open-uri](#open-uri)
 
@@ -395,6 +396,19 @@ Net::IMAP.new(host, open_timeout: 1)
 Read timeout is not configurable at the moment
 
 Raises `Net::OpenTimeout` on connect timeout
+
+### net/pop
+
+```ruby
+pop = Net::POP.new(host)
+pop.open_timeout = 1
+pop.read_timeout = 1
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
 
 ### net/smtp
 
