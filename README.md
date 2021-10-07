@@ -33,6 +33,7 @@ Standard Library
 
 - [net/ftp](#netftp)
 - [net/http](#nethttp)
+- [net/imap](#netimap)
 - [net/smtp](#netsmtp)
 - [open-uri](#open-uri)
 
@@ -384,6 +385,16 @@ Raises
 Default: 60s connect timeout, 60s read timeout, 60s write timeout
 
 Write timeout can be set in [Ruby 2.6+](https://github.com/ruby/ruby/commit/bd7c46a7aa8b4f44ef683e22f469033b96d3dd5f). Read timeouts are retried once automatically for idempotent methods like `GET`. In Ruby 2.5+, you can set the number of retries with `http.max_retries = 1`.
+
+### net/imap
+
+```ruby
+Net::IMAP.new(host, open_timeout: 1)
+```
+
+Read timeout is not configurable at the moment
+
+Raises `Net::OpenTimeout` on connect timeout
 
 ### net/smtp
 
