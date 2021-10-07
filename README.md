@@ -29,6 +29,13 @@ For many apps, the *single most important thing* to do (if you use a relational 
 
 ## Gems
 
+Standard Library
+
+- [net/ftp](#netftp)
+- [net/http](#nethttp)
+- [net/smtp](#netsmtp)
+- [open-uri](#open-uri)
+
 Data Stores
 
 - [activerecord](#activerecord)
@@ -68,8 +75,6 @@ HTTP Clients
 - [httparty](#httparty)
 - [httpclient](#httpclient)
 - [httpi](#httpi)
-- [net/http](#nethttp)
-- [open-uri](#open-uri)
 - [patron](#patron)
 - [rest-client](#rest-client)
 - [typhoeus](#typhoeus)
@@ -179,12 +184,10 @@ Other
 - [nats-pure](#nats-pure)
 - [nestful](#nestful)
 - [net-dns](#net-dns)
-- [net/ftp](#netftp)
 - [net-ldap](#net-ldap)
 - [net-ntp](#net-ntp)
 - [net-scp](#net-scp)
 - [net-sftp](#net-sftp)
-- [net/smtp](#netsmtp)
 - [net-ssh](#net-ssh)
 - [net-telnet](#net-telnet)
 - [omniauth-oauth2](#omniauth-oauth2)
@@ -341,6 +344,70 @@ MAX_STATEMENT_TIME=90 rails db:migrate
 ```
 
 [Official docs](https://mariadb.com/kb/en/mariadb/aborting-statements/)
+
+## Standard Library
+
+### net/ftp
+
+```ruby
+Net::FTP.new(host, open_timeout: 1, read_timeout: 1)
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
+
+### net/http
+
+```ruby
+Net::HTTP.start(host, port, open_timeout: 1, read_timeout: 1, write_timeout: 1) do
+  # ...
+end
+```
+
+or
+
+```ruby
+http = Net::HTTP.new(host, port)
+http.open_timeout = 1
+http.read_timeout = 1
+http.write_timeout = 1
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
+- `Net::WriteTimeout` on write timeout
+
+Default: 60s connect timeout, 60s read timeout, 60s write timeout
+
+Write timeout can be set in [Ruby 2.6+](https://github.com/ruby/ruby/commit/bd7c46a7aa8b4f44ef683e22f469033b96d3dd5f). Read timeouts are retried once automatically for idempotent methods like `GET`. In Ruby 2.5+, you can set the number of retries with `http.max_retries = 1`.
+
+### net/smtp
+
+```ruby
+smtp = Net::SMTP.new(host, 25)
+smtp.open_timeout = 1
+smtp.read_timeout = 1
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
+
+### open-uri
+
+```ruby
+URI.open(url, open_timeout: 1, read_timeout: 1)
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
 
 ## Data Stores
 
@@ -768,44 +835,6 @@ HTTPI::Request.new(url: url, open_timeout: 1)
 ```
 
 Raises same errors as underlying client
-
-### net/http
-
-```ruby
-Net::HTTP.start(host, port, open_timeout: 1, read_timeout: 1, write_timeout: 1) do
-  # ...
-end
-```
-
-or
-
-```ruby
-http = Net::HTTP.new(host, port)
-http.open_timeout = 1
-http.read_timeout = 1
-http.write_timeout = 1
-```
-
-Raises
-
-- `Net::OpenTimeout` on connect timeout
-- `Net::ReadTimeout` on read timeout
-- `Net::WriteTimeout` on write timeout
-
-Default: 60s connect timeout, 60s read timeout, 60s write timeout
-
-Write timeout can be set in [Ruby 2.6+](https://github.com/ruby/ruby/commit/bd7c46a7aa8b4f44ef683e22f469033b96d3dd5f). Read timeouts are retried once automatically for idempotent methods like `GET`. In Ruby 2.5+, you can set the number of retries with `http.max_retries = 1`.
-
-### open-uri
-
-```ruby
-open(url, open_timeout: 1, read_timeout: 1)
-```
-
-Raises
-
-- `Net::OpenTimeout` on connect timeout
-- `Net::ReadTimeout` on read timeout
 
 ### patron
 
@@ -1727,18 +1756,7 @@ Default: 5s
 
 Raises `Net::DNS::Resolver::NoResponseError`
 
-### net/ftp
-
-```ruby
-Net::FTP.new(host, open_timeout: 1, read_timeout: 1)
-```
-
-Raises
-
-- `Net::OpenTimeout` on connect timeout
-- `Net::ReadTimeout` on read timeout
-
-### net/ldap
+### net-ldap
 
 ```ruby
 Net::LDAP.new(host: host, connect_timeout: 1)
@@ -1774,19 +1792,6 @@ Net::SFTP.start(host, user, timeout: 1)
 ```
 
 Raises `Net::SSH::ConnectionTimeout`
-
-### net/smtp
-
-```ruby
-smtp = Net::SMTP.new(host, 25)
-smtp.open_timeout = 1
-smtp.read_timeout = 1
-```
-
-Raises
-
-- `Net::OpenTimeout` on connect timeout
-- `Net::ReadTimeout` on read timeout
 
 ### net-ssh
 
