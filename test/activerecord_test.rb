@@ -32,14 +32,14 @@ class ActiveRecordTest < Minitest::Test
   def test_checkout_postgresql
     ActiveRecord::Base.establish_connection adapter: "postgresql", pool: 1, checkout_timeout: 1, database: "ultimate_test"
     assert_threaded_timeout(ActiveRecord::ConnectionTimeoutError) do
-      ActiveRecord::Base.connection.execute("SELECT pg_sleep(2)")
+      ActiveRecord::Base.connection.execute("SELECT pg_sleep(1.1)")
     end
   end
 
   def test_checkout_mysql2
     ActiveRecord::Base.establish_connection adapter: "mysql2", pool: 1, checkout_timeout: 1, database: "ultimate_test"
     assert_threaded_timeout(ActiveRecord::ConnectionTimeoutError) do
-      ActiveRecord::Base.connection.execute("SELECT sleep(2)")
+      ActiveRecord::Base.connection.execute("SELECT sleep(1.1)")
     end
   end
 
