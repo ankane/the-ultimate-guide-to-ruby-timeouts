@@ -11,6 +11,10 @@ class UnknownTimeoutError < StandardError; end
 server = TCPServer.new("127.0.0.1", 4567)
 Minitest.after_run { server.close }
 
+socket = UDPSocket.new
+socket.bind("127.0.0.1", 4568)
+Minitest.after_run { socket.close }
+
 class Minitest::Test
   def assert_timeout(exception = UnknownTimeoutError, timeout: 1)
     started_at = Time.now
@@ -53,6 +57,10 @@ class Minitest::Test
 
   def read_port
     4567
+  end
+
+  def udp_port
+    4568
   end
 
   def read_host_and_port
