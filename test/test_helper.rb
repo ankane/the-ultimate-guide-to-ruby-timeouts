@@ -21,11 +21,10 @@ class Minitest::Test
     ex = assert_raises(exception) { yield }
     # test exact class
     assert_equal exception, ex.class
+
     time = Time.now - started_at
-    # p time
     timeout = timeout..timeout + 0.5 unless timeout.is_a?(Range)
-    assert_operator time, :>=, timeout.begin
-    assert_operator time, :<=, timeout.end
+    assert_includes timeout, time
   end
 
   def assert_threaded_timeout(exception = UnknownTimeoutError, timeout: 1, &block)
