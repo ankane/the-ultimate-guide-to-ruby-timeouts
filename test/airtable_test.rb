@@ -14,7 +14,7 @@ class AirtableTest < Minitest::Test
     Airtable::Table.base_uri read_url
     Airtable::Resource.default_timeout 1
 
-    assert_timeout(Net::ReadTimeout) do
+    assert_timeout(Net::ReadTimeout, timeout: 2) do
       Airtable::Client.new("key").table("table", "table").all
     end
   end

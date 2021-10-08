@@ -14,7 +14,7 @@ class ClearbitTest < Minitest::Test
     Clearbit::Enrichment::PersonCompany.endpoint = read_url
     Clearbit::Resource.options = {timeout: 1}
 
-    assert_timeout(Nestful::TimeoutError) do
+    assert_timeout(Nestful::TimeoutError, timeout: 2) do
       Clearbit::Enrichment.find(email: "test@example.com")
     end
   end

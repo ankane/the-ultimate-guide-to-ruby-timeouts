@@ -23,8 +23,8 @@ class Minitest::Test
     assert_equal exception, ex.class
     time = Time.now - started_at
     # p time
-    # assert_operator time, :>=, timeout
-    assert_operator time, :<=, timeout + 1.25 # TODO reduce
+    assert_operator time, :>=, timeout
+    assert_operator time, :<=, timeout + 0.5
   end
 
   def assert_threaded_timeout(exception = UnknownTimeoutError, timeout: 1, &block)

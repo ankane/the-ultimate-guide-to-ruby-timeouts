@@ -8,7 +8,7 @@ class DownTest < Minitest::Test
   end
 
   def test_read
-    assert_timeout(Down::TimeoutError) do
+    assert_timeout(Down::TimeoutError, timeout: 2) do
       Down::NetHttp.download(read_url, read_timeout: 1)
     end
   end

@@ -14,7 +14,7 @@ class VaultTest < Minitest::Test
 
   def test_read
     Vault.address = read_url
-    assert_timeout(Vault::HTTPConnectionError) do
+    assert_timeout(Vault::HTTPConnectionError, timeout: 2) do
       Vault.sys.mounts
     end
   end

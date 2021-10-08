@@ -19,7 +19,7 @@ class ActiveMerchantTest < Minitest::Test
 
   def test_read
     @stripe.live_url = read_url + "/"
-    assert_timeout(ActiveMerchant::ConnectionError) do
+    assert_timeout(ActiveMerchant::ConnectionError, timeout: 2) do
       @stripe.verify_credentials
     end
   end

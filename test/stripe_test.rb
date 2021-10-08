@@ -16,7 +16,7 @@ class StripeTest < Minitest::Test
   def test_read
     Stripe.api_base = read_url
     Stripe.read_timeout = 1
-    assert_timeout(Stripe::APIConnectionError) do
+    assert_timeout(Stripe::APIConnectionError, timeout: 2) do
       Stripe::Customer.list
     end
   end

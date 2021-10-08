@@ -10,7 +10,7 @@ class GeocoderTest < Minitest::Test
 
   def test_read
     Geocoder.configure(timeout: 1, always_raise: :all, lookup: :dstk, dstk: {host: read_host_and_port})
-    assert_timeout(Geocoder::LookupTimeout) do
+    assert_timeout(Geocoder::LookupTimeout, timeout: 2) do
       Geocoder.search("123 main st")
     end
   end

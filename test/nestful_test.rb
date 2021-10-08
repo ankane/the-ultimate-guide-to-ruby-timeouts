@@ -12,7 +12,7 @@ class NestfulTest < Minitest::Test
   end
 
   def test_read
-    assert_timeout(Nestful::TimeoutError) do
+    assert_timeout(Nestful::TimeoutError, timeout: 2) do
       Nestful::Request.new(read_url, timeout: 1).execute
     end
   end
@@ -28,7 +28,7 @@ class NestfulTest < Minitest::Test
   def test_read_resource
     NestfulResource.endpoint = read_url
 
-    assert_timeout(Nestful::TimeoutError) do
+    assert_timeout(Nestful::TimeoutError, timeout: 2) do
       NestfulResource.get
     end
   end

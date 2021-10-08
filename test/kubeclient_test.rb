@@ -8,7 +8,7 @@ class KubeclientTest < Minitest::Test
   end
 
   def test_read
-    assert_timeout(Kubeclient::HttpError) do
+    assert_timeout(Kubeclient::HttpError, timeout: 2) do
       Kubeclient::Client.new(read_url, timeouts: {read: 1}).discover
     end
   end

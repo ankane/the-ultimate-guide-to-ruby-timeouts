@@ -12,7 +12,7 @@ class EtcdTest < Minitest::Test
 
   def test_read
     client = Etcd.client(host: read_host, port: read_port, read_timeout: 1)
-    assert_timeout(Net::ReadTimeout) do
+    assert_timeout(Net::ReadTimeout, timeout: 2) do
       client.get("/nodes/n1")
     end
   end

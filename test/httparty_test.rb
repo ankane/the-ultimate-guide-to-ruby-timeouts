@@ -14,7 +14,7 @@ class HttpartyTest < Minitest::Test
   end
 
   def test_read
-    assert_timeout(Net::ReadTimeout) do
+    assert_timeout(Net::ReadTimeout, timeout: 2) do
       HTTParty.get(read_url, timeout: 1)
     end
   end
@@ -26,7 +26,7 @@ class HttpartyTest < Minitest::Test
   end
 
   def test_read_resource
-    assert_timeout(Net::ReadTimeout) do
+    assert_timeout(Net::ReadTimeout, timeout: 2) do
       HttppartyResource.get(read_url)
     end
   end

@@ -5,7 +5,7 @@ class NatsPureTest < Minitest::Test
   def test_connect
     nats = NATS::IO::Client.new
 
-    assert_timeout(NATS::IO::SocketTimeoutError) do
+    assert_timeout(NATS::IO::SocketTimeoutError, timeout: 2) do
       nats.connect(
         servers: ["nats://#{connect_host}:4222"],
         connect_timeout: 1,

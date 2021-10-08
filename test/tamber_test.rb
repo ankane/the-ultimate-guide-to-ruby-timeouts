@@ -16,7 +16,7 @@ class TamberTest < Minitest::Test
     Tamber.instance_variable_set(:@api_url, read_url)
     Tamber.read_timeout = 1
 
-    assert_timeout(Tamber::NetworkError) do
+    assert_timeout(Tamber::NetworkError, timeout: 2) do
       Tamber::Discover.hot
     end
   end

@@ -10,7 +10,7 @@ class JiraRubyTest < Minitest::Test
         read_timeout: 1
       )
 
-    assert_timeout(Net::ReadTimeout) do
+    assert_timeout(Net::ReadTimeout, timeout: 2) do
       client.Project.all
     end
   end

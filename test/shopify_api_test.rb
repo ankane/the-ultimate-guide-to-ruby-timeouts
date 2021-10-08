@@ -16,7 +16,7 @@ class ShopifyApiTest < Minitest::Test
     ShopifyAPI::Base.api_version = "2019-04"
     ShopifyAPI::Base.timeout = 1
 
-    assert_timeout(ActiveResource::TimeoutError) do
+    assert_timeout(ActiveResource::TimeoutError, timeout: 2) do
       ShopifyAPI::Shop.current
     end
   end
