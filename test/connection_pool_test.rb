@@ -4,7 +4,7 @@ class ConnectionPoolTest < Minitest::Test
   def test_connect
     pool = ConnectionPool.new(size: 1, timeout: 1) { Redis.new }
     assert_threaded_timeout(ConnectionPool::TimeoutError) do
-      pool.with { |_| sleep(5) }
+      pool.with { |_| sleep(1.1) }
     end
   end
 end
