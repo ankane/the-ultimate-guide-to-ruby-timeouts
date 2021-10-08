@@ -27,15 +27,15 @@ class SequelTest < Minitest::Test
 
   def test_checkout_postgresql
     db = Sequel.connect adapter: "postgresql", max_connections: 1, pool_timeout: 1, database: "ultimate_test"
-    assert_threaded_timeout(Sequel::PoolTimeout, timeout: 2) do
-      db["SELECT pg_sleep(2)"].to_a
+    assert_threaded_timeout(Sequel::PoolTimeout) do
+      db["SELECT pg_sleep(1.1)"].to_a
     end
   end
 
   def test_checkout_mysql2
     db = Sequel.connect adapter: "mysql2", max_connections: 1, pool_timeout: 1, database: "ultimate_test"
     assert_threaded_timeout(Sequel::PoolTimeout) do
-      db["SELECT sleep(2)"].to_a
+      db["SELECT sleep(1.1)"].to_a
     end
   end
 end
