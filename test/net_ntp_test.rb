@@ -9,7 +9,7 @@ class NetNtpTest < Minitest::Test
 
   def test_read
     assert_timeout(Timeout::Error) do
-      Net::NTP.get(read_host, udp_port), 1)
+      Net::NTP.get(read_host, udp_port, 1)
     end
   end
 end
