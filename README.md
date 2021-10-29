@@ -1182,7 +1182,16 @@ Not configurable at the moment, and no timeout by default
 
 ### boxr
 
-Not configurable at the moment, and no timeout by default
+```ruby
+Boxr::BOX_CLIENT.connect_timeout = 1
+Boxr::BOX_CLIENT.receive_timeout = 1
+Boxr::BOX_CLIENT.send_timeout = 1
+```
+
+Raises
+
+- `HTTPClient::ConnectTimeoutError` on connect timeout
+- `HTTPClient::ReceiveTimeoutError` on read timeout
 
 ### checkr-official
 

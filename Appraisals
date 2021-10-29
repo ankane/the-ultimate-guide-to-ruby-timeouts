@@ -46,6 +46,10 @@ appraise "bitly" do
   gem "bitly"
 end
 
+appraise "boxr" do
+  gem "boxr"
+end
+
 appraise "bunny" do
   gem "bunny"
 end
