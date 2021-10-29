@@ -2,8 +2,6 @@ require_relative "test_helper"
 
 class SmartystreetsRubySdkTest < Minitest::Test
   def test_connect
-    skip # non-configurable and doesn't work with non-ssl
-
     credentials = SmartyStreets::StaticCredentials.new("auth_id", "auth_token")
     client = SmartyStreets::ClientBuilder.new(credentials).with_base_url(connect_url).with_max_timeout(1).retry_at_most(0).build_us_street_api_client
     lookup = SmartyStreets::USStreet::Lookup.new("test")

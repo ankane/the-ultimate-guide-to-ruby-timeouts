@@ -1457,9 +1457,10 @@ Raises `Slack::Web::Api::Errors::TimeoutError`
 SmartyStreets::ClientBuilder.new(credentials).with_max_timeout(1)
 ```
 
-Connect timeout is not configurable at the moment
+Raises
 
-Raises `Net::ReadTimeout` on read timeout
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
 
 ### soda-ruby
 

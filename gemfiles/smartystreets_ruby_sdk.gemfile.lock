@@ -7,7 +7,7 @@ GEM
       thor (>= 0.14.0)
     minitest (5.14.4)
     rake (13.0.6)
-    smartystreets_ruby_sdk (5.12.1)
+    smartystreets_ruby_sdk (5.14.1)
     thor (1.1.0)
 
 PLATFORMS
