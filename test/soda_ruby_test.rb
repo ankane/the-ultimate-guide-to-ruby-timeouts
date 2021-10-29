@@ -2,8 +2,6 @@ require_relative "test_helper"
 
 class SodaRubyTest < Minitest::Test
   def test_connect
-    skip # no connect timeout
-
     client = SODA::Client.new(domain: connect_host, timeout: 1)
     assert_timeout(Net::OpenTimeout) do
       client.get("test")
