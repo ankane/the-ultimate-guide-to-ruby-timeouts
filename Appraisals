@@ -462,6 +462,10 @@ appraise "thrift_client" do
   gem "thrift_client"
 end
 
+appraise "trino_client" do
+  gem "trino-client"
+end
+
 appraise "tty_command" do
   gem "tty-command"
 end

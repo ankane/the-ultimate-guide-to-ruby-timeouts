@@ -64,6 +64,7 @@ Data Stores
 - [ruby-kafka](#ruby-kafka)
 - [searchkick](#searchkick)
 - [sequel](#sequel)
+- [trino-client](#trino-client)
 - [typesense](#typesense)
 
 HTTP Clients
@@ -734,6 +735,17 @@ Raises same exceptions as [elasticsearch](#elasticsearch)
 
   - `Sequel::DatabaseConnectionError` on connect and read timeouts
   - `Sequel::PoolTimeout` on checkout timeout
+
+### trino-client
+
+```ruby
+Trino::Client.new(http_open_timeout: 1, http_timeout: 1)
+```
+
+Raises
+
+- `Faraday::ConnectionFailed` on connect timeout
+- `Faraday::TimeoutError` on read timeout
 
 ### typesense
 
