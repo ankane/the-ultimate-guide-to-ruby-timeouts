@@ -49,6 +49,7 @@ Data Stores
 - [drill-sergeant](#drill-sergeant)
 - [elasticsearch](#elasticsearch)
 - [hiredis](#hiredis)
+- [immudb](#immudb)
 - [influxdb](#influxdb)
 - [meilisearch](#meilisearch)
 - [mongo](#mongo)
@@ -573,6 +574,14 @@ Raises
 
 - `Errno::ETIMEDOUT` on connect timeout
 - `Errno::EAGAIN` on read timeout
+
+### immudb
+
+```ruby
+Immudb::Client.new(host, timeout: 1)
+```
+
+Raises `GRPC::DeadlineExceeded`
 
 ### influxdb
 

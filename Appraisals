@@ -210,6 +210,10 @@ appraise "ignite_client" do
   gem "ignite-client"
 end
 
+appraise "immudb" do
+  gem "immudb"
+end
+
 appraise "influxdb" do
   gem "influxdb"
 end

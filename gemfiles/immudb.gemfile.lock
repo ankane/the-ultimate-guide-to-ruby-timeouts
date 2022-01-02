@@ -1,0 +1,29 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    appraisal (2.4.1)
+      bundler
+      rake
+      thor (>= 0.14.0)
+    google-protobuf (3.19.1-x86_64-darwin)
+    googleapis-common-protos-types (1.3.0)
+      google-protobuf (~> 3.14)
+    grpc (1.42.0-x86_64-darwin)
+      google-protobuf (~> 3.18)
+      googleapis-common-protos-types (~> 1.0)
+    immudb (0.1.0)
+      grpc
+    minitest (5.15.0)
+    rake (13.0.6)
+    thor (1.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  appraisal
+  immudb
+  minitest
+
+BUNDLED WITH
+   2.2.32
