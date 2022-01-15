@@ -4,6 +4,8 @@ An unresponsive service can be worse than a down one. It can tie up your entire 
 
 Here’s how to add timeouts for popular Ruby gems. **[All have been tested](test)**. You should [avoid Ruby’s `Timeout` module](https://www.mikeperham.com/2015/05/08/timeout-rubys-most-dangerous-api/). The default is no timeout, unless otherwise specified. Enjoy!
 
+Also available for [Python](https://github.com/ankane/python-timeouts), [Node](https://github.com/ankane/node-timeouts), and [Go](https://github.com/ankane/go-timeouts)
+
 [![Build Status](https://github.com/ankane/the-ultimate-guide-to-ruby-timeouts/workflows/build/badge.svg?branch=master)](https://github.com/ankane/the-ultimate-guide-to-ruby-timeouts/actions)
 
 ## Timeout Types
