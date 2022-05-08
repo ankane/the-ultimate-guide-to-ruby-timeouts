@@ -218,6 +218,10 @@ appraise "influxdb" do
   gem "influxdb"
 end
 
+appraise "influxdb_client" do
+  gem "influxdb-client"
+end
+
 appraise "intercom" do
   gem "intercom"
 end

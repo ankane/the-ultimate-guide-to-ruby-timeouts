@@ -53,6 +53,7 @@ Data Stores
 - [hiredis](#hiredis)
 - [immudb](#immudb)
 - [influxdb](#influxdb)
+- [influxdb-client](#influxdb-client)
 - [meilisearch](#meilisearch)
 - [mongo](#mongo)
 - [mongoid](#mongoid)
@@ -592,6 +593,14 @@ InfluxDB::Client.new(open_timeout: 1, read_timeout: 1)
 ```
 
 Raises `InfluxDB::ConnectionError`
+
+### influxdb-client
+
+```ruby
+InfluxDB2::Client.new(url, token, open_timeout: 1, read_timeout: 1)
+```
+
+Raises `InfluxDB2::InfluxError`
 
 ### meilisearch
 
