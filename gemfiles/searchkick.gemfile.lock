@@ -1,76 +1,78 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (6.1.4.1)
-      activesupport (= 6.1.4.1)
-    activesupport (6.1.4.1)
+    activemodel (7.0.3.1)
+      activesupport (= 7.0.3.1)
+    activesupport (7.0.3.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-      zeitwerk (~> 2.3)
     appraisal (2.4.1)
       bundler
       rake
       thor (>= 0.14.0)
-    concurrent-ruby (1.1.9)
-    elasticsearch (7.13.3)
-      elasticsearch-api (= 7.13.3)
-      elasticsearch-transport (= 7.13.3)
-    elasticsearch-api (7.13.3)
-      multi_json
-    elasticsearch-transport (7.13.3)
+    concurrent-ruby (1.1.10)
+    elastic-transport (8.0.1)
       faraday (~> 1)
       multi_json
-    ethon (0.14.0)
+    elasticsearch (8.3.0)
+      elastic-transport (~> 8)
+      elasticsearch-api (= 8.3.0)
+    elasticsearch-api (8.3.0)
+      multi_json
+    ethon (0.15.0)
       ffi (>= 1.15.0)
-    faraday (1.8.0)
+    faraday (1.10.0)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
       faraday-excon (~> 1.1)
-      faraday-httpclient (~> 1.0.1)
+      faraday-httpclient (~> 1.0)
+      faraday-multipart (~> 1.0)
       faraday-net_http (~> 1.0)
-      faraday-net_http_persistent (~> 1.1)
+      faraday-net_http_persistent (~> 1.0)
       faraday-patron (~> 1.0)
       faraday-rack (~> 1.0)
-      multipart-post (>= 1.2, < 3)
+      faraday-retry (~> 1.0)
       ruby2_keywords (>= 0.0.4)
     faraday-em_http (1.0.0)
     faraday-em_synchrony (1.0.0)
     faraday-excon (1.1.0)
     faraday-httpclient (1.0.1)
+    faraday-multipart (1.0.4)
+      multipart-post (~> 2)
     faraday-net_http (1.0.1)
     faraday-net_http_persistent (1.2.0)
     faraday-patron (1.0.0)
     faraday-rack (1.0.0)
-    ffi (1.15.4)
-    hashie (4.1.0)
-    i18n (1.8.10)
+    faraday-retry (1.0.3)
+    ffi (1.15.5)
+    hashie (5.0.0)
+    i18n (1.12.0)
       concurrent-ruby (~> 1.0)
-    minitest (5.14.4)
+    minitest (5.16.2)
     multi_json (1.15.0)
-    multipart-post (2.1.1)
+    multipart-post (2.2.3)
     rake (13.0.6)
     ruby2_keywords (0.0.5)
-    searchkick (4.6.0)
-      activemodel (>= 5)
-      elasticsearch (>= 6, < 7.14)
+    searchkick (5.0.4)
+      activemodel (>= 5.2)
       hashie
-    thor (1.1.0)
+    thor (1.2.1)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
-    tzinfo (2.0.4)
+    tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
-    zeitwerk (2.4.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   appraisal
+  elasticsearch
   minitest
   searchkick
   typhoeus
 
 BUNDLED WITH
-   2.2.27
+   2.3.18

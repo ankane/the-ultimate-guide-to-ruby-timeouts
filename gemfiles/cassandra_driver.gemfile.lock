@@ -8,14 +8,14 @@ GEM
     cassandra-driver (3.2.5)
       ione (~> 1.2)
     ione (1.2.4)
-    minitest (5.14.4)
+    minitest (5.16.2)
     rake (13.0.6)
-    rbtree (0.4.4)
-    set (1.0.1)
+    rbtree (0.4.5)
+    set (1.0.2)
     sorted_set (1.0.3)
       rbtree
       set (~> 1.0)
-    thor (1.1.0)
+    thor (1.2.1)
 
 PLATFORMS
   ruby
@@ -27,4 +27,4 @@ DEPENDENCIES
   sorted_set
 
 BUNDLED WITH
-   2.2.27
+   2.3.18

@@ -2,7 +2,7 @@ require_relative "test_helper"
 
 class HttpTest < Minitest::Test
   def test_connect
-    assert_timeout(HTTP::TimeoutError) do
+    assert_timeout(HTTP::ConnectTimeoutError) do
       HTTP.timeout(connect: 1).get(connect_url)
     end
   end

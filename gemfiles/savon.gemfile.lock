@@ -11,22 +11,24 @@ GEM
       rake
       thor (>= 0.14.0)
     builder (3.2.4)
-    gyoku (1.3.1)
+    gyoku (1.4.0)
       builder (>= 2.1.2)
+      rexml (~> 3.0)
     httpclient (2.8.3)
-    httpi (2.4.5)
+    httpi (2.5.0)
       rack
       socksify
-    mini_portile2 (2.6.1)
-    minitest (5.14.4)
-    nokogiri (1.12.4)
-      mini_portile2 (~> 2.6.1)
+    mini_portile2 (2.8.0)
+    minitest (5.16.2)
+    nokogiri (1.13.7)
+      mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     nori (2.6.0)
-    public_suffix (4.0.6)
-    racc (1.5.2)
-    rack (2.2.3)
+    public_suffix (4.0.7)
+    racc (1.6.0)
+    rack (2.2.4)
     rake (13.0.6)
+    rexml (3.2.5)
     savon (2.12.1)
       akami (~> 1.2)
       builder (>= 2.1.2)
@@ -36,8 +38,8 @@ GEM
       nori (~> 2.4)
       wasabi (~> 3.4)
     socksify (1.7.1)
-    thor (1.1.0)
-    wasabi (3.6.1)
+    thor (1.2.1)
+    wasabi (3.7.0)
       addressable
       httpi (~> 2.0)
       nokogiri (>= 1.4.2)
@@ -52,4 +54,4 @@ DEPENDENCIES
   savon
 
 BUNDLED WITH
-   2.2.27
+   2.3.18

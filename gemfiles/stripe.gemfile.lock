@@ -5,10 +5,10 @@ GEM
       bundler
       rake
       thor (>= 0.14.0)
-    minitest (5.14.4)
+    minitest (5.16.2)
     rake (13.0.6)
-    stripe (5.38.0)
-    thor (1.1.0)
+    stripe (6.5.0)
+    thor (1.2.1)
 
 PLATFORMS
   ruby
@@ -19,4 +19,4 @@ DEPENDENCIES
   stripe (>= 1.24.0)
 
 BUNDLED WITH
-   2.2.27
+   2.3.18

@@ -1,35 +1,33 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.1.4.1)
+    activesupport (7.0.3.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-      zeitwerk (~> 2.3)
     appraisal (2.4.1)
       bundler
       rake
       thor (>= 0.14.0)
     atlassian-jwt (0.2.1)
       jwt (~> 2.1)
-    concurrent-ruby (1.1.9)
-    i18n (1.8.10)
+    concurrent-ruby (1.1.10)
+    i18n (1.12.0)
       concurrent-ruby (~> 1.0)
-    jira-ruby (2.1.5)
+    jira-ruby (2.2.0)
       activesupport
       atlassian-jwt
       multipart-post
       oauth (~> 0.5, >= 0.5.0)
-    jwt (2.2.3)
-    minitest (5.14.4)
-    multipart-post (2.1.1)
-    oauth (0.5.6)
+    jwt (2.4.1)
+    minitest (5.16.2)
+    multipart-post (2.2.3)
+    oauth (0.5.10)
     rake (13.0.6)
-    thor (1.1.0)
-    tzinfo (2.0.4)
+    thor (1.2.1)
+    tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
-    zeitwerk (2.4.2)
 
 PLATFORMS
   ruby
@@ -40,4 +38,4 @@ DEPENDENCIES
   minitest
 
 BUNDLED WITH
-   2.2.27
+   2.3.18

@@ -18,10 +18,10 @@ GEM
       eventmachine (>= 1.0.0.beta.4)
     eventmachine (1.2.7)
     http_parser.rb (0.8.0)
-    minitest (5.14.4)
-    public_suffix (4.0.6)
+    minitest (5.16.2)
+    public_suffix (4.0.7)
     rake (13.0.6)
-    thor (1.1.0)
+    thor (1.2.1)
 
 PLATFORMS
   ruby
@@ -32,4 +32,4 @@ DEPENDENCIES
   minitest
 
 BUNDLED WITH
-   2.2.27
+   2.3.18

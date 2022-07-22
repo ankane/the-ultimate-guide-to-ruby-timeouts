@@ -7,10 +7,10 @@ GEM
       thor (>= 0.14.0)
     dogapi (1.45.0)
       multi_json
-    minitest (5.14.4)
+    minitest (5.16.2)
     multi_json (1.15.0)
     rake (13.0.6)
-    thor (1.1.0)
+    thor (1.2.1)
 
 PLATFORMS
   ruby
@@ -21,4 +21,4 @@ DEPENDENCIES
   minitest
 
 BUNDLED WITH
-   2.2.27
+   2.3.18

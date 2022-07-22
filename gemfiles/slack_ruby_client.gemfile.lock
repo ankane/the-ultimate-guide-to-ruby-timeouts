@@ -5,40 +5,29 @@ GEM
       bundler
       rake
       thor (>= 0.14.0)
-    faraday (1.8.0)
-      faraday-em_http (~> 1.0)
-      faraday-em_synchrony (~> 1.0)
-      faraday-excon (~> 1.1)
-      faraday-httpclient (~> 1.0.1)
-      faraday-net_http (~> 1.0)
-      faraday-net_http_persistent (~> 1.1)
-      faraday-patron (~> 1.0)
-      faraday-rack (~> 1.0)
-      multipart-post (>= 1.2, < 3)
+    faraday (2.3.0)
+      faraday-net_http (~> 2.0)
       ruby2_keywords (>= 0.0.4)
-    faraday-em_http (1.0.0)
-    faraday-em_synchrony (1.0.0)
-    faraday-excon (1.1.0)
-    faraday-httpclient (1.0.1)
-    faraday-net_http (1.0.1)
-    faraday-net_http_persistent (1.2.0)
-    faraday-patron (1.0.0)
-    faraday-rack (1.0.0)
-    faraday_middleware (1.1.0)
-      faraday (~> 1.0)
-    gli (2.20.1)
-    hashie (4.1.0)
-    minitest (5.14.4)
-    multipart-post (2.1.1)
+    faraday-mashify (0.1.0)
+      faraday (~> 2.0)
+      hashie
+    faraday-multipart (1.0.4)
+      multipart-post (~> 2)
+    faraday-net_http (2.0.3)
+    gli (2.21.0)
+    hashie (5.0.0)
+    minitest (5.16.2)
+    multipart-post (2.2.3)
     rake (13.0.6)
     ruby2_keywords (0.0.5)
-    slack-ruby-client (0.17.0)
-      faraday (>= 1.0)
-      faraday_middleware
+    slack-ruby-client (1.1.0)
+      faraday (>= 2.0)
+      faraday-mashify
+      faraday-multipart
       gli
       hashie
       websocket-driver
-    thor (1.1.0)
+    thor (1.2.1)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -52,4 +41,4 @@ DEPENDENCIES
   slack-ruby-client
 
 BUNDLED WITH
-   2.2.27
+   2.3.18

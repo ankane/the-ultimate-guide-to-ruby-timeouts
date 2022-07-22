@@ -7,10 +7,10 @@ GEM
       thor (>= 0.14.0)
     hexspace (0.1.1)
       thrift
-    minitest (5.14.4)
+    minitest (5.16.2)
     rake (13.0.6)
-    thor (1.1.0)
-    thrift (0.15.0)
+    thor (1.2.1)
+    thrift (0.16.0)
 
 PLATFORMS
   ruby
@@ -21,4 +21,4 @@ DEPENDENCIES
   minitest
 
 BUNDLED WITH
-   2.2.27
+   2.3.18

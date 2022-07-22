@@ -5,10 +5,10 @@ GEM
       bundler
       rake
       thor (>= 0.14.0)
-    excon (0.85.0)
-    minitest (5.14.4)
+    excon (0.92.4)
+    minitest (5.16.2)
     rake (13.0.6)
-    thor (1.1.0)
+    thor (1.2.1)
 
 PLATFORMS
   ruby
@@ -19,4 +19,4 @@ DEPENDENCIES
   minitest
 
 BUNDLED WITH
-   2.2.27
+   2.3.18

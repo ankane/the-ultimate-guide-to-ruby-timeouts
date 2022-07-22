@@ -8,8 +8,8 @@ class RsolrTest < Minitest::Test
   end
 
   def test_read
-    assert_timeout(RSolr::Error::Http) do
-      RSolr.connect(url: read_url, read_timeout: 1).get("select")
+    assert_timeout(RSolr::Error::Timeout) do
+      RSolr.connect(url: read_url, timeout: 1).get("select")
     end
   end
 end

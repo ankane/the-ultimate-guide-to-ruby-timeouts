@@ -8,12 +8,12 @@ GEM
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     http-accept (1.7.0)
-    http-cookie (1.0.4)
+    http-cookie (1.0.5)
       domain_name (~> 0.5)
-    mime-types (3.3.1)
+    mime-types (3.4.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2021.0901)
-    minitest (5.14.4)
+    mime-types-data (3.2022.0105)
+    minitest (5.16.2)
     netrc (0.11.0)
     rake (13.0.6)
     rest-client (2.1.0)
@@ -21,10 +21,10 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    thor (1.1.0)
+    thor (1.2.1)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.8)
+    unf_ext (0.0.8.2)
 
 PLATFORMS
   ruby
@@ -35,4 +35,4 @@ DEPENDENCIES
   rest-client
 
 BUNDLED WITH
-   2.2.27
+   2.3.18

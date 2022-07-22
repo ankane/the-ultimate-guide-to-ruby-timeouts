@@ -608,10 +608,7 @@ Raises `InfluxDB2::InfluxError`
 MeiliSearch::Client.new(url, api_key, timeout: 1)
 ```
 
-Raises
-
-- `Net::OpenTimeout` on connect timeout
-- `Net::ReadTimeout` on read timeout
+Raises `MeiliSearch::TimeoutError`
 
 ### mongo
 
@@ -701,13 +698,13 @@ Raises `Riddle::ResponseError`
 ### rsolr
 
 ```ruby
-RSolr.connect(open_timeout: 1, read_timeout: 1)
+RSolr.connect(open_timeout: 1, timeout: 1)
 ```
 
 Raises
 
 - `RSolr::Error::ConnectionRefused` on connect timeout
-- `RSolr::Error::Http` on read timeout
+- `RSolr::Error::Timeout` on read timeout
 
 ### ruby-druid
 
@@ -843,7 +840,10 @@ Raises
 HTTP.timeout(connect: 1, read: 1, write: 1).get(url)
 ```
 
-Raises `HTTP::TimeoutError`
+Raises
+
+- `HTTP::ConnectTimeoutError` on connect timeout
+- `HTTP::TimeoutError` on read timeout
 
 ### httparty
 

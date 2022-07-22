@@ -1,4 +1,9 @@
 require_relative "test_helper"
+
+# for https://github.com/bluemonk/net-dns/issues/82
+require "timeout"
+TimeoutError = Timeout::Error
+
 require "net/dns"
 
 class NetDnsTest < Minitest::Test

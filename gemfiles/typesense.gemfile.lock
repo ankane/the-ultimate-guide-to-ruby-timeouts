@@ -5,14 +5,14 @@ GEM
       bundler
       rake
       thor (>= 0.14.0)
-    ethon (0.14.0)
+    ethon (0.15.0)
       ffi (>= 1.15.0)
-    ffi (1.15.4)
-    minitest (5.14.4)
-    oj (3.13.7)
+    ffi (1.15.5)
+    minitest (5.16.2)
+    oj (3.13.17)
     rake (13.0.6)
-    thor (1.1.0)
-    typesense (0.13.0)
+    thor (1.2.1)
+    typesense (0.14.1)
       oj (~> 3.11)
       typhoeus (~> 1.4)
     typhoeus (1.4.0)
@@ -27,4 +27,4 @@ DEPENDENCIES
   typesense
 
 BUNDLED WITH
-   2.2.27
+   2.3.18

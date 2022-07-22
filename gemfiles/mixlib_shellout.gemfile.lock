@@ -5,14 +5,14 @@ GEM
       bundler
       rake
       thor (>= 0.14.0)
-    chef-utils (17.4.38)
+    chef-utils (17.10.0)
       concurrent-ruby
-    concurrent-ruby (1.1.9)
-    minitest (5.14.4)
-    mixlib-shellout (3.2.5)
+    concurrent-ruby (1.1.10)
+    minitest (5.16.2)
+    mixlib-shellout (3.2.7)
       chef-utils
     rake (13.0.6)
-    thor (1.1.0)
+    thor (1.2.1)
 
 PLATFORMS
   ruby
@@ -23,4 +23,4 @@ DEPENDENCIES
   mixlib-shellout
 
 BUNDLED WITH
-   2.2.27
+   2.3.18

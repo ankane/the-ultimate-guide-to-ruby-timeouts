@@ -240,6 +240,7 @@ end
 
 appraise "mail" do
   gem "mail", ">= 2.7.0"
+  gem "net-smtp"
 end
 
 appraise "mechanize" do
@@ -397,6 +398,7 @@ end
 
 appraise "searchkick" do
   gem "searchkick"
+  gem "elasticsearch"
   gem "typhoeus"
 end
 

@@ -5,9 +5,9 @@ GEM
       bundler
       rake
       thor (>= 0.14.0)
-    ffi (1.15.4)
+    ffi (1.15.5)
     hashie (3.6.0)
-    minitest (5.14.4)
+    minitest (5.16.2)
     multipart-post (2.0.0)
     rake (13.0.6)
     soda-ruby (1.0.1)
@@ -16,7 +16,7 @@ GEM
       sys-uname (~> 1.0.2)
     sys-uname (1.0.4)
       ffi (>= 1.0.0)
-    thor (1.1.0)
+    thor (1.2.1)
 
 PLATFORMS
   ruby
@@ -27,4 +27,4 @@ DEPENDENCIES
   soda-ruby
 
 BUNDLED WITH
-   2.2.27
+   2.3.18
