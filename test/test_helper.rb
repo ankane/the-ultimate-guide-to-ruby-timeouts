@@ -17,12 +17,12 @@ Minitest.after_run { socket.close }
 
 class Minitest::Test
   def assert_timeout(exception = UnknownTimeoutError, timeout: 1)
-    started_at = Time.now
+    started_at = monotonic_time
     ex = assert_raises(exception) { yield }
     # test exact class
     assert_equal exception, ex.class
 
-    time = Time.now - started_at
+    time = monotonic_time - started_at
     timeout = timeout..timeout + 0.5 unless timeout.is_a?(Range)
     assert_includes timeout, time
   end
@@ -69,6 +69,10 @@ class Minitest::Test
 
   def read_url
     "http://#{read_host_and_port}"
+  end
+
+  def monotonic_time
+    Process.clock_gettime(Process::CLOCK_MONOTONIC)
   end
 
   def ruby3?
