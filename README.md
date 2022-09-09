@@ -739,6 +739,8 @@ Raises same exceptions as [elasticsearch](#elasticsearch)
   Sequel.connect(connect_timeout: 1, pool_timeout: 1, ...)
   ```
 
+  Raises
+
   - `Sequel::DatabaseConnectionError` on connect and read timeouts
   - `Sequel::PoolTimeout` on checkout timeout
 
