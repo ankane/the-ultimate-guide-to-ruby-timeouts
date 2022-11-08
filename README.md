@@ -291,20 +291,6 @@ To set for a single statement, use an [optimizer hint](https://dev.mysql.com/doc
 SELECT /*+ MAX_EXECUTION_TIME(5000) */ ...
 ```
 
-For migrations, you likely want to set a longer statement timeout. You can do this with
-
-```yml
-production:
-  variables:
-    max_execution_time: <%= ENV["MAX_EXECUTION_TIME"] || 5000 %>
-```
-
-And use
-
-```sh
-MAX_EXECUTION_TIME=90000 rails db:migrate
-```
-
 ### MariaDB
 
 **Note:** Requires MariaDB 10.1.1 or higher
