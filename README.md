@@ -1198,7 +1198,21 @@ Not configurable at the moment, and no timeout by default
 
 ### bitly
 
-Not configurable at the moment, and no timeout by default
+Available since version 3.0.0:
+
+```ruby
+adapter = Bitly::HTTP::Adapters::NetHTTP.new(request_opts: {
+  open_timeout: 1,
+  read_timeout: 1
+})
+http_client = Bitly::HTTP::Client.new(adapter)
+client = Bitly::API::Client.new(token: token, http: http_client)
+```
+
+Raises
+
+- `Net::OpenTimeout` on connect timeout
+- `Net::ReadTimeout` on read timeout
 
 ### boxr
 
