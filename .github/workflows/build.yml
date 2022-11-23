@@ -4,24 +4,24 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 3.1
-        # caching causes issues - https://github.com/thoughtbot/appraisal/issues/173
-        # bundler-cache: true
-    - run: bundle install
-    - uses: ankane/setup-postgres@v1
-      with:
-        database: ultimate_test
-    - uses: ankane/setup-mysql@v1
-      with:
-        database: ultimate_test
-    - uses: ankane/setup-elasticsearch@v1
-    - run: |
-        sudo apt-get update
-        sudo apt-get install coinor-libcbc-dev libcurl4-openssl-dev memcached redis-server
-        sudo systemctl start memcached
-        sudo systemctl start redis
-    - run: bundle exec appraisal install
-    - run: bundle exec appraisal "rake test || true"
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
+          # caching causes issues - https://github.com/thoughtbot/appraisal/issues/173
+          # bundler-cache: true
+      - run: bundle install
+      - uses: ankane/setup-postgres@v1
+        with:
+          database: ultimate_test
+      - uses: ankane/setup-mysql@v1
+        with:
+          database: ultimate_test
+      - uses: ankane/setup-elasticsearch@v1
+      - run: |
+          sudo apt-get update
+          sudo apt-get install coinor-libcbc-dev libcurl4-openssl-dev memcached redis-server
+          sudo systemctl start memcached
+          sudo systemctl start redis-server
+      - run: bundle exec appraisal install
+      - run: bundle exec appraisal "rake test || true"
