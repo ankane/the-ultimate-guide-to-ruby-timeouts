@@ -33,12 +33,14 @@ For many apps, the *single most important thing* to do (if you use a relational 
 
 Standard Library
 
+- [io](#io)
 - [net/ftp](#netftp)
 - [net/http](#nethttp)
 - [net/imap](#netimap)
 - [net/pop](#netpop)
 - [net/smtp](#netsmtp)
 - [open-uri](#open-uri)
+- [regexp](#regexp)
 
 Data Stores
 
@@ -340,6 +342,16 @@ MAX_STATEMENT_TIME=90 rails db:migrate
 
 ## Standard Library
 
+### io
+
+**Note:** Requires Ruby 3.2+
+
+```ruby
+STDIN.timeout = 1
+```
+
+Raises `IO::TimeoutError`
+
 ### net/ftp
 
 ```ruby
@@ -424,6 +436,18 @@ Raises
 
 - `Net::OpenTimeout` on connect timeout
 - `Net::ReadTimeout` on read timeout
+
+### regexp
+
+**Note:** Requires Ruby 3.2+
+
+```ruby
+Regexp.timeout = 1
+# or
+Regexp.new(regexp, timeout: 1)
+```
+
+Raises `Regexp::TimeoutError`
 
 ## Data Stores
 
