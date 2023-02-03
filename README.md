@@ -429,7 +429,7 @@ Raises
 ### open-uri
 
 ```ruby
-URI.open(url, open_timeout: 1, read_timeout: 1)
+URI.parse(url).open(open_timeout: 1, read_timeout: 1)
 ```
 
 Raises
