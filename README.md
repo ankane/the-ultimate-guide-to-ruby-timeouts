@@ -64,6 +64,7 @@ Data Stores
 - [pg](#pg)
 - [presto-client](#presto-client)
 - [redis](#redis)
+- [redis-client](#redis-client)
 - [riddle](#riddle)
 - [rsolr](#rsolr)
 - [ruby-druid](#ruby-druid)
@@ -695,6 +696,18 @@ Raises
 
 - `Redis::CannotConnectError` on connect timeout
 - `Redis::TimeoutError` on read timeout
+
+### redis-client
+
+```ruby
+RedisClient.config(timeout: 1, ...)
+# or
+RedisClient.config(connect_timeout: 1, read_timeout: 1, write_timeout: 1, ...)
+```
+
+Default: 1s
+
+Raises `RedisClient::CannotConnectError`
 
 ### riddle
 

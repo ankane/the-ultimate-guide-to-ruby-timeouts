@@ -355,6 +355,10 @@ appraise "redis" do
   gem "redis"
 end
 
+appraise "redis_client" do
+  gem "redis-client"
+end
+
 appraise "redlock" do
   gem "redlock"
 end
