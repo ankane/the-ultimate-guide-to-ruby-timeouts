@@ -1028,7 +1028,7 @@ This kills and respawns the worker process. Note that this is for the worker and
 worker_shutdown_timeout 8
 ```
 
-Default: 60s
+Default: 30s
 
 This causes Puma to send a SIGKILL signal to a worker if it hasn’t shutdown within the specified time period after having received a SIGTERM signal.
 
