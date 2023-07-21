@@ -1019,7 +1019,7 @@ Raises `TTY::Command::TimeoutExceeded`
 worker_timeout 15
 ```
 
-Default: 30s
+Default: 60s
 
 This kills and respawns the worker process. Note that this is for the worker and not threads. This isn’t a [request timeout](https://github.com/puma/puma/issues/160) either. Use [Rack middleware](#rack-middleware) for request timeouts.
 
