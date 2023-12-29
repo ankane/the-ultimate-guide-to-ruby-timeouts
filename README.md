@@ -549,7 +549,7 @@ Raises
 Dalli::Client.new(host, socket_timeout: 1, ...)
 ```
 
-Default: 0.5s
+Default: 1s
 
 Raises `Dalli::RingError`
 

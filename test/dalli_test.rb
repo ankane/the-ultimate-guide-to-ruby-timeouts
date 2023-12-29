@@ -8,7 +8,7 @@ class DalliTest < Minitest::Test
   end
 
   def test_connect_default
-    assert_timeout(Dalli::RingError, timeout: 0.5) do
+    assert_timeout(Dalli::RingError, timeout: 1) do
       Dalli::Client.new(connect_host).get("hi")
     end
   end
