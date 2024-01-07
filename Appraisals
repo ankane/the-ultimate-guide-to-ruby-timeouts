@@ -277,6 +277,7 @@ end
 
 appraise "neo4j" do
   gem "neo4j"
+  gem "activesupport", "< 7"
 end
 
 appraise "nestful" do

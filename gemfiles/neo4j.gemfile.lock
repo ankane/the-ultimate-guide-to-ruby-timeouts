@@ -1,28 +1,19 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (7.1.2)
-      activesupport (= 7.1.2)
-    activesupport (7.1.2)
-      base64
-      bigdecimal
+    activemodel (6.1.7.6)
+      activesupport (= 6.1.7.6)
+    activesupport (6.1.7.6)
       concurrent-ruby (~> 1.0, >= 1.0.2)
-      connection_pool (>= 2.2.5)
-      drb
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
-      mutex_m
       tzinfo (~> 2.0)
+      zeitwerk (~> 2.3)
     appraisal (2.5.0)
       bundler
       rake
       thor (>= 0.14.0)
-    base64 (0.2.0)
-    bigdecimal (3.1.5)
     concurrent-ruby (1.2.2)
-    connection_pool (2.4.1)
-    drb (2.2.0)
-      ruby2_keywords
     ethon (0.16.0)
       ffi (>= 1.15.0)
     faraday (1.10.3)
@@ -61,7 +52,6 @@ GEM
     minitest (5.20.0)
     multi_json (1.15.0)
     multipart-post (2.3.0)
-    mutex_m (0.2.0)
     neo4j (9.6.2)
       activemodel (>= 4.0)
       activesupport (>= 4.0)
@@ -87,11 +77,13 @@ GEM
       ethon (>= 0.9.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    zeitwerk (2.6.12)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport (< 7)
   appraisal
   minitest
   neo4j
