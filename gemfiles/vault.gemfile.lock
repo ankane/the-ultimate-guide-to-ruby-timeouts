@@ -1,17 +1,17 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    appraisal (2.4.1)
+    appraisal (2.5.0)
       bundler
       rake
       thor (>= 0.14.0)
-    aws-eventstream (1.2.0)
-    aws-sigv4 (1.5.1)
+    aws-eventstream (1.3.0)
+    aws-sigv4 (1.8.0)
       aws-eventstream (~> 1, >= 1.0.2)
-    minitest (5.16.2)
-    rake (13.0.6)
-    thor (1.2.1)
-    vault (0.17.0)
+    minitest (5.20.0)
+    rake (13.1.0)
+    thor (1.3.0)
+    vault (0.18.2)
       aws-sigv4
 
 PLATFORMS
@@ -23,4 +23,4 @@ DEPENDENCIES
   vault
 
 BUNDLED WITH
-   2.3.18
+   2.4.10

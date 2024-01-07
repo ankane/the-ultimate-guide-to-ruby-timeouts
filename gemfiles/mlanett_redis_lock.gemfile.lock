@@ -8,14 +8,18 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    appraisal (2.4.1)
+    appraisal (2.5.0)
       bundler
       rake
       thor (>= 0.14.0)
-    minitest (5.16.2)
-    rake (13.0.6)
-    redis (4.7.1)
-    thor (1.2.1)
+    connection_pool (2.4.1)
+    minitest (5.20.0)
+    rake (13.1.0)
+    redis (5.0.8)
+      redis-client (>= 0.17.0)
+    redis-client (0.19.1)
+      connection_pool
+    thor (1.3.0)
 
 PLATFORMS
   ruby
@@ -26,4 +30,4 @@ DEPENDENCIES
   mlanett-redis-lock!
 
 BUNDLED WITH
-   2.3.18
+   2.4.10

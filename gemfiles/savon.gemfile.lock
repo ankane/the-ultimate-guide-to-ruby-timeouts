@@ -1,47 +1,63 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    addressable (2.8.6)
+      public_suffix (>= 2.0.2, < 6.0)
     akami (1.3.1)
       gyoku (>= 0.4.0)
       nokogiri
-    appraisal (2.4.1)
+    appraisal (2.5.0)
       bundler
       rake
       thor (>= 0.14.0)
     builder (3.2.4)
+    date (3.3.4)
     gyoku (1.4.0)
       builder (>= 2.1.2)
       rexml (~> 3.0)
     httpclient (2.8.3)
-    httpi (2.5.0)
+    httpi (3.0.1)
       rack
-      socksify
-    mini_portile2 (2.8.0)
-    minitest (5.16.2)
-    nokogiri (1.13.7)
-      mini_portile2 (~> 2.8.0)
+    mail (2.8.1)
+      mini_mime (>= 0.1.1)
+      net-imap
+      net-pop
+      net-smtp
+    mini_mime (1.1.5)
+    mini_portile2 (2.8.5)
+    minitest (5.20.0)
+    net-imap (0.4.9.1)
+      date
+      net-protocol
+    net-pop (0.1.2)
+      net-protocol
+    net-protocol (0.2.2)
+      timeout
+    net-smtp (0.4.0.1)
+      net-protocol
+    nokogiri (1.16.0)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     nori (2.6.0)
-    public_suffix (4.0.7)
-    racc (1.6.0)
-    rack (2.2.4)
-    rake (13.0.6)
-    rexml (3.2.5)
-    savon (2.12.1)
+    public_suffix (5.0.4)
+    racc (1.7.3)
+    rack (3.0.8)
+    rake (13.1.0)
+    rexml (3.2.6)
+    savon (2.14.0)
       akami (~> 1.2)
       builder (>= 2.1.2)
       gyoku (~> 1.2)
-      httpi (~> 2.3)
+      httpi (>= 2.4.5)
+      mail (~> 2.5)
       nokogiri (>= 1.8.1)
       nori (~> 2.4)
       wasabi (~> 3.4)
-    socksify (1.7.1)
-    thor (1.2.1)
-    wasabi (3.7.0)
+    thor (1.3.0)
+    timeout (0.4.1)
+    wasabi (3.8.0)
       addressable
-      httpi (~> 2.0)
+      httpi (~> 3.0)
       nokogiri (>= 1.4.2)
 
 PLATFORMS
@@ -54,4 +70,4 @@ DEPENDENCIES
   savon
 
 BUNDLED WITH
-   2.3.18
+   2.4.10

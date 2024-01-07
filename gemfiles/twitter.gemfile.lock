@@ -1,55 +1,51 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.0)
-      public_suffix (>= 2.0.2, < 5.0)
-    appraisal (2.4.1)
+    addressable (2.8.6)
+      public_suffix (>= 2.0.2, < 6.0)
+    appraisal (2.5.0)
       bundler
       rake
       thor (>= 0.14.0)
-    buftok (0.2.0)
-    domain_name (0.5.20190701)
-      unf (>= 0.0.5, < 1.0.0)
+    buftok (0.3.0)
+    domain_name (0.6.20231109)
     equalizer (0.0.11)
-    ffi (1.15.5)
+    ffi (1.16.3)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
-    http (4.4.1)
-      addressable (~> 2.3)
+    http (5.1.1)
+      addressable (~> 2.8)
       http-cookie (~> 1.0)
       http-form_data (~> 2.2)
-      http-parser (~> 1.2.0)
+      llhttp-ffi (~> 0.4.0)
     http-cookie (1.0.5)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
-    http-parser (1.2.3)
-      ffi-compiler (>= 1.0, < 2.0)
-    http_parser.rb (0.6.0)
+    llhttp-ffi (0.4.0)
+      ffi-compiler (~> 1.0)
+      rake (~> 13.0)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
-    minitest (5.16.2)
-    multipart-post (2.2.3)
+    minitest (5.20.0)
+    multipart-post (2.3.0)
     naught (1.1.0)
-    public_suffix (4.0.7)
-    rake (13.0.6)
+    public_suffix (5.0.4)
+    rake (13.1.0)
     simple_oauth (0.3.1)
-    thor (1.2.1)
+    thor (1.3.0)
     thread_safe (0.3.6)
-    twitter (7.0.0)
+    twitter (8.0.1)
       addressable (~> 2.3)
-      buftok (~> 0.2.0)
+      buftok (~> 0.3.0)
       equalizer (~> 0.0.11)
-      http (~> 4.0)
-      http-form_data (~> 2.0)
-      http_parser.rb (~> 0.6.0)
+      http (~> 5.1)
+      http-form_data (~> 2.3)
+      llhttp-ffi (~> 0.4.0)
       memoizable (~> 0.4.0)
       multipart-post (~> 2.0)
       naught (~> 1.0)
       simple_oauth (~> 0.3.0)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.8.2)
 
 PLATFORMS
   ruby
@@ -60,4 +56,4 @@ DEPENDENCIES
   twitter
 
 BUNDLED WITH
-   2.3.18
+   2.4.10

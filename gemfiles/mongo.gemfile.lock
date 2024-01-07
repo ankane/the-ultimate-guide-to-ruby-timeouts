@@ -1,16 +1,16 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    appraisal (2.4.1)
+    appraisal (2.5.0)
       bundler
       rake
       thor (>= 0.14.0)
     bson (4.15.0)
-    minitest (5.16.2)
-    mongo (2.18.0)
+    minitest (5.20.0)
+    mongo (2.19.3)
       bson (>= 4.14.1, < 5.0.0)
-    rake (13.0.6)
-    thor (1.2.1)
+    rake (13.1.0)
+    thor (1.3.0)
 
 PLATFORMS
   ruby
@@ -21,4 +21,4 @@ DEPENDENCIES
   mongo
 
 BUNDLED WITH
-   2.3.18
+   2.4.10
