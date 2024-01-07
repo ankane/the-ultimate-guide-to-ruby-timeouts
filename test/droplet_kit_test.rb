@@ -9,7 +9,7 @@ class DropletKitTest < Minitest::Test
 
   def test_read
     assert_timeout(Faraday::TimeoutError) do
-      DropletKit::Client.new(api_url: read_url, timeout: 1).droplets.find(id: "id")
+      DropletKit::Client.new(api_url: read_url, timeout: 1, retry_max: 0).droplets.find(id: "id")
     end
   end
 end

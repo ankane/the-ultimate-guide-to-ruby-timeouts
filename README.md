@@ -572,10 +572,7 @@ Raises
 Elasticsearch::Client.new(transport_options: {request: {timeout: 1}}, ...)
 ```
 
-Raises
-
-- `Faraday::ConnectionFailed` on connect timeout
-- `Faraday::TimeoutError` on read timeout
+Raises `Elastic::Transport::Transport::Error`
 
 ### hiredis
 
@@ -1420,10 +1417,7 @@ Raises `Net::ReadTimeout` on read timeout
 Koala.http_service.http_options = {request: {open_timeout: 1, timeout: 1}}
 ```
 
-Raises
-
-- `Faraday::ConnectionFailed` on connect timeout
-- `Faraday::TimeoutError` on read timeout
+Raises `Faraday::ConnectionFailed`
 
 ### linkedin
 
