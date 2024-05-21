@@ -687,7 +687,7 @@ Raises
 Redis.new(connect_timeout: 1, timeout: 1, ...)
 ```
 
-Default: 5s
+Default: 1s after 5.0, 5s before
 
 Raises
 
