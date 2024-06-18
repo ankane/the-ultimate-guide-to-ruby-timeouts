@@ -19,7 +19,6 @@ end
 module Requester
   module Requester
     class Service
-
       include GRPC::GenericService
 
       self.marshal_class_method = :encode
