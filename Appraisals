@@ -67,10 +67,6 @@ appraise "clearbit" do
   gem "clearbit"
 end
 
-appraise "coinbase" do
-  gem "coinbase"
-end
-
 appraise "connection_pool" do
   gem "connection_pool"
   gem "redis"
