@@ -18,7 +18,7 @@ class ActionMailerTest < Minitest::Test
       address: connect_host,
       open_timeout: 1
     }
-    assert_timeout(Net::OpenTimeout, timeout: 1.5) do
+    assert_timeout(Net::OpenTimeout) do
       Mailer.hi.deliver_now
     end
   end
