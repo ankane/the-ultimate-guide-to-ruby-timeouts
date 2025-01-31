@@ -9,7 +9,6 @@ jobs:
         with:
           ruby-version: 3.3
           bundler-cache: true
-      - run: bundle install
       - uses: ankane/setup-postgres@v1
         with:
           database: ultimate_test
