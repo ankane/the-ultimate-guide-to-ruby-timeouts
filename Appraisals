@@ -111,6 +111,7 @@ end
 
 appraise "etcdv3" do
   gem "etcdv3"
+  gem "google-protobuf", "< 4"
 end
 
 appraise "elasticsearch" do
@@ -171,6 +172,7 @@ end
 
 appraise "grpc" do
   gem "grpc"
+  gem "google-protobuf", "< 4"
 end
 
 appraise "hexspace" do

@@ -5,9 +5,9 @@ GEM
       bundler
       rake
       thor (>= 0.14.0)
-    minitest (5.20.0)
-    rake (13.1.0)
-    thor (1.3.0)
+    minitest (5.25.4)
+    rake (13.2.1)
+    thor (1.3.2)
     zk (1.10.0)
       zookeeper (~> 1.5.0)
     zookeeper (1.5.5)
@@ -21,4 +21,4 @@ DEPENDENCIES
   zk
 
 BUNDLED WITH
-   2.4.10
+   2.5.22

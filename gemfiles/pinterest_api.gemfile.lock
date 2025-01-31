@@ -5,15 +5,19 @@ GEM
       bundler
       rake
       thor (>= 0.14.0)
+    base64 (0.2.0)
+    bigdecimal (3.1.9)
     faraday (0.17.6)
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.14.0)
       faraday (>= 0.7.4, < 1.0)
     hashie (3.6.0)
-    jwt (2.7.1)
-    minitest (5.20.0)
-    multi_xml (0.6.0)
-    multipart-post (2.3.0)
+    jwt (2.10.1)
+      base64
+    minitest (5.25.4)
+    multi_xml (0.7.1)
+      bigdecimal (~> 3.1)
+    multipart-post (2.4.1)
     oauth2 (2.0.9)
       faraday (>= 0.17.3, < 3.0)
       jwt (>= 1.0, < 3.0)
@@ -33,13 +37,13 @@ GEM
       hashie (~> 3.0)
       omniauth (~> 1.0)
       omniauth-oauth2 (~> 1.0)
-    rack (2.2.8)
-    rake (13.1.0)
+    rack (2.2.10)
+    rake (13.2.1)
     snaky_hash (2.0.1)
       hashie
       version_gem (~> 1.1, >= 1.1.1)
-    thor (1.3.0)
-    version_gem (1.1.3)
+    thor (1.3.2)
+    version_gem (1.1.4)
 
 PLATFORMS
   ruby
@@ -50,4 +54,4 @@ DEPENDENCIES
   pinterest-api
 
 BUNDLED WITH
-   2.4.10
+   2.5.22

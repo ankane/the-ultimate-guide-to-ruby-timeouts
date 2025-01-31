@@ -2,13 +2,13 @@ require_relative "test_helper"
 
 class SequelTest < Minitest::Test
   def test_connect_postgresql
-    assert_timeout(Sequel::DatabaseConnectionError, timeout: 2) do
+    assert_timeout(Sequel::DatabaseConnectionError) do
       Sequel.connect(adapter: "postgresql", host: connect_host, connect_timeout: 1)
     end
   end
 
   def test_read_postgresql
-    assert_timeout(Sequel::DatabaseConnectionError, timeout: 2) do
+    assert_timeout(Sequel::DatabaseConnectionError) do
       Sequel.connect(adapter: "postgresql", host: read_host, port: read_port, connect_timeout: 1)
     end
   end

@@ -5,13 +5,19 @@ GEM
       bundler
       rake
       thor (>= 0.14.0)
+    base64 (0.2.0)
     httpclient (2.8.3)
-    httpi (3.0.1)
-      rack
-    minitest (5.20.0)
-    rack (3.0.8)
-    rake (13.1.0)
-    thor (1.3.0)
+    httpi (4.0.4)
+      base64
+      mutex_m
+      nkf
+      rack (>= 2.0, < 4)
+    minitest (5.25.4)
+    mutex_m (0.3.0)
+    nkf (0.2.0)
+    rack (3.1.9)
+    rake (13.2.1)
+    thor (1.3.2)
 
 PLATFORMS
   ruby
@@ -23,4 +29,4 @@ DEPENDENCIES
   minitest
 
 BUNDLED WITH
-   2.4.10
+   2.5.22

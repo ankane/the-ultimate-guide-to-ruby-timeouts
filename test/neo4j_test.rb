@@ -1,3 +1,4 @@
+require "logger"
 require_relative "test_helper"
 require "neo4j/core/cypher_session/adaptors/http"
 require "typhoeus/adapters/faraday"

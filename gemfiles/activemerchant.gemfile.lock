@@ -1,48 +1,52 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activemerchant (1.133.0)
+    activemerchant (1.137.0)
       activesupport (>= 4.2)
       builder (>= 2.1.2, < 4.0.0)
       i18n (>= 0.6.9)
       nokogiri (~> 1.4)
-      rexml (~> 3.2.5)
-    activesupport (7.1.2)
+      rexml (~> 3.3, >= 3.3.4)
+    activesupport (8.0.1)
       base64
+      benchmark (>= 0.3)
       bigdecimal
-      concurrent-ruby (~> 1.0, >= 1.0.2)
+      concurrent-ruby (~> 1.0, >= 1.3.1)
       connection_pool (>= 2.2.5)
       drb
       i18n (>= 1.6, < 2)
+      logger (>= 1.4.2)
       minitest (>= 5.1)
-      mutex_m
-      tzinfo (~> 2.0)
+      securerandom (>= 0.3)
+      tzinfo (~> 2.0, >= 2.0.5)
+      uri (>= 0.13.1)
     appraisal (2.5.0)
       bundler
       rake
       thor (>= 0.14.0)
     base64 (0.2.0)
-    bigdecimal (3.1.5)
-    builder (3.2.4)
-    concurrent-ruby (1.2.2)
-    connection_pool (2.4.1)
-    drb (2.2.0)
-      ruby2_keywords
-    i18n (1.14.1)
+    benchmark (0.4.0)
+    bigdecimal (3.1.9)
+    builder (3.3.0)
+    concurrent-ruby (1.3.5)
+    connection_pool (2.5.0)
+    drb (2.2.1)
+    i18n (1.14.7)
       concurrent-ruby (~> 1.0)
-    mini_portile2 (2.8.5)
-    minitest (5.20.0)
-    mutex_m (0.2.0)
-    nokogiri (1.16.0)
+    logger (1.6.5)
+    mini_portile2 (2.8.8)
+    minitest (5.25.4)
+    nokogiri (1.18.2)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    racc (1.7.3)
-    rake (13.1.0)
-    rexml (3.2.6)
-    ruby2_keywords (0.0.5)
-    thor (1.3.0)
+    racc (1.8.1)
+    rake (13.2.1)
+    rexml (3.4.0)
+    securerandom (0.4.1)
+    thor (1.3.2)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    uri (1.0.2)
 
 PLATFORMS
   ruby
@@ -54,4 +58,4 @@ DEPENDENCIES
   rexml
 
 BUNDLED WITH
-   2.4.10
+   2.5.22

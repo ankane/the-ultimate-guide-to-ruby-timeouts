@@ -1,15 +1,17 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.6)
-      public_suffix (>= 2.0.2, < 6.0)
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
     appraisal (2.5.0)
       bundler
       rake
       thor (>= 0.14.0)
+    base64 (0.2.0)
+    bigdecimal (3.1.9)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
-    faraday (1.10.3)
+    faraday (1.10.4)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
       faraday-excon (~> 1.1)
@@ -25,9 +27,9 @@ GEM
     faraday-em_synchrony (1.0.0)
     faraday-excon (1.1.0)
     faraday-httpclient (1.0.1)
-    faraday-multipart (1.0.4)
-      multipart-post (~> 2)
-    faraday-net_http (1.0.1)
+    faraday-multipart (1.1.0)
+      multipart-post (~> 2.0)
+    faraday-net_http (1.0.2)
     faraday-net_http_persistent (1.2.0)
     faraday-patron (1.0.0)
     faraday-rack (1.0.0)
@@ -39,22 +41,24 @@ GEM
       hashie (~> 3.5, >= 3.5.2)
       oauth2 (~> 1.0)
     hashie (3.6.0)
-    jwt (2.7.1)
-    minitest (5.20.0)
+    jwt (2.10.1)
+      base64
+    minitest (5.25.4)
     multi_json (1.15.0)
-    multi_xml (0.6.0)
-    multipart-post (2.3.0)
+    multi_xml (0.7.1)
+      bigdecimal (~> 3.1)
+    multipart-post (2.4.1)
     oauth2 (1.4.11)
       faraday (>= 0.17.3, < 3.0)
       jwt (>= 1.0, < 3.0)
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
       rack (>= 1.2, < 4)
-    public_suffix (5.0.4)
-    rack (3.0.8)
-    rake (13.1.0)
+    public_suffix (6.0.1)
+    rack (3.1.9)
+    rake (13.2.1)
     ruby2_keywords (0.0.5)
-    thor (1.3.0)
+    thor (1.3.2)
     thread_safe (0.3.6)
 
 PLATFORMS
@@ -66,4 +70,4 @@ DEPENDENCIES
   minitest
 
 BUNDLED WITH
-   2.4.10
+   2.5.22
