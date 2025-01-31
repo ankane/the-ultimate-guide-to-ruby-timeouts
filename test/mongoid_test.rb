@@ -12,9 +12,10 @@ class MongoidTest < Minitest::Test
         }
       }
     })
+    client = Mongoid::Clients.default
 
-    assert_timeout(Mongo::Error::NoServerAvailable, timeout: 1) do
-      Mongoid::Clients.default[:artists].find.count
+    assert_timeout(Mongo::Error::NoServerAvailable) do
+      client[:artists].find.count
     end
   end
 
@@ -29,9 +30,10 @@ class MongoidTest < Minitest::Test
         }
       }
     })
+    client = Mongoid::Clients.default
 
-    assert_timeout(Mongo::Error::NoServerAvailable, timeout: 1) do
-      Mongoid::Clients.default[:artists].find.count
+    assert_timeout(Mongo::Error::NoServerAvailable) do
+      client[:artists].find.count
     end
   end
 end
