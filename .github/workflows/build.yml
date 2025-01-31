@@ -8,8 +8,7 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.3
-          # caching causes issues - https://github.com/thoughtbot/appraisal/issues/173
-          # bundler-cache: true
+          bundler-cache: true
       - run: bundle install
       - uses: ankane/setup-postgres@v1
         with:
