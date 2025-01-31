@@ -1226,8 +1226,6 @@ Not configurable at the moment, and no timeout by default
 
 ### bitly
 
-**Note:** Available since version 3.0.0
-
 ```ruby
 adapter = Bitly::HTTP::Adapters::NetHTTP.new(request_opts: {
   open_timeout: 1,
