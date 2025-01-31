@@ -264,7 +264,7 @@ STATEMENT_TIMEOUT=90s rails db:migrate
 
 ### MySQL
 
-**Note:** Requires MySQL 5.7.8 or higher, and only applies to read-only `SELECT` statements ([more info](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_execution_time)).
+**Note:** Only applies to read-only `SELECT` statements ([more info](https://dev.mysql.com/doc/refman/8.4/en/server-system-variables.html#sysvar_max_execution_time))
 
 If you use Rails, add to your `config/database.yml`
 
@@ -294,8 +294,6 @@ SELECT /*+ MAX_EXECUTION_TIME(5000) */ ...
 
 ### MariaDB
 
-**Note:** Requires MariaDB 10.1.1 or higher
-
 If you use Rails, add to your `config/database.yml`
 
 ```yml
@@ -316,7 +314,7 @@ Test with
 SELECT 1 FROM information_schema.tables WHERE sleep(6);
 ```
 
-As of MariaDB 10.1.2, you can set single statement timeouts with
+To set for a single statement, use
 
 ```sql
 SET STATEMENT max_statement_time=5 FOR
@@ -387,7 +385,7 @@ Raises
 
 Default: 60s connect timeout, 60s read timeout, 60s write timeout
 
-Write timeout can be set in [Ruby 2.6+](https://github.com/ruby/ruby/commit/bd7c46a7aa8b4f44ef683e22f469033b96d3dd5f). Read timeouts are retried once automatically for idempotent methods like `GET`. In Ruby 2.5+, you can set the number of retries with `http.max_retries = 1`.
+Read timeouts are retried once automatically for idempotent methods like `GET`. You can set the max number of retries with `http.max_retries = 1`.
 
 ### net/imap
 
@@ -468,8 +466,7 @@ Raises `Regexp::TimeoutError`
 
   Raises
 
-  - `ActiveRecord::ConnectionNotEstablished` on connect and read timeouts for Active Record 6.1+
-  - `PG::ConnectionBad` on connect and read timeouts for Active Record < 6.1
+  - `ActiveRecord::ConnectionNotEstablished` on connect and read timeouts
   - `ActiveRecord::ConnectionTimeoutError` on checkout timeout
 
   See also [PostgreSQL statement timeouts](#postgresql)
@@ -492,8 +489,7 @@ Raises `Regexp::TimeoutError`
 
   Raises
 
-  - `ActiveRecord::ConnectionNotEstablished` on connect and read timeouts for Active Record 6.1+
-  - `Mysql2::Error` on connect and read timeouts for Active Record < 6.1
+  - `ActiveRecord::ConnectionNotEstablished` on connect and read timeouts
   - `ActiveRecord::ConnectionTimeoutError` on checkout timeout
 
   See also [MySQL statement timeouts](#mysql)
@@ -1230,7 +1226,7 @@ Not configurable at the moment, and no timeout by default
 
 ### bitly
 
-Available since version 3.0.0:
+**Note:** Available since version 3.0.0
 
 ```ruby
 adapter = Bitly::HTTP::Adapters::NetHTTP.new(request_opts: {
