@@ -21,10 +21,6 @@ appraise "activeresource" do
   gem "activeresource"
 end
 
-appraise "active_shipping" do
-  gem "active_shipping", git: "https://github.com/Shopify/active_shipping.git"
-end
-
 appraise "airtable" do
   gem "airtable"
 end

@@ -176,7 +176,6 @@ Other
 - [actionmailer](#actionmailer)
 - [activemerchant](#activemerchant)
 - [activeresource](#activeresource)
-- [active_shipping](#active_shipping)
 - [carrot2](#carrot2)
 - [docker-api](#docker-api)
 - [etcd](#etcd)
@@ -1650,18 +1649,6 @@ end
 ```
 
 Raises `ActiveResource::TimeoutError`
-
-### active_shipping
-
-```ruby
-client = ActiveShipping::USPS.new(login: "developer-key")
-client.open_timeout = 1
-client.read_timeout = 1
-```
-
-Default: 2s connect timeout, 10s read timeout
-
-Raises `ActiveUtils::ConnectionError`
 
 ### carrot2
 
