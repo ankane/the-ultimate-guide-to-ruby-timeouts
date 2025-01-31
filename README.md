@@ -1481,11 +1481,7 @@ Not configurable at the moment, and no timeout by default
 
 ### shopify_api
 
-```ruby
-ShopifyAPI::Base.timeout = 1
-```
-
-Raises `ActiveResource::TimeoutError`
+Not configurable at the moment, and no timeout by default
 
 ### sift
 
