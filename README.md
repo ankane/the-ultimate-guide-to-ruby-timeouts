@@ -156,6 +156,7 @@ Distributed Locks
 - [restforce](#restforce)
 - [rspotify](#rspotify)
 - [ruby-trello](#ruby-trello)
+- [sentry-ruby](#sentry-ruby)
 - [shopify_api](#shopify_api)
 - [sift](#sift)
 - [slack-notifier](#slack-notifier)
@@ -1472,6 +1473,19 @@ Not configurable at the moment, and no timeout by default
 ### ruby-trello
 
 Not configurable at the moment, and no timeout by default
+
+### sentry-ruby
+
+```ruby
+Sentry.init do |config|
+  config.transport.open_timeout = 1
+  config.transport.timeout = 1
+end
+```
+
+Default: 1s connect timeout, 2s read/write timeout
+
+Raises `Sentry::ExternalError` in [some cases](https://github.com/getsentry/sentry-ruby/issues/1290)
 
 ### shopify_api
 

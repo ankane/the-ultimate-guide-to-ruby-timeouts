@@ -401,6 +401,10 @@ appraise "searchkick" do
   gem "typhoeus"
 end
 
+appraise "sentry_ruby" do
+  gem "sentry-ruby"
+end
+
 appraise "sequel" do
   gem "sequel"
   gem "pg"
