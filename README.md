@@ -608,10 +608,10 @@ Raises `InfluxDB2::InfluxError`
 ### meilisearch
 
 ```ruby
-MeiliSearch::Client.new(url, api_key, timeout: 1)
+Meilisearch::Client.new(url, api_key, timeout: 1)
 ```
 
-Raises `MeiliSearch::TimeoutError`
+Raises `Meilisearch::TimeoutError`
 
 ### mongo
 
