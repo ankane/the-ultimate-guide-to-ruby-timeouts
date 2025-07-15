@@ -149,7 +149,6 @@ Distributed Locks
 - [koala](#koala)
 - [linkedin](#linkedin)
 - [octokit](#octokit)
-- [pinterest-api](#pinterest-api)
 - [pusher](#pusher)
 - [pwned](#pwned)
 - [restforce](#restforce)
@@ -1407,17 +1406,6 @@ Not configurable at the moment, and no timeout by default.
 
 ```ruby
 Octokit::Client.new(connection_options: {request: {open_timeout: 1, timeout: 1}})
-```
-
-Raises
-
-- `Faraday::ConnectionFailed` on connect timeout
-- `Faraday::TimeoutError` on read timeout
-
-### pinterest-api
-
-```ruby
-Pinterest::Client.new(access_token, request: {open_timeout: 1, timeout: 1})
 ```
 
 Raises

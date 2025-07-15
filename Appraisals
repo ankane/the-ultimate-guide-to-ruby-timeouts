@@ -318,10 +318,6 @@ appraise "pg" do
   gem "pg"
 end
 
-appraise "pinterest_api" do
-  gem "pinterest-api"
-end
-
 appraise "posix_spawn" do
   gem "posix-spawn"
 end
