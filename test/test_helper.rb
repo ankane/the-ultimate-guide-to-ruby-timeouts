@@ -74,8 +74,4 @@ class Minitest::Test
   def monotonic_time
     Process.clock_gettime(Process::CLOCK_MONOTONIC)
   end
-
-  def ruby3?
-    RUBY_VERSION.to_i >= 3
-  end
 end
