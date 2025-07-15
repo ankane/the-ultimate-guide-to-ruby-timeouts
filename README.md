@@ -143,7 +143,6 @@ Distributed Locks
 - [gitlab](#gitlab)
 - [google-api-client](#google-api-client)
 - [google-cloud](#google-cloud)
-- [hipchat](#hipchat)
 - [intercom](#intercom)
 - [jira-ruby](#jira-ruby)
 - [koala](#koala)
@@ -1356,17 +1355,6 @@ Google::Cloud::Storage.new(timeout: 1)
 ```
 
 Raises `Google::Cloud::Error`
-
-### hipchat
-
-```ruby
-[HipChat::Client, HipChat::Room, HipChat::User].each { |c| c.default_timeout(1) }
-```
-
-Raises
-
-- `Net::OpenTimeout` on connect timeout
-- `Net::ReadTimeout` on read timeout
 
 ### intercom
 

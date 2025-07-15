@@ -171,10 +171,6 @@ appraise "hexspace" do
   gem "hexspace"
 end
 
-appraise "hipchat" do
-  gem "hipchat"
-end
-
 appraise "hiredis" do
   gem "hiredis"
 end
