@@ -134,10 +134,6 @@ appraise "firebase" do
   gem "firebase"
 end
 
-appraise "frontkick" do
-  gem "frontkick"
-end
-
 appraise "geocoder" do
   gem "geocoder"
 end

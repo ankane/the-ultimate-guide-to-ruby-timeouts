@@ -92,7 +92,6 @@ HTTP Clients
 
 Commands
 
-- [frontkick](#frontkick)
 - [mixlib-shellout](#mixlib-shellout)
 - [posix-spawn](#posix-spawn)
 - [tty-command](#tty-command)
@@ -963,14 +962,6 @@ Default: 10s read timeout, no connect timeout
 Raises `RuntimeError`
 
 ## Commands
-
-### frontkick
-
-```ruby
-Frontkick.exec(command, timeout: 1)
-```
-
-Raises `Frontkick::Timeout`
 
 ### mixlib-shellout
 
