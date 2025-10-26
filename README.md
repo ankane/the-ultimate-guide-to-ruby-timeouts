@@ -41,6 +41,7 @@ Standard Library
 - [net/smtp](#netsmtp)
 - [open-uri](#open-uri)
 - [regexp](#regexp)
+- [socket](#socket)
 
 Data Stores
 
@@ -200,7 +201,6 @@ Other
 - [rbhive](#rbhive)
 - [reversed](#reversed)
 - [savon](#savon)
-- [socket](#socket)
 - [spidr](#spidr)
 - [spyke](#spyke)
 - [stomp](#stomp)
@@ -443,6 +443,16 @@ Regexp.new(regexp, timeout: 1)
 ```
 
 Raises `Regexp::TimeoutError`
+
+### socket
+
+```ruby
+Socket.tcp(host, 80, connect_timeout: 1) do |sock|
+  # ...
+end
+```
+
+Raises `Errno::ETIMEDOUT`
 
 ## Data Stores
 
@@ -1898,16 +1908,6 @@ Raises
 
 - `HTTPClient::ConnectTimeoutError` on connect timeout
 - `HTTPClient::ReceiveTimeoutError` on read timeout
-
-### socket
-
-```ruby
-Socket.tcp(host, 80, connect_timeout: 1) do |sock|
-  # ...
-end
-```
-
-Raises `Errno::ETIMEDOUT`
 
 ### spydr
 
