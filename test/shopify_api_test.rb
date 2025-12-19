@@ -2,10 +2,10 @@ require_relative "test_helper"
 
 class ShopifyApiTest < Minitest::Test
   def test_connect
-    skip # not configurable
+    skip "Not configurable"
   end
 
   def test_read
-    skip # not configurable
+    skip "Not configurable"
   end
 end

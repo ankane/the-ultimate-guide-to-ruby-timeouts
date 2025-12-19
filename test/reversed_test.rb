@@ -10,7 +10,7 @@ class ReversedTest < Minitest::Test
   end
 
   def test_read
-    skip # no way to set port
+    skip "No way to set port"
 
     assert_nil Reversed.lookup("8.8.8.8", timeout: 1, nameservers: [read_host])
   end

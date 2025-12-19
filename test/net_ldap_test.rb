@@ -11,7 +11,7 @@ class NetLdapTest < Minitest::Test
   end
 
   def test_read
-    skip # no read timeout
+    skip "No read timeout"
 
     ldap = Net::LDAP.new(host: read_host, port: read_port)
 

@@ -2,7 +2,7 @@ require_relative "test_helper"
 
 class SoundCloudTest < Minitest::Test
   def test_connect
-    skip # not configurable yet
+    skip "Not configurable yet"
 
     client = SoundCloud.new(client_id: "id", timeout: 1)
     api_host = connect_host
@@ -14,7 +14,7 @@ class SoundCloudTest < Minitest::Test
   end
 
   def test_read
-    skip # not configurable yet
+    skip "Not configurable yet"
 
     client = SoundCloud.new(client_id: "id", timeout: 1)
     api_host = read_host_and_port
