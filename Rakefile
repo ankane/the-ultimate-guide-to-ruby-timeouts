@@ -2,7 +2,6 @@ require "rake/testtask"
 
 Rake::TestTask.new do |t|
   name = File.basename(ENV["BUNDLE_GEMFILE"], ".gemfile")
-  t.libs << "test"
   t.test_files = ["test/#{name}_test.rb"]
   t.warning = false
 end
