@@ -242,6 +242,7 @@ end
 
 appraise "meilisearch" do
   gem "meilisearch"
+  gem "logger"
 end
 
 appraise "mixlib_shellout" do
