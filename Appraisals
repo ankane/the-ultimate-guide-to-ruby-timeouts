@@ -250,7 +250,7 @@ appraise "mixlib_shellout" do
 end
 
 appraise "mlanett_redis_lock" do
-  gem "mlanett-redis-lock", github: "mlanett/redis-lock", require: "redis-lock"
+  gem "mlanett-redis-lock", require: "redis-lock"
 end
 
 appraise "mongo" do
