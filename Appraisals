@@ -538,11 +538,6 @@ appraise "typhoeus" do
   gem "logger"
 end
 
-appraise "unirest" do
-  # requires Ruby < 3
-  # gem "unirest"
-end
-
 appraise "vault" do
   gem "vault"
 end
