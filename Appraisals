@@ -27,6 +27,7 @@ end
 
 appraise "algoliasearch" do
   gem "algoliasearch"
+  gem "base64"
 end
 
 appraise "aws_sdk" do
@@ -36,6 +37,7 @@ end
 
 appraise "azure" do
   gem "azure_mgmt_compute"
+  gem "base64"
 end
 
 appraise "bitly" do
@@ -56,6 +58,7 @@ end
 
 appraise "cassandra_driver" do
   gem "cassandra-driver"
+  gem "bigdecimal"
   gem "sorted_set"
 end
 
@@ -82,6 +85,7 @@ end
 
 appraise "docker_api" do
   gem "docker-api"
+  gem "base64"
 end
 
 appraise "dogapi" do
@@ -169,6 +173,7 @@ end
 
 appraise "hexspace" do
   gem "hexspace"
+  gem "base64"
 end
 
 appraise "hiredis" do
@@ -206,6 +211,7 @@ end
 
 appraise "influxdb_client" do
   gem "influxdb-client"
+  gem "base64"
 end
 
 appraise "intercom" do
@@ -222,6 +228,7 @@ end
 
 appraise "kubeclient" do
   gem "kubeclient"
+  gem "base64"
 end
 
 appraise "mail" do
@@ -247,6 +254,7 @@ end
 
 appraise "mongo" do
   gem "mongo"
+  gem "bigdecimal"
 end
 
 appraise "mongoid" do
@@ -264,6 +272,10 @@ end
 appraise "neo4j" do
   gem "neo4j"
   gem "activesupport", "< 7"
+  gem "base64"
+  gem "benchmark"
+  gem "bigdecimal"
+  gem "logger"
 end
 
 appraise "nestful" do
@@ -324,6 +336,7 @@ end
 
 appraise "pusher" do
   gem "pusher"
+  gem "base64"
 end
 
 appraise "pwned" do
@@ -372,6 +385,9 @@ end
 
 appraise "ruby_kafka" do
   gem "ruby-kafka"
+  gem "base64"
+  gem "bigdecimal"
+  gem "logger"
 end
 
 appraise "savon" do
@@ -413,6 +429,7 @@ end
 
 appraise "sift" do
   gem "sift"
+  gem "base64"
 end
 
 appraise "smartystreets_ruby_sdk" do
@@ -457,10 +474,14 @@ end
 
 appraise "thrift" do
   gem "thrift"
+  gem "base64"
+  gem "logger"
 end
 
 appraise "thrift_client" do
   gem "thrift_client"
+  gem "base64"
+  gem "logger"
 end
 
 appraise "trino_client" do
@@ -477,6 +498,7 @@ end
 
 appraise "twitter" do
   gem "twitter"
+  gem "base64"
 end
 
 appraise "typesense" do
