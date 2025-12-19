@@ -8,7 +8,7 @@ class TypesenseTest < Minitest::Test
       connection_timeout_seconds: 1,
       num_retries: 0
     )
-    assert_timeout(Typesense::Error::TimeoutError) do
+    assert_timeout(Faraday::ConnectionFailed) do
       client.collections.retrieve
     end
   end
@@ -20,7 +20,7 @@ class TypesenseTest < Minitest::Test
       connection_timeout_seconds: 1,
       num_retries: 0
     )
-    assert_timeout(Typesense::Error::TimeoutError) do
+    assert_timeout(Faraday::TimeoutError) do
       client.collections.retrieve
     end
   end

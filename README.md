@@ -794,7 +794,10 @@ Raises
 Typesense::Client.new(connection_timeout_seconds: 1)
 ```
 
-Raises `Typesense::Error::TimeoutError`
+Raises
+
+- `Faraday::ConnectionFailed` on connect timeout
+- `Faraday::TimeoutError` on read timeout
 
 ## HTTP Clients
 
