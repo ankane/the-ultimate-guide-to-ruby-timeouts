@@ -407,6 +407,7 @@ end
 
 appraise "sentry_ruby" do
   gem "sentry-ruby"
+  gem "logger"
 end
 
 appraise "sequel" do
