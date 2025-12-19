@@ -8,6 +8,7 @@ end
 
 appraise "activemerchant" do
   gem "activemerchant"
+  gem "benchmark"
   gem "rexml"
 end
 
@@ -46,10 +47,12 @@ end
 
 appraise "boxr" do
   gem "boxr"
+  gem "logger"
 end
 
 appraise "bunny" do
   gem "bunny"
+  gem "logger"
 end
 
 appraise "carrot2" do
@@ -59,11 +62,13 @@ end
 appraise "cassandra_driver" do
   gem "cassandra-driver"
   gem "bigdecimal"
+  gem "logger"
   gem "sorted_set"
 end
 
 appraise "clearbit" do
   gem "clearbit"
+  gem "logger"
 end
 
 appraise "connection_pool" do
@@ -81,6 +86,7 @@ end
 
 appraise "dalli" do
   gem "dalli"
+  gem "logger"
 end
 
 appraise "docker_api" do
@@ -107,6 +113,7 @@ end
 
 appraise "etcd" do
   gem "etcd"
+  gem "logger"
 end
 
 appraise "etcdv3" do
@@ -140,6 +147,7 @@ end
 
 appraise "geocoder" do
   gem "geocoder"
+  gem "logger"
 end
 
 appraise "gibbon" do
@@ -148,6 +156,7 @@ end
 
 appraise "github_api" do
   gem "github_api"
+  gem "logger"
 end
 
 appraise "gitlab" do
@@ -174,6 +183,7 @@ end
 appraise "hexspace" do
   gem "hexspace"
   gem "base64"
+  gem "logger"
 end
 
 appraise "hiredis" do
@@ -195,6 +205,7 @@ end
 appraise "httpi" do
   gem "httpi"
   gem "httpclient"
+  gem "logger"
 end
 
 appraise "ignite_client" do
@@ -207,11 +218,13 @@ end
 
 appraise "influxdb" do
   gem "influxdb"
+  gem "logger"
 end
 
 appraise "influxdb_client" do
   gem "influxdb-client"
   gem "base64"
+  gem "logger"
 end
 
 appraise "intercom" do
@@ -256,10 +269,12 @@ end
 appraise "mongo" do
   gem "mongo"
   gem "bigdecimal"
+  gem "logger"
 end
 
 appraise "mongoid" do
   gem "mongoid"
+  gem "ostruct"
 end
 
 appraise "mysql2" do
@@ -285,6 +300,7 @@ end
 
 appraise "net_dns" do
   gem "net-dns"
+  gem "logger"
 end
 
 appraise "net_ldap" do
@@ -297,14 +313,17 @@ end
 
 appraise "net_scp" do
   gem "net-scp"
+  gem "logger"
 end
 
 appraise "net_sftp" do
   gem "net-sftp"
+  gem "logger"
 end
 
 appraise "net_ssh" do
   gem "net-ssh"
+  gem "logger"
 end
 
 appraise "net_telnet" do
@@ -346,6 +365,7 @@ end
 
 appraise "rbhive" do
   gem "rbhive"
+  gem "base64"
 end
 
 appraise "redis" do
@@ -370,6 +390,7 @@ end
 
 appraise "reversed" do
   gem "reversed"
+  gem "logger"
 end
 
 appraise "riddle" do
@@ -440,10 +461,13 @@ end
 
 appraise "soda_ruby" do
   gem "soda-ruby", require: "soda"
+  gem "logger"
+  gem "ostruct"
 end
 
 appraise "soundcloud" do
   gem "soundcloud"
+  gem "logger"
 end
 
 appraise "spidr" do
@@ -463,11 +487,13 @@ appraise "stomp" do
 end
 
 appraise "stripe" do
-  gem "stripe", ">= 1.24.0"
+  gem "stripe"
+  gem "logger"
 end
 
 appraise "suo" do
   gem "suo"
+  gem "logger"
 end
 
 appraise "tamber" do
@@ -509,6 +535,7 @@ end
 
 appraise "typhoeus" do
   gem "typhoeus"
+  gem "logger"
 end
 
 appraise "unirest" do
@@ -545,4 +572,6 @@ end
 
 appraise "zookeeper" do
   gem "zookeeper"
+  gem "logger"
+  gem "benchmark"
 end
