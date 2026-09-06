@@ -8,7 +8,7 @@ class BunnyTest < Minitest::Test
   end
 
   def test_read
-    assert_timeout(Bunny::NetworkFailure) do
+    assert_timeout(AMQ::Protocol::EmptyResponseError) do
       Bunny.new(host: read_host, port: read_port, read_timeout: 1, automatically_recover: false).start
     end
   end
