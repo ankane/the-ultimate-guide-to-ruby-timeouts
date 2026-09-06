@@ -219,6 +219,7 @@ end
 
 appraise "influxdb" do
   gem "influxdb"
+  gem "cgi"
   gem "logger"
 end
 
