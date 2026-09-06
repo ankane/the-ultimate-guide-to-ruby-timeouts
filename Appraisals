@@ -165,6 +165,7 @@ end
 
 appraise "google_api_client" do
   gem "google-api-client"
+  gem "multi_json"
 end
 
 appraise "google_cloud" do
