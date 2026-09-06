@@ -9,7 +9,7 @@ class RedisTest < Minitest::Test
 
   def test_read
     assert_timeout(Redis::TimeoutError) do
-      Redis.new(host: read_host, port: read_port, timeout: 1, reconnect_attempts: 0).ping
+      Redis.new(host: read_host, port: read_port, timeout: 1, reconnect_attempts: 0, driver_info: false, protocol: 2).ping
     end
   end
 end
