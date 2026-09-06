@@ -2,7 +2,9 @@ require_relative "test_helper"
 
 class SiftTest < Minitest::Test
   def test_connect
-    Sift::Client.base_uri connect_url
+    Sift::Client.send(:remove_const, "API_ENDPOINT")
+    Sift::Client.const_set("API_ENDPOINT", connect_url)
+    Sift::Client.remove_instance_variable(:@api_client) rescue nil
 
     client = Sift::Client.new(api_key: "test", account_id: "test", timeout: 1)
     assert_timeout(Net::OpenTimeout) do
@@ -11,7 +13,9 @@ class SiftTest < Minitest::Test
   end
 
   def test_read
-    Sift::Client.base_uri read_url
+    Sift::Client.send(:remove_const, "API_ENDPOINT")
+    Sift::Client.const_set("API_ENDPOINT", read_url)
+    Sift::Client.remove_instance_variable(:@api_client) rescue nil
 
     client = Sift::Client.new(api_key: "test", account_id: "test", timeout: 1)
     assert_timeout(Net::ReadTimeout, timeout: 2) do
