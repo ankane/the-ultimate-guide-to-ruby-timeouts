@@ -779,13 +779,10 @@ Raises same exceptions as [elasticsearch](#elasticsearch)
 ### trino-client
 
 ```ruby
-Trino::Client.new(http_open_timeout: 1, http_timeout: 1)
+Trino::Client.new(http_open_timeout: 1, http_timeout: 1, query_timeout: 1, plan_timeout: 1)
 ```
 
-Raises
-
-- `Faraday::ConnectionFailed` on connect timeout
-- `Faraday::TimeoutError` on read timeout
+Raises `Trino::Client::TrinoQueryTimeoutError`
 
 ### typesense
 
