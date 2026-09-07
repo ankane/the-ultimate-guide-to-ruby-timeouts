@@ -566,6 +566,7 @@ end
 appraise "zk" do
   gem "zk"
   gem "logger"
+  gem "benchmark"
 end
 
 appraise "zookeeper" do
