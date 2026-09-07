@@ -6,6 +6,7 @@ class TwitterTest < Minitest::Test
       Twitter::REST::Request.send(:remove_const, "BASE_URL")
       Twitter::REST::Request.const_set("BASE_URL", connect_url)
       client = Twitter::REST::Client.new do |config|
+        config.bearer_token = "test"
         # must all be set
         config.timeouts = {connect: 1, read: 30, write: 30}
       end
@@ -18,6 +19,7 @@ class TwitterTest < Minitest::Test
       Twitter::REST::Request.send(:remove_const, "BASE_URL")
       Twitter::REST::Request.const_set("BASE_URL", read_url)
       client = Twitter::REST::Client.new do |config|
+        config.bearer_token = "test"
         # must all be set
         config.timeouts = {connect: 30, read: 1, write: 30}
       end
